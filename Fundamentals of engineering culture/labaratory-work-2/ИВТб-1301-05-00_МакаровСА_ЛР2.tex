@@ -1,0 +1,76 @@
+\documentclass[a4paper,14pt]{extarticle}
+%\documentclass[a4paper,12pt,twocolumn]{extarticle}
+%\documentclass[12pt]{article}
+
+\usepackage[a4paper,text={180mm,260mm},left=15mm,top=15mm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{cmap}
+\usepackage[russian]{babel}
+\usepackage{textcomp}
+\usepackage{indentfirst}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+%\begin{document}
+%	Текст документа
+%\end{document}
+
+\begin{document}
+	\title{Заголовок}
+	\author{Автор, или перечень авторов}
+	\date{Дата создания документа}
+	\date\today
+	\begin{abstract}
+		Аннотация
+	\end{abstract}
+	\maketitle
+	
+	$$\delta_{ij}=\begin{cases}1,&i=j\\0,&i\ne j\end{cases}$$
+	
+	$$\delta_{ij} =
+		\begin{cases}
+			1, & i=j,\\
+			0, & i\ne j
+		\end{cases}$$
+	
+	Текст % А
+	будет не % комментарий
+	прерывен! % пропадет!
+	
+	\AA
+	\aa
+	\textbf\AA
+	
+	\rule[5pt]{25pt}{1pt}
+	\rule[-5pt]{1pt}{10pt}
+	\rule{6pt}{6pt}
+	
+	$x^2_ij$
+	$x^2_{ij}$
+	
+	{\itshape курсив}
+	
+	\begin{itshape}
+		Для верстки большого объема текста лучше пользоваться окружениями
+	\end{itshape}
+	
+	\textbf{при}мер
+	
+	{Для начала создадим группу, вложенную в обычный текст. \it\large Здесь изменим шрифт на курсив большого размера. {\sf\small Создадим вложенную группу и установим рубленный шрифт малого размера.} Выйдем из вложенной группы. Восстановился большой курсив.} А теперь, выйдя из первой группы, возвратимся к исходному шрифту.
+	
+	\section[О друзьях]{Слоны мои друзья!}\label{s:слоны}
+	
+	\appendix
+	\section{Название}\label{}
+		Текст приложения\dots
+	\subsection{Заголовок}\label{}
+		Продолжение\dots
+
+	\tableofcontents
+	%\thepage
+	
+	Текст\footnotemark[1]
+	\footnotetext[1]{Текст}
+	
+\end{document}
