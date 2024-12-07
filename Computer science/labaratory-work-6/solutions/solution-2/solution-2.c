@@ -25,19 +25,13 @@ void print_code(Node* root, int codes[], int top) {
     }
 }
 
-int compare(const void* left, const void* right) {
-    Node* left_node = *(Node**)left;
-    Node* right_node = *(Node**)right;
-    return left_node->p > right_node->p;
-}
-
 int main() {
     int n;
     scanf("%d", &n);
 
     struct Node* nodes[n];
 
-    for (int i = n - 1; i >= 0; i--) {
+    for (int i = 0; i < n; i++) {
         Node* node = (Node*)malloc(sizeof(Node));
         scanf("%f", &node->p);
         node->left = NULL;
@@ -45,13 +39,19 @@ int main() {
         nodes[i] = node;
     }
 
-    qsort(nodes, n, sizeof(Node*), compare);
+    while (n > 1) {
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (nodes[j]->p > nodes[j + 1]->p) {
+                    Node* node = nodes[j];
+                    nodes[j] = nodes[j + 1];
+                    nodes[j + 1] = node;
+                }
+            }
+        }
 
-    do {
-        qsort(nodes, n, sizeof(Node*), compare);
-
-        Node* left = nodes[0];
-        Node* right = nodes[1];
+        Node* left = nodes[1];
+        Node* right = nodes[0];
         Node* node = (Node*)malloc(sizeof(Node));
         node->p = left->p + right->p;
         node->left = left;
@@ -61,8 +61,9 @@ int main() {
         for (int i = 1; i < n - 1; i++) {
             nodes[i] = nodes[i + 1];
         }
+
         n--;
-    } while (n > 1);
+    }
 
     int codes[32];
     print_code(nodes[0], codes, 0);
