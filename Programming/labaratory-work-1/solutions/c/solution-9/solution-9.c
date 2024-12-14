@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-int main() {
-    int N;
-    int M;
+int main()
+{
+    int N, M;
     scanf("%d %d", &N, &M);
 
     int cnt = 0;

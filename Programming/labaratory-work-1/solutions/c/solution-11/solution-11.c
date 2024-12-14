@@ -1,11 +1,8 @@
 #include <stdio.h>
 
-int main() {
-    float k1;
-    float b1;
-    float k2;
-    float b2;
-    float e;
+int main()
+{
+    float k1, b1, k2, b2, e;
     scanf("%f %f %f %f %f", &k1, &b1, &k2, &b2, &e);
 
     if (k1 == k2) {

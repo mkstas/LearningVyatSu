@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <math.h>
 
-void print_bin(int n, int b) {
+void print_bin(int n, int b)
+{
     for (int i = b - 1; i >= 0; i--) {
         printf("%d", n >> i & 1);
     }
 }
 
-int main() {
+int main()
+{
     float x; int n, k;
     scanf("%f %d %d", &x, &n, &k);
 
