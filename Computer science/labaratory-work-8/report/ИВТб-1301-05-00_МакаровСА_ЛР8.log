@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.5)  4 DEC 2024 09:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.5)  14 DEC 2024 01:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -345,58 +345,30 @@ File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 \Gin@req@height=\dimen157
 \Gin@req@width=\dimen158
 )
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count273
-\lst@gtempboxa=\box53
-\lst@token=\toks22
-\lst@length=\count274
-\lst@currlwidth=\dimen159
-\lst@column=\count275
-\lst@pos=\count276
-\lst@lostspace=\dimen160
-\lst@width=\dimen161
-\lst@newlines=\count277
-\lst@lineno=\count278
-\lst@maxwidth=\dimen162
-
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
-File: lstpatch.sty 2024/05/25 1.10b (Carsten Heinz)
-)
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
-File: lstmisc.sty 2024/05/25 1.10b (Carsten Heinz)
-\c@lstnumber=\count279
-\lst@skipnumbers=\count280
-\lst@framebox=\box54
-)
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
-File: listings.cfg 2024/05/25 1.10b listings configuration
-))
-Package: listings 2024/05/25 1.10b (Carsten Heinz)
-
 (C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count281
-\l__pdf_internal_box=\box55
+\l__color_backend_stack_int=\count273
+\l__pdf_internal_box=\box53
 ) (ИВТб-1301-05-00_МакаровСА_ЛР8.aux)
 \openout1 = `ИВТб-1301-05-00_МакаровСА_ЛР8.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -432,22 +404,22 @@ LaTeX Font Info:    ... okay on input line 17.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \th on input line 17.
+LaTeX Info: Redefining \th on input line 16.
 
 (C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count282
-\scratchdimen=\dimen163
-\scratchbox=\box56
-\nofMPsegments=\count283
-\nofMParguments=\count284
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count285
-\MPscratchDim=\dimen164
-\MPnumerator=\count286
-\makeMPintoPDFobject=\count287
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count274
+\scratchdimen=\dimen159
+\scratchbox=\box54
+\nofMPsegments=\count275
+\nofMParguments=\count276
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count277
+\MPscratchDim=\dimen160
+\MPnumerator=\count278
+\makeMPintoPDFobject=\count279
+\everyMPtoPDFconversion=\toks23
 )
 (C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -459,9 +431,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c@lstlisting=\count288
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <7> on input line 41.
+(Font)              <7> on input line 40.
 
 
 [1
@@ -478,18 +449,18 @@ L3 programming layer <2024-08-30>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5570 strings out of 473899
- 91354 string characters out of 5726500
- 488926 words of memory out of 5000000
- 28412 multiletter control sequences out of 15000+600000
+ 4198 strings out of 473899
+ 71331 string characters out of 5726500
+ 467647 words of memory out of 5000000
+ 27052 multiletter control sequences out of 15000+600000
  561825 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,444b,265s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,7n,65p,444b,204s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/makar/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfb
 x1440.pfb><C:/Users/makar/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-s
 uper/sfrm1440.pfb>
 Output written on ИВТб-1301-05-00_МакаровСА_ЛР8.pdf (3 pages, 50
-754 bytes).
+883 bytes).
 PDF statistics:
  23 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -7,6 +7,7 @@
 \usepackage{indentfirst}
 \usepackage{titlesec}
 \usepackage{graphicx}
+\usepackage{nicematrix}
 
 \renewcommand{\baselinestretch}{1.3}
 \titleformat{\section}{\normalsize\bfseries}{\thesection}{1em}{}
@@ -68,12 +69,219 @@
 	\newpage
 	\section*{Решение}
 	\subsection*{Задание 1}
+	Таблица истинности для функции 1 представлена на таблице 1.
 	
+	\noindent Таблица 1 -- Таблица истинности функции 1 \\
+	\begin{NiceTabular}{cccc}[hvlines]
+		$x_1$ & $x_2$ & $x_3$ & $f$ \\
+		0 & 0 & 0 & 0 \\
+		0 & 0 & 1 & 0 \\
+		0 & 1 & 0 & 0 \\
+		0 & 1 & 1 & 1 \\
+		1 & 0 & 0 & 1 \\
+		1 & 0 & 1 & 0 \\
+		1 & 1 & 0 & 0 \\
+		1 & 1 & 1 & 1
+	\end{NiceTabular}\\
+	
+	Диаграмма Вейча-Карно для минимизации функции 1 представлена на таблице 2.
+	
+	\noindent Таблица 2 -- Диаграмма Вейча-Карно функции 1 \\
+	\begin{NiceTabular}{cccccc}[hvlines]
+		& $x_2$ & 0 & 0 & 1 & 1 \\
+		& $x_3$ & 0 & 1 & 1 & 0 \\
+		$x_1$ & & & & & \\
+		0 & & & & 1 & \\
+		1 & & 1 & & 1 &
+	\end{NiceTabular} \\
+	
+	Минимизированная функция: $f=x_1\overline{x}_2\overline{x}_3\lor x_2x_3$. Комбинационная схема представлена на рисунке 1.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\linewidth]{images/s-1-1}
+	\end{figure}
+	\begin{center}
+		Рисунок 1 – Комбинационная схема функции 1
+	\end{center}
+	
+	\pagebreak
+	Таблица истинности для функции 2 представлена на таблице 3.
+	
+	\noindent Таблица 3 -- Таблица истинности функции 2 \\
+	\begin{NiceTabular}{cccc}[hvlines]
+		$x_1$ & $x_2$ & $x_3$ & $f$ \\
+		0 & 0 & 0 & 0 \\
+		0 & 0 & 1 & 0 \\
+		0 & 1 & 0 & 1 \\
+		0 & 1 & 1 & 1 \\
+		1 & 0 & 0 & 1 \\
+		1 & 0 & 1 & 1 \\
+		1 & 1 & 0 & 0 \\
+		1 & 1 & 1 & 0
+	\end{NiceTabular}\\
+	
+	Диаграмма Вейча-Карно для минимизации функции 2 представлена на таблице 4.
+	
+	\noindent Таблица 4 -- Диаграмма Вейча-Карно функции 2 \\
+	\begin{NiceTabular}{cccccc}[hvlines]
+		& $x_2$ & 0 & 0 & 1 & 1 \\
+		& $x_3$ & 0 & 1 & 1 & 0 \\
+		$x_1$ & & & & & \\
+		0 & & & & 1 & 1 \\
+		1 & & 1 & 1 & &
+	\end{NiceTabular}\\
+	
+	Минимизированная функция в базисе Шеффера: $f=x_1\overline{x}_2\lor\overline{x}_1x_2=\overline{
+		\overline{x_1\overline{x_2x_2}}\;
+		\overline{\overline{x_1x_1}x_2}
+	}$. Комбинационная схема представлена на рисунке 2.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\linewidth]{images/s-1-2}
+	\end{figure}
+	\begin{center}
+		Рисунок 2 – Комбинационная схема функции 2
+	\end{center}
+	
+	\pagebreak
+	Таблица истинности для функции 3 представлена на таблице 5.
+	
+	\noindent Таблица 5 -- Таблица истинности функции 3 \\
+	\begin{NiceTabular}{ccccc}[hvlines]
+		$x_1$ & $x_2$ & $x_3$ & $x_4$ & $f$ \\
+		0 & 0 & 0 & 0 & 1 \\
+		0 & 0 & 0 & 1 & 1 \\
+		0 & 0 & 1 & 0 & 0 \\
+		0 & 0 & 1 & 1 & 0 \\
+		0 & 1 & 0 & 0 & 1 \\
+		0 & 1 & 0 & 1 & 0 \\
+		0 & 1 & 1 & 0 & 0 \\
+		0 & 1 & 1 & 1 & 0 \\
+		1 & 0 & 0 & 0 & 1 \\
+		1 & 0 & 0 & 1 & 0 \\
+		1 & 0 & 1 & 0 & 1 \\
+		1 & 0 & 1 & 1 & 0 \\
+		1 & 1 & 0 & 0 & 1 \\
+		1 & 1 & 0 & 1 & 1 \\
+		1 & 1 & 1 & 0 & 0 \\
+		1 & 1 & 1 & 1 & 1
+	\end{NiceTabular}\\
+	
+	Диаграмма Вейча-Карно для минимизации функции 3 представлена на таблице 6.
+	
+	\noindent Таблица 6 -- Диаграмма Вейча-Карно функции 3 \\
+	\begin{NiceTabular}{ccccccc}[hvlines]
+		& & $x_3$ & 0 & 0 & 1 & 1 \\
+		& & $x_4$ & 0 & 1 & 1 & 0 \\
+		$x_1$ & $x_2$ & & & & & \\
+		0 & 0 & & 1 & 1 & & \\
+		0 & 1 & & 1 & & & \\
+		1 & 1 & & 1 & 1 & 1 & \\
+		1 & 0 & & 1 & & & 1 \\
+	\end{NiceTabular} \\
+	
+	Минимизированная функция: $f=x_1x_2x_4\lor x_1\overline{x}_2\overline{x}_4\lor \overline{x}_1\overline{x}_2\overline{x}_3\lor \overline{x}_3\overline{x}_4$. Комбинационная схема представлена на рисунке 3.
+	
+	\pagebreak
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\linewidth]{images/s-1-3}
+	\end{figure}
+	\begin{center}
+		Рисунок 3 – Комбинационная схема функции 3
+	\end{center}
+	
+	Таблица истинности для функции 4 представлена на таблице 7.
+	
+	\noindent Таблица 7 -- Таблица истинности функции 4 \\
+	\begin{NiceTabular}{ccccc}[hvlines]
+		$x_1$ & $x_2$ & $x_3$ & $x_4$ & $f$ \\
+		0 & 0 & 0 & 0 & 1 \\
+		0 & 0 & 0 & 1 & 0 \\
+		0 & 0 & 1 & 0 & 0 \\
+		0 & 0 & 1 & 1 & 1 \\
+		0 & 1 & 0 & 0 & 0 \\
+		0 & 1 & 0 & 1 & 1 \\
+		0 & 1 & 1 & 0 & 0 \\
+		0 & 1 & 1 & 1 & 0 \\
+		1 & 0 & 0 & 0 & 1 \\
+		1 & 0 & 0 & 1 & 0 \\
+		1 & 0 & 1 & 0 & 0 \\
+		1 & 0 & 1 & 1 & 1 \\
+		1 & 1 & 0 & 0 & 1 \\
+		1 & 1 & 0 & 1 & 0 \\
+		1 & 1 & 1 & 0 & 1 \\
+		1 & 1 & 1 & 1 & 1
+	\end{NiceTabular}\\
+	
+	\pagebreak
+	Диаграмма Вейча-Карно для минимизации функции 4 представлена на таблице 8.
+	
+	\noindent Таблица 8 -- Диаграмма Вейча-Карно функции 4 \\
+	\begin{NiceTabular}{ccccccc}[hvlines]
+		& & $x_3$ & 0 & 0 & 1 & 1 \\
+		& & $x_4$ & 0 & 1 & 1 & 0 \\
+		$x_1$ & $x_2$ & & & & & \\
+		0 & 0 & & 1 & & 1 & \\
+		0 & 1 & & & 1 & & \\
+		1 & 1 & & 1 & & 1 & 1 \\
+		1 & 0 & & 1 & & 1 & \\
+	\end{NiceTabular} \\
+	
+	Минимизированная функция в базисе Шеффера:\\
+	$f=\overline{
+		\overline{\overline{x_1x_1}x_2\;\overline{x_3x_3}x_4}\;
+		\overline{\overline{x_2x_2}\;\overline{x_3x_3}\;\overline{x_4x_4}}\;
+		\overline{x_1\overline{x_3x_3}\;\overline{x_4x_4}}\;
+		\overline{x_1x_2x_3}\;
+		\overline{\overline{x_2x_2}x_3x_4}\;
+		\overline{x_1x_3x_4}
+	}$. Комбинационная схема представлена на рисунке 2.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\linewidth]{images/s-1-4}
+	\end{figure}
+	\begin{center}
+		Рисунок 4 – Комбинационная схема функции 4
+	\end{center}
+	
+	\newpage
 	\subsection*{Задание 2}
+	Комбинационная схема четырехразрядного сумматора состоит из одноразрядных сумматоров, представленные на рисунке 5. Схема четырехразрядного сумматора представлена на рисунке 6.
 	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\linewidth]{images/s-2-1}
+	\end{figure}
+	\begin{center}
+		Рисунок 5 – Комбинационная схема одноразрядного сумматора
+	\end{center}
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1\linewidth]{images/s-2-2}
+	\end{figure}
+	\begin{center}
+		Рисунок 6 – Комбинационная схема четырехразрядного сумматора
+	\end{center}
+	
+	\pagebreak
 	\subsection*{Задание 3}
+	Комбинационная схема четырехразрядного умножителя представлена на рисунке 7.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.9\linewidth]{images/s-3}
+	\end{figure}
+	\begin{center}
+		Рисунок 7 – Комбинационная схема четырехразрядного умножителя
+	\end{center}
 	
+	\pagebreak
 	\subsection*{Задание 4}
+	Комбинационная схема шестнадцати разрядного сумматора с ускоренным переносом представлена на рисунке 8.
 	
 	\section*{Вывод}
 	

@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 
+#define X -1.71619
+
 float curve(float x)
 {
     return 2 * pow(x, 3) - 2 * pow(x, 2) + 0 * x + 16;
@@ -12,140 +14,117 @@ float antiderivative(float x)
     return 0.5 * pow(x, 4) - 2.0 / 3.0 * pow(x, 3) + 16 * x;
 }
 
-float find_x() {
-    float left = -2;
-    float right = -1.5;
-    float center;
+float left_rect(float a, float b, float h) {
+    float s = 0.0;
 
-    while (right + left > 1e-10) {
-        center = (left + right) / 2;
-
-        if (curve(center) * curve(right) < 0) {
-            left = center;
-        } else {
-            right = center;
+    for (float i = a; i < b; i = i + h) {
+        if (curve(i + h) > 0) {
+            s += curve(i + h) * h;
         }
     }
 
-    float x = (left + right) / 2;
-
-    return x;
+    return s;
 }
 
-float left_rect(float a, float b, int n)
+float calc_exact(float a, float b)
 {
-    float h = (b - a) / n;
-    float s = 0.0;
-
-    for (int i = 0; i < n; i++)
-    {
-        float y = curve(a + i * h);
-        if (y > 0)
-            s += y * h;
-    }
-
-    return abs(s);
+    return antiderivative(b) - antiderivative(a);
 }
 
-float calc_error(float a, float b, int n, float *abs_error, float *rel_error)
-{
-    float res = left_rect(a, b, n);
-    float exact = fabs(antiderivative(b) - antiderivative(a));
-
-    *abs_error = fabs(res - exact);
-
-    if (exact != 0) {
-        *rel_error = *abs_error / exact * 100;
-    }
-
-    return exact;
-}
-
-void print_menu()
-{
+void print_menu() {
     printf("\033[0d\033[2J");
-    printf("1. Ввод верхнего предела\n");
-    printf("2. Ввод нижнего предела\n");
+    printf("1. Ввод нижнего предела\n");
+    printf("2. Ввод верхнего предела\n");
     printf("3. Ввод шага интегрирования\n");
     printf("4. Рассчет интеграла\n");
     printf("5. Рассчет погрешности\n");
-    printf("6. Выход\n");
 }
 
-int main()
-{
-    int choice, n = 0, exit = 1;
-    float a, b;
+void print_input(int *choice) {
+    printf(">  ");
+    scanf("%d", &*choice);
+}
+
+float check_value(float a, float b, char *message) {
+    while (a >= b) {
+        printf("%s: ", message);
+        scanf("%f", &a);
+    }
+
+    return b;
+}
+
+int main() {
+    int choice, is_a = 0, is_b = 0, is_h = 0;
+    float a, b, h;
 
     print_menu();
-    printf(">  ");
+    print_input(&choice);
 
-    scanf("%d", &choice);
-
-    while (exit)
+    while(1)
     {
         switch (choice)
         {
         case 1:
-            printf("Верхний предел: ");
-            scanf("%f", &a);
-            if (a < find_x()) a = find_x();
             print_menu();
-            printf(">  ");
-            scanf("%d", &choice);
+            printf("Нижний предел: ");
+            scanf("%f", &a);
+
+            if (is_b) while (a >= b) {
+                printf("Введите корректный нижний предел: ");
+                scanf("%f", &a);
+            }
+            if (a < X) a = X;
+            is_a = 1;
+            print_input(&choice);
             break;
 
         case 2:
-            printf("Нижний предел: ");
-            scanf("%f", &b);
             print_menu();
-            printf(">  ");
-            scanf("%d", &choice);
+            printf("Верхний предел: ");
+            scanf("%f", &b);
+
+            if (is_a) while (a >= b) {
+                printf("Введите корректный верхний предел: ");
+                scanf("%f", &b);
+            }
+            is_b = 1;
+            print_input(&choice);
             break;
 
         case 3:
-            printf("Шаг интегрирования: ");
-            scanf("%d", &n);
             print_menu();
-            printf(">  ");
-            scanf("%d", &choice);
+            printf("Шаг интегрирования: ");
+            scanf("%f", &h), is_h = 1;
+            print_input(&choice);
             break;
 
         case 4:
             print_menu();
-            if (a && b && n != 0) {
-                printf("Площадь: %f\n", left_rect(a, b, n));
+            if (is_a && is_b && is_h) {
+                printf("Площадь: %.2f\n", left_rect(a, b, h));
             } else {
-                printf("Не введены пределы и шаг интегрирования\n");
+                printf("Не введены пределы или шаг интегрирования\n");
             }
-            printf(">  ");
-            scanf("%d", &choice);
+            print_input(&choice);
             break;
 
         case 5:
             print_menu();
-            if (a && b && n != 0) {
-                float abs_error, rel_error = 0.0;
-                float exact = calc_error(a, b, n, &abs_error, &rel_error);
-                printf("Метод левых прямоугольников: %f\n", left_rect(a, b, n));
-                printf("Метод Ньютона-Лейбница: %f\n", exact);
-                printf("Абсолютная погрешность: %f\n", abs_error);
-                printf("Относительная погрешность: %f%%\n", rel_error);
+            if (is_a && is_b && is_h) {
+                printf("Метод левых прямоугольников: %.2f\n", left_rect(a, b, h));
+                printf("Метод Ньютона-Лейбница:      %.2f\n", calc_exact(a, b));
+                printf("Абсолютная погрешность:      %.2f\n", left_rect(a, b, h) - calc_exact(a, b));
+                printf("Относительная погрешность:   %.2f%%\n", (left_rect(a, b, h) - calc_exact(a, b)) / calc_exact(a, b) * 100);
             } else {
-                printf("Не введены пределы и шаг интегрирования\n");
+                printf("Не введены пределы или шаг интегрирования\n");
             }
-            printf(">  ");
-            scanf("%d", &choice);
-            break;
-
-        case 6:
-            exit = 0;
-            printf("\033[0d\033[2J");
+            print_input(&choice);
             break;
 
         default:
             print_menu();
-            printf(">  ");
+            print_input(&choice);
             break;
         }
     }
