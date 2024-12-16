@@ -14,21 +14,19 @@ float antiderivative(float x)
     return 0.5 * pow(x, 4) - 2.0 / 3.0 * pow(x, 3) + 16 * x;
 }
 
+float calc_newton(float a, float b)
+{
+    return antiderivative(b) - antiderivative(a);
+}
+
 float left_rect(float a, float b, float h) {
     float s = 0.0;
 
     for (float i = a; i < b; i = i + h) {
-        if (curve(i + h) > 0) {
-            s += curve(i + h) * h;
-        }
+        s += curve(i + h) * h;
     }
 
     return s;
-}
-
-float calc_exact(float a, float b)
-{
-    return antiderivative(b) - antiderivative(a);
 }
 
 void print_menu() {
@@ -43,15 +41,6 @@ void print_menu() {
 void print_input(int *choice) {
     printf(">  ");
     scanf("%d", &*choice);
-}
-
-float check_value(float a, float b, char *message) {
-    while (a >= b) {
-        printf("%s: ", message);
-        scanf("%f", &a);
-    }
-
-    return b;
 }
 
 int main() {
@@ -113,9 +102,9 @@ int main() {
             print_menu();
             if (is_a && is_b && is_h) {
                 printf("Метод левых прямоугольников: %.2f\n", left_rect(a, b, h));
-                printf("Метод Ньютона-Лейбница:      %.2f\n", calc_exact(a, b));
-                printf("Абсолютная погрешность:      %.2f\n", left_rect(a, b, h) - calc_exact(a, b));
-                printf("Относительная погрешность:   %.2f%%\n", (left_rect(a, b, h) - calc_exact(a, b)) / calc_exact(a, b) * 100);
+                printf("Метод Ньютона-Лейбница:      %.2f\n", calc_newton(a, b));
+                printf("Абсолютная погрешность:      %.2f\n", fabs(left_rect(a, b, h) - calc_newton(a, b)));
+                printf("Относительная погрешность:   %.2f%%\n", fabs((left_rect(a, b, h) - calc_newton(a, b)) / calc_newton(a, b) * 100));
             } else {
                 printf("Не введены пределы или шаг интегрирования\n");
             }
