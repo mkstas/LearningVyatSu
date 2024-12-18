@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.5)  17 DEC 2024 10:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.5)  16 DEC 2024 11:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./ИВТб-1301-05-00_МакаровСА_ЛР8.tex
-(ИВТб-1301-05-00_МакаровСА_ЛР8.tex
+**./ИВТб-1301-05-00_МакаровСА_Л4.tex
+(ИВТб-1301-05-00_МакаровСА_Л4.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-30>
 
@@ -344,31 +344,44 @@ File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen157
 \Gin@req@width=\dimen158
+) (C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks22
+\verbatim@line=\toks23
+\verbatim@in@stream=\read3
+) (C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
+Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
+\FV@CodeLineNo=\count273
+\FV@InFile=\read4
+\FV@TabBox=\box53
+\c@FancyVerbLine=\count274
+\FV@StepNumber=\count275
+\FV@OutFile=\write3
 )
 (C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count273
-\l__pdf_internal_box=\box53
-) (ИВТб-1301-05-00_МакаровСА_ЛР8.aux)
-\openout1 = `ИВТб-1301-05-00_МакаровСА_ЛР8.aux'.
+\l__color_backend_stack_int=\count276
+\l__pdf_internal_box=\box54
+) (ИВТб-1301-05-00_МакаровСА_Л4.aux)
+\openout1 = `ИВТб-1301-05-00_МакаровСА_Л4.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -404,22 +417,22 @@ LaTeX Font Info:    ... okay on input line 16.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \th on input line 16.
+LaTeX Info: Redefining \th on input line 18.
 
 (C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count274
+\scratchcounter=\count277
 \scratchdimen=\dimen159
-\scratchbox=\box54
-\nofMPsegments=\count275
-\nofMParguments=\count276
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count277
+\scratchbox=\box55
+\nofMPsegments=\count278
+\nofMParguments=\count279
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count280
 \MPscratchDim=\dimen160
-\MPnumerator=\count278
-\makeMPintoPDFobject=\count279
-\everyMPtoPDFconversion=\toks23
+\MPnumerator=\count281
+\makeMPintoPDFobject=\count282
+\everyMPtoPDFconversion=\toks25
 )
 (C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -432,7 +445,12 @@ fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <7> on input line 40.
+(Font)              <7> on input line 41.
+
+Overfull \hbox (8.31245pt too wide) in paragraph at lines 40--47
+[] 
+ []
+
 
 
 [1
@@ -440,49 +458,27 @@ LaTeX Font Info:    External font `cmex7' loaded for size
 {C:/Users/makar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/maka
 r/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t2a.enc}]
 
-[2]
-<images/s-1-1.png, id=10, 933.4875pt x 301.125pt>
-File: images/s-1-1.png Graphic file (type png)
-<use images/s-1-1.png>
-Package pdftex.def Info: images/s-1-1.png  used on input line 79.
-(pdftex.def)             Requested size: 386.95897pt x 124.82669pt.
-<images/s-1-2.png, id=11, 933.4875pt x 301.125pt>
-File: images/s-1-2.png Graphic file (type png)
-<use images/s-1-2.png>
-Package pdftex.def Info: images/s-1-2.png  used on input line 87.
-(pdftex.def)             Requested size: 386.95897pt x 124.82669pt.
-
-
-[3 <./images/s-1-1.png (PNG copy)> <./images/s-1-2.png (PNG copy)>]
-<images/s-2.png, id=15, 973.6375pt x 451.6875pt>
-File: images/s-2.png Graphic file (type png)
-<use images/s-2.png>
-Package pdftex.def Info: images/s-2.png  used on input line 99.
-(pdftex.def)             Requested size: 386.95897pt x 179.5139pt.
-
-
-[4 <./images/s-2.png (PNG copy)>]
-(ИВТб-1301-05-00_МакаровСА_ЛР8.aux)
+[2] (ИВТб-1301-05-00_МакаровСА_Л4.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-30>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4233 strings out of 473899
- 72085 string characters out of 5726500
- 467647 words of memory out of 5000000
- 27087 multiletter control sequences out of 15000+600000
+ 4629 strings out of 473899
+ 78433 string characters out of 5726500
+ 473718 words of memory out of 5000000
+ 27477 multiletter control sequences out of 15000+600000
  561825 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,444b,242s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,7n,65p,274b,204s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/makar/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfb
 x1440.pfb><C:/Users/makar/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-s
 uper/sfrm1440.pfb>
-Output written on ИВТб-1301-05-00_МакаровСА_ЛР8.pdf (4 pages, 70
-478 bytes).
+Output written on ИВТб-1301-05-00_МакаровСА_Л4.pdf (2 pages, 3840
+0 bytes).
 PDF statistics:
- 29 PDF objects out of 1000 (max. 8388607)
+ 20 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

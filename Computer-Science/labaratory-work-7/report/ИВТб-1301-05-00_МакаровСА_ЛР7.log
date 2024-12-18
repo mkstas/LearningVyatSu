@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.5)  16 DEC 2024 11:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.5)  18 DEC 2024 14:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -968,18 +968,44 @@ Package pdftex.def Info: images/s-3.png  used on input line 276.
 
 
 [9 <./images/s-3.png (PNG copy)>]
+<images/s-4-1.png, id=46, 461.725pt x 311.1625pt>
+File: images/s-4-1.png Graphic file (type png)
+<use images/s-4-1.png>
+Package pdftex.def Info: images/s-4-1.png  used on input line 288.
+(pdftex.def)             Requested size: 169.29684pt x 114.08852pt.
+<images/s-4-2.png, id=47, 863.225pt x 1124.2pt>
+File: images/s-4-2.png Graphic file (type png)
+<use images/s-4-2.png>
+Package pdftex.def Info: images/s-4-2.png  used on input line 296.
+(pdftex.def)             Requested size: 290.22107pt x 377.95163pt.
 
-[10] (ИВТб-1301-05-00_МакаровСА_ЛР7.aux)
+
+[10 <./images/s-4-1.png (PNG copy)> <./images/s-4-2.png (PNG copy)>]
+<images/s-4-3.png, id=51, 1385.175pt x 702.625pt>
+File: images/s-4-3.png Graphic file (type png)
+<use images/s-4-3.png>
+Package pdftex.def Info: images/s-4-3.png  used on input line 305.
+(pdftex.def)             Requested size: 435.32422pt x 220.81342pt.
+<images/s-4-4.png, id=52, 2589.675pt x 1525.7pt>
+File: images/s-4-4.png Graphic file (type png)
+<use images/s-4-4.png>
+Package pdftex.def Info: images/s-4-4.png  used on input line 313.
+(pdftex.def)             Requested size: 483.69687pt x 284.95059pt.
+
+
+[11 <./images/s-4-3.png (PNG copy)> <./images/s-4-4.png (PNG copy)>]
+
+[12] (ИВТб-1301-05-00_МакаровСА_ЛР7.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-30>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 20563 strings out of 473899
- 432855 string characters out of 5726500
+ 20607 strings out of 473899
+ 433815 string characters out of 5726500
  851980 words of memory out of 5000000
- 43224 multiletter control sequences out of 15000+600000
+ 43268 multiletter control sequences out of 15000+600000
  561825 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  81i,11n,93p,591b,873s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -990,10 +1016,10 @@ blic/amsfonts/cm/cmr12.pfb><C:/Users/makar/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/makar/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Users/makar/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/cm-super/sfrm1440.pfb>
-Output written on ИВТб-1301-05-00_МакаровСА_ЛР7.pdf (10 pages, 1
-87110 bytes).
+Output written on ИВТб-1301-05-00_МакаровСА_ЛР7.pdf (12 pages, 2
+78208 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
+ 86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 48 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 68 words of extra memory for PDF output out of 10000 (max. 10000000)
 
