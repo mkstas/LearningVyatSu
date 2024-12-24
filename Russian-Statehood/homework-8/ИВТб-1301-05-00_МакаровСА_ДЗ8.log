@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.5)  25 DEC 2024 02:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.5)  24 DEC 2024 11:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./ИВТб-1301-05-00_МакаровСА_Л4.tex
-(ИВТб-1301-05-00_МакаровСА_Л4.tex
+**./ИВТб-1301-05-00_МакаровСА_ДЗ8.tex
+(ИВТб-1301-05-00_МакаровСА_ДЗ8.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-30>
 
@@ -309,79 +309,30 @@ Package babel Info: Default for \cyrdash is provided on input line 163.
 Package babel Info: Importing font and identification data for russian
 (babel)             from babel-ru.ini. Reported on input line 11.
 )
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.sty
-Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
-)
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
-Package: titlesec 2023/10/27 v2.16 Sectioning titles
-\ttl@box=\box52
-\beforetitleunit=\skip51
-\aftertitleunit=\skip52
-\ttl@plus=\dimen152
-\ttl@minus=\dimen153
-\ttl@toksa=\toks21
-\titlewidth=\dimen154
-\titlewidthlast=\dimen155
-\titlewidthfirst=\dimen156
-)
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2024/05/23 v1.4g Standard LaTeX Graphics (DPC,SPQR)
-
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
-Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-)
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
-fg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 106.
-
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
-))
-\Gin@req@height=\dimen157
-\Gin@req@width=\dimen158
-) (C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
-Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks22
-\verbatim@line=\toks23
-\verbatim@in@stream=\read3
-) (C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
-Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
-\FV@CodeLineNo=\count273
-\FV@InFile=\read4
-\FV@TabBox=\box53
-\c@FancyVerbLine=\count274
-\FV@StepNumber=\count275
-\FV@OutFile=\write3
-)
 (C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count276
-\l__pdf_internal_box=\box54
-) (ИВТб-1301-05-00_МакаровСА_Л4.aux)
-\openout1 = `ИВТб-1301-05-00_МакаровСА_Л4.aux'.
+\l__color_backend_stack_int=\count273
+\l__pdf_internal_box=\box52
+) (ИВТб-1301-05-00_МакаровСА_ДЗ8.aux)
+\openout1 = `ИВТб-1301-05-00_МакаровСА_ДЗ8.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -391,15 +342,15 @@ LaTeX Font Info:    ... okay on input line 18.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(85.35826pt, 483.69687pt, 28.45274pt)
-* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* h-part:(L,W,R)=(28.45274pt, 540.60239pt, 28.45274pt)
+* v-part:(T,H,B)=(28.45274pt, 788.14136pt, 28.45274pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=483.69687pt
-* \textheight=731.23584pt
-* \oddsidemargin=13.08827pt
-* \evensidemargin=13.08827pt
-* \topmargin=-54.36449pt
+* \textwidth=540.60239pt
+* \textheight=788.14136pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=-82.81725pt
 * \headheight=14.0pt
 * \headsep=25.0pt
 * \topskip=14.0pt
@@ -417,38 +368,15 @@ LaTeX Font Info:    ... okay on input line 18.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \th on input line 18.
+LaTeX Info: Redefining \th on input line 10.
 
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
-ii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count277
-\scratchdimen=\dimen159
-\scratchbox=\box55
-\nofMPsegments=\count278
-\nofMParguments=\count279
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count280
-\MPscratchDim=\dimen160
-\MPnumerator=\count281
-\makeMPintoPDFobject=\count282
-\everyMPtoPDFconversion=\toks25
-)
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
-ase.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
 
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
-fg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-))
-LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <7> on input line 41.
+ []
 
-Overfull \hbox (8.31245pt too wide) in paragraph at lines 40--47
-[] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
  []
 
 
@@ -457,68 +385,27 @@ Overfull \hbox (8.31245pt too wide) in paragraph at lines 40--47
 
 {C:/Users/makar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/maka
 r/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t2a.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 61--63
 
- []
-
-<images/s-1.png, id=6, 891.33pt x 805.0075pt>
-File: images/s-1.png Graphic file (type png)
-<use images/s-1.png>
-Package pdftex.def Info: images/s-1.png  used on input line 66.
-(pdftex.def)             Requested size: 270.86906pt x 244.63638pt.
-
-
-[2 <./images/s-1.png>]
-<images/s-2.png, id=17, 845.1575pt x 1848.9075pt>
-File: images/s-2.png Graphic file (type png)
-<use images/s-2.png>
-Package pdftex.def Info: images/s-2.png  used on input line 75.
-(pdftex.def)             Requested size: 260.2262pt x 569.29036pt.
-
-
-[3 <./images/s-2.png>]
-<images/s-3.png, id=22, 463.7325pt x 784.9325pt>
-File: images/s-3.png Graphic file (type png)
-<use images/s-3.png>
-Package pdftex.def Info: images/s-3.png  used on input line 84.
-(pdftex.def)             Requested size: 193.47578pt x 327.48956pt.
-LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
-90.
-
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\t2acmtt.fd
-File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
-
-[4 <./images/s-3.png>]
-
-[5]
-
-[6] (ИВТб-1301-05-00_МакаровСА_Л4.aux)
+[2] (ИВТб-1301-05-00_МакаровСА_ДЗ8.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-30>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4688 strings out of 473899
- 79910 string characters out of 5726500
- 475718 words of memory out of 5000000
- 27532 multiletter control sequences out of 15000+600000
- 562135 words of font info for 45 fonts, out of 8000000 for 9000
+ 3072 strings out of 473899
+ 54411 string characters out of 5726500
+ 449447 words of memory out of 5000000
+ 25967 multiletter control sequences out of 15000+600000
+ 559173 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,500b,276s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/makar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmmi10.pfb><C:/Users/makar/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmmi12.pfb><C:/Users/makar/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb><C:/Users/makar/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/makar/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Users/makar/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/cm-super/sfrm1440.pfb><C:/Users/makar/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on ИВТб-1301-05-00_МакаровСА_Л4.pdf (6 pages, 2424
-62 bytes).
+ 57i,5n,65p,857b,244s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/makar/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfr
+m1440.pfb>
+Output written on ИВТб-1301-05-00_МакаровСА_ДЗ8.pdf (2 pages, 25
+683 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
+ 15 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,43 +1,58 @@
 program solution;
 
 type
-    node = record
-        info: integer;
+    item = record
+        data: integer;
         next, prev:byte;
     end;
 
     list = record
-        nodes:array[1..32] of node;
-        first, last:byte;
+        items:array[1..100] of item;
+        head, tail:byte;
     end;
 
-var n, k, i, cur:integer;
+var
+    n, k, i, max, min:integer;
     L:list;
 
-procedure make_null(var L:list);
+procedure push(var L:list; new_el:integer; k:integer);
 begin
-    L.first := 0;
-    L.last := 0;
+    L.items[new_el].data := k;
+
+    if new_el <> 1 then
+    begin
+        L.items[new_el].prev := new_el;
+        L.items[new_el - 1].next := new_el;
+    end;
 end;
 
-procedure insert(var L:list; k:integer; i:integer);
 begin
-    L.nodes[i].info := k;
-end;
-
-begin
-    make_null(L);
+    L.head := 0;
+    L.tail := 0;
 
     readln(n);
 
     for i := 1 to 2 * n do
     begin
         read(k);
-        insert(L, k, i);
+        push(L, i, k);
     end;
 
-    for i := 1 to 2 * n do
+    if L.items[1].data > L.items[2 * n].data then
+        max := L.items[2 * n].data
+    else
+        max := L.items[1].data;
+
+    for i := 2 to n do
     begin
-        writeln(L.nodes[i].prev, ' ', L.nodes[i].info, ' ', L.nodes[i].next);
+        if L.items[i + 1].data > L.items[2 * n - (i - 1) * 2].data then
+            min := L.items[2 * n - (i - 1) * 2].data
+        else
+            min := L.items[i + 1].data;
+
+        if min > max then
+            max := min;
     end;
+
+    writeln(max);
 end.
