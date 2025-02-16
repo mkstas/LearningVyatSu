@@ -3,32 +3,32 @@
 #define size 100
 #define range 1000
 
-static void sort(int array[], int n, void(*comparator)(int array[], int counters[])) {
-	int counters[range] = { 0 };
+void sort(int array[], int n, void(*comparator)(int array[], int count[])) {
+	int count[range] = { 0 };
 
 	for (int i = 0; i < n; i++) {
-		counters[array[i]]++;
+		count[array[i]]++;
 	}
 
-	comparator(array, counters);
+	comparator(array, count);
 }
 
-static void comparator_min(int array[], int counters[]) {
+void comparator_min(int array[], int count[]) {
 	int k = 0;
 
 	for (int i = 0; i < range; i++) {
-		for (int j = 0; j < counters[i]; j++) {
+		for (int j = 0; j < count[i]; j++) {
 			array[k] = i;
 			k++;
 		}
 	}
 }
 
-static void comparator_max(int array[], int counters[]) {
+void comparator_max(int array[], int count[]) {
 	int k = 0;
 
 	for (int i = range - 1; i >= 0; i--) {
-		for (int j = 0; j < counters[i]; j++) {
+		for (int j = 0; j < count[i]; j++) {
 			array[k] = i;
 			k++;
 		}
@@ -46,7 +46,7 @@ int main() {
 
 	fclose(input);
 
-	void(*comparator)(int array[], int counters[]);
+	void(*comparator)(int array[], int count[]);
 
 	comparator = comparator_min;
 	//comparator = comparator_max;

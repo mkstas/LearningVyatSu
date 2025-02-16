@@ -2,7 +2,8 @@
 
 #define size 100
 
-static sort(int array[], int n, void(*comparator)(int max, int array[], int n)) {
+void sort(int array[], int n, void(*comparator)(int count[]))
+{
 	int max = array[0];
 
 	for (int i = 1; i < n; i++) {
@@ -11,68 +12,43 @@ static sort(int array[], int n, void(*comparator)(int max, int array[], int n)) 
 		}
 	}
 
-	comparator(max, array, n);
-}
-
-static void comparator_min(int max, int array[], int n) {
 	for (int exp = 1; max / exp > 0; exp *= 10) {
-		int sorted[size] = { 0 };
-		int counting[10] = { 0 };
+		int count[10] = { 0 };
+		int temp[size] = { 0 }; 
 
 		for (int i = 0; i < n; i++) {
-			counting[array[i] / exp % 10]++;
+			count[array[i] / exp % 10]++;
 		}
 
-		for (int i = 1; i < 10; i++) {
-			counting[i] += counting[i - 1];
-		}
+		comparator(count);
 
 		for (int i = n - 1; i >= 0; i--) {
-			sorted[counting[array[i] / exp % 10] - 1] = array[i];
-			counting[array[i] / exp % 10]--;
+			temp[count[array[i] / exp % 10] - 1] = array[i];
+			count[array[i] / exp % 10]--;
 		}
 
 		for (int i = 0; i < n; i++) {
-			array[i] = sorted[i];
+			array[i] = temp[i];
 		}
 	}
 }
 
-static void comparator_max(int max, int array[], int n) {
-	int tmp[size] = { 0 };
-
-	for (int i = 0; i < n; i++) {
-		tmp[i] = array[i];
-	}
-
-	for (int exp = 1; max / exp > 0; exp *= 10) {
-		int sorted[size] = { 0 };
-		int counting[10] = { 0 };
-
-		for (int i = 0; i < n; i++) {
-			counting[tmp[i] / exp % 10]++;
-		}
-
-		for (int i = 1; i < 10; i++) {
-			counting[i] += counting[i - 1];
-		}
-
-		for (int i = n - 1; i >= 0; i--) {
-			sorted[counting[tmp[i] / exp % 10] - 1] = tmp[i];
-			counting[tmp[i] / exp % 10]--;
-		}
-
-		for (int i = 0; i < n; i++) {
-			tmp[i] = sorted[i];
-		}
-	}
-
-	for (int i = 0; i < n; i++) {
-		array[i] = tmp[n - i - 1];
+void comparator_min(int count[])
+{
+	for (int i = 1; i < 10; i++) {
+		count[i] += count[i - 1];
 	}
 }
 
-int main() {
+void comparator_max(int count[])
+{
+	for (int i = 8; i >= 0; i--) {
+		count[i] += count[i + 1];
+	}
+}
+
+int main()
+{
 	FILE* input = fopen("../input.txt", "r");
 	FILE* output = fopen("../output.txt", "w");
 
@@ -83,7 +59,7 @@ int main() {
 
 	fclose(input);
 
-	void(*comparator)(int max, int array[], int n);
+	void(*comparator)(int count[]);
 
 	//comparator = comparator_min;
 	comparator = comparator_max;
