@@ -1,39 +1,44 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-#define size 100
-#define range 1000
-
-static void sort(int array[], int n, void(*comparator)(int array[], int count[]))
+void sort(int n, int array[], void(*comparator)(int range, int min, int array[], int count[]))
 {
-	int count[range] = { 0 };
+	int min = array[0];
+	int max = array[0];
 
-	for (int i = 0; i < n; i++) {
-		count[array[i]]++;
+	for (int i = 1; i < n; i++) {
+		if (array[i] < min) min = array[i];
+		if (array[i] > max) max = array[i];
 	}
 
-	comparator(array, count);
+	int range = max - min + 1;
+	int* count = (int*)calloc(range, sizeof(int));
+
+	for (int i = 0; i < n; i++) count[array[i] - min]++;
+
+	comparator(range, min, array, count);
 }
 
-static void comparatorUp(int array[], int count[])
+void comparatorUp(int range, int min, int array[], int count[])
 {
-	int k = 0;
-
+	int index = 0;
 	for (int i = 0; i < range; i++) {
-		for (int j = 0; j < count[i]; j++) {
-			array[k] = i;
-			k++;
+		while (count[i] > 0) {
+			count[i]--;
+			array[index] = i + min;
+			index++;
 		}
 	}
 }
 
-static void comparatorDown(int array[], int count[])
+void comparatorDown(int range, int min, int array[], int count[])
 {
-	int k = 0;
-
+	int index = 0;
 	for (int i = range - 1; i >= 0; i--) {
-		for (int j = 0; j < count[i]; j++) {
-			array[k] = i;
-			k++;
+		while (count[i] > 0) {
+			count[i]--;
+			array[index] = i + min;
+			index++;
 		}
 	}
 }
@@ -43,25 +48,22 @@ int main()
 	FILE* input = fopen("../input.txt", "r");
 	FILE* output = fopen("../output.txt", "w");
 
-	int array[size] = { 0 };
 	int n = 0;
-
 	fscanf_s(input, "%d", &n);
+	int* array = (int*)calloc(n, sizeof(int));
 
-	for (int i = 0; i < n; i++) fscanf_s(input, "%d", &array[i]);
-
+	for (int i = 0; i < n; i++) {
+		fscanf_s(input, "%d", &array[i]);
+	}
 	fclose(input);
 
-	void(*comparator)(int array[], int count[]);
-
+	void(*comparator)(int range, int min, int array[], int count[]);
 	comparator = comparatorUp;
-
-	sort(array, n, comparator);
+	sort(n, array, comparator);
 
 	for (int i = 0; i < n; i++) {
 		fprintf(output, "%d ", array[i]);
 	}
-
 	fclose(output);
 
 	return 0;
