@@ -6,10 +6,10 @@ var
   p, i: byte;
   error: boolean;
   number: real;
+  symbol: char;
 
 begin
-  error := true;
-  
+  error := true;  
   repeat
     write('Введите мощность множества (не более 10): ');
     try
@@ -100,8 +100,66 @@ begin
   end;
   readln();
   
+  write('Введите множество (D) латинских букв: ');
+  i := 0;
+  while i < p do
+  begin
+    try
+      read(symbol);
+      if ((ord(symbol) >= 65) and (ord(symbol) <= 90)) or 
+          ((ord(symbol) >= 97) and (ord(symbol) <= 122)) then
+        bf := symbol
+      else
+      begin
+        writeln('Буква ', symbol, ' не является латинской');
+        continue;
+      end;
+      if bf in D then
+      begin
+        writeln('Буква ', bf, ' уже входит в множество');
+        continue;
+      end;
+      include(D, bf);
+      i := i + 1;
+    except
+      writeln('Неверный формат ввода');
+    end;
+  end;
+  readln();
+  
+  write('Введите множество (E) русских букв: ');
+  i := 0;
+  while i < p do
+  begin
+    try
+      read(symbol);
+      if (ord(symbol) >= 1040) and (ord(symbol) <= 1103) then
+        bf := symbol
+      else
+      begin
+        writeln('Буква ', symbol, ' не является латинской');
+        continue;
+      end;
+      if bf in E then
+      begin
+        writeln('Буква ', bf, ' уже входит в множество');
+        continue;
+      end;
+      include(E, bf);
+      i := i + 1;
+    except
+      writeln('Неверный формат ввода');
+    end;
+  end;
+  readln();
+  
   writeln('A = ', A);
   writeln('B = ', B);
   writeln('C = ', C);
+  writeln('D = ', D);
+  writeln('E = ', E);
   writeln('X = A * B * C = ', A * B * C);
+  writeln('Y = (E + D) - (E * D) = ', (E + D) - (E * D));
+  writeln('K = X + Y = ', (A * B * C) + ((E + D) - (E * D)));
+  writeln('Мощность множества K = ', ((A * B * C) + ((E + D) - (E * D))).count);
 end.

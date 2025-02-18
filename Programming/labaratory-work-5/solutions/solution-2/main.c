@@ -2,7 +2,7 @@
 
 #define size 100
 
-void sort(int array[], int n, void(*comparator)(int count[]))
+static void sort(int array[], int n, void(*comparator)(int count[]))
 {
 	int max = array[0];
 
@@ -33,14 +33,14 @@ void sort(int array[], int n, void(*comparator)(int count[]))
 	}
 }
 
-void comparator_min(int count[])
+static void comparatorUp(int count[])
 {
 	for (int i = 1; i < 10; i++) {
 		count[i] += count[i - 1];
 	}
 }
 
-void comparator_max(int count[])
+static void comparatorDown(int count[])
 {
 	for (int i = 8; i >= 0; i--) {
 		count[i] += count[i + 1];
@@ -55,14 +55,15 @@ int main()
 	int array[size] = { 0 };
 	int n = 0;
 
-	while (fscanf_s(input, "%d", &array[n]) != EOF) n++;
+	fscanf_s(input, "%d", &n);
+
+	for (int i = 0; i < n; i++) fscanf_s(input, "%d", &array[i]);
 
 	fclose(input);
 
 	void(*comparator)(int count[]);
 
-	//comparator = comparator_min;
-	comparator = comparator_max;
+	comparator = comparatorUp;
 
 	sort(array, n, comparator);
 

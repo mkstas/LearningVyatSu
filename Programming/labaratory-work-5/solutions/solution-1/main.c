@@ -3,7 +3,8 @@
 #define size 100
 #define range 1000
 
-void sort(int array[], int n, void(*comparator)(int array[], int count[])) {
+static void sort(int array[], int n, void(*comparator)(int array[], int count[]))
+{
 	int count[range] = { 0 };
 
 	for (int i = 0; i < n; i++) {
@@ -13,7 +14,8 @@ void sort(int array[], int n, void(*comparator)(int array[], int count[])) {
 	comparator(array, count);
 }
 
-void comparator_min(int array[], int count[]) {
+static void comparatorUp(int array[], int count[])
+{
 	int k = 0;
 
 	for (int i = 0; i < range; i++) {
@@ -24,7 +26,8 @@ void comparator_min(int array[], int count[]) {
 	}
 }
 
-void comparator_max(int array[], int count[]) {
+static void comparatorDown(int array[], int count[])
+{
 	int k = 0;
 
 	for (int i = range - 1; i >= 0; i--) {
@@ -35,21 +38,23 @@ void comparator_max(int array[], int count[]) {
 	}
 }
 
-int main() {
+int main()
+{
 	FILE* input = fopen("../input.txt", "r");
 	FILE* output = fopen("../output.txt", "w");
 
 	int array[size] = { 0 };
 	int n = 0;
 
-	while (fscanf_s(input, "%d", &array[n]) != EOF) n++;
+	fscanf_s(input, "%d", &n);
+
+	for (int i = 0; i < n; i++) fscanf_s(input, "%d", &array[i]);
 
 	fclose(input);
 
 	void(*comparator)(int array[], int count[]);
 
-	comparator = comparator_min;
-	//comparator = comparator_max;
+	comparator = comparatorUp;
 
 	sort(array, n, comparator);
 
