@@ -6,6 +6,7 @@ var
   p, i: byte;
   error: boolean;
   number: real;
+  peace: integer;
   symbol: char;
 
 begin
@@ -45,25 +46,17 @@ begin
   end;
   readln();
   
-  write('Введите множество (B) рациональых чисел (-100 - 100): ');
+  write('Введите множество (B) рациональых чисел: ');
   i := 0;
   while i < p do
   begin
     try
-      read(number);
-      if (number > 100) or (number < -100) then
-      begin
-        writeln('Выход за пределы значения числа');
-        continue;
-      end;
-      bf := FloatToStr(number);
-      if bf in B then
-      begin
-        writeln('Число ', bf, ' уже входит в множество');
-        continue;
-      end;
-      include(B, bf);
-      i := i + 1;
+      write('Введите числитель: ');
+      readln(peace);
+      repeat
+        write('Введите знаменатель: ');
+        readln(peace);
+      until peace < 1;
     except
       writeln('Неверный формат ввода');
     end;
@@ -106,6 +99,7 @@ begin
   begin
     try
       read(symbol);
+      if ord(symbol) = 32 then continue;
       if ((ord(symbol) >= 65) and (ord(symbol) <= 90)) or 
           ((ord(symbol) >= 97) and (ord(symbol) <= 122)) then
         bf := symbol
@@ -153,13 +147,14 @@ begin
   end;
   readln();
   
-  writeln('A = ', A);
-  writeln('B = ', B);
+  writeln('A = ', A, ' ');
+  writeln('B = ', B, ' ');
   writeln('C = ', C);
-  writeln('D = ', D);
+  writeln('D = ', D, ' ');
   writeln('E = ', E);
   writeln('X = A * B * C = ', A * B * C);
   writeln('Y = (E + D) - (E * D) = ', (E + D) - (E * D));
   writeln('K = X + Y = ', (A * B * C) + ((E + D) - (E * D)));
   writeln('Мощность множества K = ', ((A * B * C) + ((E + D) - (E * D))).count);
+  readln;
 end.

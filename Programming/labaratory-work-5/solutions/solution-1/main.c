@@ -14,8 +14,9 @@ void sort(int n, int array[], void(*comparator)(int range, int min, int array[],
 	int range = max - min + 1;
 	int* count = (int*)calloc(range, sizeof(int));
 
-	for (int i = 0; i < n; i++) count[array[i] - min]++;
-
+	for (int i = 0; i < n; i++) {
+		count[array[i] - min]++;
+	}
 	comparator(range, min, array, count);
 }
 

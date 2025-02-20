@@ -20,13 +20,16 @@ void sort(int n, int array[])
 
 		for (int i = 0; i < n; i++) {
 			array[i] = temp[i];
-			printf("%d ", array[i]);
 		}
-		printf("\n");
 	}
 }
 
 void comparatorUp()
+{
+
+}
+
+void comoaratorDown()
 {
 
 }
