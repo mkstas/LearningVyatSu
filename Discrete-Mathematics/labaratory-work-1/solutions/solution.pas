@@ -6,7 +6,7 @@ var
   p, i: byte;
   error: boolean;
   number: real;
-  peace: integer;
+  numerator, denominator: integer;
   symbol: char;
 
 begin
@@ -46,17 +46,23 @@ begin
   end;
   readln();
   
-  write('Введите множество (B) рациональых чисел: ');
+  writeln('Введите множество (B) рациональых чисел: ');
   i := 0;
   while i < p do
   begin
     try
       write('Введите числитель: ');
-      readln(peace);
+      readln(numerator);
       repeat
         write('Введите знаменатель: ');
-        readln(peace);
-      until peace < 1;
+        readln(denominator);
+        if denominator < 1 then
+          writeln('Знаменатель не может быть меньше 0');
+      until denominator > 0;
+      number := int(numerator) / int(denominator);
+      bf := FloatToStr(number);
+      include(B, bf);
+      i := i + 1;
     except
       writeln('Неверный формат ввода');
     end;
