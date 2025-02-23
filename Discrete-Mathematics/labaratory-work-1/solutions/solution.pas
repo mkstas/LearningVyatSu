@@ -55,9 +55,9 @@ begin
       readln(numerator);
       repeat
         write('Введите знаменатель: ');
-        readln(denominator);
+        read(denominator);
         if denominator < 1 then
-          writeln('Знаменатель не может быть меньше 0');
+          writeln('Знаменатель не может быть меньше 1');
       until denominator > 0;
       number := int(numerator) / int(denominator);
       bf := FloatToStr(number);
