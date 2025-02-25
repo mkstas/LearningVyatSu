@@ -105,7 +105,7 @@ begin
   begin
     try
       read(symbol);
-      if ord(symbol) = 32 then continue;
+      if (ord(symbol) = 32) or (ord(symbol) = 10) or (ord(symbol) = 13) then continue;
       if ((ord(symbol) >= 65) and (ord(symbol) <= 90)) or 
           ((ord(symbol) >= 97) and (ord(symbol) <= 122)) then
         bf := symbol
@@ -133,6 +133,7 @@ begin
   begin
     try
       read(symbol);
+      if (ord(symbol) = 32) or (ord(symbol) = 10) or (ord(symbol) = 13) then continue;
       if (ord(symbol) >= 1040) and (ord(symbol) <= 1103) then
         bf := symbol
       else
