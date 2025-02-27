@@ -22,24 +22,22 @@ void sort(int n, int array[], void(*comparator)(int range, int min, int array[],
 
 void comparatorUp(int range, int min, int array[], int count[])
 {
-	int index = 0;
+	int j = 0;
 	for (int i = 0; i < range; i++) {
 		while (count[i] > 0) {
 			count[i]--;
-			array[index] = i + min;
-			index++;
+			array[j++] = i + min;
 		}
 	}
 }
 
 void comparatorDown(int range, int min, int array[], int count[])
 {
-	int index = 0;
+	int j = 0;
 	for (int i = range - 1; i >= 0; i--) {
 		while (count[i] > 0) {
 			count[i]--;
-			array[index] = i + min;
-			index++;
+			array[j++] = i + min;
 		}
 	}
 }
