@@ -17,12 +17,14 @@ void sort(int n, int array[], void(*comparator)(int range, int min, int array[],
 	for (int i = 0; i < n; i++) {
 		count[array[i] - min]++;
 	}
+
 	comparator(range, min, array, count);
 }
 
 void comparatorUp(int range, int min, int array[], int count[])
 {
 	int j = 0;
+
 	for (int i = 0; i < range; i++) {
 		while (count[i] > 0) {
 			count[i]--;
@@ -34,6 +36,7 @@ void comparatorUp(int range, int min, int array[], int count[])
 void comparatorDown(int range, int min, int array[], int count[])
 {
 	int j = 0;
+
 	for (int i = range - 1; i >= 0; i--) {
 		while (count[i] > 0) {
 			count[i]--;
@@ -48,22 +51,29 @@ int main()
 	FILE* output = fopen("../output.txt", "w");
 
 	int n = 0;
+
 	fscanf_s(input, "%d", &n);
+
 	int* array = (int*)calloc(n, sizeof(int));
 
 	for (int i = 0; i < n; i++) {
 		fscanf_s(input, "%d", &array[i]);
 	}
+
 	fclose(input);
 
 	void(*comparator)(int range, int min, int array[], int count[]);
+
 	comparator = comparatorUp;
+
 	sort(n, array, comparator);
 
 	for (int i = 0; i < n; i++) {
 		fprintf(output, "%d ", array[i]);
 	}
+
 	fclose(output);
+	free(array);
 
 	return 0;
 }

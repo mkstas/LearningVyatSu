@@ -34,54 +34,57 @@ void radixSort(int n, int array[])
 	}
 }
 
-void sort(int n, int array[], void(*comparator)(int array[], int negative[], int negCount, int positive[], int posCount))
+void sort(int n, int array[], void(*comparator)(int array[], int negCount, int negatives[], int posCount, int positives[]))
 {
-	int* negative = (int*)calloc(n, sizeof(int));
-	int* positive = (int*)calloc(n, sizeof(int));
+	int* negatives = (int*)calloc(n, sizeof(int));
+	int* positives = (int*)calloc(n, sizeof(int));
 	int negCount = 0, posCount = 0;
 
 	for (int i = 0; i < n; i++) {
 		if (array[i] < 0) {
-			negative[negCount++] = -array[i];
+			negatives[negCount++] = -array[i];
 		}
 		else {
-			positive[posCount++] = array[i];
+			positives[posCount++] = array[i];
 		}
 	}
 
-	radixSort(negCount, negative);
-	radixSort(posCount, positive);
+	radixSort(negCount, negatives);
+	radixSort(posCount, positives);
 
 	for (int i = 0; i < negCount; i++) {
-		negative[i] = -negative[i];
+		negatives[i] = -negatives[i];
 	}
 
-	comparator(array, negative, negCount, positive, posCount);
+	comparator(array, negatives, negCount, positives, posCount);
+
+	free(negatives);
+	free(positives);
 }
 
-void comparatorUp(int array[], int negative[], int negCount, int positive[], int posCount)
+void comparatorUp(int array[], int negCount, int negatives[], int posCount, int positives[])
 {
 	int j = 0;
 
 	for (int i = negCount - 1; i >= 0; i--) {
-		array[j++] = negative[i];
+		array[j++] = negatives[i];
 	}
 
 	for (int i = 0; i < posCount; i++) {
-		array[j++] = positive[i];
+		array[j++] = positives[i];
 	}
 }
 
-void comparatorDown(int array[], int negative[], int negCount, int positive[], int posCount)
+void comparatorDown(int array[], int negCount, int negatives[], int posCount, int positives[])
 {
 	int j = 0;
 
 	for (int i = posCount - 1; i >= 0; i--) {
-		array[j++] = positive[i];
+		array[j++] = positives[i];
 	}
 
 	for (int i = 0; i < negCount; i++) {
-		array[j++] = negative[i];
+		array[j++] = negatives[i];
 	}
 }
 
@@ -91,22 +94,29 @@ int main()
 	FILE* output = fopen("../output.txt", "w");
 
 	int n = 0;
+
 	fscanf_s(input, "%d", &n);
+
 	int* array = (int*)calloc(n, sizeof(int));
 
 	for (int i = 0; i < n; i++) {
 		fscanf_s(input, "%d", &array[i]);
 	}
+
 	fclose(input);
 
-	void(*comparator)(int array[], int negative[], int negCount, int positive[], int posCount);
+	void(*comparator)(int array[], int negCount, int negatives[], int posCount, int positives[]);
+
 	comparator = comparatorUp;
+
 	sort(n, array, comparator);
 
 	for (int i = 0; i < n; i++) {
 		fprintf(output, "%d ", array[i]);
 	}
+
 	fclose(output);
+	free(array);
 
 	return 0;
 }

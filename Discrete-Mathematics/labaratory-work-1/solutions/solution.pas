@@ -10,9 +10,9 @@ var
   symbol: char;
 
 begin
-  error := true;  
+  error := true;
   repeat
-    write('Введите мощность множества (не более 10): ');
+    write('Введите мощность множеств (не более 10): ');
     try
       readln(p);
       error := false;
@@ -61,6 +61,11 @@ begin
       until denominator > 0;
       number := int(numerator) / int(denominator);
       bf := FloatToStr(number);
+      if bf in B then
+      begin
+        writeln('Число ', bf, ' уже входит в множество');
+        continue;
+      end;
       include(B, bf);
       i := i + 1;
     except
