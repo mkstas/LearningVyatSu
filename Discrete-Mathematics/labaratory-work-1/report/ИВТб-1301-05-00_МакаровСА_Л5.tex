@@ -70,7 +70,7 @@
 	Данные для выполнения задания:\\
 	$\cup$ -- объединение множеств\\
 	$\cap$ -- пересечение множеств\\
-	- -- разность множеств\\
+	/ -- разность множеств\\
 	$\triangle$ -- симметричная разность множеств\\
 	N -- множество натуральных чисел\\
 	Z -- множество целых чисел\\
@@ -88,6 +88,218 @@
 	\end{NiceTabularX}
 	
 	\section*{Решение}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\linewidth]{images/s-1}
+	\end{figure}
+	\begin{center}
+		Рисунок 1 – Схема алгоритма программы
+	\end{center}
+	
+	\pagebreak
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\linewidth]{images/s-2}
+	\end{figure}
+	\begin{center}
+		Рисунок 2 – Продолжение схемы алгоритма программы
+	\end{center}
+	
+	\pagebreak
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.58\linewidth]{images/s-3}
+	\end{figure}
+	\begin{center}
+		Рисунок 3 – Продолжение схемы алгоритма программы
+	\end{center}
+	
+	\pagebreak
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.55\linewidth]{images/s-4}
+	\end{figure}
+	\begin{center}
+		Рисунок 4 – Продолжение схемы алгоритма программы
+	\end{center}
+	
+	\pagebreak
+	Исходный код программы на языке Pascal:
+	\begin{Verbatim}[tabsize=2]
+program solution;
+var
+	A, B, C, D, E: set of string;
+	bf: string;
+	p, i: byte;
+	error: boolean;
+	number: real;
+	numerator, denominator: integer;
+	symbol: char;
+begin
+	error := true;
+	repeat
+		write('Введите мощность множеств (не более 10): ');
+		try
+			readln(p);
+			error := false;
+		except
+			writeln('Неверный формат ввода');
+		end;
+	until (p >= 1) and (p <= 10) and not error;
+	write('Введите множество (A) действительных чисел (-100 - 100): ');
+	i := 0;
+	while i < p do
+	begin
+		try
+			read(number);
+			if (number > 100) or (number < -100) then
+			begin
+				writeln('Выход за пределы значения числа');
+				continue;
+			end;
+			bf := FloatToStr(number);
+			if bf in A then
+			begin
+				writeln('Число ', bf, ' уже входит в множество');
+				continue;
+			end;
+			include(A, bf);
+			i := i + 1;
+		except
+			writeln('Неверный формат ввода');
+		end;
+	end;
+	readln();
+	writeln('Введите множество (B) рациональых чисел: ');
+	i := 0;
+	while i < p do
+	begin
+		try
+			write('Введите числитель: ');
+			readln(numerator);
+			repeat
+				write('Введите знаменатель: ');
+				read(denominator);
+				if denominator < 1 then
+					writeln('Знаменатель не может быть меньше 1');
+			until denominator > 0;
+			number := int(numerator) / int(denominator);
+			bf := FloatToStr(number);
+			if bf in B then
+			begin
+				writeln('Число ', bf, ' уже входит в множество');
+				continue;
+			end;
+			include(B, bf);
+			i := i + 1;
+		except
+			writeln('Неверный формат ввода');
+		end;
+	end;
+	readln();
+	write('Введите множество (С) натуральных чисел (1 - 100): ');
+	i := 0;
+	while i < p do
+	begin
+		try
+			read(number);
+			if (frac(number) <> 0) or (number < 1) then
+			begin
+				writeln('Число ', number, ' не является натуральным');
+				continue;
+			end;
+			if number > 100 then
+			begin
+				writeln('Превышен предел значения числа');
+				continue;
+			end;
+			bf := FloatToStr(number);
+			if bf in C then
+			begin
+				writeln('Число ', bf, ' уже входит в множество');
+				continue;
+			end;
+			include(C, bf);
+			i := i + 1;
+		except
+			writeln('Неверный формат ввода');
+		end;
+	end;
+	readln();
+	write('Введите множество (D) латинских букв: ');
+	i := 0;
+	while i < p do
+	begin
+		try
+			read(symbol);
+			if (ord(symbol) = 32) or (ord(symbol) = 10) or (ord(symbol) = 13) then continue;
+			if ((ord(symbol) >= 65) and (ord(symbol) <= 90)) or 
+			((ord(symbol) >= 97) and (ord(symbol) <= 122)) then
+				bf := symbol
+			else
+			begin
+				writeln('Буква ', symbol, ' не является латинской');
+				continue;
+			end;
+			if bf in D then
+			begin
+				writeln('Буква ', bf, ' уже входит в множество');
+				continue;
+			end;
+			include(D, bf);
+			i := i + 1;
+		except
+			writeln('Неверный формат ввода');
+		end;
+	end;
+	readln();
+	write('Введите множество (E) русских букв: ');
+	i := 0;
+	while i < p do
+	begin
+		try
+			read(symbol);
+			if (ord(symbol) = 32) or (ord(symbol) = 10) or (ord(symbol) = 13) then continue;
+			if (ord(symbol) >= 1040) and (ord(symbol) <= 1103) then
+				bf := symbol
+			else
+			begin
+				writeln('Буква ', symbol, ' не является латинской');
+				continue;
+			end;
+			if bf in E then
+			begin
+				writeln('Буква ', bf, ' уже входит в множество');
+				continue;
+			end;
+			include(E, bf);
+			i := i + 1;
+		except
+			writeln('Неверный формат ввода');
+		end;
+	end;
+	readln();
+	writeln('A = ', A, ' ');
+	writeln('B = ', B, ' ');
+	writeln('C = ', C);
+	writeln('D = ', D, ' ');
+	writeln('E = ', E);
+	writeln('X = A * B * C = ', A * B * C);
+	writeln('Y = (E + D) - (E * D) = ', (E + D) - (E * D));
+	writeln('K = X + Y = ', (A * B * C) + ((E + D) - (E * D)));
+	writeln('Мощность множества K = ', ((A * B * C) + ((E + D) - (E * D))).count);
+	readln;
+end.
+	\end{Verbatim}
+	
+	Экранные формы:
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.8\linewidth]{images/screen}
+	\end{figure}
+	\begin{center}
+		Рисунок 5 – Консольный интерфейс программы
+	\end{center}
 	
 	\section*{Вывод}
 	В ходе выполнения лабораторной работы были изучены способы работы с множествами путём выполннения предложенных задач. Также был реализован консольный интерфейс для ввода мощности множеств и ввода самих множеств в соответствии с вариантом задания.

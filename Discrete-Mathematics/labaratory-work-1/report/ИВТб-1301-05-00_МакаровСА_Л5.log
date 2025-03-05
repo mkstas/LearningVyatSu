@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.7)  2 MAR 2025 00:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.7)  5 MAR 2025 20:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -833,28 +833,82 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--82
 
 
 [2]
+<images/s-1.png, id=14, 941.5175pt x 1487.5575pt>
+File: images/s-1.png Graphic file (type png)
+<use images/s-1.png>
+Package pdftex.def Info: images/s-1.png  used on input line 93.
+(pdftex.def)             Requested size: 338.58632pt x 534.95284pt.
 
-[3] (ИВТб-1301-05-00_МакаровСА_Л5.aux)
+
+[3 <./images/s-1.png>]
+<images/s-2.png, id=20, 963.6pt x 1328.965pt>
+File: images/s-2.png Graphic file (type png)
+<use images/s-2.png>
+Package pdftex.def Info: images/s-2.png  used on input line 102.
+(pdftex.def)             Requested size: 338.58632pt x 466.9495pt.
+
+
+[4 <./images/s-2.png>]
+<images/s-3.png, id=25, 905.3825pt x 1828.8325pt>
+File: images/s-3.png Graphic file (type png)
+<use images/s-3.png>
+Package pdftex.def Info: images/s-3.png  used on input line 111.
+(pdftex.def)             Requested size: 280.54506pt x 566.68108pt.
+
+
+[5 <./images/s-3.png>]
+<images/s-4.png, id=30, 827.09pt x 1768.6075pt>
+File: images/s-4.png Graphic file (type png)
+<use images/s-4.png>
+Package pdftex.def Info: images/s-4.png  used on input line 120.
+(pdftex.def)             Requested size: 266.03474pt x 568.88054pt.
+
+
+[6 <./images/s-4.png>]
+LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
+128.
+ (D:\Program Files\MikTex\tex/latex/cyrillic\t2acmtt.fd
+File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)
+
+[7]
+
+[8]
+
+[9]
+
+[10]
+<images/screen.png, id=49, 426.09187pt x 274.77657pt>
+File: images/screen.png Graphic file (type png)
+<use images/screen.png>
+Package pdftex.def Info: images/screen.png  used on input line 298.
+(pdftex.def)             Requested size: 386.95897pt x 249.5565pt.
+
+
+[11]
+
+[12 <./images/screen.png>] (ИВТб-1301-05-00_МакаровСА_Л5.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 15721 strings out of 473530
- 330278 string characters out of 5724862
- 723976 words of memory out of 5000000
- 38729 multiletter control sequences out of 15000+600000
- 562593 words of font info for 44 fonts, out of 8000000 for 9000
+ 15801 strings out of 473530
+ 332171 string characters out of 5724862
+ 722981 words of memory out of 5000000
+ 38805 multiletter control sequences out of 15000+600000
+ 562903 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  81i,11n,93p,529b,617s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <D:/Program Files/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Progra
 m Files/MikTex/fonts/type1/public/cm-super/sfbx1440.pfb><D:/Program Files/MikTe
-x/fonts/type1/public/cm-super/sfrm1440.pfb>
-Output written on ИВТб-1301-05-00_МакаровСА_Л5.pdf (3 pages, 5728
-4 bytes).
+x/fonts/type1/public/cm-super/sfrm1440.pfb><D:/Program Files/MikTex/fonts/type1
+/public/cm-super/sftt1440.pfb>
+Output written on ИВТб-1301-05-00_МакаровСА_Л5.pdf (12 pages, 346
+094 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
+ 76 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
