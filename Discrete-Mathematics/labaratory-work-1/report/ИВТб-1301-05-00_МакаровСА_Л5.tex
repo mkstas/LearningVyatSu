@@ -50,7 +50,7 @@
 	
 	\vfill
 	\begin{center}
-		Киров 2024
+		Киров 2025
 	\end{center}
 	
 	\newpage
@@ -85,12 +85,15 @@
 		вар./множ. & \centering A & \centering B & \centering C & \centering D & \centering E & X & Y & K \\
 		
 		5 & \centering R & \centering Q & \centering N & \centering лат. & \centering рус. & A$\cap$B$\cap$C & E$\triangle$D & X$\cap$Y
-	\end{NiceTabularX}
+	\end{NiceTabularX}\\
+	
+	В таблице 1 представлены множества в соответствии с вариантом.
 	
 	\section*{Решение}
+	Для решением задач разработана схема алгоритма, представленная на рисунках 1, 2, 3, 4.
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.7\linewidth]{images/s-1}
+		\includegraphics[width=0.6\linewidth]{images/s-1}
 	\end{figure}
 	\begin{center}
 		Рисунок 1 – Схема алгоритма программы
@@ -124,7 +127,7 @@
 	\end{center}
 	
 	\pagebreak
-	Исходный код программы на языке Pascal:
+	При разработке реализована программа, исходный код которой представлен ниже.
 	\begin{Verbatim}[tabsize=2]
 program solution;
 var
@@ -251,8 +254,7 @@ begin
 		except
 			writeln('Неверный формат ввода');
 		end;
-	end;
-	readln();
+	end; readln();
 	write('Введите множество (E) русских букв: ');
 	i := 0;
 	while i < p do
@@ -292,7 +294,7 @@ begin
 end.
 	\end{Verbatim}
 	
-	Экранные формы:
+	Экранная форма программы в виде консольного приложения представлена на рисунке 5.
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.8\linewidth]{images/screen}
@@ -302,6 +304,6 @@ end.
 	\end{center}
 	
 	\section*{Вывод}
-	В ходе выполнения лабораторной работы были изучены способы работы с множествами путём выполннения предложенных задач. Также был реализован консольный интерфейс для ввода мощности множеств и ввода самих множеств в соответствии с вариантом задания.
+	В процессе выполнения лабораторной работы, при решении предложенных задач, изучены операции над множествами и реализованы такие операции как пересечение, симметричная разность, мощность множества. Для решения реализована программа на языке Паскаль, представляющая из себя консольный интерфейс, которая выводит результат решения задач.
 
 \end{document}
