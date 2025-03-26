@@ -1,0 +1,213 @@
+\documentclass[a4paper,14pt]{extarticle}
+
+\usepackage[a4paper,top=20mm,bottom=20mm,left=30mm,right=10mm]{geometry}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{indentfirst}
+\usepackage{titlesec}
+\usepackage{verbatim}
+\usepackage{fancyvrb}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\titleformat{\section}{\normalsize\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+
+\setlength{\parindent}{12.5mm}
+
+\begin{document}
+
+  \newpage\thispagestyle{empty}
+  \begin{center}
+    \MakeUppercase{
+      Министерство науки и высшего образования Российской Федерации\\
+      Федеральное государственное бюджетное образовательное учреждение высшего образования\\
+      <<Вятский Государственный Университет>>\\
+    }
+    Институт математики и информационных систем\\
+    Факультет автоматики и вычислительной техники\\
+    Кафедра электронных вычислительных машин
+  \end{center}
+  \vfill
+  
+  \begin{center}
+    Отчет по лабораторной работе №1\\
+    по дисциплине\\
+    <<Информатика>>\\
+    <<Светодидные индикаторы>>\\
+    Вариант 15
+  \end{center}
+  \vfill
+  
+  \noindent
+  \begin{tabular}{ll}
+    Выполнил студент гр. ИВТб-1301-05-00 \hspace{5mm} &
+    \rule[-1mm]{25mm}{0.10mm}\,/Макаров С.А./\\
+    
+    Руководитель преподаватель & \rule[-1mm]{25mm}{0.10mm}\,/Шмакова Н.А./\\
+  \end{tabular}
+  
+  \vfill
+  \begin{center}
+    Киров 2025
+  \end{center}
+
+  \newpage
+  \section*{\hspace{12.5mm}Цель работы}
+  Цель работы: ознакомление с элементами Arduino IDE, изучение основ
+  работы со средой для программирования, а также сборка схем со
+  светодиодными индикаторами.
+
+  \section*{\hspace{12.5mm}Задание}
+
+  \begin{enumerate}
+    \item Бегущий огонек. Cделать движение светодиодов по варианту. Начальное состояние -- выключено. Движение происходит с центра к крайним, чётные/нечётные.
+    \item Пульсар. Начальное состояние -- выключено. Необходимо использовать полевой транзистор MOSFET p-канальный. Изменение состояний -- уменьшение до середны, сброс,уменьшение до минимального.
+    \item Ночной светильник. Начальное состояние -- включено. В качестве входного сигнала использовать термиистор. Использовать резистор с сопротивлением 100 кОм. Яркость уменьшается в зависимости от значения на датчике.
+    \item Кнопочный переключатель. Включение происходит по двум кнопкам (левая, правая). Выключение происходит по нажатию на правую кнопку.
+    \item RGB светодиод. Без фиксации нажатия кнопки. Срабатывание кнопки по отпусканию. Без смешивания цветов. Необходимо использовать светодиод с обшим анодом.
+  \end{enumerate}
+
+  \newpage
+  \section*{\hspace{12.5mm}Решение}
+  \subsection*{\hspace{12.5mm}Задание 1}
+  Выполнена живая сборка. Исходный код программы:
+
+  \noindent
+  \begin{Verbatim}[tabsize=2,fontsize=\small]
+#define FIRST_LED_PIN 2
+#define LAST_LED_PIN 11
+int pairs[6][2] = { {4, 4}, {2, 6}, {0, 8}, {1, 9}, {2, 7}, {3, 5} };
+void setup() {
+  for (int pin = FIRST_LED_PIN; pin <= LAST_LED_PIN; ++pin)
+    pinMode(pin, OUTPUT);
+}
+void loop() {
+  unsigned int ms = millis();
+  int index = (ms / 1000) % 6;
+  digitalWrite(FIRST_LED_PIN + pairs[index][0], HIGH);
+  digitalWrite(FIRST_LED_PIN + pairs[index][1], HIGH);
+  delay(1000);
+  digitalWrite(FIRST_LED_PIN + pairs[index][0], LOW);
+  digitalWrite(FIRST_LED_PIN + pairs[index][1], LOW);
+}
+  \end{Verbatim}
+
+  \subsection*{\hspace{12.5mm}Задание 2}
+  Выполнена живая сборка. Исходный код программы:
+
+  \noindent
+  \begin{Verbatim}[tabsize=2,fontsize=\small]
+#define CONTROL_PIN 9
+int brightness = 255;
+int state = 0;
+void setup() {
+  pinMode(CONTROL_PIN, OUTPUT);
+}
+void loop() {
+  if (state == 0) {
+    brightness--;
+    if (brightness == 128) state = 1;
+  } 
+  if (state == 1) {
+    brightness = 255;
+    state = 2;
+  }
+  if (state == 2) {
+    brightness--;
+    if (brightness == 0) state = 3;
+  }
+  if (state == 3) {
+    brightness = 255;
+    state = 0;
+  }
+  analogWrite(CONTROL_PIN, brightness);
+  delay(10);
+}
+  \end{Verbatim}
+
+  \subsection*{\hspace{12.5mm}Задание 3}
+  Выполнена живая сборка. Исходный код программы:
+
+  \noindent
+  \begin{Verbatim}[tabsize=2,fontsize=\small]
+#define LED_PIN 9
+#define THERMISTOR_PIN A0
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+}
+void loop() {
+  int temperature = constrain(analogRead(THERMISTOR_PIN), 939, 960);
+  int brightness = map(temperature, 939, 960, 0, 255);
+  delay(10);
+}
+  \end{Verbatim}
+
+  \subsection*{\hspace{12.5mm}Задание 4}
+  Выполнена живая сборка. Исходный код программы:
+
+  \noindent
+  \begin{Verbatim}[tabsize=2,fontsize=\small]
+#define LEFT_BUTTON_PIN 2
+#define RIGHT_BUTTON_PIN 3
+#define LED_PIN 13
+boolean leftButtonUp = false;
+boolean ledEnabled = false;
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+  pinMode(LEFT_BUTTON_PIN, INPUT_PULLUP);
+  pinMode(RIGHT_BUTTON_PIN, INPUT_PULLUP);
+}
+void loop() {
+  if (digitalRead(LEFT_BUTTON_PIN) == LOW && !ledEnabled) {
+    leftButtonUp = true;
+    delay(200);
+  }
+  if (digitalRead(RIGHT_BUTTON_PIN) == LOW && leftButtonUp && !ledEnabled) {
+    digitalWrite(LED_PIN, HIGH);
+    ledEnabled = true;
+    delay(200);
+  }
+  if (digitalRead(RIGHT_BUTTON_PIN) == LOW && ledEnabled) {
+    digitalWrite(LED_PIN, LOW);
+    leftButtonUp = false;
+    ledEnabled = false;
+    delay(200);
+  }
+}
+  \end{Verbatim}
+
+  \subsection*{\hspace{12.5mm}Задание 5}
+  Выполнена живая сборка. Исходный код программы:
+
+  \noindent
+  \begin{Verbatim}[tabsize=2,fontsize=\small]
+int buttonPins[] = {2, 3, 4};
+int ledPins[] = {9, 10, 11};
+int index = 0;
+void setup() {
+  for (int i = 0; i < 3; i++) {
+    pinMode(buttonPins[i], INPUT_PULLUP);
+    pinMode(ledPins[i], OUTPUT);
+    digitalWrite(ledPins[i], HIGH);
+  }
+}
+void loop() {
+  if (digitalRead(buttonPins[index]) == LOW) {
+    if (digitalRead(buttonPins[index]) == HIGH) {
+      digitalWrite(ledPins[index], LOW);
+      delay(100);
+      digitalWrite(ledPins[index], HIGH);
+    }
+  } else {
+    digitalWrite(ledPins[index], HIGH);
+    index = (index + 1) % 3;
+  }
+}
+  \end{Verbatim}
+
+  \section*{\hspace{12.5mm}Вывод}
+  В ходе выполнения лабораторной работы изучены основы работы в Arduino IDE, а также собраны схемы со светодиодными индикаторами в соответствии с вариантом задания.
+
+\end{document}

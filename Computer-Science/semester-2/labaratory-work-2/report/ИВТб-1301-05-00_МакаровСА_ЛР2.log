@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.18)  26 MAR 2025 11:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.15)  27 MAR 2025 01:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"d:/Studies VyatSU/Computer-Science/semester-2/labaratory-work-1/report/ИВТб-1301-05-00_МакаровСА_ЛР8.tex"
-(d:/Studies VyatSU/Computer-Science/semester-2/labaratory-work-1/report/ИВТб-1301-05-00_МакаровСА_ЛР8.tex
+**"d:/Studies VyatSU/Computer-Science/semester-2/labaratory-work-2/report/ИВТб-1301-05-00_МакаровСА_ЛР2.tex"
+(d:/Studies VyatSU/Computer-Science/semester-2/labaratory-work-2/report/ИВТб-1301-05-00_МакаровСА_ЛР2.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (d:/Program Files/TexLive/texmf-dist/tex/latex/extsizes/extarticle.cls
@@ -301,32 +301,40 @@ Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks22
 \verbatim@line=\toks23
 \verbatim@in@stream=\read3
+) (d:/Program Files/TexLive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
+\FV@CodeLineNo=\count275
+\FV@InFile=\read4
+\FV@TabBox=\box53
+\c@FancyVerbLine=\count276
+\FV@StepNumber=\count277
+\FV@OutFile=\write3
 ) (d:/Program Files/TexLive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count275
-\l__pdf_internal_box=\box53
-) (./ИВТб-1301-05-00_МакаровСА_ЛР8.aux
+\l__color_backend_stack_int=\count278
+\l__pdf_internal_box=\box54
+) (./ИВТб-1301-05-00_МакаровСА_ЛР2.aux
 Package babel Info: 'russian' activates 'russian' shorthands.
 (babel)             Reported  on input line 5.
 )
-\openout1 = `ИВТб-1301-05-00_МакаровСА_ЛР8.aux'.
+\openout1 = `ИВТб-1301-05-00_МакаровСА_ЛР2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -362,34 +370,50 @@ LaTeX Font Info:    ... okay on input line 18.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \th on input line 18.
+LaTeX Info: Redefining \th on input line 19.
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <7> on input line 43.
+(Font)              <7> on input line 44.
 
 
 [1
 
 {d:/Program Files/TexLive/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{d:/Program Files/TexLive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}]
 
-[2] (./ИВТб-1301-05-00_МакаровСА_ЛР8.aux)
+[2]
+LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 74.
+ (d:/Program Files/TexLive/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
+File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)
+
+[3]
+
+[4]
+
+[5]
+
+[6]
+
+[7]
+
+[8] (./ИВТб-1301-05-00_МакаровСА_ЛР2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3454 strings out of 473190
- 59655 string characters out of 5715256
- 457456 words of memory out of 5000000
- 26720 multiletter control sequences out of 15000+600000
- 562593 words of font info for 44 fonts, out of 8000000 for 9000
+ 3876 strings out of 473190
+ 66829 string characters out of 5715256
+ 468059 words of memory out of 5000000
+ 27133 multiletter control sequences out of 15000+600000
+ 563705 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,347b,204s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<d:/Program Files/TexLive/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/Program Files/TexLive/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb>
-Output written on ИВТб-1301-05-00_МакаровСА_ЛР8.pdf (2 pages, 37763 bytes).
+ 57i,7n,65p,410b,317s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<d:/Program Files/TexLive/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/Program Files/TexLive/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><d:/Program Files/TexLive/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on ИВТб-1301-05-00_МакаровСА_ЛР2.pdf (8 pages, 88114 bytes).
 PDF statistics:
- 22 PDF objects out of 1000 (max. 8388607)
- 13 compressed objects within 1 object stream
+ 47 PDF objects out of 1000 (max. 8388607)
+ 30 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

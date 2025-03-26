@@ -1,0 +1,286 @@
+\documentclass[a4paper,14pt]{extarticle}
+
+\usepackage[a4paper,top=20mm,bottom=20mm,left=30mm,right=10mm]{geometry}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{indentfirst}
+\usepackage{titlesec}
+\usepackage{verbatim}
+\usepackage{fancyvrb}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\titleformat{\section}{\normalsize\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+
+\setlength{\parindent}{12.5mm}
+
+\begin{document}
+
+  \newpage\thispagestyle{empty}
+  \begin{center}
+    \MakeUppercase{
+      Министерство науки и высшего образования Российской Федерации\\
+      Федеральное государственное бюджетное образовательное учреждение высшего образования\\
+      <<Вятский Государственный Университет>>\\
+    }
+    Институт математики и информационных систем\\
+    Факультет автоматики и вычислительной техники\\
+    Кафедра электронных вычислительных машин
+  \end{center}
+  \vfill
+  
+  \begin{center}
+    Отчет по лабораторной работе №2\\
+    по дисциплине\\
+    <<Информатика>>\\
+    <<Пьезоэлемент, микросхемы>>\\
+    Вариант 3
+  \end{center}
+  \vfill
+  
+  \noindent
+  \begin{tabular}{ll}
+    Выполнил студент гр. ИВТб-1301-05-00 \hspace{5mm} &
+    \rule[-1mm]{25mm}{0.10mm}\,/Макаров С.А./\\
+    
+    Руководитель преподаватель & \rule[-1mm]{25mm}{0.10mm}\,/Шмакова Н.А./\\
+  \end{tabular}
+  
+  \vfill
+  \begin{center}
+    Киров 2025
+  \end{center}
+
+  \newpage
+  \section*{\hspace{12.5mm}Цель работы}
+  Цель работы: ознакомление с элементами Arduino IDE, изучение
+  основ работы со средой для программирования, а также сборка схем с
+  пьезодинамиком, микросхемами.
+
+  \section*{\hspace{12.5mm}Задание}
+
+  \begin{enumerate}
+    \item 
+  \end{enumerate}
+
+  \newpage
+  \section*{\hspace{12.5mm}Решение}
+  \subsection*{\hspace{12.5mm}Задание 1}
+  Выполнена живая сборка. Исходный код программы:
+
+  \noindent
+  \begin{Verbatim}[tabsize=2,fontsize=\small]
+#define BUZZER_PIN 2
+#define BUTTON_PIN 3
+#define LED_PIN_1 5
+#define LED_PIN_2 6
+#define LED_PIN_3 7
+int songOne[] = {
+  440, 440, 440, 349, 523,
+  440, 349, 523, 440, 0,
+  659, 659, 659, 698, 535,
+  415, 349, 523, 440, 0,
+  880, 440, 440, 880, 830,
+  784, 740, 698, 740, 0,
+  455, 622, 587, 554, 523,
+  466, 523, 0,
+  349, 415, 349, 440, 523,
+  440, 523, 659, 0,
+  880, 440, 440, 880, 830,
+  784, 740, 698, 740, 0,
+  455, 622, 587, 554, 523,
+  466, 523, 0,
+  349, 415, 349, 523, 440,
+  349, 523, 440, 0
+};
+int tempOne[] = {
+  500, 500, 500, 350, 150,
+  500, 350, 150, 650, 500,
+  500, 500, 500, 350, 150,
+  500, 350, 150, 650, 500,
+  500, 300, 150, 500, 325,
+  175, 125, 125, 250, 325,
+  250, 500, 325, 175, 125,
+  125, 250, 350,
+  250, 500, 350, 125, 500,
+  375, 125, 650, 500,
+  500, 300, 150, 500, 325,
+  175, 125, 125, 250, 325,
+  250, 500, 325, 175, 125,
+  125, 250, 350,
+  250, 500, 375, 125, 500,
+  375, 125, 600, 650
+};
+int songTwo[] = {
+  2637, 2637, 0, 2637,
+  0, 2093, 2637, 0,
+  3136, 0, 0, 0,
+  1568, 0, 0, 0,
+  2093, 0, 0, 1568,
+  0, 0, 1319, 0,
+  0, 1760, 0, 1976,
+  0, 1865, 1760, 0,
+  1568, 2637, 3136,
+  3520, 0, 2794, 3136,
+  0, 2637, 0, 2093,
+  2349, 1976, 0, 0,
+  2093, 0, 0, 1568,
+  0, 0, 1319, 0,
+  0, 1760, 0, 1976,
+  0, 1865, 1760, 0,
+  1568, 2637, 3136,
+  3520, 0, 2794, 3136,
+  0, 2637, 0, 2093,
+  2349, 1976, 0, 0
+};
+int tempTwo[] = {
+  80, 80, 80, 80,
+  80, 80, 80, 80,
+  80, 80, 80, 80,
+  80, 80, 80, 80,
+  80, 80, 80, 80,
+  80, 80, 80, 80,
+  80, 80, 80, 80,
+  80, 80, 80, 80,
+  110, 110, 100,
+  80, 80, 80, 80,
+  80, 80, 80, 80,
+  80, 80, 80, 80,
+  80, 80, 80, 80,
+  80, 80, 80, 80,
+  80, 80, 80, 80,
+  80, 80, 80, 80,
+  110, 110, 100,
+  80, 80, 80, 80,
+  80, 80, 80, 80,
+  80, 80, 80, 80,
+};
+volatile bool isFirstMusic = true;
+volatile bool isChangedMusic = false;
+int counter = 0;
+void setup() {
+  Serial.begin(9600);
+  pinMode(BUZZER_PIN, OUTPUT);
+  pinMode(BUTTON_PIN, INPUT_PULLUP);
+  pinMode(LED_PIN_1, OUTPUT);
+  pinMode(LED_PIN_2, OUTPUT);
+  pinMode(LED_PIN_3, OUTPUT);
+  attachInterrupt(1, changeMusic, FALLING);
+}
+void loop() {
+  if (isChangedMusic) {
+      isChangedMusic = false;
+    isFirstMusic = !isFirstMusic; 
+  }
+  if (isFirstMusic) {
+    musicOne();
+  } else {
+    musicTwo();
+  }
+}
+void changeMusic() {
+  isChangedMusic = true;
+}
+void beep(int note, int duration) {
+  tone(BUZZER_PIN, note, duration);
+  if (counter % 2 == 0) {
+    digitalWrite(LED_PIN_1, HIGH);
+    delay(duration);
+    digitalWrite(LED_PIN_1, LOW);
+  } else if (counter % 3 == 0) {
+    digitalWrite(LED_PIN_2, HIGH);
+    delay(duration);
+    digitalWrite(LED_PIN_2, LOW);
+  } else {
+    digitalWrite(LED_PIN_3, HIGH);
+    delay(duration);
+    digitalWrite(LED_PIN_3, LOW);
+  }
+  noTone(BUZZER_PIN);
+  delay(50);
+  counter++;
+}
+void musicOne() {
+  int size = sizeof(songOne) / sizeof(int);
+  for (int i = 0; i < size; i++) {
+    if (isChangedMusic) {
+      return;
+    }
+    beep(songOne[i], tempOne[i]);
+  }
+}
+void musicTwo() {
+  int size = sizeof(songTwo) / sizeof(int);
+  for (int i = 0; i < size; i++) {
+    if (isChangedMusic) {
+      return;
+    }
+    beep(songTwo[i], tempTwo[i]);
+  }
+}
+  \end{Verbatim}
+
+  \subsection*{\hspace{12.5mm}Задание 2}
+  Выполнена живая сборка. Исходный код программы:
+
+  \noindent
+  \begin{Verbatim}[tabsize=2,fontsize=\small]
+#define BUZZER_PIN 3
+#define LDR_PIN A0
+int notes[] = {261, 277, 293, 311, 329, 349, 369, 392, 415, 440, 466, 493};
+int size = sizeof(notes) / sizeof(int);
+void setup() {
+  pinMode(BUZZER_PIN, OUTPUT);
+}
+void loop() {
+  int val, index;
+  val = constrain(analogRead(LDR_PIN), 49, 150);
+  index = map(val, 49, 150, 0, size);
+  tone(BUZZER_PIN, notes[index]);
+}
+  \end{Verbatim}
+
+  \subsection*{\hspace{12.5mm}Задание 3}
+  Выполнена живая сборка. Исходный код программы:
+
+  \noindent
+  \begin{Verbatim}[tabsize=2,fontsize=\small]
+#define BUZZER_PIN 13
+#define FIRST_KEY_PIN 7
+#define KEY_COUNT 5
+int index = 0;
+void setup() {
+  pinMode(BUZZER_PIN, OUTPUT);
+}
+void loop() {
+  int keyPin = index + FIRST_KEY_PIN;
+  boolean keyUp = digitalRead(keyPin);
+  if (digitalRead(keyPin)) {
+    switch (index) {
+      case 0:
+        tone(BUZZER_PIN, 523, 20);
+        break;
+      case 1:
+        tone(BUZZER_PIN, 587, 20);
+        break;
+      case 2:
+        tone(BUZZER_PIN, 659, 20);
+        break;
+      case 3:
+        tone(BUZZER_PIN, 698, 20);
+        break;
+      case 4:
+        tone(BUZZER_PIN, 784, 20);
+        break;
+    }
+  }
+  index = (index + 1) % 5;
+}
+  \end{Verbatim}
+
+  \section*{\hspace{12.5mm}Вывод}
+  В ходе выполнения лабораторной работы изучены основы работы в Arduino IDE, а также собраны схемы с пьезоэлементом в соответствии с вариантом задания.
+
+\end{document}

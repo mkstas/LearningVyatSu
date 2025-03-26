@@ -1,9 +1,9 @@
-PWD d:/Studies VyatSU/Computer-Science/semester-2/labaratory-work-1/report
+PWD d:/Studies VyatSU/Computer-Science/semester-2/labaratory-work-2/report
 INPUT d:/Program Files/TexLive/texmf.cnf
 INPUT d:/Program Files/TexLive/texmf-dist/web2c/texmf.cnf
 INPUT d:/Program Files/TexLive/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT d:/Studies VyatSU/Computer-Science/semester-2/labaratory-work-1/report/ИВТб-1301-05-00_МакаровСА_ЛР8.tex
-OUTPUT ИВТб-1301-05-00_МакаровСА_ЛР8.log
+INPUT d:/Studies VyatSU/Computer-Science/semester-2/labaratory-work-2/report/ИВТб-1301-05-00_МакаровСА_ЛР2.tex
+OUTPUT ИВТб-1301-05-00_МакаровСА_ЛР2.log
 INPUT d:/Program Files/TexLive/texmf-dist/tex/latex/extsizes/extarticle.cls
 INPUT d:/Program Files/TexLive/texmf-dist/tex/latex/extsizes/extarticle.cls
 INPUT d:/Program Files/TexLive/texmf-dist/tex/latex/extsizes/size14.clo
@@ -51,21 +51,29 @@ INPUT d:/Program Files/TexLive/texmf-dist/tex/latex/titlesec/titlesec.sty
 INPUT d:/Program Files/TexLive/texmf-dist/tex/latex/titlesec/titlesec.sty
 INPUT d:/Program Files/TexLive/texmf-dist/tex/latex/tools/verbatim.sty
 INPUT d:/Program Files/TexLive/texmf-dist/tex/latex/tools/verbatim.sty
+INPUT d:/Program Files/TexLive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+INPUT d:/Program Files/TexLive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 INPUT d:/Program Files/TexLive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT d:/Program Files/TexLive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT ./ИВТб-1301-05-00_МакаровСА_ЛР8.aux
-INPUT ./ИВТб-1301-05-00_МакаровСА_ЛР8.aux
-INPUT ИВТб-1301-05-00_МакаровСА_ЛР8.aux
-OUTPUT ИВТб-1301-05-00_МакаровСА_ЛР8.aux
+INPUT ./ИВТб-1301-05-00_МакаровСА_ЛР2.aux
+INPUT ./ИВТб-1301-05-00_МакаровСА_ЛР2.aux
+INPUT ИВТб-1301-05-00_МакаровСА_ЛР2.aux
+OUTPUT ИВТб-1301-05-00_МакаровСА_ЛР2.aux
 INPUT d:/Program Files/TexLive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT d:/Program Files/TexLive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT d:/Program Files/TexLive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT d:/Program Files/TexLive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-OUTPUT ИВТб-1301-05-00_МакаровСА_ЛР8.pdf
+OUTPUT ИВТб-1301-05-00_МакаровСА_ЛР2.pdf
 INPUT d:/Program Files/TexLive/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT d:/Program Files/TexLive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc
 INPUT c:/Users/makar/.texlive2025/texmf-var/fonts/tfm/lh/lh-t2a/labx1440.tfm
-INPUT ИВТб-1301-05-00_МакаровСА_ЛР8.aux
+INPUT c:/Users/makar/.texlive2025/texmf-var/fonts/tfm/lh/lh-t2a/larm1200.tfm
+INPUT d:/Program Files/TexLive/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
+INPUT d:/Program Files/TexLive/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
+INPUT d:/Program Files/TexLive/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
+INPUT c:/Users/makar/.texlive2025/texmf-var/fonts/tfm/lh/lh-t2a/latt1200.tfm
+INPUT ИВТб-1301-05-00_МакаровСА_ЛР2.aux
 INPUT d:/Program Files/TexLive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm
 INPUT d:/Program Files/TexLive/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb
 INPUT d:/Program Files/TexLive/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb
+INPUT d:/Program Files/TexLive/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb
