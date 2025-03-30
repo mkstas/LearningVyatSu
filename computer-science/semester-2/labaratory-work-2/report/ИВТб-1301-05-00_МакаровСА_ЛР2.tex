@@ -6,8 +6,8 @@
 \usepackage[russian]{babel}
 \usepackage{indentfirst}
 \usepackage{titlesec}
-\usepackage{verbatim}
 \usepackage{fancyvrb}
+\usepackage{minted}
 
 \renewcommand{\baselinestretch}{1.3}
 
@@ -62,7 +62,10 @@
   \section*{\hspace{12.5mm}Задание}
 
   \begin{enumerate}
-    \item 
+    \item Использовать любые две мелодии для пьезодинамика из вложения. Добавить световую индикацию из 3 светодиодов. Добавить кнопку для переключения мелодий.
+    \item Терменвокс. При падении освещенности звук должен увеличиваться, звуковой сигнал непрерывен. Необходимо использовать частоты первой октавы.
+    \item Мерзкое пианино. Необходимо собрать клавитуру из 5 кнопок, на которой можно сыграть несколько нот второй октавы. Кнопкт должны подключаться через стягивающий резистор, входной сигнал обрабатвается конструкцией switch/case.
+    \item Перетягивание каната. Добавить по 2 светодиода каждому игроку (всего 14). Создать игру, в которой необходиму бестрее соперника перетянуть канат на свою сторону. Необходимо использовать 14 светодиодов, кнопки подключаются через подтягивающий резистор, индикаия выиграша на светодиоде. Для перехода к следующему светодиоду необходимо 4 нажатия.
   \end{enumerate}
 
   \newpage
@@ -70,8 +73,10 @@
   \subsection*{\hspace{12.5mm}Задание 1}
   Выполнена живая сборка. Исходный код программы:
 
-  \noindent
-  \begin{Verbatim}[tabsize=2,fontsize=\small]
+  \begingroup
+  \fontsize{14pt}{10pt}\selectfont
+  \linespread{1}
+  \begin{minted}{Arduino}
 #define BUZZER_PIN 2
 #define BUTTON_PIN 3
 #define LED_PIN_1 5
@@ -220,13 +225,16 @@ void musicTwo() {
     beep(songTwo[i], tempTwo[i]);
   }
 }
-  \end{Verbatim}
+  \end{minted}
+  \endgroup
 
   \subsection*{\hspace{12.5mm}Задание 2}
   Выполнена живая сборка. Исходный код программы:
 
-  \noindent
-  \begin{Verbatim}[tabsize=2,fontsize=\small]
+  \begingroup
+  \fontsize{14pt}{10pt}\selectfont
+  \linespread{1}
+  \begin{minted}{Arduino}
 #define BUZZER_PIN 3
 #define LDR_PIN A0
 int notes[] = {261, 277, 293, 311, 329, 349, 369, 392, 415, 440, 466, 493};
@@ -240,13 +248,16 @@ void loop() {
   index = map(val, 49, 150, 0, size);
   tone(BUZZER_PIN, notes[index]);
 }
-  \end{Verbatim}
+  \end{minted}
+  \endgroup
 
   \subsection*{\hspace{12.5mm}Задание 3}
   Выполнена живая сборка. Исходный код программы:
 
-  \noindent
-  \begin{Verbatim}[tabsize=2,fontsize=\small]
+  \begingroup
+  \fontsize{14pt}{10pt}\selectfont
+  \linespread{1}
+  \begin{minted}{Arduino}
 #define BUZZER_PIN 13
 #define FIRST_KEY_PIN 7
 #define KEY_COUNT 5
@@ -278,7 +289,11 @@ void loop() {
   }
   index = (index + 1) % 5;
 }
-  \end{Verbatim}
+  \end{minted}
+  \endgroup
+
+  \subsection*{\hspace{12.5mm}Задание 4}
+  Выполнена живая сборка. Исходный код программы:
 
   \section*{\hspace{12.5mm}Вывод}
   В ходе выполнения лабораторной работы изучены основы работы в Arduino IDE, а также собраны схемы с пьезоэлементом в соответствии с вариантом задания.
