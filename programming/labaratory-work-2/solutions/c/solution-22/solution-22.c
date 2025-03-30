@@ -1,26 +1,26 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main() {
-    int N;
-    scanf("%d", &N);
+int main()
+{
+    int n;
 
-    float nums[N];
+    scanf_s("%d", &n);
 
-    for (int i = 0; i < N; i++) {
-        scanf("%f", &nums[i]);
-    }
+    float* numbers = (int*)malloc(sizeof(float) * n);
+
+    for (int i = 0; i < n; i++)
+        scanf_s("%f", &numbers[i]);
 
     int i = 1;
 
-    while (nums[i - 1] <= nums[i]) {
+    while (numbers[i - 1] <= numbers[i])
         i++;
-    }
 
-    if (i == N) {
+    if (i == n)
         printf("%d", 0);
-    } else {
+    else
         printf("%d", i);
-    }
 
     return 0;
 }

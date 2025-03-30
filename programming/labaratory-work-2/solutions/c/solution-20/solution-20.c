@@ -1,26 +1,26 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main() {
-    int N;
-    scanf("%d", &N);
+int main()
+{
+    int n;
 
-    int nums[N];
-    
-    for (int i = 0; i < N; i++) {
-        scanf("%d", &nums[i]);
-    }
+    scanf_s("%d", &n);
+
+    int* numbers = (int*)malloc(sizeof(int) * n);
+
+    for (int i = 0; i < n; i++)
+        scanf_s("%d", &numbers[i]);
 
     int zeros = 0;
     int sum = 0;
 
     do {
-        N--;
-        if (nums[N] == 0) {
+        n--;
+        if (numbers[n] == 0)
             zeros++;
-        }
-        if (zeros == 1) {
-            sum += nums[N];
-        }
+        if (zeros == 1)
+            sum += numbers[n];
     } while (zeros < 2);
 
     printf("%d", sum);

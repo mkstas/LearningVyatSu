@@ -1,25 +1,27 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main() {
-    int N;
-    scanf("%d", &N);
-    int nums[N];
+int main()
+{
+    int n;
 
-    for (int i = 0; i < N; i++) {
-        scanf("%d", &nums[i]);
-    }
+    scanf_s("%d", &n);
+
+    int* numbers = (int*)malloc(sizeof(int) * n);
+
+    for (int i = 0; i < n; i++)
+        scanf_s("%d", &numbers[i]);
 
     int i = 0;
 
     do {
         i++;
-    } while (nums[i - 1] >= 0 && nums[i - 1] > nums[i]);
+    } while (numbers[i - 1] >= 0 && numbers[i - 1] > numbers[i]);
 
-    if (i > 1 && nums[i - 1] < 0) {
+    if (i > 1 && numbers[i - 1] < 0)
         printf("Yes");
-    } else {
+    else
         printf("No");
-    }
 
     return 0;
 }

@@ -1,16 +1,17 @@
 #include <stdio.h>
 
-int main() {
-    int K, M, n;
-    scanf("%d %d %d", &K, &M, &n);
+int main()
+{
+    int k, m, n;
 
-    int cnt = 0;
+    scanf_s("%d %d %d", &k, &m, &n);
 
-    for (int i = 0; i < n; i++) {
-        cnt += K >> i & 1 ^ M >> i & 1;
-    }
+    int count = 0;
 
-    printf("%d", cnt);
+    for (int i = 0; i < n; i++)
+        count += k >> i & 1 ^ m >> i & 1;
+
+    printf("%d", count);
 
     return 0;
 }

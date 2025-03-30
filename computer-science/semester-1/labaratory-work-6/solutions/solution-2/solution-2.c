@@ -3,37 +3,44 @@
 
 typedef struct Node {
     float p;
-    struct Node *left, *right;
+    struct Node* left, * right;
 } Node;
 
-void print_code(Node* root, int codes[], int top) {
+static void printCode(Node* root, int codes[], int top)
+{
     if (root->left) {
         codes[top] = 0;
-        print_code(root->left, codes, top + 1);
+
+        printCode(root->left, codes, top + 1);
     }
 
     if (root->right) {
         codes[top] = 1;
-        print_code(root->right, codes, top + 1);
+
+        printCode(root->right, codes, top + 1);
     }
 
     if (root->left == NULL && root->right == NULL) {
-        for (int i = 0; i < top; i++) {
+        for (int i = 0; i < top; i++)
             printf("%d", codes[i]);
-        }
+
         printf(" ");
     }
 }
 
-int main() {
+int main()
+{
     int n;
-    scanf("%d", &n);
 
-    struct Node* nodes[n];
+    scanf_s("%d", &n);
+
+    struct Node** nodes = (Node*)malloc(sizeof(Node) * n);
 
     for (int i = 0; i < n; i++) {
         Node* node = (Node*)malloc(sizeof(Node));
-        scanf("%f", &node->p);
+
+        scanf_s("%f", &node->p);
+
         node->left = NULL;
         node->right = NULL;
         nodes[i] = node;
@@ -53,20 +60,21 @@ int main() {
         Node* left = nodes[1];
         Node* right = nodes[0];
         Node* node = (Node*)malloc(sizeof(Node));
+
         node->p = left->p + right->p;
         node->left = left;
         node->right = right;
         nodes[0] = node;
 
-        for (int i = 1; i < n - 1; i++) {
+        for (int i = 1; i < n - 1; i++)
             nodes[i] = nodes[i + 1];
-        }
 
         n--;
     }
 
     int codes[32];
-    print_code(nodes[0], codes, 0);
+
+    printCode(nodes[0], codes, 0);
 
     return 0;
 }

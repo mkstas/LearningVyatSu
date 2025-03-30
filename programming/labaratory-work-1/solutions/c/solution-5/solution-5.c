@@ -1,14 +1,15 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int A, B, x, y, z;
-    scanf("%d %d %d %d %d", &A, &B, &x, &y, &z);
 
-    if (x * z <= A * B || y * z <= A * B || x * y <= A * B) {
+    scanf_s("%d %d %d %d %d", &A, &B, &x, &y, &z);
+
+    if (x * z <= A * B || y * z <= A * B || x * y <= A * B)
         printf("Yes");
-    } else {
+    else
         printf("No");
-    }
 
     return 0;
 }

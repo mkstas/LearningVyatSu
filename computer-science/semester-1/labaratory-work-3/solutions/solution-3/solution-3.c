@@ -1,81 +1,98 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include <locale.h>
 
-int quantity(int K, int M, char *fract_str) {
-    return ceil(strlen(fract_str) * (log(K) / log(M)));
+static double quantity(int k, int m, char* fractStr)
+{
+    return ceil(strlen(fractStr) * (log(k) / log(m)));
 }
 
-void divide_num(char *X, char *integ_str, char *fract_str) {
-    sprintf(integ_str, "%s", strtok(X, "."));
-    sprintf(fract_str, "%s", strtok(NULL, "."));
+static void divideNumber(char* x, char* integStr, char* fractStr)
+{
+    sprintf(integStr, "%s", strtok(x, "."));
+    sprintf(fractStr, "%s", strtok(NULL, "."));
 }
 
-void translate_to_10(int K, int M, char *X, char *integ_str, char *fract_str) {
-    int integ_sum = 0;
-    float fract_sum = 0;
+static void translateTo10(int k, int m, char* x, char* integStr, char* fractStr)
+{
+    double integSum = 0;
+    double fractSum = 0.0;
 
-    for (int i = 0; i < strlen(integ_str); i++) {
-        integ_sum += (integ_str[i] - '0') * pow(K, strlen(integ_str) - i - 1);
-    }
+    for (int i = 0; i < strlen(integStr); i++)
+        integSum += (integStr[i] - '0') * pow(k, strlen(integStr) - i - 1);
 
-    for (int i = 0; i < quantity(K, M, fract_str); i++) {
-        fract_sum += (fract_str[i] - '0') * (1 / pow(K, i + 1));
-    }
+    for (int i = 0; i < quantity(k, m, fractStr); i++)
+        fractSum += (fractStr[i] - '0') * (1 / pow(k, i + 1));
 
-    sprintf(X, "%g", integ_sum + fract_sum);
+    sprintf(x, "%g", integSum + fractSum);
 }
 
-void translate_to_M(int K, int M, char *X, char *integ_str, char *fract_str) {
-    char integ_M[32], fract_M[32] = "", bf[32] = "0.";
-    itoa(atoi(integ_str), integ_M, M);
-    strcat(bf, fract_str);
-    float fract = atof(bf);
+static void translateToM(int k, int m, char* x, char* integStr, char* fractStr)
+{
+    char integM[32], fractM[32] = "", buffer[32] = "0.";
 
-    for (int i = 0; i < quantity(K, M, fract_str); i++) {
-        fract *= M;
+    _itoa(atoi(integStr), integM, m);
+    strcat(buffer, fractStr);
+
+    double fract = atof(buffer);
+
+    for (int i = 0; i < quantity(k, m, fractStr); i++) {
+        fract *= m;
+
         if (fract >= 0) {
-            char bf[2];
-            itoa((int)floor(fract), bf, 10);
-            strcat(fract_M, bf);
+            char buffer[2];
+            _itoa((int)floor(fract), buffer, 10);
+            strcat(fractM, buffer);
             fract -= floor(fract);
         } else {
-            strcat(fract_M, "0");
+            strcat(fractM, "0");
         }
     }
 
-    sprintf(X, "%s", integ_M);
-    strcat(X, ".");
-    strcat(X, fract_M);
+    sprintf(x, "%s", integM);
+    strcat(x, ".");
+    strcat(x, fractM);
 }
 
-int main() {
-    char X[32]; int K, M; 
-    char integ_str[16], fract_str[16];
-    scanf("%s %d %d", X, &K, &M);
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    setlocale(LC_NUMERIC, "C");
 
-    if (K < 2 || K > 10 || M < 2 || M > 10) {
+    int k, m;
+    char x[32];
+    char integStr[16] = { ' ' };
+    char fractStr[16] = { ' ' };
+
+    scanf("%s %d %d", x, &k, &m);
+
+    if (k < 2 || k > 10 || m < 2 || m > 10) {
         printf("Неверный диапазон оснований систем счисления");
+
         return 0;
     }
 
-    char *ptr = strchr(X, K + '0');
+    char* ptr = strchr(x, k + '0');
 
     if (ptr != NULL) {
         printf("Число не соответсвует числу основанию");
+
         return 0;
     }
 
-    if (K < 10) {
-        divide_num(X, integ_str, fract_str);
-        translate_to_10(K, M, X, integ_str, fract_str);
+    if (k < 10) {
+        divideNumber(x, integStr, fractStr);
+        translateTo10(k, m, x, integStr, fractStr);
     }
 
-    divide_num(X, integ_str, fract_str);
-    translate_to_M(K, M, X, integ_str, fract_str);
+    divideNumber(x, integStr, fractStr);
+    translateToM(k, m, x, integStr, fractStr);
 
-    printf("%s", X);
+    printf("%s", x);
 
     return 0;
 }

@@ -1,23 +1,26 @@
 #include <stdio.h>
 
-int main() {
-    int N;
-    scanf("%d", &N);
+int main()
+{
+    int n;
 
-    int cnt = 0;
-    int prev_k = 0;
+    scanf_s("%d", &n);
 
-    for (int i = 0; i < N; i++) {
+    int count = 0;
+    int prevK = 0;
+
+    for (int i = 0; i < n; i++) {
         int k;
-        scanf("%d", &k);
 
-        if (k > 0 && prev_k < 0 || k < 0 && prev_k > 0) {
-            cnt++;
-        }
-        prev_k = k;
+        scanf_s("%d", &k);
+
+        if (k > 0 && prevK < 0 || k < 0 && prevK > 0)
+            count++;
+
+        prevK = k;
     }
 
-    printf("%d", cnt);
+    printf("%d", count);
 
     return 0;
 }

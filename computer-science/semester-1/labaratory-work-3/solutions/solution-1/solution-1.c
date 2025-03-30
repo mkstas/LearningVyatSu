@@ -1,14 +1,18 @@
 #include <stdio.h>
 
-int main() {
-    int N, cnt = 0;
-    scanf("%d", &N);
+int main()
+{
+    int n;
+
+    scanf_s("%d", &n);
+
+    int count = 0;
 
     do {
-        cnt += ~N & 1, N >>= 1;
-    } while (N);
+        count += ~n & 1, n >>= 1;
+    } while (n);
 
-    printf("%d", cnt);
+    printf("%d", count);
 
     return 0;
 }

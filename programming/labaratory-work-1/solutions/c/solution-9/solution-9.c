@@ -1,12 +1,14 @@
 #include <stdio.h>
 
-int main() {
-    int N, M;
-    scanf("%d %d", &N, &M);
+int main()
+{
+    int n, m;
 
-    int cnt = 0;
+    scanf_s("%d %d", &n, &m);
 
-    for (int i = N; i <= M; i++) {
+    int count = 0;
+
+    for (int i = n; i <= m; i++) {
         int a = i % 10;
         int b = i / 10 % 10;
         int c = i / 100 % 10;
@@ -14,12 +16,11 @@ int main() {
         int e = i / 10000 % 10;
         int f = i / 100000 % 10;
 
-        if ((a + b + c) == (d + e + f)) {
-            cnt++;
-        }
+        if ((a + b + c) == (d + e + f))
+            count++;
     }
 
-    printf("%d", cnt);
+    printf("%d", count);
 
     return 0;
 }

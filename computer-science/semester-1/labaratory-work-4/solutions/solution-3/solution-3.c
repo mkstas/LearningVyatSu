@@ -1,23 +1,25 @@
 #include <stdio.h>
 #include <math.h>
 
-int main() {
-    int K, n;
-    scanf("%d %d", &K, &n);
+int main()
+{
+    int k, n;
 
-    if (K > pow(2, n - 1) - 1 || K < (pow(2, n - 1) - 1) * -1) {
+    scanf_s("%d %d", &k, &n);
+
+    if (k > pow(2, n - 1) - 1 || k < (pow(2, n - 1) - 1) * -1) {
         printf("Ошибка");
+
         return 0;
     }
 
-    if (K < 0) {
-        K = abs(K);
-        K = ~K;
+    if (k < 0) {
+        k = abs(k);
+        k = ~k;
     }
 
-    for (int i = n - 1; i >= 0; i--) {
-        printf("%d", K >> i & 1);
-    }
+    for (int i = n - 1; i >= 0; i--)
+        printf("%d", k >> i & 1);
 
     return 0;
 }

@@ -1,33 +1,32 @@
 #include <stdio.h>
 
-int main() {
-    int N; 
-    scanf("%d", &N);
+int main()
+{
+    int n;
 
-    int a = N % 10;
-    int b = N / 10 % 10;
-    N /= 100;
+    scanf_s("%d", &n);
 
+    int a = n % 10;
+    int b = n / 10 % 10;
     int max = a;
     int min = a;
 
-    if (b > max && b > N) {
+    n /= 100;
+
+    if (b > max && b > n)
         max = b;
-    } else if (N > max && N > b) {
-        max = N;
-    }
+    else if (n > max && n > b)
+        max = n;
 
-    if (b < min) {
+    if (b < min)
         min = b;
-    } else if (N < min) {
-        min = N;
-    }
+    else if (n < min)
+        min = n;
 
-    if ((max + min) / 2 < a + b + N - max - min) {
+    if ((max + min) / 2 < a + b + n - max - min)
         printf("YES");
-    } else {
+    else
         printf("NO");
-    }
 
     return 0;
 }

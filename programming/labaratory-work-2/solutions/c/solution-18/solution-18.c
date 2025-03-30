@@ -1,35 +1,37 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 
-int main() {
-    int N;
-    scanf("%d", &N);
-    int numbers[N + 2];
+int main()
+{
+    int n;
 
-    for (int i = 1; i <= N; i++) {
-        scanf("%d", &numbers[i]);
-    }
+    scanf_s("%d", &n);
 
-    int cntOdd = 0;
-    float cntEven = 0;
+    int* numbers = (int*)malloc(sizeof(int) * n + sizeof(int) * 2);
+
+    for (int i = 1; i <= n; i++)
+        scanf_s("%d", &numbers[i]);
+
+    int countOdd = 0;
+    float countEven = 0;
     float sumEven = 0;
 
-    for (int i = 1; i <= N; i++) {
-        if (numbers[i] % 3 == 0) {
-            cntOdd++;
-        }
+    for (int i = 1; i <= n; i++) {
+        if (numbers[i] % 3 == 0)
+            countOdd++;
+
         if (numbers[i] % 2 == 0) {
             sumEven += numbers[i];
-            cntEven++;
+            countEven++;
         }
     }
 
-    numbers[0] = cntOdd;
-    numbers[N + 1] =  rint(sumEven / cntEven);
+    numbers[0] = countOdd;
+    numbers[n + 1] = rint(sumEven / countEven);
 
-    for (int i = 0; i <= N + 1; i++) {
-        printf ("%d ", numbers[i]);
-    }
+    for (int i = 0; i <= n + 1; i++)
+        printf("%d ", numbers[i]);
 
     return 0;
 }

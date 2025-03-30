@@ -1,32 +1,31 @@
 #include <stdio.h>
 
-int main() {
-    int N; 
-    scanf("%d", &N);
+int main()
+{
+    int n;
 
-    int prev_k = 0;
-    int cnt = 0;
-    int max_cnt = 0;
+    scanf_s("%d", &n);
 
-    for (int i = 0; i < N; i++) {
+    int prevK = 0;
+    int count = 0;
+    int maxCount = 0;
+
+    for (int i = 0; i < n; i++) {
         int k;
-        scanf("%d", &k);
+        scanf_s("%d", &k);
 
-        if (k <= prev_k) {
-            cnt = 1;
-        } else {
-            cnt++;
-        }
+        if (k <= prevK)
+            count = 1;
+        else
+            count++;
 
-        if (cnt > max_cnt)
-        {
-            max_cnt = cnt;
-        }
+        if (count > maxCount)
+            maxCount = count;
 
-        prev_k = k;
+        prevK = k;
     }
 
-    printf("%d", max_cnt);
+    printf("%d", maxCount);
 
     return 0;
 }

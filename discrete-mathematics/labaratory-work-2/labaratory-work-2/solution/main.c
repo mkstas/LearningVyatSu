@@ -3,7 +3,8 @@
 #include <locale.h>
 #include <time.h>
 
-int main() {
+int main()
+{
     setlocale(LC_ALL, "Russian");
     srand(time(NULL));
 
@@ -22,8 +23,10 @@ int main() {
         for (int j = 0; j < n; j++) {
             matrix[i][j] = rand() % 2;
             degrees[i] += matrix[i][j];
+
             printf("%d ", matrix[i][j]);
         }
+
         printf("\n");
     }
 
@@ -39,11 +42,12 @@ int main() {
 
     printf("Вершина с максимальной полустепенью исхода: %d\n", vertex + 1);
     printf("Множество дуг для вершины %d: {", vertex + 1);
+
     for (int j = 0; j < n; j++) {
-        if (matrix[vertex][j] == 1) {
+        if (matrix[vertex][j] == 1)
             printf(" (%d, %d) ", vertex + 1, j + 1);
-        }
     }
+
     printf("}\n");
 
     return 0;
