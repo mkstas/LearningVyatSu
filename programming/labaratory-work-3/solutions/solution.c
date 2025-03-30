@@ -4,18 +4,15 @@
 
 #define X -1.71619
 
-float curve(float x)
-{
+float curve(float x) {
     return 2 * pow(x, 3) - 2 * pow(x, 2) + 0 * x + 16;
 }
 
-float antiderivative(float x)
-{
+float antiderivative(float x) {
     return 0.5 * pow(x, 4) - 2.0 / 3.0 * pow(x, 3) + 16 * x;
 }
 
-float calc_newton(float a, float b)
-{
+float calc_newton(float a, float b) {
     return antiderivative(b) - antiderivative(a);
 }
 

@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
     float k1, b1, k2, b2, e;
     scanf("%f %f %f %f %f", &k1, &b1, &k2, &b2, &e);
 

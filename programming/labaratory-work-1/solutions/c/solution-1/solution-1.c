@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
     int N; 
     scanf("%d", &N);
 
@@ -19,7 +18,8 @@ int main()
             cnt++;
         }
 
-        if (cnt > max_cnt) {
+        if (cnt > max_cnt)
+        {
             max_cnt = cnt;
         }
 

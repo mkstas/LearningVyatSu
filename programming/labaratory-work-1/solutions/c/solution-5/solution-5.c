@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
     int A, B, x, y, z;
     scanf("%d %d %d %d %d", &A, &B, &x, &y, &z);
 
