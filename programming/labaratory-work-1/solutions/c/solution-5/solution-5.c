@@ -6,10 +6,11 @@ int main()
 
     scanf_s("%d %d %d %d %d", &A, &B, &x, &y, &z);
 
-    if (x * z <= A * B || y * z <= A * B || x * y <= A * B)
+    if (x * z <= A * B || y * z <= A * B || x * y <= A * B) {
         printf("Yes");
-    else
+    } else {
         printf("No");
+    }
 
     return 0;
 }

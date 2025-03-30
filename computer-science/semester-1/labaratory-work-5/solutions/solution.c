@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <math.h>
 
-static void printBin(int n, int b)
+void printBin(int n, int b)
 {
-    for (int i = b - 1; i >= 0; i--)
+    for (int i = b - 1; i >= 0; i--) {
         printf("%d", n >> i & 1);
+    }
 }
 
 int main()
@@ -24,10 +25,11 @@ int main()
     if (k < 23) {
         e = p + (pow(2, n - k - 2) - 1);
 
-        if (p > 0)
+        if (p > 0) {
             m = m / pow(2, k + p);
-        else
+        } else {
             m = m / pow(2, 23 - k);
+        }
     }
 
     printBin(s, 1);

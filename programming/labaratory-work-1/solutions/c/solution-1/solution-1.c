@@ -12,15 +12,18 @@ int main()
 
     for (int i = 0; i < n; i++) {
         int k;
+
         scanf_s("%d", &k);
 
-        if (k <= prevK)
+        if (k <= prevK) {
             count = 1;
-        else
+        } else {
             count++;
+        }
 
-        if (count > maxCount)
+        if (count > maxCount) {
             maxCount = count;
+        }
 
         prevK = k;
     }

@@ -9,18 +9,21 @@ int main()
 
     float* numbers = (int*)malloc(sizeof(float) * n);
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++) {
         scanf_s("%f", &numbers[i]);
+    }
 
     int i = 1;
 
-    while (numbers[i - 1] <= numbers[i])
+    while (numbers[i - 1] <= numbers[i]) {
         i++;
+    }
 
-    if (i == n)
+    if (i == n) {
         printf("%d", 0);
-    else
+    } else {
         printf("%d", i);
+    }
 
     return 0;
 }

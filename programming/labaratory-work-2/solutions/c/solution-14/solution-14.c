@@ -9,8 +9,9 @@ int main()
 
     int* numbers = (int*)malloc(sizeof(int) * n);
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++) {
         scanf_s("%d", &numbers[i]);
+    }
 
     int i = 0;
 
@@ -18,10 +19,11 @@ int main()
         i++;
     } while (numbers[i - 1] >= 0 && numbers[i - 1] > numbers[i]);
 
-    if (i > 1 && numbers[i - 1] < 0)
+    if (i > 1 && numbers[i - 1] < 0) {
         printf("Yes");
-    else
+    } else {
         printf("No");
+    }
 
     return 0;
 }

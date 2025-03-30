@@ -5,32 +5,33 @@
 
 #define X -1.71619
 
-static float curve(float x)
+float curve(float x)
 {
     return 2 * pow(x, 3) - 2 * pow(x, 2) + 0 * x + 16;
 }
 
-static float antiderivative(float x)
+float antiderivative(float x)
 {
     return 0.5 * pow(x, 4) - 2.0 / 3.0 * pow(x, 3) + 16 * x;
 }
 
-static float newton(float a, float b)
+float newton(float a, float b)
 {
     return antiderivative(b) - antiderivative(a);
 }
 
-static float leftRect(float a, float b, float h)
+float leftRect(float a, float b, float h)
 {
     float s = 0.0;
 
-    for (float i = a; i < b; i = i + h)
+    for (float i = a; i < b; i = i + h) {
         s += curve(i + h) * h;
+    }
 
     return s;
 }
 
-static void printMenu()
+void printMenu()
 {
     system("cls");
     printf("1. Ввод нижнего предела\n");
@@ -107,10 +108,11 @@ int main()
             case 4:
                 printMenu();
 
-                if (is_a && is_b && is_h)
+                if (is_a && is_b && is_h) {
                     printf("Площадь: %.2f\n", leftRect(a, b, h));
-                else
+                } else {
                     printf("Не введены пределы или шаг интегрирования\n");
+                }
 
                 printf(">  ");
                 scanf_s("%d", &choice);

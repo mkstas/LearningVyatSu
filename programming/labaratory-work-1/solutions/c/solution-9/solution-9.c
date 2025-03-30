@@ -16,8 +16,9 @@ int main()
         int e = i / 10000 % 10;
         int f = i / 100000 % 10;
 
-        if ((a + b + c) == (d + e + f))
+        if ((a + b + c) == (d + e + f)) {
             count++;
+        }
     }
 
     printf("%d", count);

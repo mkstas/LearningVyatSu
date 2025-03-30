@@ -1,7 +1,8 @@
 ﻿#include <stdio.h>
 #include <stdlib.h>
 
-void radixSort(int n, int array[]) {
+void radixSort(int n, int array[])
+{
     int max = array[0];
 
     for (int i = 1; i < n; i++) {
@@ -33,7 +34,8 @@ void radixSort(int n, int array[]) {
     }
 }
 
-void sort(int n, int array[], void(*comparator)(int array[], int negCount, int negatives[], int posCount, int positives[])) {
+void sort(int n, int array[], void(*comparator)(int array[], int negCount, int negatives[], int posCount, int positives[]))
+{
     int* negatives = (int*)calloc(n, sizeof(int));
     int* positives = (int*)calloc(n, sizeof(int));
     int negCount = 0, posCount = 0;
@@ -59,7 +61,8 @@ void sort(int n, int array[], void(*comparator)(int array[], int negCount, int n
     free(positives);
 }
 
-void comparatorUp(int array[], int negCount, int negatives[], int posCount, int positives[]) {
+void comparatorUp(int array[], int negCount, int negatives[], int posCount, int positives[])
+{
     int j = 0;
 
     for (int i = negCount - 1; i >= 0; i--) {
@@ -71,7 +74,8 @@ void comparatorUp(int array[], int negCount, int negatives[], int posCount, int 
     }
 }
 
-void comparatorDown(int array[], int negCount, int negatives[], int posCount, int positives[]) {
+void comparatorDown(int array[], int negCount, int negatives[], int posCount, int positives[])
+{
     int j = 0;
 
     for (int i = posCount - 1; i >= 0; i--) {
@@ -83,7 +87,8 @@ void comparatorDown(int array[], int negCount, int negatives[], int posCount, in
     }
 }
 
-int main() {
+int main()
+{
     FILE* input = fopen("../input.txt", "r");
     FILE* output = fopen("../output.txt", "w");
 

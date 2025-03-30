@@ -6,7 +6,7 @@ typedef struct Node {
     struct Node* left, * right;
 } Node;
 
-static void printCode(Node* root, int codes[], int top)
+void printCode(Node* root, int codes[], int top)
 {
     if (root->left) {
         codes[top] = 0;
@@ -21,8 +21,9 @@ static void printCode(Node* root, int codes[], int top)
     }
 
     if (root->left == NULL && root->right == NULL) {
-        for (int i = 0; i < top; i++)
+        for (int i = 0; i < top; i++) {
             printf("%d", codes[i]);
+        }
 
         printf(" ");
     }
@@ -66,8 +67,9 @@ int main()
         node->right = right;
         nodes[0] = node;
 
-        for (int i = 1; i < n - 1; i++)
+        for (int i = 1; i < n - 1; i++) {
             nodes[i] = nodes[i + 1];
+        }
 
         n--;
     }

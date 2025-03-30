@@ -8,8 +8,9 @@ int main()
 
     int count = 0;
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++) {
         count += k >> i & 1 ^ m >> i & 1;
+    }
 
     printf("%d", count);
 

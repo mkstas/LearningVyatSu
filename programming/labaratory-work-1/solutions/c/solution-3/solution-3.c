@@ -13,20 +13,23 @@ int main()
 
     n /= 100;
 
-    if (b > max && b > n)
+    if (b > max && b > n) {
         max = b;
-    else if (n > max && n > b)
+    } else if (n > max && n > b) {
         max = n;
+    }
 
-    if (b < min)
+    if (b < min) {
         min = b;
-    else if (n < min)
+    } else if (n < min) {
         min = n;
+    }
 
-    if ((max + min) / 2 < a + b + n - max - min)
+    if ((max + min) / 2 < a + b + n - max - min) {
         printf("YES");
-    else
+    } else {
         printf("NO");
+    }
 
     return 0;
 }

@@ -10,8 +10,9 @@ int main()
     int* n1 = (int*)malloc(sizeof(int) * n);
     int* n2 = (int*)malloc(sizeof(int) * n);
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++) {
         scanf_s("%d", &n1[i]);
+    }
 
     int j = 0;
 
@@ -25,8 +26,9 @@ int main()
     if (j > 0) {
         printf("%d\n", j);
 
-        for (int i = 0; i < j; i++)
+        for (int i = 0; i < j; i++) {
             printf("%d ", n2[i]);
+        }
     } else {
         printf("NO");
     }

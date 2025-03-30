@@ -18,8 +18,9 @@ int main()
         k = ~k;
     }
 
-    for (int i = n - 1; i >= 0; i--)
+    for (int i = n - 1; i >= 0; i--) {
         printf("%d", k >> i & 1);
+    }
 
     return 0;
 }

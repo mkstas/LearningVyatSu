@@ -6,32 +6,34 @@
 #include <math.h>
 #include <locale.h>
 
-static double quantity(int k, int m, char* fractStr)
+double quantity(int k, int m, char* fractStr)
 {
     return ceil(strlen(fractStr) * (log(k) / log(m)));
 }
 
-static void divideNumber(char* x, char* integStr, char* fractStr)
+void divideNumber(char* x, char* integStr, char* fractStr)
 {
     sprintf(integStr, "%s", strtok(x, "."));
     sprintf(fractStr, "%s", strtok(NULL, "."));
 }
 
-static void translateTo10(int k, int m, char* x, char* integStr, char* fractStr)
+void translateTo10(int k, int m, char* x, char* integStr, char* fractStr)
 {
     double integSum = 0;
     double fractSum = 0.0;
 
-    for (int i = 0; i < strlen(integStr); i++)
+    for (int i = 0; i < strlen(integStr); i++) {
         integSum += (integStr[i] - '0') * pow(k, strlen(integStr) - i - 1);
+    }
 
-    for (int i = 0; i < quantity(k, m, fractStr); i++)
+    for (int i = 0; i < quantity(k, m, fractStr); i++) {
         fractSum += (fractStr[i] - '0') * (1 / pow(k, i + 1));
+    }
 
     sprintf(x, "%g", integSum + fractSum);
 }
 
-static void translateToM(int k, int m, char* x, char* integStr, char* fractStr)
+void translateToM(int k, int m, char* x, char* integStr, char* fractStr)
 {
     char integM[32], fractM[32] = "", buffer[32] = "0.";
 

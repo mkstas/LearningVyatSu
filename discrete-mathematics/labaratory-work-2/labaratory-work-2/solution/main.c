@@ -19,6 +19,7 @@ int main()
     int degrees[10] = { 0 };
 
     printf("Матрица смежности:\n");
+
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             matrix[i][j] = rand() % 2;
@@ -44,8 +45,9 @@ int main()
     printf("Множество дуг для вершины %d: {", vertex + 1);
 
     for (int j = 0; j < n; j++) {
-        if (matrix[vertex][j] == 1)
+        if (matrix[vertex][j] == 1) {
             printf(" (%d, %d) ", vertex + 1, j + 1);
+        }
     }
 
     printf("}\n");

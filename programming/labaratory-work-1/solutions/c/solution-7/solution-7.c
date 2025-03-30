@@ -14,8 +14,9 @@ int main()
 
         scanf_s("%d", &k);
 
-        if (k > 0 && prevK < 0 || k < 0 && prevK > 0)
+        if (k > 0 && prevK < 0 || k < 0 && prevK > 0) {
             count++;
+        }
 
         prevK = k;
     }

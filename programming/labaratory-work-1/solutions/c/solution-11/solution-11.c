@@ -12,10 +12,11 @@ int main()
         float x = (b2 - b1) / (k1 - k2);
         float y = k1 * x + b1;
 
-        if (x * x + y * y <= e * e)
+        if (x * x + y * y <= e * e) {
             printf("Yes");
-        else
+        } else {
             printf("No");
+        }
     }
 
     return 0;
