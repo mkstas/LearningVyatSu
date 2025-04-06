@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.28)  28 MAR 2025 23:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.3.28)  7 APR 2025 01:41
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -564,11 +564,11 @@ LaTeX Font Info:    External font `cmex7' loaded for size
 \pydata@fh@_EB5231CC209723621B9B671FFD2C4A49.data.minted=\write4
 \openout4 = `_EB5231CC209723621B9B671FFD2C4A49.data.minted'.
 
-runsystem(latexminted config  --timestamp 20250328235151 EB5231CC209723621B9B67
+runsystem(latexminted config  --timestamp 20250407014116 EB5231CC209723621B9B67
 1FFD2C4A49)...executed.
 
  (_EB5231CC209723621B9B671FFD2C4A49.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20250328235151 EB5231CC209723621
+runsystem(latexminted cleanconfig  --timestamp 20250407014116 EB5231CC209723621
 B9B671FFD2C4A49)...executed.
 
 
@@ -589,12 +589,14 @@ LaTeX Font Info:    Font shape `T2A/cmtt/bx/n' in size <14> not available
 [4]) (_minted/62EBA92F04F7A4E9BE95A83E34D76FC6.highlight.minted)
 (_minted/55CA6A461450997CD981310509D22B5D.highlight.minted
 
-[5])
+[5]) (_minted/99C1372A995536907B6D6DD9A6714CC5.highlight.minted
 
-[6]
+[6])
+
+[7]
 \openout4 = `_EB5231CC209723621B9B671FFD2C4A49.data.minted'.
 
-runsystem(latexminted clean  --timestamp 20250328235151 EB5231CC209723621B9B671
+runsystem(latexminted clean  --timestamp 20250407014116 EB5231CC209723621B9B671
 FFD2C4A49)...executed.
 
  (ИВТб-1301-05-00_МакаровСА_ЛР2.aux)
@@ -604,10 +606,10 @@ L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 9951 strings out of 473523
- 217466 string characters out of 5725212
+ 9958 strings out of 473523
+ 217905 string characters out of 5725212
  741159 words of memory out of 5000000
- 33066 multiletter control sequences out of 15000+600000
+ 33070 multiletter control sequences out of 15000+600000
  563213 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,7n,93p,734b,695s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -616,10 +618,10 @@ Here is how much of TeX's memory you used:
 it1440.pk> <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi60
 0\labx1440.pk> <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/d
 pi600\larm1440.pk>
-Output written on ИВТб-1301-05-00_МакаровСА_ЛР2.pdf (6 pages, 89
-947 bytes).
+Output written on ИВТб-1301-05-00_МакаровСА_ЛР2.pdf (7 pages, 93
+041 bytes).
 PDF statistics:
- 257 PDF objects out of 1000 (max. 8388607)
+ 266 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

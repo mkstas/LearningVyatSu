@@ -295,6 +295,55 @@ void loop() {
   \subsection*{\hspace{12.5mm}Задание 4}
   Выполнена живая сборка. Исходный код программы:
 
+  \begingroup
+  \fontsize{14pt}{10pt}\selectfont
+  \linespread{1}
+  \begin{minted}{Arduino}
+int ledPins[14] = {4, 5, 6, 7, 8, 9, 10, 11, 12, 13, A0, A1, A2, A3};
+int isFirstLed = true;
+volatile int score = 0;
+void setup() {
+  for (int i = 0; i < 14; i++)
+  	pinMode(ledPins[i], OUTPUT);
+  pinMode(A4, OUTPUT);
+  attachInterrupt(1, clickButtonOne, FALLING);
+  attachInterrupt(0, clickButtonTwo, FALLING);
+}
+void clickButtonOne() {
+  score++;
+  if (abs(score) == 4 && isFirstLed) {
+    score += 4;
+    isFirstLed = false;
+  }
+}
+void clickButtonTwo() {
+  score--;
+  if (abs(score) == 4 && isFirstLed) {
+    score -= 4;
+    isFirstLed = false;
+  }
+}
+void loop() {
+  do {
+    if (abs(score) > 7) {
+      for (int i = 0; i < 14; i++) {
+        if (score > 0) {
+          digitalWrite(ledPins[i], i >= 6 && i <= 6 + score / 4);
+        } else {
+          digitalWrite(ledPins[i], i <= 7 && i >= 7 + score / 4);
+        }
+      }
+    } else {
+      digitalWrite(ledPins[6], HIGH);
+      digitalWrite(ledPins[7], HIGH);
+    }
+  } while (abs(score) < 28);
+  if (score <= -28) digitalWrite(ledPins[0], HIGH);
+  digitalWrite(A4, HIGH);
+}
+  \end{minted}
+  \endgroup
+
   \section*{\hspace{12.5mm}Вывод}
   В ходе выполнения лабораторной работы изучены основы работы в Arduino IDE, а также собраны схемы с пьезоэлементом в соответствии с вариантом задания.
 
