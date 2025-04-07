@@ -1,0 +1,18 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{define FIRST\PYGZus{}LED\PYGZus{}PIN 2}
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{define LAST\PYGZus{}LED\PYGZus{}PIN 11}
+\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{pairs}\PYG{p}{[}\PYG{l+m+mi}{6}\PYG{p}{]}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{6}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{9}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{7}\PYG{p}{\PYGZcb{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{k+kr}{void}\PYG{+w}{ }\PYG{n+nb}{setup}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{pin}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{FIRST\PYGZus{}LED\PYGZus{}PIN}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{pin}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{o}{=}\PYG{+w}{ }\PYG{n}{LAST\PYGZus{}LED\PYGZus{}PIN}\PYG{p}{;}\PYG{+w}{ }\PYG{o}{+}\PYG{o}{+}\PYG{n}{pin}\PYG{p}{)}
+\PYG{+w}{    }\PYG{n+nf}{pinMode}\PYG{p}{(}\PYG{n}{pin}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{OUTPUT}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kr}{void}\PYG{+w}{ }\PYG{n+nb}{loop}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k+kr}{unsigned}\PYG{+w}{ }\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{ms}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{millis}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{index}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{ms}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mi}{1000}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZpc{}}\PYG{+w}{ }\PYG{l+m+mi}{6}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{digitalWrite}\PYG{p}{(}\PYG{n}{FIRST\PYGZus{}LED\PYGZus{}PIN}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{pairs}\PYG{p}{[}\PYG{n}{index}\PYG{p}{]}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{HIGH}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{digitalWrite}\PYG{p}{(}\PYG{n}{FIRST\PYGZus{}LED\PYGZus{}PIN}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{pairs}\PYG{p}{[}\PYG{n}{index}\PYG{p}{]}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{HIGH}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{delay}\PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{digitalWrite}\PYG{p}{(}\PYG{n}{FIRST\PYGZus{}LED\PYGZus{}PIN}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{pairs}\PYG{p}{[}\PYG{n}{index}\PYG{p}{]}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{LOW}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{digitalWrite}\PYG{p}{(}\PYG{n}{FIRST\PYGZus{}LED\PYGZus{}PIN}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{pairs}\PYG{p}{[}\PYG{n}{index}\PYG{p}{]}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{LOW}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

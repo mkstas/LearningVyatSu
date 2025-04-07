@@ -1,18 +1,17 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.5)  10 NOV 2024 04:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.7)  7 APR 2025 03:05
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**./ИВТб-1301-05-00_МакаровСА_ЛР3.tex
-(ИВТб-1301-05-00_МакаровСА_ЛР3.tex
-LaTeX2e <2024-06-01> patch level 2
-L3 programming layer <2024-08-30>
-
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/extsizes\extarticle.cls
+**d:/StudiesVyatSU/computer-science/semester-1/labaratory-work-3/report/ИВТб-1301-05-00_МакаровСА_ЛР3.tex
+(d:/StudiesVyatSU/computer-science/semester-1/labaratory-work-3/report/ИВТб-1301-05-00_МакаровСА_ЛР3.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(D:\ProgramFiles\MikTex\tex/latex/extsizes\extarticle.cls
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/extsizes\size14.clo
+(D:\ProgramFiles\MikTex\tex/latex/extsizes\size14.clo
 File: size14.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
-)
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/base\exscale.sty
+) (D:\ProgramFiles\MikTex\tex/latex/base\exscale.sty
 Package: exscale 2018/09/24 v2.1i Standard LaTeX package exscale
 LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
@@ -21,34 +20,30 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
 \big@size=\dimen141
 )
-\c@part=\count194
-\c@section=\count195
-\c@subsection=\count196
-\c@subsubsection=\count197
-\c@paragraph=\count198
-\c@subparagraph=\count199
-\c@figure=\count266
-\c@table=\count267
+\c@part=\count196
+\c@section=\count197
+\c@subsection=\count198
+\c@subsubsection=\count199
+\c@paragraph=\count266
+\c@subparagraph=\count267
+\c@figure=\count268
+\c@table=\count269
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen142
-)
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+) (D:\ProgramFiles\MikTex\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
-
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+ (D:\ProgramFiles\MikTex\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
-)
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+) (D:\ProgramFiles\MikTex\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
+ (D:\ProgramFiles\MikTex\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-\Gm@cnth=\count268
-\Gm@cntv=\count269
-\c@Gm@tempcnt=\count270
+\Gm@cnth=\count270
+\Gm@cntv=\count271
+\c@Gm@tempcnt=\count272
 \Gm@bindingoffset=\dimen143
 \Gm@wd@mp=\dimen144
 \Gm@odd@mp=\dimen145
@@ -58,17 +53,13 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layouthoffset=\dimen149
 \Gm@layoutvoffset=\dimen150
 \Gm@dimlist=\toks18
-
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+ (D:\ProgramFiles\MikTex\tex/latex/geometry\geometry.cfg)) (D:\ProgramFiles\MikTex\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\t2aenc.def
+ (D:\ProgramFiles\MikTex\tex/latex/cyrillic\t2aenc.def
 File: t2aenc.def 2023/11/07 v1.0k Cyrillic encoding definition file
 Now handling font encoding T2A ...
 ... processing UTF-8 mapping file for font encoding T2A
-
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/base\t2aenc.dfu
+ (D:\ProgramFiles\MikTex\tex/latex/base\t2aenc.dfu
 File: t2aenc.dfu 2022/06/07 v1.3c UTF-8 support
    defining Unicode char U+00A4 (decimal 164)
    defining Unicode char U+00A7 (decimal 167)
@@ -269,51 +260,39 @@ File: t2aenc.dfu 2022/06/07 v1.3c UTF-8 support
    defining Unicode char U+FB05 (decimal 64261)
    defining Unicode char U+FB06 (decimal 64262)
 ))
-LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 1
-16.
-
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\t2acmr.fd
+LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 116.
+ (D:\ProgramFiles\MikTex\tex/latex/cyrillic\t2acmr.fd
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-))
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+)) (D:\ProgramFiles\MikTex\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks19
 \inpenc@posthook=\toks20
-)
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2024/08/29 v24.9 The Babel package
-\babel@savecnt=\count271
+) (D:\ProgramFiles\MikTex\tex/generic/babel\babel.sty
+Package: babel 2025/03/27 v25.6 The multilingual framework for pdfLaTeX, LuaLaTeX and XeLaTeX
+\babel@savecnt=\count273
 \U@D=\dimen151
 \l@unhyphenated=\language79
-
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+ (D:\ProgramFiles\MikTex\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count272
+\bbl@dirlevel=\count274
 
 *************************************
 * Local config file bblopts.cfg used
 *
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/babel-russian\russianb.
-ldf
+(D:\ProgramFiles\MikTex\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (D:\ProgramFiles\MikTex\tex/latex/babel-russian\russianb.ldf
 File: russianb.ldf 2021/01/10 1.3m Russian support for the Babel system
 Language: russian 2020/09/09 1.3k Russian support for the Babel system
 Package babel Info: Making " an active character on input line 124.
 Package babel Info: Default for \cyrdash is provided on input line 163.
-))
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/ru\babel
--russian.tex
+)) (D:\ProgramFiles\MikTex\tex/generic/babel/locale/ru\babel-russian.tex
 Package babel Info: Importing font and identification data for russian
 (babel)             from babel-ru.ini. Reported on input line 11.
-)
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.sty
+) (D:\ProgramFiles\MikTex\tex/latex/tools\indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
-)
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
-Package: titlesec 2023/10/27 v2.16 Sectioning titles
+) (D:\ProgramFiles\MikTex\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box52
 \beforetitleunit=\skip51
 \aftertitleunit=\skip52
@@ -323,62 +302,51 @@ Package: titlesec 2023/10/27 v2.16 Sectioning titles
 \titlewidth=\dimen154
 \titlewidthlast=\dimen155
 \titlewidthfirst=\dimen156
-)
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+) (D:\ProgramFiles\MikTex\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2024/05/23 v1.4g Standard LaTeX Graphics (DPC,SPQR)
-
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+ (D:\ProgramFiles\MikTex\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (D:\ProgramFiles\MikTex\tex/latex/graphics\trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-)
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
-fg
+) (D:\ProgramFiles\MikTex\tex/latex/graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
-
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+ (D:\ProgramFiles\MikTex\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen157
 \Gin@req@width=\dimen158
-)
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count273
+) (D:\ProgramFiles\MikTex\tex/latex/listings\listings.sty
+\lst@mode=\count275
 \lst@gtempboxa=\box53
 \lst@token=\toks22
-\lst@length=\count274
+\lst@length=\count276
 \lst@currlwidth=\dimen159
-\lst@column=\count275
-\lst@pos=\count276
+\lst@column=\count277
+\lst@pos=\count278
 \lst@lostspace=\dimen160
 \lst@width=\dimen161
-\lst@newlines=\count277
-\lst@lineno=\count278
+\lst@newlines=\count279
+\lst@lineno=\count280
 \lst@maxwidth=\dimen162
-
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
-File: lstpatch.sty 2024/05/25 1.10b (Carsten Heinz)
-)
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
-File: lstmisc.sty 2024/05/25 1.10b (Carsten Heinz)
-\c@lstnumber=\count279
-\lst@skipnumbers=\count280
+ (D:\ProgramFiles\MikTex\tex/latex/listings\lstpatch.sty
+File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
+) (D:\ProgramFiles\MikTex\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
+\c@lstnumber=\count281
+\lst@skipnumbers=\count282
 \lst@framebox=\box54
-)
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
-File: listings.cfg 2024/05/25 1.10b listings configuration
+) (D:\ProgramFiles\MikTex\tex/latex/listings\listings.cfg
+File: listings.cfg 2024/09/23 1.10c listings configuration
 ))
-Package: listings 2024/05/25 1.10b (Carsten Heinz)
-
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
+Package: listings 2024/09/23 1.10c (Carsten Heinz)
+ (D:\ProgramFiles\MikTex\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count281
+\l__color_backend_stack_int=\count283
 \l__pdf_internal_box=\box55
-) (ИВТб-1301-05-00_МакаровСА_ЛР3.aux)
+)
+No file ИВТб-1301-05-00_МакаровСА_ЛР3.aux.
 \openout1 = `ИВТб-1301-05-00_МакаровСА_ЛР3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
@@ -397,7 +365,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -432,42 +399,36 @@ LaTeX Font Info:    ... okay on input line 17.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+Package babel Info: 'russian' activates 'russian' shorthands.
+(babel)             Reported  on input line 17.
 LaTeX Info: Redefining \th on input line 17.
-
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
-ii
+(D:\ProgramFiles\MikTex\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count282
+\scratchcounter=\count284
 \scratchdimen=\dimen163
 \scratchbox=\box56
-\nofMPsegments=\count283
-\nofMParguments=\count284
+\nofMPsegments=\count285
+\nofMParguments=\count286
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count285
+\MPscratchCnt=\count287
 \MPscratchDim=\dimen164
-\MPnumerator=\count286
-\makeMPintoPDFobject=\count287
+\MPnumerator=\count288
+\makeMPintoPDFobject=\count289
 \everyMPtoPDFconversion=\toks24
-)
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
-ase.sty
+) (D:\ProgramFiles\MikTex\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
-fg
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (D:\ProgramFiles\MikTex\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c@lstlisting=\count288
+\c@lstlisting=\count290
 LaTeX Font Info:    External font `cmex7' loaded for size
 (Font)              <7> on input line 41.
 
 
 [1
 
-{C:/Users/makar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/maka
-r/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t2a.enc}]
+{C:/Users/makar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 
 [2]
 <schemes/s-1.png, id=10, 921.4425pt x 867.24pt>
@@ -475,9 +436,8 @@ File: schemes/s-1.png Graphic file (type png)
 <use schemes/s-1.png>
 Package pdftex.def Info: schemes/s-1.png  used on input line 73.
 (pdftex.def)             Requested size: 328.91032pt x 309.55957pt.
-LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 
-81.
- (C:\Users\makar\AppData\Local\Programs\MiKTeX\tex/latex/cyrillic\t2acmtt.fd
+LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 81.
+ (D:\ProgramFiles\MikTex\tex/latex/cyrillic\t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
 <schemes/s-2.png, id=12, 847.165pt x 365.365pt>
@@ -532,26 +492,22 @@ Package pdftex.def Info: schemes/s-3-5.png  used on input line 158.
 
 [10] (ИВТб-1301-05-00_МакаровСА_ЛР3.aux)
  ***********
-LaTeX2e <2024-06-01> patch level 2
-L3 programming layer <2024-08-30>
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5931 strings out of 473899
- 95959 string characters out of 5726500
- 529928 words of memory out of 5000000
- 28769 multiletter control sequences out of 15000+600000
- 562135 words of font info for 45 fonts, out of 8000000 for 9000
+ 5959 strings out of 473523
+ 94447 string characters out of 5725213
+ 533416 words of memory out of 5000000
+ 29153 multiletter control sequences out of 15000+600000
+ 562903 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,808b,1567s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/makar/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfb
-x1440.pfb><C:/Users/makar/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-s
-uper/sfrm1440.pfb><C:/Users/makar/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/cm-super/sftt1440.pfb>
-Output written on ИВТб-1301-05-00_МакаровСА_ЛР3.pdf (10 pages, 4
-25968 bytes).
+ 57i,7n,65p,904b,1567s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\latt1440.pk> <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk>
+Output written on ИВТб-1301-05-00_МакаровСА_ЛР3.pdf (10 pages, 402440 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
+ 220 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

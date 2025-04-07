@@ -1,0 +1,12 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{define LED\PYGZus{}PIN 9}
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{define THERMISTOR\PYGZus{}PIN A0}
+\PYG{k+kr}{void}\PYG{+w}{ }\PYG{n+nb}{setup}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{n+nf}{pinMode}\PYG{p}{(}\PYG{n}{LED\PYGZus{}PIN}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{OUTPUT}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kr}{void}\PYG{+w}{ }\PYG{n+nb}{loop}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{temperature}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{constrain}\PYG{p}{(}\PYG{n+nf}{analogRead}\PYG{p}{(}\PYG{n}{THERMISTOR\PYGZus{}PIN}\PYG{p}{)}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{939}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{960}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{brightness}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{map}\PYG{p}{(}\PYG{n}{temperature}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{939}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{960}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{255}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{delay}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

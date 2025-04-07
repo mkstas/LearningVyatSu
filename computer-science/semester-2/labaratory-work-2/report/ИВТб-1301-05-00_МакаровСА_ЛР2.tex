@@ -30,7 +30,7 @@
     Кафедра электронных вычислительных машин
   \end{center}
   \vfill
-  
+
   \begin{center}
     Отчет по лабораторной работе №2\\
     по дисциплине\\
@@ -39,15 +39,15 @@
     Вариант 3
   \end{center}
   \vfill
-  
+
   \noindent
   \begin{tabular}{ll}
     Выполнил студент гр. ИВТб-1301-05-00 \hspace{5mm} &
-    \rule[-1mm]{25mm}{0.10mm}\,/Макаров С.А./\\
-    
-    Руководитель преподаватель & \rule[-1mm]{25mm}{0.10mm}\,/Шмакова Н.А./\\
+    \rule[-1mm]{25mm}{0.10mm}\,/Макаров С.А./                                                     \\
+
+    Руководитель преподаватель                        & \rule[-1mm]{25mm}{0.10mm}\,/Шмакова Н.А./ \\
   \end{tabular}
-  
+
   \vfill
   \begin{center}
     Киров 2025
@@ -74,9 +74,9 @@
   Выполнена живая сборка. Исходный код программы:
 
   \begingroup
-  \fontsize{14pt}{10pt}\selectfont
-  \linespread{1}
-  \begin{minted}{Arduino}
+    \fontsize{14pt}{10pt}\selectfont
+    \linespread{1}
+    \begin{minted}{Arduino}
 #define BUZZER_PIN 2
 #define BUTTON_PIN 3
 #define LED_PIN_1 5
@@ -225,16 +225,16 @@ void musicTwo() {
     beep(songTwo[i], tempTwo[i]);
   }
 }
-  \end{minted}
+    \end{minted}
   \endgroup
 
   \subsection*{\hspace{12.5mm}Задание 2}
   Выполнена живая сборка. Исходный код программы:
 
   \begingroup
-  \fontsize{14pt}{10pt}\selectfont
-  \linespread{1}
-  \begin{minted}{Arduino}
+    \fontsize{14pt}{10pt}\selectfont
+    \linespread{1}
+    \begin{minted}{Arduino}
 #define BUZZER_PIN 3
 #define LDR_PIN A0
 int notes[] = {261, 277, 293, 311, 329, 349, 369, 392, 415, 440, 466, 493};
@@ -248,16 +248,16 @@ void loop() {
   index = map(val, 49, 150, 0, size);
   tone(BUZZER_PIN, notes[index]);
 }
-  \end{minted}
+    \end{minted}
   \endgroup
 
   \subsection*{\hspace{12.5mm}Задание 3}
   Выполнена живая сборка. Исходный код программы:
 
   \begingroup
-  \fontsize{14pt}{10pt}\selectfont
-  \linespread{1}
-  \begin{minted}{Arduino}
+    \fontsize{14pt}{10pt}\selectfont
+    \linespread{1}
+    \begin{minted}{Arduino}
 #define BUZZER_PIN 13
 #define FIRST_KEY_PIN 7
 #define KEY_COUNT 5
@@ -289,22 +289,22 @@ void loop() {
   }
   index = (index + 1) % 5;
 }
-  \end{minted}
+    \end{minted}
   \endgroup
 
   \subsection*{\hspace{12.5mm}Задание 4}
   Выполнена живая сборка. Исходный код программы:
 
   \begingroup
-  \fontsize{14pt}{10pt}\selectfont
-  \linespread{1}
-  \begin{minted}{Arduino}
+    \fontsize{14pt}{10pt}\selectfont
+    \linespread{1}
+    \begin{minted}{Arduino}
 int ledPins[14] = {4, 5, 6, 7, 8, 9, 10, 11, 12, 13, A0, A1, A2, A3};
 int isFirstLed = true;
 volatile int score = 0;
 void setup() {
   for (int i = 0; i < 14; i++)
-  	pinMode(ledPins[i], OUTPUT);
+    pinMode(ledPins[i], OUTPUT);
   pinMode(A4, OUTPUT);
   attachInterrupt(1, clickButtonOne, FALLING);
   attachInterrupt(0, clickButtonTwo, FALLING);
@@ -341,7 +341,7 @@ void loop() {
   if (score <= -28) digitalWrite(ledPins[0], HIGH);
   digitalWrite(A4, HIGH);
 }
-  \end{minted}
+    \end{minted}
   \endgroup
 
   \section*{\hspace{12.5mm}Вывод}
