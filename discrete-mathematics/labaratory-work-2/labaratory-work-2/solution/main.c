@@ -18,18 +18,34 @@ int main()
     int matrix[10][10] = { 0 };
     int degrees[10] = { 0 };
 
-    printf("Матрица смежности:\n");
+    printf("Матрица смежности:\n\n     ");
+
+    for (int i = 1; i <= n; i++) {
+        printf("%d  ", i);
+    }
+
+    printf("\n   ");
+
+    for (int i = 1; i < n; i++) {
+        printf("----");
+    }
+
+    printf("\n");
 
     for (int i = 0; i < n; i++) {
+        printf(" %d | ", i + 1);
+
         for (int j = 0; j < n; j++) {
             matrix[i][j] = rand() % 2;
             degrees[i] += matrix[i][j];
 
-            printf("%d ", matrix[i][j]);
+            printf("%d  ", matrix[i][j]);
         }
 
         printf("\n");
     }
+
+    printf("\n");
 
     int max = 0;
     int vertex = 0;
