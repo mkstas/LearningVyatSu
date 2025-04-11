@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.11)  11 APR 2025 11:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.11)  11 APR 2025 11:58
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -514,10 +514,10 @@ LaTeX Font Info:    External font `cmex7' loaded for size
 \pydata@fh@0=\write4
 \openout4 = `_1C198C554FCCEC167D66C5203FAA4456.data.minted'.
 
-runsystem(latexminted config  --timestamp 20250411115459 1C198C554FCCEC167D66C5203FAA4456)...executed.
+runsystem(latexminted config  --timestamp 20250411115835 1C198C554FCCEC167D66C5203FAA4456)...executed.
 
  (_1C198C554FCCEC167D66C5203FAA4456.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20250411115459 1C198C554FCCEC167D66C5203FAA4456)...executed.
+runsystem(latexminted cleanconfig  --timestamp 20250411115835 1C198C554FCCEC167D66C5203FAA4456)...executed.
 
  (_minted/default.style.minted) (_minted/B552B564FF24EC20239906462A21AEB2.highlight.minted
 LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 1.
@@ -551,7 +551,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  85i,7n,93p,656b,693s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lait1440.pk> <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\latt1440.pk> <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk>
-Output written on ИВТб-1301-05-00_МакаровСА_ЛР3.pdf (7 pages, 92648 bytes).
+Output written on ИВТб-1301-05-00_МакаровСА_ЛР3.pdf (7 pages, 92697 bytes).
 PDF statistics:
  261 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
