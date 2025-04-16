@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.7)  7 APR 2025 02:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.7)  15 APR 2025 02:23
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -334,8 +334,10 @@ Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count278
 \l__pdf_internal_box=\box54
+) (ИВТб-1301-05-00_МакаровСА_Л3.aux
+Package babel Info: 'russian' activates 'russian' shorthands.
+(babel)             Reported  on input line 5.
 )
-No file ИВТб-1301-05-00_МакаровСА_Л3.aux.
 \openout1 = `ИВТб-1301-05-00_МакаровСА_Л3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -354,6 +356,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -388,8 +391,6 @@ LaTeX Font Info:    ... okay on input line 18.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package babel Info: 'russian' activates 'russian' shorthands.
-(babel)             Reported  on input line 18.
 LaTeX Info: Redefining \th on input line 18.
 (D:\ProgramFiles\MikTex\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -417,25 +418,33 @@ LaTeX Font Info:    External font `cmex7' loaded for size
 [1
 
 {C:/Users/makar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 65.
+ (D:\ProgramFiles\MikTex\tex/latex/cyrillic\t2acmtt.fd
+File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)
 
-[2] (ИВТб-1301-05-00_МакаровСА_Л3.aux)
+[2]
+
+[3]
+
+[4] (ИВТб-1301-05-00_МакаровСА_Л3.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4657 strings out of 473523
- 77182 string characters out of 5725213
- 477168 words of memory out of 5000000
- 27861 multiletter control sequences out of 15000+600000
- 562593 words of font info for 44 fonts, out of 8000000 for 9000
+ 4683 strings out of 473523
+ 78108 string characters out of 5725213
+ 479159 words of memory out of 5000000
+ 27881 multiletter control sequences out of 15000+600000
+ 562903 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,619b,204s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk>
-Output written on ИВТб-1301-05-00_МакаровСА_Л3.pdf (2 pages, 39204 bytes).
+ 57i,7n,65p,632b,278s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\latt1440.pk> <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk>
+Output written on ИВТб-1301-05-00_МакаровСА_Л3.pdf (4 pages, 70506 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
+ 210 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

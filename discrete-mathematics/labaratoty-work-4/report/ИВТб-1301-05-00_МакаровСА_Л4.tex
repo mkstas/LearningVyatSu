@@ -11,7 +11,6 @@
 \usepackage{fancyvrb}
 
 \renewcommand{\baselinestretch}{1.3}
-
 \setlength{\parindent}{12.5mm}
 \titleformat{\section}{\normalsize\bfseries}{\indent\thesection}{1em}{}
 \titleformat{\subsection}{\normalsize\bfseries}{\indent\thesubsection}{1em}{}
@@ -33,7 +32,7 @@
 
   \begin{center}
     \textbf{Работа с графами}\\
-    Отчёт по лабораторной работе №2\\
+    Отчёт по лабораторной работе №4\\
     по дисциплине\\
     <<Дискретная математика>>\\
     Вариант 8
@@ -58,7 +57,7 @@
   Цель лабораторной работы: изучение основ теории графов, базовых операций над ними, разработка приложения на языке Паскаль или СИ согласно заданию.
 
   \section*{Задание}
-  Орграф задается матрицей смежности, которая формируется случайным образом. Размерность 4 <= n <= 10 вводится с клавиатуры. Найти номер вершины, имеющей максимальную полустепень исхода, вывести множество соответсвующих дуг найденной вершины.
+  Неориентированный граф задается матрицей смежности, которая записана в файле. Резмерность: вершин >= 5, дуг >= 7. Сформировать дополнение графа.
 
   \section*{Решение}
 
@@ -66,59 +65,57 @@
   \begin{Verbatim}[tabsize=2]
 {$codepage UTF8}
 
+uses
+  SysUtils;
+
 var
-  n, i, j, max, vertex: integer;
-  matrix: array[1..10, 1..10] of integer;
-  degrees: array[1..10] of integer;
+  input: text;
+  line: string;
+  i, j, k: integer;
+  matrix: array [1..5, 1..7] of integer;
 
 begin
-  Randomize();
+  Assign(input, 'input.txt');
+  Reset(input);
+  i := 1;
 
-  repeat
-    write('Введите размерность матрицы (4 <= n <= 10): ');
-    readln(n);
-  until ((n >= 4) and (n <= 10));
-
-  writeln('Матрица смежности');
-
-  for i := 1 to n do
+  while not Eof(input) do
   begin
-    for j := 1 to n do
+    readln(input, line);
+    j := 1;
+
+    for k := 1 to Length(line) do
     begin
-      matrix[i][j] := Random(2);
-      degrees[i] += matrix[i][j];
-      write(matrix[i][j], '  ');
+      if line[k] <> ' ' then
+      begin
+        if (line[k] = '1') or (i = j) then
+          matrix[i][j] := 0
+        else
+          matrix[i][j] := 1;
+
+        j := j + 1;
+      end;
+    end;
+
+    i := i + 1;
+  end;
+
+  writeln('Дополнение графа в виде матрицы смежности');
+
+  for i := 1 to 5 do
+  begin
+    for j := 1 to 5 do
+    begin
+      write(matrix[i][j], ' ');
     end;
     writeln();
   end;
-
-  max := degrees[1];
-  vertex := 1;
-
-  for i := 2 to n do
-  begin
-    if degrees[i] > max then
-    begin
-      max := degrees[i];
-      vertex := i;
-    end;
-  end;
-
-  writeln('Вершина с максимальной полустепенью исхода: ', vertex);
-  write('Множество дуг для вершины ', vertex, ': {');
-
-  for j := 1 to n do
-  begin
-    if matrix[vertex][j] = 1 then
-      write(' (', vertex, ', ', j, ') ');
-  end;
-  write('}');
 
   readln;
 end.
   \end{Verbatim}
 
   \section*{Вывод}
-  В процессе выполнения лабораторной работы, при решении предложенных задач, изучены основы теории графов и реализована программа на языке Паскаль, находящая номер вершины, имеющей максимальную полустепень исхода и выводит множество соответсвующих дуг в соответсвии матрицы смежности.
+  В процессе выполнения лабораторной работы, при решении предложенных задач, реализована программа на языке Паскаль, которая выполняют такую операцию, как дополнение графа для матрицы смежности, заданной в файле.
 
 \end{document}
