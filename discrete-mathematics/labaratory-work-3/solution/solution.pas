@@ -6,9 +6,10 @@ uses
 var
   input: text;
   line: string;
-  i, j, k, max, vertex: integer;
+  i, j, k, max: integer;
   matrix: array [1..5, 1..7] of integer;
   degrees: array [1..5] of integer;
+  vertexes: array[1..5] of integer;
 
 begin
   Assign(input, 'input.txt');
@@ -41,27 +42,63 @@ begin
 
   Close(input);
 
-  max := degrees[1];
-  vertex := 1;
+  writeln('Матрица инцидентности');
+  writeln();
 
-  for i := 2 to 5 do
+  write('     ');
+  for i := 1 to 7 do
+    write(' ', i, ' ');
+  writeln();
+
+  write('    ');
+  for i := 2 to 7 do
+    write('----');
+  writeln();
+
+  for i := 1 to 5 do
   begin
-    if degrees[i] > max then
-    begin
+    write(' ', i, ' | ');
+    for j := 1 to 7 do
+      if matrix[i][j] = -1 then
+        write(matrix[i][j], ' ')
+      else
+        write(' ', matrix[i][j], ' ');
+    writeln();
+  end;
+  writeln();
+
+  max := 0;
+
+  for i := 1 to 5 do
+  begin
+    if (degrees[i] > max) then
       max := degrees[i];
-      vertex := i;
+  end;
+
+  j := 1;
+  for i := 1 to 5 do
+  begin
+    if degrees[i] = max then
+    begin
+      vertexes[j] := i;
+      j := j + 1;
     end;
   end;
 
-  writeln('Вершина с максимальной полустепенью захода: ', vertex);
-  write('Множество дуг для вершины ', vertex, ': {');
+  writeln('Вершины с максимальной полустепенью захода');
 
-  for j := 1 to 7 do
+  i := 1;
+  while vertexes[i] <> 0 do
   begin
-    if (matrix[vertex][j] = -1) or (matrix[vertex][j] = 2) then
-      write(' ', j, ' ');
+    write('Множество дуг для вершины ', vertexes[i], ': {');
+    for j := 1 to 7 do
+    begin
+      if (matrix[vertexes[i]][j] = -1) or (matrix[vertexes[i]][j] = 2) then
+        write(' ', j);
+    end;
+    writeln(' }');
+    i := i + 1;
   end;
-  write('}');
 
   readln;
 end.
