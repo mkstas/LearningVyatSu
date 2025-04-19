@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.7)  15 APR 2025 03:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.7)  19 APR 2025 15:57
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/StudiesVyatSU/discrete-mathematics/labaratoty-work-4/report/ИВТб-1301-05-00_МакаровСА_Л4.tex
-(d:/StudiesVyatSU/discrete-mathematics/labaratoty-work-4/report/ИВТб-1301-05-00_МакаровСА_Л4.tex
+**d:/StudiesVyatSU/discrete-mathematics/labaratory-work-4/report/ИВТб-1301-05-00_МакаровСА_Л4.tex
+(d:/StudiesVyatSU/discrete-mathematics/labaratory-work-4/report/ИВТб-1301-05-00_МакаровСА_Л4.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (D:\ProgramFiles\MikTex\tex/latex/extsizes\extarticle.cls
@@ -418,33 +418,55 @@ LaTeX Font Info:    External font `cmex7' loaded for size
 [1
 
 {C:/Users/makar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 65.
+<images/graph.png, id=7, 403.5075pt x 483.8075pt>
+File: images/graph.png Graphic file (type png)
+<use images/graph.png>
+Package pdftex.def Info: images/graph.png  used on input line 68.
+(pdftex.def)             Requested size: 193.47578pt x 231.98134pt.
+
+
+[2 <./images/graph.png>]
+<images/sсheme.png, id=13, 1328.965pt x 1569.865pt>
+File: images/sсheme.png Graphic file (type png)
+<use images/sсheme.png>
+Package pdftex.def Info: images/sсheme.png  used on input line 79.
+(pdftex.def)             Requested size: 478.86255pt x 565.65402pt.
+
+
+[3 <./images/sсheme.png>]
+LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 91.
  (D:\ProgramFiles\MikTex\tex/latex/cyrillic\t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
 
-[2]
+[4]
+<images/image.png, id=22, 640.64343pt x 366.61969pt>
+File: images/image.png Graphic file (type png)
+<use images/image.png>
+Package pdftex.def Info: images/image.png  used on input line 162.
+(pdftex.def)             Requested size: 386.95897pt x 221.44476pt.
 
-[3]
 
-[4] (ИВТб-1301-05-00_МакаровСА_Л4.aux)
+[5 <./images/image.png>]
+
+[6] (ИВТб-1301-05-00_МакаровСА_Л4.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4683 strings out of 473523
- 78108 string characters out of 5725213
- 479159 words of memory out of 5000000
- 27881 multiletter control sequences out of 15000+600000
+ 4706 strings out of 473523
+ 78658 string characters out of 5725213
+ 480159 words of memory out of 5000000
+ 27904 multiletter control sequences out of 15000+600000
  562903 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,521b,278s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,7n,65p,521b,300s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\latt1440.pk> <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk>
-Output written on ИВТб-1301-05-00_МакаровСА_Л4.pdf (4 pages, 65828 bytes).
+Output written on ИВТб-1301-05-00_МакаровСА_Л4.pdf (6 pages, 157689 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
+ 204 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

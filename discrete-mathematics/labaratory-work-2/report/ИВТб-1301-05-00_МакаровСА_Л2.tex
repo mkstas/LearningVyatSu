@@ -54,22 +54,36 @@
   \end{center}
 
   \newpage
-  \section*{Цель}
+  \section*{\hspace{12.5mm}Цель}
   Цель лабораторной работы: изучение основ теории графов, базовых операций над ними, разработка приложения на языке Паскаль или СИ согласно заданию.
 
-  \section*{Задание}
+  \section*{\hspace{12.5mm}Задание}
   Орграф задается матрицей смежности, которая формируется случайным образом. Размерность 4 <= n <= 10 вводится с клавиатуры. Найти номер вершины, имеющей максимальную полустепень исхода, вывести множество соответсвующих дуг найденной вершины.
 
-  \section*{Решение}
+  \newpage
+  \section*{\hspace{12.5mm}Решение}
+
+  Для решения задач разработана схема алгоритма, представленная на рисунке 1.
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{images/scheme.png}
+  \end{figure}
+  \begin{center}
+    Рисунок 1 – Схема алгоритма программы
+  \end{center}
 
   При разработке реализована программа, исходный код которой представлен ниже.
-  \begin{Verbatim}[tabsize=2]
-{$codepage UTF8}
 
+  \begingroup
+    \linespread{1}
+
+    \begin{Verbatim}[tabsize=2]
 var
-  n, i, j, max, vertex: integer;
   matrix: array[1..10, 1..10] of integer;
   degrees: array[1..10] of integer;
+  vertexes: array[1..10] of integer;
+  n, i, j, max: integer;
 
 begin
   Randomize();
@@ -77,12 +91,18 @@ begin
   repeat
     write('Введите размерность матрицы (4 <= n <= 10): ');
     readln(n);
-  until ((n >= 4) and (n <= 10));
+  until (n >= 4) and (n <= 10);
 
-  writeln('Матрица смежности');
+  writeln('Матрица смежности', #10);
+
+  write('  ');
+  for i := 1 to n do
+    write(' ', i, ' ');
+  writeln();
 
   for i := 1 to n do
   begin
+    write(i, '  ');
     for j := 1 to n do
     begin
       matrix[i][j] := Random(2);
@@ -91,34 +111,58 @@ begin
     end;
     writeln();
   end;
+  writeln();
 
   max := degrees[1];
-  vertex := 1;
 
   for i := 2 to n do
   begin
-    if degrees[i] > max then
-    begin
+    if (degrees[i] > max) then
       max := degrees[i];
-      vertex := i;
+  end;
+
+  j := 1;
+
+  for i := 1 to n do
+  begin
+    if degrees[i] = max then
+    begin
+      vertexes[j] := i;
+      j := j + 1;
     end;
   end;
 
-  writeln('Вершина с максимальной полустепенью исхода: ', vertex);
-  write('Множество дуг для вершины ', vertex, ': {');
+  writeln('Вершины с максимальной полустепенью исхода');
 
-  for j := 1 to n do
+  i := 1;
+
+  while vertexes[i] <> 0 do
   begin
-    if matrix[vertex][j] = 1 then
-      write(' (', vertex, ', ', j, ') ');
+    write('Множество дуг для вершины ', vertexes[i], ': {');
+    for j := 1 to n do
+    begin
+      if matrix[vertexes[i]][j] = 1 then
+        write(' (', vertexes[i], ', ', j, ')');
+    end;
+    writeln(' }');
+    i := i + 1;
   end;
-  write('}');
 
   readln;
 end.
-  \end{Verbatim}
+    \end{Verbatim}
+  \endgroup
 
-  \section*{Вывод}
+  Экранная форма программы в виде консольного приложения представлена на рисунке 2.
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/image.png}
+  \end{figure}
+  \begin{center}
+    Рисунок 2 – Консольный интерфейс программы
+  \end{center}
+
+  \section*{\hspace{12.5mm}Вывод}
   В процессе выполнения лабораторной работы, при решении предложенных задач, изучены основы теории графов и реализована программа на языке Паскаль, находящая номер вершины, имеющей максимальную полустепень исхода и выводит множество соответсвующих дуг в соответсвии матрицы смежности.
 
 \end{document}

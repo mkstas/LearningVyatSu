@@ -53,46 +53,84 @@
   \end{center}
 
   \newpage
-  \section*{Цель}
+  \section*{\hspace{12.5mm}Цель}
   Цель лабораторной работы: изучение основ теории графов, базовых операций над ними, разработка приложения на языке Паскаль или СИ согласно заданию.
 
-  \section*{Задание}
+  \section*{\hspace{12.5mm}Задание}
   По матрице инцидентности определить вершину, имеющую максимальную полустепень захода (матрицу инцедентности задать из файла). Вывести множество соответсвующих дуг найденной вершины.
 
-  \section*{Решение}
+  \section*{\hspace{12.5mm}Решение}
+
+  Для решения задач подготовлен ориентированный граф, представленный на рисунке 1.
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\linewidth]{images/graph.png}
+  \end{figure}
+  \begin{center}
+    Рисунок 1 – Ориентированный граф
+  \end{center}
+
+  \pagebreak
+  Перед разработкой составлена схема алгоритма, представленная на рисунке 2.
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{images/scheme.png}
+  \end{figure}
+  \begin{center}
+    Рисунок 2 – Схема алгоритма программы
+  \end{center}
 
   При разработке реализована программа, исходный код которой представлен ниже.
-  \begin{Verbatim}[tabsize=2]
-{$codepage UTF8}
 
+  \begingroup
+    \linespread{1}
+
+    \begin{Verbatim}[tabsize=2]
 uses
   SysUtils;
 
 var
-  input: text;
-  line: string;
-  i, j, k, max, vertex: integer;
   matrix: array [1..5, 1..7] of integer;
   degrees: array [1..5] of integer;
+  vertexes: array[1..5] of integer;
+  i, j, k, max: integer;
+  fileInput: text;
+  fileLine: string;
 
 begin
-  Assign(input, 'input.txt');
-  Reset(input);
+  assign(fileInput, 'input.txt');
+  reset(fileInput);
+  writeln('Матрица инцидентности', #10);
+
+  write('  ');
+  for i := 1 to 7 do
+    write(' ', i, ' ');
+  writeln();
+
   i := 1;
 
-  while not Eof(input) do
+  while not Eof(fileInput) do
   begin
-    readln(input, line);
+    write(i, ' ');
+    readln(fileInput, fileLine);
     j := 1;
 
-    for k := 1 to Length(line) do
+    for k := 1 to Length(fileLine) do
     begin
-      if (line[k] <> ' ') and (line[k] <> '-') then
+      if (fileLine[k] <> ' ') and (fileLine[k] <> '-') then
       begin
-        if line[k - 1] = '-' then
-          matrix[i][j] := StrToInt(line[k]) * -1
+        if fileLine[k - 1] = '-' then
+        begin
+          matrix[i][j] := StrToInt(fileLine[k]) * -1;
+          write(matrix[i][j], ' ')
+        end
         else
-          matrix[i][j] := StrToInt(line[k]);
+        begin
+          matrix[i][j] := StrToInt(fileLine[k]);
+          write(' ', matrix[i][j], ' ');
+        end;
 
         if (matrix[i][j] = -1) or (matrix[i][j] = 2) then
           degrees[i] += 1;
@@ -100,39 +138,61 @@ begin
         j := j + 1;
       end;
     end;
+    writeln();
 
     i := i + 1;
   end;
-
-  Close(input);
+  writeln();
 
   max := degrees[1];
-  vertex := 1;
-
   for i := 2 to 5 do
   begin
-    if degrees[i] > max then
-    begin
+    if (degrees[i] > max) then
       max := degrees[i];
-      vertex := i;
+  end;
+
+  j := 1;
+
+  for i := 1 to 5 do
+  begin
+    if degrees[i] = max then
+    begin
+      vertexes[j] := i;
+      j := j + 1;
     end;
   end;
 
-  writeln('Вершина с максимальной полустепенью захода: ', vertex);
-  write('Множество дуг для вершины ', vertex, ': {');
+  writeln('Вершины с максимальной полустепенью захода');
 
-  for j := 1 to 7 do
+  i := 1;
+  while vertexes[i] <> 0 do
   begin
-    if (matrix[vertex][j] = -1) or (matrix[vertex][j] = 2) then
-      write(' ', j, ' ');
+    write('Множество дуг для вершины ', vertexes[i], ': {');
+    for j := 1 to 7 do
+    begin
+      if (matrix[vertexes[i]][j] = -1) or 
+          (matrix[vertexes[i]][j] = 2) then
+        write(' ', j);
+    end;
+    writeln(' }');
+    i := i + 1;
   end;
-  write('}');
-
   readln;
 end.
-  \end{Verbatim}
+    \end{Verbatim}
+  \endgroup
 
-  \section*{Вывод}
+  Экранная форма программы в виде консольного приложения представлена на рисунке 3.
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/image.png}
+  \end{figure}
+  \begin{center}
+    Рисунок 3 – Консольный интерфейс программы
+  \end{center}
+
+  \section*{\hspace{12.5mm}Вывод}
   В процессе выполнения лабораторной работы, при решении предложенных задач, реализована программа на языке Паскаль, находящая номер вершины, имеющей максимальную полустепень захода и выводит множество соответсвующих дуг согласно матрице инцедентности, заданной в файле.
 
 \end{document}

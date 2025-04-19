@@ -1,10 +1,10 @@
 {$codepage UTF8}
 
 var
-  n, i, j, max: integer;
   matrix: array[1..10, 1..10] of integer;
   degrees: array[1..10] of integer;
   vertexes: array[1..10] of integer;
+  n, i, j, max: integer;
 
 begin
   Randomize();
@@ -12,24 +12,18 @@ begin
   repeat
     write('Введите размерность матрицы (4 <= n <= 10): ');
     readln(n);
-  until ((n >= 4) and (n <= 10));
+  until (n >= 4) and (n <= 10);
 
-  writeln('Матрица смежности');
-  writeln();
+  writeln('Матрица смежности', #10);
 
-  write('    ');
+  write('  ');
   for i := 1 to n do
     write(' ', i, ' ');
   writeln();
 
-  write('    ');
-  for i := 2 to n do
-    write('----');
-  writeln();
-
   for i := 1 to n do
   begin
-    write(' ', i, ' | ');
+    write(i, '  ');
     for j := 1 to n do
     begin
       matrix[i][j] := Random(2);
@@ -40,15 +34,16 @@ begin
   end;
   writeln();
 
-  max := 0;
+  max := degrees[1];
 
-  for i := 1 to n do
+  for i := 2 to n do
   begin
     if (degrees[i] > max) then
       max := degrees[i];
   end;
 
   j := 1;
+
   for i := 1 to n do
   begin
     if degrees[i] = max then
@@ -61,6 +56,7 @@ begin
   writeln('Вершины с максимальной полустепенью исхода');
 
   i := 1;
+
   while vertexes[i] <> 0 do
   begin
     write('Множество дуг для вершины ', vertexes[i], ': {');
