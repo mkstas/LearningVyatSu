@@ -1,0 +1,66 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZlt{}Wire.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZlt{}TroykaLedMatrix.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{define SDA\PYGZus{}PIN 5}
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{define SCL\PYGZus{}PIN 4}
+\PYG{n}{TwoWire}\PYG{+w}{ }\PYG{n}{customWire}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{TwoWire}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{TroykaLedMatrix}\PYG{+w}{ }\PYG{n}{matrix}\PYG{p}{;}
+\PYG{k+kr}{const}\PYG{+w}{ }\PYG{k+kr}{uint8\PYGZus{}t}\PYG{+w}{ }\PYG{n}{sprite\PYGZus{}1}\PYG{p}{[}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{l+m+mb}{0b00111100}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b00111100}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b00111100}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b11111111}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01011010}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01111110}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01000010}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b00111100}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{k+kr}{const}\PYG{+w}{ }\PYG{k+kr}{uint8\PYGZus{}t}\PYG{+w}{ }\PYG{n}{sprite\PYGZus{}2}\PYG{p}{[}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{l+m+mb}{0b00111100}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b00111100}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b00111100}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b11111111}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01111010}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01111110}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01111000}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b00111100}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{k+kr}{const}\PYG{+w}{ }\PYG{k+kr}{uint8\PYGZus{}t}\PYG{+w}{ }\PYG{n}{sprite\PYGZus{}3}\PYG{p}{[}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{l+m+mb}{0b00111100}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b00111100}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b00111100}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b11111111}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01111110}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01111110}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01111110}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b00111100}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{k+kr}{const}\PYG{+w}{ }\PYG{k+kr}{uint8\PYGZus{}t}\PYG{+w}{ }\PYG{n}{sprite\PYGZus{}4}\PYG{p}{[}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{l+m+mb}{0b00111100}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b00111100}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b00111100}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b11111111}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01011110}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01111110}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b00011110}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b00111100}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{k+kr}{void}\PYG{+w}{ }\PYG{n+nb}{setup}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{n}{customWire}\PYG{p}{.}\PYG{n+nf}{begin}\PYG{p}{(}\PYG{n}{SDA\PYGZus{}PIN}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{SCL\PYGZus{}PIN}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{100000}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n}{matrix}\PYG{p}{.}\PYG{n+nf}{begin}\PYG{p}{(}\PYG{n}{customWire}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kr}{void}\PYG{+w}{ }\PYG{n+nb}{loop}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{n}{matrix}\PYG{p}{.}\PYG{n+nf}{clear}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n}{matrix}\PYG{p}{.}\PYG{n}{drawBitmap}\PYG{p}{(}\PYG{n}{sprite\PYGZus{}1}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{delay}\PYG{p}{(}\PYG{l+m+mi}{300}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n}{matrix}\PYG{p}{.}\PYG{n+nf}{clear}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n}{matrix}\PYG{p}{.}\PYG{n}{drawBitmap}\PYG{p}{(}\PYG{n}{sprite\PYGZus{}2}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{delay}\PYG{p}{(}\PYG{l+m+mi}{300}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n}{matrix}\PYG{p}{.}\PYG{n+nf}{clear}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n}{matrix}\PYG{p}{.}\PYG{n}{drawBitmap}\PYG{p}{(}\PYG{n}{sprite\PYGZus{}3}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{delay}\PYG{p}{(}\PYG{l+m+mi}{300}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n}{matrix}\PYG{p}{.}\PYG{n+nf}{clear}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n}{matrix}\PYG{p}{.}\PYG{n}{drawBitmap}\PYG{p}{(}\PYG{n}{sprite\PYGZus{}4}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{delay}\PYG{p}{(}\PYG{l+m+mi}{300}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}
