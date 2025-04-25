@@ -20,7 +20,8 @@
 \PYG{k+kr}{void}\PYG{+w}{ }\PYG{n+nb}{loop}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
 \PYG{+w}{  }\PYG{n}{lcd}\PYG{p}{.}\PYG{n+nf}{clear}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
 \PYG{+w}{  }\PYG{n}{lcd}\PYG{p}{.}\PYG{n+nf}{setCursor}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{;}
-\PYG{+w}{  }\PYG{k+kr}{String}\PYG{+w}{ }\PYG{n}{displayMessage}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{message}\PYG{p}{.}\PYG{n}{substring}\PYG{p}{(}\PYG{n+nf}{position}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nf}{min}\PYG{p}{(}\PYG{n+nf}{position}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{16}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{length}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kr}{String}\PYG{+w}{ }\PYG{n}{displayMessage}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{message}\PYG{p}{.}\PYG{n}{substring}\PYG{p}{(}\PYG{n+nf}{position}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n+nf}{min}\PYG{p}{(}\PYG{n+nf}{position}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{16}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{length}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \PYG{+w}{  }\PYG{n}{lcd}\PYG{p}{.}\PYG{n+nf}{print}\PYG{p}{(}\PYG{n}{displayMessage}\PYG{p}{)}\PYG{p}{;}
 \PYG{+w}{  }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{displayMessage}\PYG{p}{.}\PYG{n}{length}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{16}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{length}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{l+m+mi}{16}\PYG{p}{)}
 \PYG{+w}{    }\PYG{n}{lcd}\PYG{p}{.}\PYG{n+nf}{print}\PYG{p}{(}\PYG{n}{message}\PYG{p}{.}\PYG{n}{substring}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{16}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{displayMessage}\PYG{p}{.}\PYG{n}{length}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}

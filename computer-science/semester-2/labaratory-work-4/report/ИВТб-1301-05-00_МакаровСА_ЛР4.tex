@@ -206,7 +206,8 @@ void changeDirection() {
 void loop() {
   lcd.clear();
   lcd.setCursor(0, 0);
-  String displayMessage = message.substring(position, min(position + 16, length));
+  String displayMessage = message.substring(position, 
+    min(position + 16, length));
   lcd.print(displayMessage);
   if (displayMessage.length() < 16 && length > 16)
     lcd.print(message.substring(0, 16 - displayMessage.length()));
@@ -233,6 +234,45 @@ void loop() {
     \fontsize{14pt}{10pt}\selectfont
     \linespread{1}
     \begin{minted}{Arduino}
+#define LINE_SENSOR_1 A0
+#define LINE_SENSOR_2 A1
+#define TILT_SENSOR A2
+#define DIR_PIN 4
+#define SPEED_PIN 5
+#define LED_PIN_WHITE 8
+#define LED_PIN_BLUE 9
+#define LED_PIN_RED 10
+void setup() {
+  pinMode(DIR_PIN, OUTPUT);
+  pinMode(SPEED_PIN, OUTPUT);
+  pinMode(LED_PIN_WHITE, OUTPUT);
+  pinMode(LED_PIN_BLUE, OUTPUT);
+  pinMode(LED_PIN_RED, OUTPUT);
+  Serial.begin(9600);
+} 
+void loop() {
+  int valueSensor1 = analogRead(LINE_SENSOR_1);
+  int valueSensor2 = analogRead(LINE_SENSOR_2);
+  int valueTilted = analogRead(TILT_SENSOR);
+  digitalWrite(DIR_PIN, LOW);
+  boolean isS1 = valueSensor1 > 500 ? true : false;
+  boolean isS2 = valueSensor2 < 500 ? true : false;
+  boolean isS3 = valueTilted < 500 ? true : false;
+  isS1 ? digitalWrite(LED_PIN_WHITE, HIGH)
+    : digitalWrite(LED_PIN_WHITE, LOW);
+  isS2 ? digitalWrite(LED_PIN_BLUE, HIGH)
+    : digitalWrite(LED_PIN_BLUE, LOW);
+  isS3 ? digitalWrite(LED_PIN_RED, HIGH)
+    : digitalWrite(LED_PIN_RED, LOW);
+  if (isS3) {
+    analogWrite(SPEED_PIN, 255);
+  } else if (isS1 || isS2) {
+    analogWrite(SPEED_PIN, 80);
+  } else {
+    analogWrite(SPEED_PIN, 0);
+  }
+}
+
     \end{minted}
   \endgroup
 

@@ -1,0 +1,41 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{define LINE\PYGZus{}SENSOR\PYGZus{}1 A0}
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{define LINE\PYGZus{}SENSOR\PYGZus{}2 A1}
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{define TILT\PYGZus{}SENSOR A2}
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{define DIR\PYGZus{}PIN 4}
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{define SPEED\PYGZus{}PIN 5}
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{define LED\PYGZus{}PIN\PYGZus{}WHITE 8}
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{define LED\PYGZus{}PIN\PYGZus{}BLUE 9}
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{define LED\PYGZus{}PIN\PYGZus{}RED 10}
+\PYG{k+kr}{void}\PYG{+w}{ }\PYG{n+nb}{setup}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{n+nf}{pinMode}\PYG{p}{(}\PYG{n}{DIR\PYGZus{}PIN}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{OUTPUT}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{pinMode}\PYG{p}{(}\PYG{n}{SPEED\PYGZus{}PIN}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{OUTPUT}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{pinMode}\PYG{p}{(}\PYG{n}{LED\PYGZus{}PIN\PYGZus{}WHITE}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{OUTPUT}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{pinMode}\PYG{p}{(}\PYG{n}{LED\PYGZus{}PIN\PYGZus{}BLUE}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{OUTPUT}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{pinMode}\PYG{p}{(}\PYG{n}{LED\PYGZus{}PIN\PYGZus{}RED}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{OUTPUT}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{Serial}\PYG{p}{.}\PYG{n+nf}{begin}\PYG{p}{(}\PYG{l+m+mi}{9600}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kr}{void}\PYG{+w}{ }\PYG{n+nb}{loop}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{valueSensor1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{analogRead}\PYG{p}{(}\PYG{n}{LINE\PYGZus{}SENSOR\PYGZus{}1}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{valueSensor2}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{analogRead}\PYG{p}{(}\PYG{n}{LINE\PYGZus{}SENSOR\PYGZus{}2}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{valueTilted}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{analogRead}\PYG{p}{(}\PYG{n}{TILT\PYGZus{}SENSOR}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{digitalWrite}\PYG{p}{(}\PYG{n}{DIR\PYGZus{}PIN}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{LOW}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kr}{boolean}\PYG{+w}{ }\PYG{n}{isS1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{valueSensor1}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{l+m+mi}{500}\PYG{+w}{ }\PYG{o}{?}\PYG{+w}{ }\PYG{k+kr}{true}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kr}{false}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kr}{boolean}\PYG{+w}{ }\PYG{n}{isS2}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{valueSensor2}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{500}\PYG{+w}{ }\PYG{o}{?}\PYG{+w}{ }\PYG{k+kr}{true}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kr}{false}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kr}{boolean}\PYG{+w}{ }\PYG{n}{isS3}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{valueTilted}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{500}\PYG{+w}{ }\PYG{o}{?}\PYG{+w}{ }\PYG{k+kr}{true}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{k+kr}{false}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n}{isS1}\PYG{+w}{ }\PYG{o}{?}\PYG{+w}{ }\PYG{n+nf}{digitalWrite}\PYG{p}{(}\PYG{n}{LED\PYGZus{}PIN\PYGZus{}WHITE}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{HIGH}\PYG{p}{)}
+\PYG{+w}{    }\PYG{o}{:}\PYG{+w}{ }\PYG{n+nf}{digitalWrite}\PYG{p}{(}\PYG{n}{LED\PYGZus{}PIN\PYGZus{}WHITE}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{LOW}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n}{isS2}\PYG{+w}{ }\PYG{o}{?}\PYG{+w}{ }\PYG{n+nf}{digitalWrite}\PYG{p}{(}\PYG{n}{LED\PYGZus{}PIN\PYGZus{}BLUE}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{HIGH}\PYG{p}{)}
+\PYG{+w}{    }\PYG{o}{:}\PYG{+w}{ }\PYG{n+nf}{digitalWrite}\PYG{p}{(}\PYG{n}{LED\PYGZus{}PIN\PYGZus{}BLUE}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{LOW}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n}{isS3}\PYG{+w}{ }\PYG{o}{?}\PYG{+w}{ }\PYG{n+nf}{digitalWrite}\PYG{p}{(}\PYG{n}{LED\PYGZus{}PIN\PYGZus{}RED}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{HIGH}\PYG{p}{)}
+\PYG{+w}{    }\PYG{o}{:}\PYG{+w}{ }\PYG{n+nf}{digitalWrite}\PYG{p}{(}\PYG{n}{LED\PYGZus{}PIN\PYGZus{}RED}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{LOW}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{isS3}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nf}{analogWrite}\PYG{p}{(}\PYG{n}{SPEED\PYGZus{}PIN}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{255}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{isS1}\PYG{+w}{ }\PYG{o}{|}\PYG{o}{|}\PYG{+w}{ }\PYG{n}{isS2}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nf}{analogWrite}\PYG{p}{(}\PYG{n}{SPEED\PYGZus{}PIN}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{80}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nf}{analogWrite}\PYG{p}{(}\PYG{n}{SPEED\PYGZus{}PIN}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\end{MintedVerbatim}
