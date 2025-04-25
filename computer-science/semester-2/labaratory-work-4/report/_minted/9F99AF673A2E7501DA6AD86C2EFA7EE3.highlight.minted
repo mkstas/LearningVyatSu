@@ -1,7 +1,9 @@
 \begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZlt{}LiquidCrystal\PYGZus{}I2C.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZlt{}Wire.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZlt{}hd44780.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZlt{}hd44780ioClass/hd44780\PYGZus{}I2Cexp.h\PYGZgt{}}
 \PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{define BUTTON\PYGZus{}PIN 3}
-\PYG{n}{LiquidCrystal\PYGZus{}I2C}\PYG{+w}{ }\PYG{n+nf}{lcd}\PYG{p}{(}\PYG{l+m+mh}{0x27}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{16}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{hd44780\PYGZus{}I2Cexp}\PYG{+w}{ }\PYG{n+nf}{lcd}\PYG{p}{(}\PYG{l+m+mh}{0x27}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{16}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
 \PYG{k+kr}{String}\PYG{+w}{ }\PYG{n}{message}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{hello computer science }\PYG{l+s}{\PYGZdq{}}\PYG{p}{;}
 \PYG{k+kr}{volatile}\PYG{+w}{ }\PYG{k+kr}{boolean}\PYG{+w}{ }\PYG{n}{direction}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kr}{true}\PYG{p}{;}
 \PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{length}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{message}\PYG{p}{.}\PYG{n}{length}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
@@ -18,8 +20,7 @@
 \PYG{k+kr}{void}\PYG{+w}{ }\PYG{n+nb}{loop}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
 \PYG{+w}{  }\PYG{n}{lcd}\PYG{p}{.}\PYG{n+nf}{clear}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
 \PYG{+w}{  }\PYG{n}{lcd}\PYG{p}{.}\PYG{n+nf}{setCursor}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{;}
-\PYG{+w}{  }\PYG{k+kr}{String}\PYG{+w}{ }\PYG{n}{displayMessage}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{message}\PYG{p}{.}\PYG{n}{substring}\PYG{p}{(}
-\PYG{+w}{    }\PYG{n+nf}{position}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nf}{min}\PYG{p}{(}\PYG{n+nf}{position}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{16}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{length}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kr}{String}\PYG{+w}{ }\PYG{n}{displayMessage}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{message}\PYG{p}{.}\PYG{n}{substring}\PYG{p}{(}\PYG{n+nf}{position}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nf}{min}\PYG{p}{(}\PYG{n+nf}{position}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{16}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{length}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
 \PYG{+w}{  }\PYG{n}{lcd}\PYG{p}{.}\PYG{n+nf}{print}\PYG{p}{(}\PYG{n}{displayMessage}\PYG{p}{)}\PYG{p}{;}
 \PYG{+w}{  }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{displayMessage}\PYG{p}{.}\PYG{n}{length}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{16}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{length}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{l+m+mi}{16}\PYG{p}{)}
 \PYG{+w}{    }\PYG{n}{lcd}\PYG{p}{.}\PYG{n+nf}{print}\PYG{p}{(}\PYG{n}{message}\PYG{p}{.}\PYG{n}{substring}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{16}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{displayMessage}\PYG{p}{.}\PYG{n}{length}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
@@ -34,6 +35,6 @@
 \PYG{+w}{  }\PYG{p}{\PYGZcb{}}
 \PYG{+w}{  }\PYG{n}{lcd}\PYG{p}{.}\PYG{n+nf}{setCursor}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{p}{;}
 \PYG{+w}{  }\PYG{n}{lcd}\PYG{p}{.}\PYG{n+nf}{print}\PYG{p}{(}\PYG{n+nf}{millis}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mi}{1000}\PYG{p}{)}\PYG{p}{;}
-\PYG{+w}{  }\PYG{n+nf}{delay}\PYG{p}{(}\PYG{l+m+mi}{200}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{delay}\PYG{p}{(}\PYG{l+m+mi}{700}\PYG{p}{)}\PYG{p}{;}
 \PYG{p}{\PYGZcb{}}
 \end{MintedVerbatim}

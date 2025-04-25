@@ -1,0 +1,85 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{columnPins}\PYG{p}{[}\PYG{l+m+mi}{5}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{6}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{rowPins}\PYG{p}{[}\PYG{l+m+mi}{7}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{7}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{9}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{11}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{12}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{13}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{k+kr}{byte}\PYG{+w}{ }\PYG{n}{sprite1}\PYG{p}{[}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01110}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01110}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b11111}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b10101}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b11111}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b10001}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01110}
+\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{k+kr}{byte}\PYG{+w}{ }\PYG{n}{sprite2}\PYG{p}{[}\PYG{l+m+mi}{7}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01110}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01110}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b11111}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b11101}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b11111}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b11100}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01110}
+\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{k+kr}{byte}\PYG{+w}{ }\PYG{n}{sprite3}\PYG{p}{[}\PYG{l+m+mi}{7}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01110}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01110}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b11111}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b11111}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b11111}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b11111}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01110}
+\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{k+kr}{byte}\PYG{+w}{ }\PYG{n}{sprite4}\PYG{p}{[}\PYG{l+m+mi}{7}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01110}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01110}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b11111}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b10111}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b11111}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b00111}\PYG{p}{,}
+\PYG{+w}{  }\PYG{l+m+mb}{0b01110}
+\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{lastSwitch}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{interval}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{500}\PYG{p}{;}
+\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{k+kr}{void}\PYG{+w}{ }\PYG{n+nb}{setup}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{o}{+}\PYG{o}{+}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nf}{pinMode}\PYG{p}{(}\PYG{n}{columnPins}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{OUTPUT}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nf}{digitalWrite}\PYG{p}{(}\PYG{n}{columnPins}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{LOW}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{7}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{o}{+}\PYG{o}{+}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nf}{pinMode}\PYG{p}{(}\PYG{n}{rowPins}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{OUTPUT}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nf}{digitalWrite}\PYG{p}{(}\PYG{n}{rowPins}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{HIGH}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kr}{void}\PYG{+w}{ }\PYG{n+nb}{loop}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{currentTime}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{millis}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{displayFrame}\PYG{p}{(}\PYG{n}{sprite1}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{displayFrame}\PYG{p}{(}\PYG{n}{sprite2}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{displayFrame}\PYG{p}{(}\PYG{n}{sprite3}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{displayFrame}\PYG{p}{(}\PYG{n}{sprite4}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{currentTime}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{lastSwitch}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{o}{=}\PYG{+w}{ }\PYG{n}{interval}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{i}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZpc{}}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{lastSwitch}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{currentTime}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kr}{void}\PYG{+w}{ }\PYG{n+nf}{displayFrame}\PYG{p}{(}\PYG{k+kr}{byte}\PYG{+w}{ }\PYG{n}{frame}\PYG{p}{[}\PYG{l+m+mi}{7}\PYG{p}{]}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{row}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{row}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{7}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{row}\PYG{o}{+}\PYG{o}{+}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nf}{digitalWrite}\PYG{p}{(}\PYG{n}{rowPins}\PYG{p}{[}\PYG{n}{row}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{LOW}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{col}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{col}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{col}\PYG{o}{+}\PYG{o}{+}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nf}{bitRead}\PYG{p}{(}\PYG{n}{frame}\PYG{p}{[}\PYG{n}{row}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{col}\PYG{p}{)}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nf}{digitalWrite}\PYG{p}{(}\PYG{n}{columnPins}\PYG{p}{[}\PYG{n}{col}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{HIGH}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nf}{digitalWrite}\PYG{p}{(}\PYG{n}{columnPins}\PYG{p}{[}\PYG{n}{col}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{LOW}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{col}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{col}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{col}\PYG{o}{+}\PYG{o}{+}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{n+nf}{digitalWrite}\PYG{p}{(}\PYG{n}{columnPins}\PYG{p}{[}\PYG{n}{col}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{LOW}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{n+nf}{digitalWrite}\PYG{p}{(}\PYG{n}{rowPins}\PYG{p}{[}\PYG{n}{row}\PYG{p}{]}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{HIGH}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

@@ -58,6 +58,12 @@
   \section*{\hspace{12.5mm}Задание}
   \begin{enumerate}
     \item Кнопочные ковбои. Начальное состояние светодидов выключено. 3 игрока, для каждого по два светодиода. После окончания игры она начинается сначала. Выиграш игорка сигнализируется свеодиодом. игрок зарабатывает бонусы за нажатие, по нажатию на кнопку, если игрок нажал первый после звукового сигнала, то он зарабатывает бонус.
+    \item Вывод текста. Текст задан строкой 50–100 символов. Мы пытаемся прочитать текст с помощью навигации с помощью потенциометра. Дополнительно мы можем включать и выключать подсветку экрана кнопкой.
+    \item Тестер батареек. Текст задан строкой 20–30 символов. Организовать бегущую строку без использования циклов и встроенной функции scroll.
+    \item Задание с мотором. Дополнить схему платой расширения для моторов и датчиков. Подключить 2 датчика линии и 1 датчик наклона к плате и 3 светодиода для легкого контроля за датчиками.
+    \item Светодиодная матрица 8x8 (Troyka модуль). Отобразить на матрице изменение состояний. По желанию можно дополнить или продублировать состояния для плавного перехода или более интересной анимации.
+    \item Светодиодная матрица АЛС340А1. Вывести на матрицу первую букву своей фамилии и затем номер варианта поочередно.
+    \item Дополнительное задание. Выполнить задание 5 на матрице АЛС340А1
   \end{enumerate}
 
   \newpage
@@ -123,6 +129,52 @@ void loop(){
     \fontsize{14pt}{10pt}\selectfont
     \linespread{1}
     \begin{minted}{Arduino}
+#include <LiquidCrystal.h>
+#define POT_PIN A0
+#define BUTTON_PIN 3
+#define BACKLIGHT_PIN 5
+LiquidCrystal lcd(13, 12, 11, 10, 9, 8);
+String text = "Lorem ipsum dolor sit amet, cons ectetur 
+  adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+  dolore magna aliqua. Lorem ipsum dolor sit amet, cons ectetur 
+  adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+  dolore magna aliqua.";
+int rows = (text.length() + 15) / 16;
+int scroll = max(0, rows - 2);
+volatile boolean isEnable = true;
+void setup() {
+  lcd.begin(16, 2);
+  pinMode(BUTTON_PIN, INPUT_PULLUP);
+  pinMode(BACKLIGHT_PIN, OUTPUT);
+  attachInterrupt(1, switchDisplay, FALLING);
+}
+void switchDisplay() {
+  isEnable = !isEnable;
+}
+void updateDisplay(int start) {
+  lcd.clear();
+  for (int i = 0; i < 2; i++) {
+    int index = start + i;
+    if (index < rows) {
+      int position = index * 16;
+      String row = text.substring(position, 
+        min(position + 16, text.length()));
+      lcd.setCursor(0, i);
+      lcd.print(row);
+    }
+  }
+}
+void loop() {
+  if (isEnable) {
+    digitalWrite(BACKLIGHT_PIN, HIGH);
+  } else {
+    digitalWrite(BACKLIGHT_PIN, LOW);
+  }
+  int potValue = analogRead(POT_PIN);
+  int position = map(potValue, 0, 1023, 0, scroll);
+  updateDisplay(position);
+  delay(200);
+}
     \end{minted}
   \endgroup
 
@@ -133,9 +185,11 @@ void loop(){
     \fontsize{14pt}{10pt}\selectfont
     \linespread{1}
     \begin{minted}{Arduino}
-#include <LiquidCrystal_I2C.h>
+#include <Wire.h>
+#include <hd44780.h>
+#include <hd44780ioClass/hd44780_I2Cexp.h>
 #define BUTTON_PIN 3
-LiquidCrystal_I2C lcd(0x27, 16, 2);
+hd44780_I2Cexp lcd(0x27, 16, 2);
 String message = "hello computer science ";
 volatile boolean direction = true;
 int length = message.length();
@@ -152,8 +206,7 @@ void changeDirection() {
 void loop() {
   lcd.clear();
   lcd.setCursor(0, 0);
-  String displayMessage = message.substring(
-    position, min(position + 16, length));
+  String displayMessage = message.substring(position, min(position + 16, length));
   lcd.print(displayMessage);
   if (displayMessage.length() < 16 && length > 16)
     lcd.print(message.substring(0, 16 - displayMessage.length()));
@@ -168,7 +221,7 @@ void loop() {
   }
   lcd.setCursor(0, 1);
   lcd.print(millis() / 1000);
-  delay(200);
+  delay(700);
 }
     \end{minted}
   \endgroup
@@ -328,9 +381,15 @@ void displayFrame(byte frame[7]) {
     \end{minted}
   \endgroup
 
-  int columnPins[5] = {2, 3, 4, 5, 6};
-int rowPins[7] = {7, 8, 9, 10, 11, 12, 13};
+  \subsection*{\hspace{12.5mm}Дополнительное задание}
+  Выполнена живая сборка. Исходный код программы:
 
+  \begingroup
+    \fontsize{14pt}{10pt}\selectfont
+    \linespread{1}
+    \begin{minted}{Arduino}
+int columnPins[5] = {2, 3, 4, 5, 6};
+int rowPins[7] = {7, 8, 9, 10, 11, 12, 13};
 byte sprite1[] {
   0b01110,
   0b01110,
@@ -340,7 +399,6 @@ byte sprite1[] {
   0b10001,
   0b01110
 };
-
 byte sprite2[7] {
   0b01110,
   0b01110,
@@ -350,7 +408,6 @@ byte sprite2[7] {
   0b11100,
   0b01110
 };
-
 byte sprite3[7] {
   0b01110,
   0b01110,
@@ -360,7 +417,6 @@ byte sprite3[7] {
   0b11111,
   0b01110
 };
-
 byte sprite4[7] {
   0b01110,
   0b01110,
@@ -370,11 +426,9 @@ byte sprite4[7] {
   0b00111,
   0b01110
 };
-
 int lastSwitch = 0;
 int interval = 500;
 int i = 0;
-
 void setup() {
   for (int i = 0; i < 5; i++) {
     pinMode(columnPins[i], OUTPUT);
@@ -385,7 +439,6 @@ void setup() {
     digitalWrite(rowPins[i], HIGH);
   }
 }
-
 void loop() {
   int currentTime = millis();
   if (i == 0) {
@@ -402,7 +455,6 @@ void loop() {
     lastSwitch = currentTime;
   }
 }
-
 void displayFrame(byte frame[7]) {
   for (int row = 0; row < 7; row++) {
     digitalWrite(rowPins[row], LOW);
@@ -419,8 +471,10 @@ void displayFrame(byte frame[7]) {
     digitalWrite(rowPins[row], HIGH);
   }
 }
+    \end{minted}
+  \endgroup
 
   \section*{\hspace{12.5mm}Вывод}
-  В ходе лабораторной работы были изучены основы работы в среде Arduino IDE, а также собраны схемы с семисегментными индикаторами (с общим анодом и катодом), регистром 595, дешифратором 4511, драйвером 4026 в соответствии с вариантом задания.
+  В ходе лабораторной работы закреплны основы работы в среде Arduino IDE, а также собраны схемы пьезоэлемнтами, светодиодами, моторами и текстовыми дисплеями.
  
 \end{document}

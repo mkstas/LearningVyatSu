@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.11)  24 APR 2025 13:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.7)  25 APR 2025 06:45
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/StudiesVyatSU/computer-science/semester-2/labaratory-work-4/report/ИВТб-1301-05-00_МакаровСА_ЛР3.tex
-(d:/StudiesVyatSU/computer-science/semester-2/labaratory-work-4/report/ИВТб-1301-05-00_МакаровСА_ЛР3.tex
+**d:/StudiesVyatSU/computer-science/semester-2/labaratory-work-4/report/ИВТб-1301-05-00_МакаровСА_ЛР4.tex
+(d:/StudiesVyatSU/computer-science/semester-2/labaratory-work-4/report/ИВТб-1301-05-00_МакаровСА_ЛР4.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (D:\ProgramFiles\MikTex\tex/latex/extsizes\extarticle.cls
@@ -430,11 +430,11 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count303
 \l__pdf_internal_box=\box62
-) (ИВТб-1301-05-00_МакаровСА_ЛР3.aux
+) (ИВТб-1301-05-00_МакаровСА_ЛР4.aux
 Package babel Info: 'russian' activates 'russian' shorthands.
 (babel)             Reported  on input line 5.
 )
-\openout1 = `ИВТб-1301-05-00_МакаровСА_ЛР3.aux'.
+\openout1 = `ИВТб-1301-05-00_МакаровСА_ЛР4.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
@@ -512,12 +512,12 @@ LaTeX Font Info:    External font `cmex7' loaded for size
 
 [2]
 \pydata@fh@0=\write4
-\openout4 = `_1C198C554FCCEC167D66C5203FAA4456.data.minted'.
+\openout4 = `_03F2F8B256FC988B32A4EF63DF8FE5C8.data.minted'.
 
-runsystem(latexminted config  --timestamp 20250424135326 1C198C554FCCEC167D66C5203FAA4456)...executed.
+runsystem(latexminted config  --timestamp 20250425064545 03F2F8B256FC988B32A4EF63DF8FE5C8)...executed.
 
- (_1C198C554FCCEC167D66C5203FAA4456.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20250424135326 1C198C554FCCEC167D66C5203FAA4456)...executed.
+ (_03F2F8B256FC988B32A4EF63DF8FE5C8.config.minted)
+runsystem(latexminted cleanconfig  --timestamp 20250425064545 03F2F8B256FC988B32A4EF63DF8FE5C8)...executed.
 
  (_minted/default.style.minted) (_minted/31CA7DFCEE556A1EC9E134FC2831EE17.highlight.minted
 LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 1.
@@ -526,41 +526,48 @@ File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
 LaTeX Font Info:    Font shape `T2A/cmtt/bx/n' in size <14> not available
 (Font)              Font shape `T2A/cmtt/m/n' tried instead on input line 4.
-) (_minted/70BFD336033AD936680462987547674E.highlight.minted
+)
+\openout4 = `_03F2F8B256FC988B32A4EF63DF8FE5C8.data.minted'.
 
-[3]) (_minted/B95CF75FF8595E47053FC4C1C2F212AE.highlight.minted) (_minted/70BFD336033AD936680462987547674E.highlight.minted) (_minted/AB74970BD9DBFA67D2B5D7EF4F47FF8E.highlight.minted
+runsystem(latexminted highlight  --timestamp 20250425064545 03F2F8B256FC988B32A4EF63DF8FE5C8)...executed.
 
-[4]
+ (_minted/897C1E393A7E742241AFFC11B25575E9.highlight.minted
 
-[5]) (_minted/DE04D81DF0EED248E159D63EC14E2B1C.highlight.minted
+[3]) (_minted/9F99AF673A2E7501DA6AD86C2EFA7EE3.highlight.minted
 
-[6])
-Overfull \hbox (46.47095pt too wide) in paragraph at lines 406--422
-\T2A/cmr/m/n/14.4 digitalWrite(rowPins[row], LOW); for (int col = 0; col < 5; col++)  if (bitRead(frame[row],
- []
+[4]) (_minted/70BFD336033AD936680462987547674E.highlight.minted) (_minted/AB74970BD9DBFA67D2B5D7EF4F47FF8E.highlight.minted
 
+[5]
 
+[6]) (_minted/DE04D81DF0EED248E159D63EC14E2B1C.highlight.minted
 
-[7]
+[7]) (_minted/BCCB1C704513844F6E6C8DF8AC8E61E1.highlight.minted
 
-[8] (ИВТб-1301-05-00_МакаровСА_ЛР3.aux)
+[8])
+
+[9]
+\openout4 = `_03F2F8B256FC988B32A4EF63DF8FE5C8.data.minted'.
+
+runsystem(latexminted clean  --timestamp 20250425064545 03F2F8B256FC988B32A4EF63DF8FE5C8)...executed.
+
+ (ИВТб-1301-05-00_МакаровСА_ЛР4.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 9810 strings out of 473523
- 214313 string characters out of 5725212
- 727992 words of memory out of 5000000
- 32915 multiletter control sequences out of 15000+600000
+ 9859 strings out of 473523
+ 215997 string characters out of 5725213
+ 729455 words of memory out of 5000000
+ 32960 multiletter control sequences out of 15000+600000
  563213 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,7n,93p,769b,699s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 85i,7n,93p,769b,724s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\latt1440.pk> <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\lait1440.pk> <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk>
-Output written on ИВТб-1301-05-00_МакаровСА_ЛР3.pdf (8 pages, 109258 bytes).
+Output written on ИВТб-1301-05-00_МакаровСА_ЛР4.pdf (9 pages, 108396 bytes).
 PDF statistics:
- 313 PDF objects out of 1000 (max. 8388607)
+ 303 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

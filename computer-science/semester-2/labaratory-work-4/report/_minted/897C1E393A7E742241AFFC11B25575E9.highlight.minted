@@ -1,0 +1,48 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZlt{}LiquidCrystal.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{define POT\PYGZus{}PIN A0}
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{define BUTTON\PYGZus{}PIN 3}
+\PYG{c+cp}{\PYGZsh{}}\PYG{c+cp}{define BACKLIGHT\PYGZus{}PIN 5}
+\PYG{n+nf}{LiquidCrystal}\PYG{+w}{ }\PYG{n+nf}{lcd}\PYG{p}{(}\PYG{l+m+mi}{13}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{12}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{11}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{9}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{)}\PYG{p}{;}
+\PYG{k+kr}{String}\PYG{+w}{ }\PYG{n+nf}{text}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{Lorem ipsum dolor sit amet, cons ectetur}
+\PYG{+w}{  }\PYG{n}{adipiscing}\PYG{+w}{ }\PYG{n}{elit}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{sed}\PYG{+w}{ }\PYG{k}{do}\PYG{+w}{ }\PYG{n}{eiusmod}\PYG{+w}{ }\PYG{n}{tempor}\PYG{+w}{ }\PYG{n}{incididunt}\PYG{+w}{ }\PYG{n}{ut}\PYG{+w}{ }\PYG{n}{labore}\PYG{+w}{ }\PYG{n}{et}
+\PYG{+w}{  }\PYG{n}{dolore}\PYG{+w}{ }\PYG{n}{magna}\PYG{+w}{ }\PYG{n}{aliqua}\PYG{p}{.}\PYG{+w}{ }\PYG{n}{Lorem}\PYG{+w}{ }\PYG{n}{ipsum}\PYG{+w}{ }\PYG{n}{dolor}\PYG{+w}{ }\PYG{n}{sit}\PYG{+w}{ }\PYG{n}{amet}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{cons}\PYG{+w}{ }\PYG{n}{ectetur}
+\PYG{+w}{  }\PYG{n}{adipiscing}\PYG{+w}{ }\PYG{n}{elit}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{sed}\PYG{+w}{ }\PYG{k}{do}\PYG{+w}{ }\PYG{n}{eiusmod}\PYG{+w}{ }\PYG{n}{tempor}\PYG{+w}{ }\PYG{n}{incididunt}\PYG{+w}{ }\PYG{n}{ut}\PYG{+w}{ }\PYG{n}{labore}\PYG{+w}{ }\PYG{n}{et}
+\PYG{+w}{  }\PYG{n}{dolore}\PYG{+w}{ }\PYG{n}{magna}\PYG{+w}{ }\PYG{n}{aliqua}\PYG{p}{.}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{;}
+\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{rows}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nf}{text}\PYG{p}{.}\PYG{n}{length}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{15}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mi}{16}\PYG{p}{;}
+\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{scroll}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{max}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{rows}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
+\PYG{k+kr}{volatile}\PYG{+w}{ }\PYG{k+kr}{boolean}\PYG{+w}{ }\PYG{n}{isEnable}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kr}{true}\PYG{p}{;}
+\PYG{k+kr}{void}\PYG{+w}{ }\PYG{n+nb}{setup}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{n}{lcd}\PYG{p}{.}\PYG{n+nf}{begin}\PYG{p}{(}\PYG{l+m+mi}{16}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{pinMode}\PYG{p}{(}\PYG{n}{BUTTON\PYGZus{}PIN}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{INPUT\PYGZus{}PULLUP}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{pinMode}\PYG{p}{(}\PYG{n}{BACKLIGHT\PYGZus{}PIN}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{OUTPUT}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{attachInterrupt}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{switchDisplay}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{FALLING}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kr}{void}\PYG{+w}{ }\PYG{n+nf}{switchDisplay}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{n}{isEnable}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{!}\PYG{n}{isEnable}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kr}{void}\PYG{+w}{ }\PYG{n+nf}{updateDisplay}\PYG{p}{(}\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{start}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{n}{lcd}\PYG{p}{.}\PYG{n+nf}{clear}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{o}{+}\PYG{o}{+}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{index}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{start}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{i}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{index}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{rows}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n+nf}{position}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{index}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mi}{16}\PYG{p}{;}
+\PYG{+w}{      }\PYG{k+kr}{String}\PYG{+w}{ }\PYG{n}{row}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{text}\PYG{p}{.}\PYG{n}{substring}\PYG{p}{(}\PYG{n+nf}{position}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nf}{min}\PYG{p}{(}\PYG{n+nf}{position}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{16}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nf}{text}\PYG{p}{.}\PYG{n}{length}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{      }\PYG{n}{lcd}\PYG{p}{.}\PYG{n+nf}{setCursor}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{i}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{      }\PYG{n}{lcd}\PYG{p}{.}\PYG{n+nf}{print}\PYG{p}{(}\PYG{n}{row}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kr}{void}\PYG{+w}{ }\PYG{n+nb}{loop}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{isEnable}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nf}{digitalWrite}\PYG{p}{(}\PYG{n}{BACKLIGHT\PYGZus{}PIN}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{HIGH}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nf}{digitalWrite}\PYG{p}{(}\PYG{n}{BACKLIGHT\PYGZus{}PIN}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kr}{LOW}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n}{potValue}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{analogRead}\PYG{p}{(}\PYG{n}{POT\PYGZus{}PIN}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kr}{int}\PYG{+w}{ }\PYG{n+nf}{position}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf}{map}\PYG{p}{(}\PYG{n}{potValue}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1023}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{scroll}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n}{updateDisplay}\PYG{p}{(}\PYG{n+nf}{position}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{  }\PYG{n+nf}{delay}\PYG{p}{(}\PYG{l+m+mi}{200}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}
