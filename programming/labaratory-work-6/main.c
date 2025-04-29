@@ -3,21 +3,43 @@
 #include <conio.h>
 #include <locale.h>
 #include <string.h>
+#include <ctype.h>
 #include "queue.h"
 
 void readNumber(int* value) {
-    printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ: ");
+    printf("Введите значение: ");
     scanf_s("%d", value);
+}
+
+// Функция для получения чистой команды (удаляет пробелы с обеих сторон)
+void getCleanCommand(const char* input, char* cleanCommand) {
+    const char* start = input;
+    while (*start && isspace(*start)) start++; // Пропускаем начальные пробелы
+
+    if (*start == '\0') {
+        cleanCommand[0] = '\0';
+        return;
+    }
+
+    const char* end = start + strlen(start) - 1;
+    while (end > start && isspace(*end)) end--; // Пропускаем конечные пробелы
+
+    strncpy_s(cleanCommand, 20, start, end - start + 1);
+    cleanCommand[end - start + 1] = '\0';
 }
 
 void autocompleteCommand(char* input, size_t size) {
     char* commands[] = { "add", "delete", "print", "check", "exit" };
     int numCommands = 5;
+    char cleanInput[20] = { 0 };
+    getCleanCommand(input, cleanInput);
+
+    if (strlen(cleanInput) == 0) return;
 
     for (int i = 0; i < numCommands; i++) {
-        if (strncmp(commands[i], input, strlen(input)) == 0) {
+        if (strncmp(commands[i], cleanInput, strlen(cleanInput)) == 0) {
             strcpy_s(input, size, commands[i]);
-            printf("\rР’РІРµРґРёС‚Рµ РєРѕРјР°РЅРґСѓ: %s", input);
+            printf("\rВведите команду: %s", input);
             break;
         }
     }
@@ -29,11 +51,124 @@ void clearCurrentLine(size_t length) {
     }
 }
 
+void handleBackspace(char* command, size_t* idx) {
+    if (*idx > 0) {
+        (*idx)--;
+        command[*idx] = '\0';
+        printf("\b \b");
+    }
+}
+
+void handleTab(char* command, size_t* idx) {
+    clearCurrentLine(*idx);
+    autocompleteCommand(command, 20);
+    *idx = strlen(command);
+}
+
+void handleArrowUp(char* command, size_t* idx, char history[][20], int historyCount, int* historyPos) {
+    if (historyCount > 0 && *historyPos < historyCount - 1) {
+        (*historyPos)++;
+        clearCurrentLine(*idx);
+        strcpy_s(command, 20, history[historyCount - 1 - *historyPos]);
+        printf("%s", command);
+        *idx = strlen(command);
+    }
+}
+
+void handleArrowDown(char* command, size_t* idx, char history[][20], int historyCount, int* historyPos) {
+    if (*historyPos > 0) {
+        (*historyPos)--;
+        clearCurrentLine(*idx);
+        strcpy_s(command, 20, history[historyCount - 1 - *historyPos]);
+        printf("%s", command);
+        *idx = strlen(command);
+    }
+}
+
+void handleEnter(char* command, size_t idx, char history[][20], int* historyCount, int* historyPos) {
+    char cleanCommand[20] = { 0 };
+    getCleanCommand(command, cleanCommand);
+
+    if (strlen(cleanCommand) > 0) {
+        if (*historyCount < 10) {
+            strcpy_s(history[*historyCount], 20, cleanCommand);
+            (*historyCount)++;
+        }
+        else {
+            for (int i = 0; i < 9; i++) {
+                strcpy_s(history[i], 20, history[i + 1]);
+            }
+            strcpy_s(history[9], 20, cleanCommand);
+        }
+    }
+    *historyPos = -1;
+}
+
+void handleRegularChar(char* command, size_t* idx, int ch) {
+    if (*idx < 19 && isprint(ch)) {
+        command[*idx] = (char)ch;
+        (*idx)++;
+        putchar(ch);
+    }
+}
+
+void processCommand(Queue* queue, const char* command) {
+    char cleanCommand[20] = { 0 };
+    getCleanCommand(command, cleanCommand);
+
+    if (strlen(cleanCommand) == 0) {
+        printf("\nНеверная команда. Попробуйте снова.\n");
+        return;
+    }
+
+    int value;
+    if (strcmp(cleanCommand, "add") == 0) {
+        readNumber(&value);
+        addElementQueue(queue, value);
+        printf("\nЭлемент %d добавлен в очередь\n", value);
+    }
+    else if (strcmp(cleanCommand, "delete") == 0) {
+        if (isEmpty(queue)) {
+            printf("\nОчередь пуста, удаление невозможно.\n");
+        }
+        else {
+            value = deleteElementQueue(queue);
+            if (value != -1) {
+                printf("\nЭлемент %d удален из очереди\n", value);
+            }
+        }
+    }
+    else if (strcmp(cleanCommand, "print") == 0) {
+        if (isEmpty(queue)) {
+            printf("\nОчередь пуста.\n");
+        }
+        else {
+            printQueue(queue);
+            printf("\n");
+        }
+    }
+    else if (strcmp(cleanCommand, "check") == 0) {
+        if (isEmpty(queue)) {
+            printf("\nОчередь пуста.\n");
+        }
+        else {
+            printf("\nОчередь не пуста.\n");
+        }
+    }
+    else if (strcmp(cleanCommand, "exit") == 0) {
+        deleteQueue(queue);
+        printf("\nВыход\n");
+        exit(0);
+    }
+    else {
+        printf("\nНеверная команда. Попробуйте снова.\n");
+    }
+}
+
 int main() {
     setlocale(LC_ALL, "Rus");
 
     Queue* queue = createQueue();
-    int value;
     char command[20] = { 0 };
     size_t idx = 0;
     char history[10][20] = { 0 };
@@ -41,127 +176,46 @@ int main() {
     int historyPos = -1;
 
     while (1) {
-        printf("\nРњРµРЅСЋ:\n");
-        printf("add - Р”РѕР±Р°РІРёС‚СЊ СЌР»РµРјРµРЅС‚\n");
-        printf("delete - РЈРґР°Р»РёС‚СЊ СЌР»РµРјРµРЅС‚\n");
-        printf("print - РџРµС‡Р°С‚СЊ РѕС‡РµСЂРµРґРё\n");
-        printf("check - РџСЂРѕРІРµСЂРєР° РЅР° РїСѓСЃС‚РѕС‚Сѓ РѕС‡РµСЂРµРґРё\n");
-        printf("exit - Р’С‹С…РѕРґ\n");
-        printf("Р’РІРµРґРёС‚Рµ РєРѕРјР°РЅРґСѓ: ");
+        printf("\nМеню:\n");
+        printf("add - Добавить элемент\n");
+        printf("delete - Удалить элемент\n");
+        printf("print - Печать очереди\n");
+        printf("check - Проверка на пустоту очереди\n");
+        printf("exit - Выход\n");
+        printf("Введите команду: ");
 
         memset(command, 0, sizeof(command));
         idx = 0;
 
         while (1) {
-            int ch = _getch(); 
+            int ch = _getch();
 
             if (ch == 13) { // Enter
-                if (idx > 0) {
-                    if (historyCount < 10) {
-                        strcpy_s(history[historyCount], sizeof(history[0]), command);
-                        historyCount++;
-                    }
-                    else {
-                        for (int i = 0; i < 9; i++) {
-                            strcpy_s(history[i], sizeof(history[0]), history[i + 1]);
-                        }
-                        strcpy_s(history[9], sizeof(history[0]), command);
-                    }
-                }
-                historyPos = -1;
+                handleEnter(command, idx, history, &historyCount, &historyPos);
                 break;
             }
             else if (ch == 8) { // Backspace
-                if (idx > 0) {
-                    idx--;
-                    command[idx] = '\0';
-                    printf("\b \b");
-                }
+                handleBackspace(command, &idx);
             }
             else if (ch == 9) { // Tab
-                clearCurrentLine(idx);
-                autocompleteCommand(command, sizeof(command));
-                idx = strlen(command);
+                handleTab(command, &idx);
             }
-            else if (ch == 0xE0 || ch == 0) { // РЎРїРµС†РёР°Р»СЊРЅС‹Рµ РєР»Р°РІРёС€Рё (СЃС‚СЂРµР»РєРё)
-                ch = _getch(); // РџРѕР»СѓС‡Р°РµРј СЂРµР°Р»СЊРЅС‹Р№ РєРѕРґ РєР»Р°РІРёС€Рё
-
-                if (ch == 72) { // РЎС‚СЂРµР»РєР° РІРІРµСЂС…
-                    if (historyCount > 0 && historyPos < historyCount - 1) {
-                        historyPos++;
-                        clearCurrentLine(idx);
-                        strcpy_s(command, sizeof(command), history[historyCount - 1 - historyPos]);
-                        printf("%s", command);
-                        idx = strlen(command);
-                    }
+            else if (ch == 0xE0 || ch == 0) { // Специальные клавиши (стрелки)
+                ch = _getch();
+                if (ch == 72) { // Стрелка вверх
+                    handleArrowUp(command, &idx, history, historyCount, &historyPos);
                 }
-                else if (ch == 80) { // РЎС‚СЂРµР»РєР° РІРЅРёР·
-                    if (historyPos > 0) {
-                        historyPos--;
-                        clearCurrentLine(idx);
-                        strcpy_s(command, sizeof(command), history[historyCount - 1 - historyPos]);
-                        printf("%s", command);
-                        idx = strlen(command);
-                    }
-                    else if (historyPos == 0) {
-                        historyPos = -1;
-                        clearCurrentLine(idx);
-                        memset(command, 0, sizeof(command));
-                        idx = 0;
-                    }
+                else if (ch == 80) { // Стрелка вниз
+                    handleArrowDown(command, &idx, history, historyCount, &historyPos);
                 }
             }
-            else if (idx < sizeof(command) - 1 && isprint(ch)) { // РџСЂРѕРІРµСЂРєР° РЅР° РїРµС‡Р°С‚РЅС‹Р№ СЃРёРјРІРѕР»
-                command[idx] = (char)ch;
-                idx++;
-                putchar(ch);
+            else {
+                handleRegularChar(command, &idx, ch);
             }
         }
 
+        processCommand(queue, command);
+    }
 
-        // РћСЃС‚Р°Р»СЊРЅРѕР№ РєРѕРґ РѕР±СЂР°Р±РѕС‚РєРё РєРѕРјР°РЅРґ...
-        if (strcmp(command, "add") == 0) {
-          readNumber(&value);
-          addElementQueue(queue, value);
-          printf("\nР­Р»РµРјРµРЅС‚ %d РґРѕР±Р°РІР»РµРЅ РІ РѕС‡РµСЂРµРґСЊ\n", value);
-      }
-      else if (strcmp(command, "delete") == 0) {
-          if (isEmpty(queue)) {
-              printf("\nРћС‡РµСЂРµРґСЊ РїСѓСЃС‚Р°, СѓРґР°Р»РµРЅРёРµ РЅРµРІРѕР·РјРѕР¶РЅРѕ.\n");
-          }
-          else {
-              value = deleteElementQueue(queue);
-              if (value != -1) {
-                  printf("\nР­Р»РµРјРµРЅС‚ %d СѓРґР°Р»РµРЅ РёР· РѕС‡РµСЂРµРґРё\n", value);
-              }
-          }
-      }
-      else if (strcmp(command, "print") == 0) {
-          if (isEmpty(queue)) {
-              printf("\nРћС‡РµСЂРµРґСЊ РїСѓСЃС‚Р°.\n");
-          }
-          else {
-              printQueue(queue);
-              printf("\n");
-          }
-      }
-      else if (strcmp(command, "check") == 0) {
-          if (isEmpty(queue)) {
-              printf("\nРћС‡РµСЂРµРґСЊ РїСѓСЃС‚Р°.\n");
-          }
-          else {
-              printf("\nРћС‡РµСЂРµРґСЊ РЅРµ РїСѓСЃС‚Р°.\n");
-          }
-      }
-      else if (strcmp(command, "exit") == 0) {
-          deleteQueue(queue);
-          printf("\nР’С‹С…РѕРґ\n");
-          return 0;
-      }
-      else {
-          printf("\nРќРµРІРµСЂРЅР°СЏ РєРѕРјР°РЅРґР°. РџРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°.\n");
-      }
-  }
-
-  return 0;
+    return 0;
 }

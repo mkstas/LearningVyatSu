@@ -1,10 +1,15 @@
-program solution;
+{$codepage UTF8}
 
 uses Queue;
 
 var
-  commands: array[1..4] of string = ('add', 'delete', 'print', 'check');
+  q: TQueue;
 
 begin
-  write(add(1, 2));
+  init(q);
+  push(q, 10);
+  push(q, 20);
+  print(q);
+  pop(q);
+  print(q);
 end.
