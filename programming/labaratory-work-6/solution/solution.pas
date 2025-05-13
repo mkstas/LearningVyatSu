@@ -1,6 +1,6 @@
 {$codepage UTF8}
 
-uses 
+uses
   SysUtils, Crt, Queue;
 
 const
@@ -49,7 +49,7 @@ begin
     historyCount := historyCount + 1;
   end;
 
-  history[0] := input;
+  history[0] := cmd;
   historyPos := -1;
 end;
 

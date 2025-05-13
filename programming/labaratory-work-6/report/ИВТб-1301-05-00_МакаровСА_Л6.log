@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.7)  4 MAY 2025 19:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.7)  13 MAY 2025 04:16
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/StudiesVyatSU/programming/labaratory-work-6/report/ИВТб-1301-05-00_МакаровСА_Л5.tex
-(d:/StudiesVyatSU/programming/labaratory-work-6/report/ИВТб-1301-05-00_МакаровСА_Л5.tex
+**d:/StudiesVyatSU/programming/labaratory-work-6/report/ИВТб-1301-05-00_МакаровСА_Л6.tex
+(d:/StudiesVyatSU/programming/labaratory-work-6/report/ИВТб-1301-05-00_МакаровСА_Л6.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (D:\ProgramFiles\MikTex\tex/latex/extsizes\extarticle.cls
@@ -334,11 +334,11 @@ Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count278
 \l__pdf_internal_box=\box54
-) (ИВТб-1301-05-00_МакаровСА_Л5.aux
+) (ИВТб-1301-05-00_МакаровСА_Л6.aux
 Package babel Info: 'russian' activates 'russian' shorthands.
 (babel)             Reported  on input line 5.
 )
-\openout1 = `ИВТб-1301-05-00_МакаровСА_Л5.aux'.
+\openout1 = `ИВТб-1301-05-00_МакаровСА_Л6.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
@@ -425,41 +425,73 @@ Overfull \hbox (8.31245pt too wide) in paragraph at lines 40--47
 {C:/Users/makar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 
 [2]
-LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 71.
+<images/s-1.png, id=10, 1889.0575pt x 1889.0575pt>
+File: images/s-1.png Graphic file (type png)
+<use images/s-1.png>
+Package pdftex.def Info: images/s-1.png  used on input line 70.
+(pdftex.def)             Requested size: 483.69687pt x 483.67778pt.
+
+
+[3 <./images/s-1.png>]
+<images/s-2.png, id=16, 1969.3575pt x 1347.0325pt>
+File: images/s-2.png Graphic file (type png)
+<use images/s-2.png>
+Package pdftex.def Info: images/s-2.png  used on input line 80.
+(pdftex.def)             Requested size: 483.69687pt x 330.83774pt.
+
+
+[4 <./images/s-2.png>]
+<images/s-3.png, id=21, 907.89188pt x 1999.47pt>
+File: images/s-3.png Graphic file (type png)
+<use images/s-3.png>
+Package pdftex.def Info: images/s-3.png  used on input line 90.
+(pdftex.def)             Requested size: 258.77959pt x 569.9159pt.
+
+
+[5 <./images/s-3.png>]
+<images/s-4.png, id=26, 1072.005pt x 1939.245pt>
+File: images/s-4.png Graphic file (type png)
+<use images/s-4.png>
+Package pdftex.def Info: images/s-4.png  used on input line 100.
+(pdftex.def)             Requested size: 314.40001pt x 568.7286pt.
+
+
+[6 <./images/s-4.png>]
+LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 111.
  (D:\ProgramFiles\MikTex\tex/latex/cyrillic\t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-
-[3]
-
-[4]
-
-[5]
-
-[6]
 
 [7]
 
 [8]
 
-[9] (ИВТб-1301-05-00_МакаровСА_Л5.aux)
+[9]
+
+[10]
+
+[11]
+
+[12]
+
+[13] (ИВТб-1301-05-00_МакаровСА_Л6.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4687 strings out of 473523
- 78127 string characters out of 5725213
- 482155 words of memory out of 5000000
- 27884 multiletter control sequences out of 15000+600000
+ 4733 strings out of 473523
+ 79055 string characters out of 5725213
+ 482157 words of memory out of 5000000
+ 27930 multiletter control sequences out of 15000+600000
  563705 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,551b,317s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,7n,65p,551b,315s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\latt1200.pk> <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk>
-Output written on ИВТб-1301-05-00_МакаровСА_Л5.pdf (9 pages, 78263 bytes).
+Output written on ИВТб-1301-05-00_МакаровСА_Л6.pdf (13 pages, 631916 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
+ 262 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

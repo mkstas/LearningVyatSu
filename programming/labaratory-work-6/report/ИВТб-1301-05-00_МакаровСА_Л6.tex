@@ -65,7 +65,47 @@
   \pagebreak
   \section*{Решение}
 
-  Исходный код отдельного модуля для структуры <<Очередь>> представлен ниже:
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{images/s-1}
+  \end{figure}
+  \begin{center}
+    Рисунок 1 – Схемы алгоритмов проверки на пустоту, вывода структуры, удаления и добвления элемента
+  \end{center}
+
+  \pagebreak
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{images/s-2}
+  \end{figure}
+  \begin{center}
+    Рисунок 2 – Схемы алгоритмов добавления в историю, автоподстановки
+  \end{center}
+
+  \pagebreak
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.535\linewidth]{images/s-3}
+  \end{figure}
+  \begin{center}
+    Рисунок 3 – Схема алгоритма обработки ввода
+  \end{center}
+
+  \pagebreak
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=0.65\linewidth]{images/s-4}
+  \end{figure}
+  \begin{center}
+    Рисунок 4 – Схема алгоритма программы
+  \end{center}
+
+  \pagebreak
+
+  Исходный код модуля для структуры <<Очередь>> представлен ниже:
 
   \noindent
   \begin{Verbatim}[tabsize=4,fontsize=\small]
@@ -145,7 +185,7 @@ end.
   \noindent
   \begin{Verbatim}[tabsize=4,fontsize=\small]
 {$codepage UTF8}
-uses 
+uses
   SysUtils, Crt, Queue;
 const
   MAX_HISTORY = 10;
@@ -188,7 +228,7 @@ begin
       history[i] := history[i - 1];
     historyCount := historyCount + 1;
   end;
-  history[0] := input;
+  history[0] := cmd;
   historyPos := -1;
 end;
 function autoComplete(partialCmd: string): string;
