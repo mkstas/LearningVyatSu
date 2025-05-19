@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.7)  13 MAY 2025 05:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.7)  19 MAY 2025 01:37
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -418,31 +418,101 @@ LaTeX Font Info:    External font `cmex7' loaded for size
 [1
 
 {C:/Users/makar/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+<images/graph.png, id=7, 283.0575pt x 242.9075pt>
+File: images/graph.png Graphic file (type png)
+<use images/graph.png>
+Package pdftex.def Info: images/graph.png  used on input line 68.
+(pdftex.def)             Requested size: 193.47578pt x 166.0348pt.
 
-[2]
-LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 70.
+
+[2 <./images/graph.png>]
+<images/s-1.png, id=13, 1638.12pt x 1286.8075pt>
+File: images/s-1.png Graphic file (type png)
+<use images/s-1.png>
+Package pdftex.def Info: images/s-1.png  used on input line 79.
+(pdftex.def)             Requested size: 483.69687pt x 379.95836pt.
+
+
+[3 <./images/s-1.png>]
+<images/s-2.png, id=18, 1286.8075pt x 1850.915pt>
+File: images/s-2.png Graphic file (type png)
+<use images/s-2.png>
+Package pdftex.def Info: images/s-2.png  used on input line 90.
+(pdftex.def)             Requested size: 386.95897pt x 556.57796pt.
+
+
+[4 <./images/s-2.png>]
+<images/s-3.png, id=23, 1583.9175pt x 1750.54pt>
+File: images/s-3.png Graphic file (type png)
+<use images/s-3.png>
+Package pdftex.def Info: images/s-3.png  used on input line 101.
+(pdftex.def)             Requested size: 483.69687pt x 534.56834pt.
+
+
+[5 <./images/s-3.png>]
+<images/s-4.png, id=28, 1286.8075pt x 1951.29pt>
+File: images/s-4.png Graphic file (type png)
+<use images/s-4.png>
+Package pdftex.def Info: images/s-4.png  used on input line 112.
+(pdftex.def)             Requested size: 338.58632pt x 513.42715pt.
+
+
+[6 <./images/s-4.png>]
+<images/s-5.png, id=33, 2051.665pt x 1447.4075pt>
+File: images/s-5.png Graphic file (type png)
+<use images/s-5.png>
+Package pdftex.def Info: images/s-5.png  used on input line 123.
+(pdftex.def)             Requested size: 483.69687pt x 341.223pt.
+
+
+[7 <./images/s-5.png>]
+<images/s-6.png, id=39, 849.1725pt x 1567.8575pt>
+File: images/s-6.png Graphic file (type png)
+<use images/s-6.png>
+Package pdftex.def Info: images/s-6.png  used on input line 134.
+(pdftex.def)             Requested size: 304.73138pt x 562.634pt.
+
+
+[8 <./images/s-6.png>]
+LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 146.
  (D:\ProgramFiles\MikTex\tex/latex/cyrillic\t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
 
-[3] (ИВТб-1301-05-00_МакаровСА_Л5.aux)
+[9]
+
+[10]
+
+[11]
+
+[12]
+
+[13]
+<images/image.png, id=61, 423.08063pt x 403.5075pt>
+File: images/image.png Graphic file (type png)
+<use images/image.png>
+Package pdftex.def Info: images/image.png  used on input line 350.
+(pdftex.def)             Requested size: 435.32422pt x 415.19868pt.
+
+
+[14 <./images/image.png>] (ИВТб-1301-05-00_МакаровСА_Л5.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4683 strings out of 473523
- 78108 string characters out of 5725213
- 477159 words of memory out of 5000000
- 27881 multiletter control sequences out of 15000+600000
+ 4741 strings out of 473523
+ 79360 string characters out of 5725213
+ 481161 words of memory out of 5000000
+ 27939 multiletter control sequences out of 15000+600000
  562903 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,486b,230s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk>
-Output written on ИВТб-1301-05-00_МакаровСА_Л5.pdf (3 pages, 40852 bytes).
+ 57i,7n,65p,486b,300s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\latt1440.pk> <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Users\makar\AppData\Local\MiKTeX\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk>
+Output written on ИВТб-1301-05-00_МакаровСА_Л5.pdf (14 pages, 557698 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
+ 268 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
