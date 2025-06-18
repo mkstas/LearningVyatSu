@@ -1,8 +1,170 @@
-object Form1: TForm1
-  Left = 199
-  Height = 240
-  Top = 250
-  Width = 320
-  Caption = 'Form1'
+object MainForm: TMainForm
+  Left = 50
+  Height = 400
+  Top = 50
+  Width = 700
+  BorderStyle = bsSingle
+  Caption = 'Работа с данными'
+  ClientHeight = 400
+  ClientWidth = 700
+  Position = poMainFormCenter
   LCLVersion = '4.0.0.4'
+  object ButtonGenerate: TButton
+    Left = 10
+    Height = 40
+    Top = 10
+    Width = 150
+    Caption = 'Генерировать'
+    TabOrder = 0
+    OnClick = ButtonGenerateClick
+  end
+  object RadioGroupSort: TRadioGroup
+    Left = 10
+    Height = 70
+    Top = 110
+    Width = 150
+    AutoFill = True
+    Caption = 'Сортировать по'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 50
+    ClientWidth = 146
+    TabOrder = 1
+    object RadioButtonSortDown: TRadioButton
+      Left = 6
+      Height = 25
+      Top = 0
+      Width = 134
+      Caption = 'Убыванию'
+      Checked = True
+      TabOrder = 1
+      TabStop = True
+    end
+    object RadioButtonSortUp: TRadioButton
+      Left = 6
+      Height = 25
+      Top = 25
+      Width = 134
+      Caption = 'Возрастанию'
+      TabOrder = 0
+    end
+  end
+  object ButtonShow: TButton
+    Left = 10
+    Height = 40
+    Top = 60
+    Width = 150
+    Caption = 'Вывести данные'
+    TabOrder = 2
+    OnClick = ButtonShowClick
+  end
+  object RadioGroupField: TRadioGroup
+    Left = 10
+    Height = 150
+    Top = 190
+    Width = 150
+    AutoFill = True
+    Caption = 'Сортировать по полю'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 130
+    ClientWidth = 146
+    TabOrder = 3
+    object RadioButtonName: TRadioButton
+      Left = 6
+      Height = 26
+      Top = 0
+      Width = 134
+      Caption = 'Имя'
+      Checked = True
+      TabOrder = 4
+      TabStop = True
+    end
+    object RadioButtonSurname: TRadioButton
+      Left = 6
+      Height = 26
+      Top = 26
+      Width = 134
+      Caption = 'Фамилия'
+      TabOrder = 0
+    end
+    object RadioButtonFaculty: TRadioButton
+      Left = 6
+      Height = 26
+      Top = 52
+      Width = 134
+      Caption = 'Факультет'
+      TabOrder = 1
+    end
+    object RadioButtonCourse: TRadioButton
+      Left = 6
+      Height = 26
+      Top = 78
+      Width = 134
+      Caption = 'Курс'
+      TabOrder = 2
+    end
+    object RadioButtonGroup: TRadioButton
+      Left = 6
+      Height = 26
+      Top = 104
+      Width = 134
+      Caption = 'Группа'
+      TabOrder = 3
+    end
+  end
+  object ButtonSort: TButton
+    Left = 10
+    Height = 40
+    Top = 350
+    Width = 150
+    Caption = 'Сортировать'
+    TabOrder = 4
+    OnClick = ButtonSortClick
+  end
+  object MemoRecords: TMemo
+    Left = 170
+    Height = 330
+    Top = 10
+    Width = 520
+    ParentShowHint = False
+    ReadOnly = True
+    ScrollBars = ssAutoVertical
+    TabOrder = 5
+  end
+  object ProgressBar: TProgressBar
+    Left = 170
+    Height = 36
+    Top = 352
+    Width = 300
+    TabOrder = 6
+  end
+  object ButtonNext: TButton
+    Left = 590
+    Height = 40
+    Top = 350
+    Width = 100
+    Caption = 'Вперед'
+    TabOrder = 7
+    OnClick = ButtonNextClick
+  end
+  object ButtonBack: TButton
+    Left = 480
+    Height = 40
+    Top = 350
+    Width = 100
+    Caption = 'Назад'
+    TabOrder = 8
+    OnClick = ButtonBackClick
+  end
 end
