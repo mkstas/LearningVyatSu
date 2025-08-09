@@ -1,0 +1,37 @@
+package main
+
+import "fmt"
+
+func main() {
+	var x1 int
+	var y1 int
+	var x2 int
+	var y2 int
+	var s int
+
+	fmt.Scanf("%d %d %d %d", &x1, &y1, &x2, &y2)
+
+	if x1 < 0 {
+		x1 = 0;
+	}
+
+	if y1 < 0 {
+		y1 = 0;
+	}
+
+	if x2 < 0 {
+		x2 = 0;
+	}
+
+	if y2 < 0 {
+		y2 = 0;
+	}
+
+	s = (x1 - x2) * (y1 - y2);
+
+	if s < 0 {
+		s *= -1;
+	}
+
+	fmt.Printf("%d", s)
+}
