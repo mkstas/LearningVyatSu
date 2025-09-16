@@ -27,18 +27,21 @@ VALUES ('Мир')
 RETURNING id INTO paymentId;
 
 INSERT INTO "user_payments" (user_id, payment_id, card_number, cvv)
-VALUES (userId, paymentId, '0000000000000000', '000');
-
-INSERT INTO "users" (phone_number, username)
-VALUES ('89001110000', 'Александр')
-RETURNING id INTO userId;
+VALUES (userId, paymentId, '2400100020003000', '135');
 
 INSERT INTO "payments" (title)
 VALUES ('Visa')
 RETURNING id INTO paymentId;
 
 INSERT INTO "user_payments" (user_id, payment_id, card_number, cvv)
-VALUES (userId, paymentId, '1111111111111111', '111');
+VALUES (userId, paymentId, '6500100020003000', '246');
+
+INSERT INTO "users" (phone_number, username)
+VALUES ('89001110000', 'Александр')
+RETURNING id INTO userId;
+
+INSERT INTO "user_payments" (user_id, payment_id, card_number, cvv)
+VALUES (userId, paymentId, '6500300020001000', '975');
 
 INSERT INTO "users" (phone_number, username)
 VALUES ('89002220000', 'Екатерина')
@@ -49,7 +52,7 @@ VALUES ('MasterCard')
 RETURNING id INTO paymentId;
 
 INSERT INTO "user_payments" (user_id, payment_id, card_number, cvv)
-VALUES (userId, paymentId, '2222222222222222', '222');
+VALUES (userId, paymentId, '4200400050006000', '864');
 
 INSERT INTO "categories" (title)
 VALUES ('Пиццы')
