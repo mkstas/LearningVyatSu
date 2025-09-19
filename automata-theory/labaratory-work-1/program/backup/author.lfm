@@ -1,0 +1,31 @@
+object AuthorForm: TAuthorForm
+  Left = 350
+  Height = 320
+  Top = 250
+  Width = 640
+  Caption = 'AuthorForm'
+  ClientHeight = 320
+  ClientWidth = 640
+  object ButtonOk: TButton
+    Left = 552
+    Height = 25
+    Top = 280
+    Width = 75
+    Caption = 'Ок'
+    TabOrder = 0
+    OnClick = ButtonOkClick
+  end
+  object AuthorStaticText: TStaticText
+    Left = 16
+    Height = 50
+    Top = 16
+    Width = 328
+    Caption = 'Разработал: Макаров Станислав Алексеевич'#13#10'Группа: ИВТб-2301-05-00'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -16
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 1
+  end
+end

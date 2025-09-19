@@ -1,0 +1,44 @@
+object MainForm: TMainForm
+  Left = 350
+  Height = 400
+  Top = 250
+  Width = 800
+  Caption = 'Рыбаки'
+  Menu = MainMenu
+  object MainMenu: TMainMenu
+    object MenuFile: TMenuItem
+      Caption = 'Файл'
+      object MenuOpen: TMenuItem
+        Caption = 'Открыть'
+      end
+      object MenuSave: TMenuItem
+        Caption = 'Сохранить'
+      end
+      object MenuExit: TMenuItem
+        Caption = 'Выход'
+      end
+    end
+    object MenuSettings: TMenuItem
+      Caption = 'Настройки'
+      object MenuColors: TMenuItem
+        Caption = 'Выбор цвета'
+        OnClick = MenuColorsClick
+      end
+      object MenuInitial: TMenuItem
+        Caption = 'Начальное заполнение'
+        OnClick = MenuInitialClick
+      end
+    end
+    object MenuReference: TMenuItem
+      Caption = 'Справка'
+      object MenuAbout: TMenuItem
+        Caption = 'О программе'
+        OnClick = MenuAboutClick
+      end
+      object MenuAuthor: TMenuItem
+        Caption = 'Об авторе'
+        OnClick = MenuAuthorClick
+      end
+    end
+  end
+end

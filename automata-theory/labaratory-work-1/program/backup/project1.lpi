@@ -35,11 +35,25 @@
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="unit1.pas"/>
+        <Filename Value="main.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form1"/>
+        <ComponentName Value="MainForm"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Unit1"/>
+        <UnitName Value="Main"/>
+      </Unit>
+      <Unit>
+        <Filename Value="about.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AboutForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="About"/>
+      </Unit>
+      <Unit>
+        <Filename Value="author.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="AuthorForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Author"/>
       </Unit>
     </Units>
   </ProjectOptions>
@@ -54,6 +68,9 @@
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf3"/>
+      </Debugging>
       <Options>
         <Win32>
           <GraphicApplication Value="True"/>
