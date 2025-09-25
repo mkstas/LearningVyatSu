@@ -1,0 +1,93 @@
+<explain xmlns="http://www.postgresql.org/2009/explain">
+  <Query>
+    <Plan>
+      <Node-Type>Hash Join</Node-Type>
+      <Parallel-Aware>false</Parallel-Aware>
+      <Async-Capable>false</Async-Capable>
+      <Join-Type>Inner</Join-Type>
+      <Startup-Cost>24.50</Startup-Cost>
+      <Total-Cost>60.48</Total-Cost>
+      <Plan-Rows>2191</Plan-Rows>
+      <Plan-Width>1669</Plan-Width>
+      <Inner-Unique>true</Inner-Unique>
+      <Hash-Cond>(pv.product_id = p.id)</Hash-Cond>
+      <Plans>
+        <Plan>
+          <Node-Type>Hash Join</Node-Type>
+          <Parent-Relationship>Outer</Parent-Relationship>
+          <Parallel-Aware>false</Parallel-Aware>
+          <Async-Capable>false</Async-Capable>
+          <Join-Type>Inner</Join-Type>
+          <Startup-Cost>12.93</Startup-Cost>
+          <Total-Cost>46.82</Total-Cost>
+          <Plan-Rows>767</Plan-Rows>
+          <Plan-Width>605</Plan-Width>
+          <Inner-Unique>false</Inner-Unique>
+          <Hash-Cond>(pi.product_id = pv.product_id)</Hash-Cond>
+          <Plans>
+            <Plan>
+              <Node-Type>Seq Scan</Node-Type>
+              <Parent-Relationship>Outer</Parent-Relationship>
+              <Parallel-Aware>false</Parallel-Aware>
+              <Async-Capable>false</Async-Capable>
+              <Relation-Name>product_ingredients</Relation-Name>
+              <Alias>pi</Alias>
+              <Startup-Cost>0.00</Startup-Cost>
+              <Total-Cost>21.80</Total-Cost>
+              <Plan-Rows>1180</Plan-Rows>
+              <Plan-Width>41</Plan-Width>
+            </Plan>
+            <Plan>
+              <Node-Type>Hash</Node-Type>
+              <Parent-Relationship>Inner</Parent-Relationship>
+              <Parallel-Aware>false</Parallel-Aware>
+              <Async-Capable>false</Async-Capable>
+              <Startup-Cost>11.30</Startup-Cost>
+              <Total-Cost>11.30</Total-Cost>
+              <Plan-Rows>130</Plan-Rows>
+              <Plan-Width>564</Plan-Width>
+              <Plans>
+                <Plan>
+                  <Node-Type>Seq Scan</Node-Type>
+                  <Parent-Relationship>Outer</Parent-Relationship>
+                  <Parallel-Aware>false</Parallel-Aware>
+                  <Async-Capable>false</Async-Capable>
+                  <Relation-Name>product_variants</Relation-Name>
+                  <Alias>pv</Alias>
+                  <Startup-Cost>0.00</Startup-Cost>
+                  <Total-Cost>11.30</Total-Cost>
+                  <Plan-Rows>130</Plan-Rows>
+                  <Plan-Width>564</Plan-Width>
+                </Plan>
+              </Plans>
+            </Plan>
+          </Plans>
+        </Plan>
+        <Plan>
+          <Node-Type>Hash</Node-Type>
+          <Parent-Relationship>Inner</Parent-Relationship>
+          <Parallel-Aware>false</Parallel-Aware>
+          <Async-Capable>false</Async-Capable>
+          <Startup-Cost>10.70</Startup-Cost>
+          <Total-Cost>10.70</Total-Cost>
+          <Plan-Rows>70</Plan-Rows>
+          <Plan-Width>1064</Plan-Width>
+          <Plans>
+            <Plan>
+              <Node-Type>Seq Scan</Node-Type>
+              <Parent-Relationship>Outer</Parent-Relationship>
+              <Parallel-Aware>false</Parallel-Aware>
+              <Async-Capable>false</Async-Capable>
+              <Relation-Name>products</Relation-Name>
+              <Alias>p</Alias>
+              <Startup-Cost>0.00</Startup-Cost>
+              <Total-Cost>10.70</Total-Cost>
+              <Plan-Rows>70</Plan-Rows>
+              <Plan-Width>1064</Plan-Width>
+            </Plan>
+          </Plans>
+        </Plan>
+      </Plans>
+    </Plan>
+  </Query>
+</explain>

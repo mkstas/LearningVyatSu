@@ -143,3 +143,20 @@ END;
 $$ LANGUAGE plpgsql;
 
 SELECT get_value_by_id('categories', 'title', 4);
+
+CREATE OR REPLACE FUNCTION get_value_by_price (
+    table_name VARCHAR,
+    price INT
+)
+RETURNS TEXT
+AS $$
+DECLARE
+    result TEXT;
+BEGIN
+    EXECUTE 'SELECT * FROM ' || table_name || ' WHERE price > $1' USING price INTO result;
+
+    RETURN result;
+END;
+$$ LANGUAGE plpgsql;
+
+SELECT get_value_by_price('ingredients', 60);
