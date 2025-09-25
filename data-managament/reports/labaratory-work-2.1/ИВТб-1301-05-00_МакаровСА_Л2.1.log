@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.2)  25 SEP 2025 14:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.2)  25 SEP 2025 14:52
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/studies-vyatsu/data-managament/reports/labaratory-work-3/РР’РўР±-1301-05-00_РњР°РєР°СЂРѕРІРЎРђ_Р›3
-(d:/studies-vyatsu/data-managament/reports/labaratory-work-3/РР’РўР±-1301-05-00_РњР°РєР°СЂРѕРІРЎРђ_Р›3.tex
+**d:/studies-vyatsu/data-managament/reports/labaratory-work-2.1/РР’РўР±-1301-05-00_РњР°РєР°СЂРѕРІРЎРђ_Р›2.1
+(d:/studies-vyatsu/data-managament/reports/labaratory-work-2.1/РР’РўР±-1301-05-00_РњР°РєР°СЂРѕРІРЎРђ_Р›2.1.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
 (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/extsizes/extarticle.cls
@@ -335,11 +335,11 @@ Package: fancyvrb 2025/07/28 4.6 verbatim text (tvz,hv)
 ) (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count291
-) (./РР’РўР±-1301-05-00_РњР°РєР°СЂРѕРІРЎРђ_Р›3.aux
+) (./РР’РўР±-1301-05-00_РњР°РєР°СЂРѕРІРЎРђ_Р›2.1.aux
 Package babel Info: 'russian' activates 'russian' shorthands.
 (babel)             Reported on input line 5.
 )
-\openout1 = `РР’РўР±-1301-05-00_РњР°РєР°СЂРѕРІРЎРђ_Р›3.aux'.
+\openout1 = `РР’РўР±-1301-05-00_РњР°РєР°СЂРѕРІРЎРђ_Р›2.1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
@@ -419,139 +419,66 @@ LaTeX Font Info:    External font `cmex7' loaded for size
 [1
 
 {d:/ProgramFiles/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{d:/ProgramFiles/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}]
-Overfull \hbox (3.50072pt too wide) in paragraph at lines 61--62
-[]\T2A/cmr/m/n/14.4 Для лю-бой таб-ли-цы, на ко-то-рую име-ют-ся внеш-ние клю-чи, со-здать функ-
- []
-
-
 
 [2]
-Overfull \hbox (0.62985pt too wide) in paragraph at lines 72--73
-\T2A/cmr/m/n/14.4 Реализовать за-пол-не-ние таб-ли-цы с ло-гом с по-мо-щью триг-ге-ров на встав-
- []
-
-
-
-[3]
-LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 87.
+LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 69.
  (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-<img/t-1-1.png, id=14, 498.36188pt x 145.29282pt>
-File: img/t-1-1.png Graphic file (type png)
-<use img/t-1-1.png>
-Package pdftex.def Info: img/t-1-1.png  used on input line 119.
-(pdftex.def)             Requested size: 483.69687pt x 141.02031pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
+[3]
 
 [4]
-<img/t-1-2.png, id=20, 115.93312pt x 48.93282pt>
-File: img/t-1-2.png Graphic file (type png)
-<use img/t-1-2.png>
-Package pdftex.def Info: img/t-1-2.png  used on input line 136.
-(pdftex.def)             Requested size: 96.73788pt x 40.83148pt.
-<img/t-1-3.png, id=21, 118.94438pt x 54.9553pt>
-File: img/t-1-3.png Graphic file (type png)
-<use img/t-1-3.png>
-Package pdftex.def Info: img/t-1-3.png  used on input line 153.
-(pdftex.def)             Requested size: 96.73788pt x 44.69717pt.
+
+[5]
+
+[6]
+
+[7]
+<img/view-1.png, id=28, 593.96906pt x 106.14656pt>
+File: img/view-1.png Graphic file (type png)
+<use img/view-1.png>
+Package pdftex.def Info: img/view-1.png  used on input line 278.
+(pdftex.def)             Requested size: 483.69687pt x 86.44308pt.
+<img/view-2.png, id=30, 911.65594pt x 142.28156pt>
+File: img/view-2.png Graphic file (type png)
+<use img/view-2.png>
+Package pdftex.def Info: img/view-2.png  used on input line 299.
+(pdftex.def)             Requested size: 483.69687pt x 75.49136pt.
 
 
-[5 <./img/t-1-1.png> <./img/t-1-2.png> <./img/t-1-3.png>]
-<img/t-1-4.png, id=28, 501.37312pt x 164.11313pt>
-File: img/t-1-4.png Graphic file (type png)
-<use img/t-1-4.png>
-Package pdftex.def Info: img/t-1-4.png  used on input line 164.
-(pdftex.def)             Requested size: 483.69687pt x 158.3356pt.
-File: img/t-1-4.png Graphic file (type png)
-<use img/t-1-4.png>
-Package pdftex.def Info: img/t-1-4.png  used on input line 202.
-(pdftex.def)             Requested size: 483.69687pt x 158.3356pt.
+[8 <./img/view-1.png> <./img/view-2.png>]
+<img/view-3.png, id=36, 365.11406pt x 85.06781pt>
+File: img/view-3.png Graphic file (type png)
+<use img/view-3.png>
+Package pdftex.def Info: img/view-3.png  used on input line 322.
+(pdftex.def)             Requested size: 362.77264pt x 84.5263pt.
 
-
-[6 <./img/t-1-4.png>]
-<img/t-2-1.png, id=33, 379.4175pt x 59.47218pt>
-File: img/t-2-1.png Graphic file (type png)
-<use img/t-2-1.png>
-Package pdftex.def Info: img/t-2-1.png  used on input line 226.
-(pdftex.def)             Requested size: 386.95897pt x 60.65536pt.
-
-
-[7 <./img/t-2-1.png>]
-<img/t-2-2.png, id=39, 502.87875pt x 144.54pt>
-File: img/t-2-2.png Graphic file (type png)
-<use img/t-2-2.png>
-Package pdftex.def Info: img/t-2-2.png  used on input line 237.
-(pdftex.def)             Requested size: 483.69687pt x 139.02586pt.
-
-
-[8 <./img/t-2-2.png>]
-<img/t-3-1.png, id=44, 545.78906pt x 87.32625pt>
-File: img/t-3-1.png Graphic file (type png)
-<use img/t-3-1.png>
-Package pdftex.def Info: img/t-3-1.png  used on input line 276.
-(pdftex.def)             Requested size: 483.69687pt x 77.39232pt.
-
-
-[9 <./img/t-3-1.png>]
-<img/t-4-1.png, id=49, 528.47438pt x 124.96687pt>
-File: img/t-4-1.png Graphic file (type png)
-<use img/t-4-1.png>
-Package pdftex.def Info: img/t-4-1.png  used on input line 330.
-(pdftex.def)             Requested size: 483.69687pt x 114.37788pt.
-<img/t-4-2.png, id=50, 391.4625pt x 44.41594pt>
-File: img/t-4-2.png Graphic file (type png)
-<use img/t-4-2.png>
-Package pdftex.def Info: img/t-4-2.png  used on input line 338.
-(pdftex.def)             Requested size: 386.95897pt x 43.90752pt.
-
-Overfull \hbox (11.61649pt too wide) in paragraph at lines 347--348
-[]\T2A/cmr/m/n/14.4 Данная таб-ли-ца бу-дет со-дер-жать в се-бе ин-фор-ма-цию о встав-ке/изменении
+Overfull \hbox (3.43724pt too wide) in paragraph at lines 329--330
+[]\T2A/cmr/m/n/14.4 В хо-де вы-пол-не-ния ла-бо-ра-тор-ной ра-бо-ты изу-че-ны ос-но-вы DML-запросов
  []
 
 
 
-[10 <./img/t-4-1.png> <./img/t-4-2.png>]
-
-[11]
-<img/t-5-1.png, id=59, 454.69875pt x 67.75313pt>
-File: img/t-5-1.png Graphic file (type png)
-<use img/t-5-1.png>
-Package pdftex.def Info: img/t-5-1.png  used on input line 424.
-(pdftex.def)             Requested size: 483.69687pt x 72.07538pt.
-
-
-[12 <./img/t-5-1.png>]
-<img/t-6-1.png, id=64, 118.94438pt x 51.19125pt>
-File: img/t-6-1.png Graphic file (type png)
-<use img/t-6-1.png>
-Package pdftex.def Info: img/t-6-1.png  used on input line 465.
-(pdftex.def)             Requested size: 120.92421pt x 52.04565pt.
-
-
-[13 <./img/t-6-1.png>] (./РР’РўР±-1301-05-00_РњР°РєР°СЂРѕРІРЎРђ_Р›3.aux)
+[9 <./img/view-3.png>] (./РР’РўР±-1301-05-00_РњР°РєР°СЂРѕРІРЎРђ_Р›2.1.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4811 strings out of 467800
- 81282 string characters out of 5429289
- 491053 words of memory out of 5000000
- 33428 multiletter control sequences out of 15000+600000
+ 4723 strings out of 467800
+ 79675 string characters out of 5429289
+ 491055 words of memory out of 5000000
+ 33338 multiletter control sequences out of 15000+600000
  631693 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,765b,350s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,7n,65p,735b,352s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/ProgramFiles/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/ProgramFiles/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><d:/ProgramFiles/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on РР’РўР±-1301-05-00_РњР°РєР°СЂРѕРІРЎРђ_Р›3.pdf (13 pages, 260923 bytes).
+Output written on РР’РўР±-1301-05-00_РњР°РєР°СЂРѕРІРЎРђ_Р›2.1.pdf (9 pages, 161979 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 57 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
