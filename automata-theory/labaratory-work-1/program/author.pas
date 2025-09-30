@@ -13,7 +13,11 @@ type
 
   TAuthorForm = class(TForm)
     ButtonOk: TButton;
-    AuthorStaticText: TStaticText;
+    StaticText1: TStaticText;
+    StaticText2: TStaticText;
+    StaticText3: TStaticText;
+    StaticText4: TStaticText;
+    StaticText5: TStaticText;
     procedure ButtonOkClick(Sender: TObject);
   private
 

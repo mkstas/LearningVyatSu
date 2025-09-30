@@ -5,6 +5,7 @@ object MainForm: TMainForm
   Width = 800
   Caption = 'Рыбаки'
   Menu = MainMenu
+  Position = poDesktopCenter
   object MainMenu: TMainMenu
     object MenuFile: TMenuItem
       Caption = 'Файл'
@@ -16,6 +17,7 @@ object MainForm: TMainForm
       end
       object MenuExit: TMenuItem
         Caption = 'Выход'
+        OnClick = MenuExitClick
       end
     end
     object MenuSettings: TMenuItem

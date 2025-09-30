@@ -26,6 +26,7 @@ type
     procedure MenuAboutClick(Sender: TObject);
     procedure MenuAuthorClick(Sender: TObject);
     procedure MenuColorsClick(Sender: TObject);
+    procedure MenuExitClick(Sender: TObject);
     procedure MenuInitialClick(Sender: TObject);
   private
 
@@ -55,6 +56,11 @@ end;
 procedure TMainForm.MenuColorsClick(Sender: TObject);
 begin
   ColorsForm.ShowModal;
+end;
+
+procedure TMainForm.MenuExitClick(Sender: TObject);
+begin
+  MainForm.Close;
 end;
 
 procedure TMainForm.MenuInitialClick(Sender: TObject);

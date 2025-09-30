@@ -12,6 +12,7 @@ type
   { TColorsForm }
 
   TColorsForm = class(TForm)
+    ButtonCancel: TButton;
     ButtonRandom: TButton;
     ButtonOk: TButton;
     ColorBox1: TColorBox;

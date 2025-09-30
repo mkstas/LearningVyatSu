@@ -55,6 +55,20 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Author"/>
       </Unit>
+      <Unit>
+        <Filename Value="colors.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ColorsForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Colors"/>
+      </Unit>
+      <Unit>
+        <Filename Value="initial.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="InitialForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Initial"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

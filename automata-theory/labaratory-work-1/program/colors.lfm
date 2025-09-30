@@ -6,6 +6,7 @@ object ColorsForm: TColorsForm
   Caption = 'Выбор цвета'
   ClientHeight = 320
   ClientWidth = 640
+  Position = poMainFormCenter
   object ButtonOk: TButton
     Left = 552
     Height = 25
@@ -17,7 +18,7 @@ object ColorsForm: TColorsForm
   end
   object ColorBox1: TColorBox
     Left = 16
-    Height = 24
+    Height = 22
     Top = 16
     Width = 100
     ItemHeight = 16

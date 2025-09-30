@@ -12,19 +12,12 @@ type
   { TInitialForm }
 
   TInitialForm = class(TForm)
-    ButtonRandom: TButton;
+    ButtonCancel: TButton;
+    ButtonClear: TButton;
     ButtonOk: TButton;
     SpinEdit1: TSpinEdit;
-    SpinEdit10: TSpinEdit;
-    SpinEdit2: TSpinEdit;
-    SpinEdit3: TSpinEdit;
-    SpinEdit4: TSpinEdit;
-    SpinEdit5: TSpinEdit;
-    SpinEdit6: TSpinEdit;
-    SpinEdit7: TSpinEdit;
-    SpinEdit8: TSpinEdit;
-    SpinEdit9: TSpinEdit;
     procedure ButtonOkClick(Sender: TObject);
+    procedure SpinEdit1Change(Sender: TObject);
   private
 
   public
@@ -43,6 +36,14 @@ implementation
 procedure TInitialForm.ButtonOkClick(Sender: TObject);
 begin
   InitialForm.Close;
+end;
+
+procedure TInitialForm.SpinEdit1Change(Sender: TObject);
+begin
+  if SpinEdit1.Value = 10 then
+    SpinEdit1.Value := 0;
+  if SpinEdit1.Value = -1 then
+    SpinEdit1.Value := 9;
 end;
 
 end.

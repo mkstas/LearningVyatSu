@@ -103,4 +103,12 @@ object ColorsForm: TColorsForm
     Caption = 'Случайно'
     TabOrder = 11
   end
+  object ButtonCancel: TButton
+    Left = 376
+    Height = 25
+    Top = 280
+    Width = 75
+    Caption = 'Отмена'
+    TabOrder = 12
+  end
 end

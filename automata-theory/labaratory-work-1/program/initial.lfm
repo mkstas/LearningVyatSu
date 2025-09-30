@@ -6,6 +6,7 @@ object InitialForm: TInitialForm
   Caption = 'Начальное заполнение'
   ClientHeight = 320
   ClientWidth = 640
+  Position = poMainFormCenter
   object ButtonOk: TButton
     Left = 552
     Height = 25
@@ -20,80 +21,10 @@ object InitialForm: TInitialForm
     Height = 23
     Top = 16
     Width = 50
-    MaxValue = 9
+    MaxValue = 10
+    MinValue = -1
     TabOrder = 1
-  end
-  object SpinEdit2: TSpinEdit
-    Left = 88
-    Height = 23
-    Top = 16
-    Width = 50
-    MaxValue = 9
-    TabOrder = 2
-  end
-  object SpinEdit3: TSpinEdit
-    Left = 16
-    Height = 23
-    Top = 56
-    Width = 50
-    MaxValue = 9
-    TabOrder = 3
-  end
-  object SpinEdit4: TSpinEdit
-    Left = 88
-    Height = 23
-    Top = 56
-    Width = 50
-    MaxValue = 9
-    TabOrder = 4
-  end
-  object SpinEdit5: TSpinEdit
-    Left = 16
-    Height = 23
-    Top = 96
-    Width = 50
-    MaxValue = 9
-    TabOrder = 5
-  end
-  object SpinEdit6: TSpinEdit
-    Left = 88
-    Height = 23
-    Top = 96
-    Width = 50
-    MaxValue = 9
-    TabOrder = 6
-  end
-  object SpinEdit7: TSpinEdit
-    Left = 16
-    Height = 23
-    Top = 136
-    Width = 50
-    MaxValue = 9
-    TabOrder = 7
-  end
-  object SpinEdit8: TSpinEdit
-    Left = 88
-    Height = 23
-    Top = 136
-    Width = 50
-    MaxValue = 9
-    TabOrder = 8
-  end
-  object SpinEdit9: TSpinEdit
-    Left = 16
-    Height = 23
-    Top = 176
-    Width = 50
-    MaxValue = 9
-    TabOrder = 9
-  end
-  object SpinEdit10: TSpinEdit
-    Left = 88
-    Height = 23
-    Top = 176
-    Width = 50
-    MaxValue = 9
-    TabOrder = 10
+    OnChange = SpinEdit1Change
   end
   object ButtonClear: TButton
     Left = 456
@@ -101,7 +32,7 @@ object InitialForm: TInitialForm
     Top = 280
     Width = 75
     Caption = 'Очистить'
-    TabOrder = 11
+    TabOrder = 2
   end
   object ButtonCancel: TButton
     Left = 360
@@ -109,6 +40,6 @@ object InitialForm: TInitialForm
     Top = 280
     Width = 75
     Caption = 'Отмена'
-    TabOrder = 12
+    TabOrder = 3
   end
 end
