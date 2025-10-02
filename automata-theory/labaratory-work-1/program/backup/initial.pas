@@ -15,9 +15,11 @@ type
     ButtonCancel: TButton;
     ButtonClear: TButton;
     ButtonOk: TButton;
-    SpinEdit1: TSpinEdit;
+    StaticText1: TStaticText;
+    StaticText2: TStaticText;
     procedure ButtonOkClick(Sender: TObject);
-    procedure SpinEdit1Change(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure SpinEditChange(Sender: TObject);
   private
 
   public
@@ -26,6 +28,8 @@ type
 
 var
   InitialForm: TInitialForm;
+  FSpinEdits: array[0..9] of TSpinEdit;
+  FLabels: array[0..9] of TLabel;
 
 implementation
 
@@ -38,12 +42,39 @@ begin
   InitialForm.Close;
 end;
 
-procedure TInitialForm.SpinEdit1Change(Sender: TObject);
+procedure TInitialForm.FormCreate(Sender: TObject);
+var
+  i: Integer;
 begin
-  if SpinEdit1.Value = 10 then
-    SpinEdit1.Value := 0;
-  if SpinEdit1.Value = -1 then
-    SpinEdit1.Value := 9;
+  for i := 0 to 9 do
+  begin
+    FLabels[i] := TLabel.Create(Self);
+    FLabels[i].Parent := Self;
+    FLabels[i].Width := 20;
+    FLabels[i].Width := 24;
+    FLabels[i].Left := 16 + (i mod 2) * 124;
+    FLabels[i].Top := 67 + (i div 2) * 40;
+    FLabels[i].Name := 'Label' + IntToStr(i);
+    FLabels[i].Caption := IntToStr(i + 1) + ':';
+
+    FSpinEdits[i] := TSpinEdit.Create(Self);
+    FSpinEdits[i].Parent := Self;
+    FSpinEdits[i].Width := 80;
+    FSpinEdits[i].Height := 24;
+    FSpinEdits[i].Left := 36 + (i mod 2) * 124;
+    FSpinEdits[i].Top := 64 + (i div 2) * 40;
+    FSpinEdits[i].Name := 'SpinEdit' + IntToStr(i);
+    FSpinEdits[i].MinValue := -1;
+    FSpinEdits[i].MaxValue := 10;
+    FSpinEdits[i].Value := i;
+
+    FSpinEdits[i].OnChange := @SpinEditChange;
+  end;
+end;
+
+procedure TInitialForm.SpinEditChange(Sender: TObject);
+begin
+
 end;
 
 end.

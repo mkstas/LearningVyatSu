@@ -17,6 +17,7 @@ object MainForm: TMainForm
       end
       object MenuExit: TMenuItem
         Caption = 'Выход'
+        OnClick = MenuExitClick
       end
     end
     object MenuSettings: TMenuItem

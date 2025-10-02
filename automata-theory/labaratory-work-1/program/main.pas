@@ -11,6 +11,11 @@ type
 
   { TMainForm }
 
+  TFisher = record
+    color: string;
+    fishes: integer;
+  end;
+
   TMainForm = class(TForm)
     MainMenu: TMainMenu;
     MenuFile: TMenuItem;

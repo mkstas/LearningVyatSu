@@ -11,6 +11,11 @@ type
 
   { TMainForm }
 
+  TFisher = record
+    color: string;
+    fishes: integer;
+  end;
+
   TMainForm = class(TForm)
     MainMenu: TMainMenu;
     MenuFile: TMenuItem;
@@ -26,9 +31,10 @@ type
     procedure MenuAboutClick(Sender: TObject);
     procedure MenuAuthorClick(Sender: TObject);
     procedure MenuColorsClick(Sender: TObject);
+    procedure MenuExitClick(Sender: TObject);
     procedure MenuInitialClick(Sender: TObject);
   private
-
+    FSpinEdits: array[0..4] of TSpinEdit;
   public
 
   end;
@@ -55,6 +61,11 @@ end;
 procedure TMainForm.MenuColorsClick(Sender: TObject);
 begin
   ColorsForm.ShowModal;
+end;
+
+procedure TMainForm.MenuExitClick(Sender: TObject);
+begin
+  MainForm.Close;
 end;
 
 procedure TMainForm.MenuInitialClick(Sender: TObject);
