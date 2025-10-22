@@ -1,0 +1,15 @@
+QLineEdit {
+  padding: 9px 16px;
+}
+
+QComboBox {
+  padding: 9px;
+}
+
+QPushButton {
+  padding: 10px 20px;
+}
+
+QHeaderView::section {
+  padding: 4px;
+}

@@ -94,7 +94,7 @@ CREATE TABLE log_ingredeints (
     new_value INT,
 
     FOREIGN KEY (ingredient_id) REFERENCES ingredients(id) ON DELETE RESTRICT
-)
+);
 
 CREATE OR REPLACE FUNCTION ingredients_trigger_func ()
 RETURNS TRIGGER
@@ -160,3 +160,43 @@ END;
 $$ LANGUAGE plpgsql;
 
 SELECT get_value_by_price('ingredients', 60);
+
+CREATE OR REPLACE FUNCTION create_user_payment (
+    _user_id BIGINT,
+    _payment_id BIGINT,
+    _card_number VARCHAR(16),
+    _cvv VARCHAR(3)
+)
+RETURNS BIGINT
+AS $$
+DECLARE
+    user_payment_id BIGINT;
+BEGIN
+    INSERT INTO user_payments (user_id, payment_id, card_number, cvv)
+    VALUES (_user_id, _payment_id, _card_number, _cvv)
+    RETURNING id INTO user_payment_id;
+
+    RETURN user_payment_id;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION update_user_payment (
+    _id BIGINT,
+    _user_id BIGINT,
+    _payment_id BIGINT,
+    _card_number VARCHAR(16),
+    _cvv VARCHAR(3)
+)
+RETURNS BIGINT
+AS $$
+BEGIN
+    UPDATE user_payments SET
+        user_id = _user_id,
+        payment_id = _payment_id,
+        card_number = _card_number,
+        cvv = _cvv
+    WHERE id = _id;
+
+    RETURN _id;
+END;
+$$ LANGUAGE plpgsql;

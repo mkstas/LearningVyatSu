@@ -1,18 +1,18 @@
 services:
   postgres:
-    container_name: postgres
+    container_name: dm_postgres
     image: postgres:15.14-alpine3.22
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
-      - POSTGRES_DB=data-managament
+      - POSTGRES_DB=dm_db
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
       - 5432:5432
 
   pgadmin:
-    container_name: pgadmin
+    container_name: dm_pgadmin
     image: dpage/pgadmin4
     environment:
       PGADMIN_DEFAULT_EMAIL: root@local.com
