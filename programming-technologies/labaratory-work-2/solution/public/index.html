@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <div class="app-container">
+        <form class="form" id="payment_form" method="POST">
+          <div class="form-row">
+            <div class="form-textfield">
+              <label for="username">Имя пользователя</label>
+              <input id="username" name="username" placeholder="Иван Смирнов" type="text" />
+            </div>
+            <div class="form-textfield">
+              <label for="phone_number">Номер телефона</label>
+              <input
+                id="phone_number"
+                name="phoneNumber"
+                placeholder="+7 (900) 000 00 00"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-textfield">
+              <label for="card_number">Номер карты</label>
+              <input
+                id="card_number"
+                name="cardNumber"
+                placeholder="0000 0000 0000 0000 0000"
+                type="text"
+              />
+            </div>
+            <div class="form-textfield">
+              <label for="cvv">CVV код</label>
+              <input id="cvv" name="cvv" placeholder="000" type="text" />
+            </div>
+          </div>
+          <div class="payments">
+            <div class="payments__title">Способ оплаты</div>
+            <div class="payments__variants">
+              <label class="payments__method selected" for="mir">
+                <input type="radio" id="mir" name="method" value="mir" checked />
+                <div class="payments__name">Мир</div>
+                <div class="checkmark"></div>
+              </label>
+              <label class="payments__method" for="visa">
+                <input type="radio" id="visa" name="method" value="visa" />
+                <div class="payments__name">VISA</div>
+                <div class="checkmark"></div>
+              </label>
+              <label class="payments__method" for="mastercard">
+                <input type="radio" id="mastercard" name="method" value="mastercard" />
+                <div class="payments__name">MasterCard</div>
+                <div class="checkmark"></div>
+              </label>
+            </div>
+          </div>
+          <button class="form-button">Оплатить</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/imask"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>

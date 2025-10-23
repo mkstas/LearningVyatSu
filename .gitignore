@@ -3,3 +3,5 @@ x64
 __pycache__
 venv
 build
+node_modules
+generated
