@@ -1,5 +1,5 @@
 from PyQt6.QtWidgets import (
-  QMainWindow, QWidget, QHBoxLayout
+    QMainWindow, QWidget, QHBoxLayout
 )
 from windows.views.user_payments_view import UserPaymentsView
 
@@ -18,6 +18,6 @@ class MainWindow(QMainWindow):
         self.setFixedSize(1366, 768)
         self.setCentralWidget(central_widget)
 
-        with open('src/main.qss', 'r') as f:
+        with open('main.qss', 'r') as f:
             styles = f.read()
             self.setStyleSheet(styles)

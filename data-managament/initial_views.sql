@@ -22,7 +22,7 @@ WHERE pi.is_required = true;
 
 SELECT * FROM products_required_ingredients_v;
 
-CREATE OR REPLACE VIEW "ingredients_price_metric_v" AS
+CREATE OR REPLACE VIEW ingredients_price_metric_v AS
 
 SELECT
     'Минимальное значение' as metric,

@@ -19,6 +19,8 @@ class UserPaymentsView(QWidget):
         self.main_layout = QHBoxLayout(self)
         self.main_layout.setContentsMargins(0, 0, 0, 0)
 
+        self.user_payments = []
+
         self.setup_form()
         self.setup_table()
         self.load_user_payments()
@@ -41,10 +43,12 @@ class UserPaymentsView(QWidget):
             self.payments_combobox.addItem(payment[1], userData=payment[0])
 
         self.card_number_input = QLineEdit()
-        self.card_number_input.setInputMask("0000 0000 0000 0000")
+        self.card_number_input.setMaxLength(16)
+        self.card_number_input.textChanged.connect(self.validate_input)
 
         self.cvv_input = QLineEdit()
-        self.cvv_input.setInputMask("000")
+        self.cvv_input.setMaxLength(3)
+        self.cvv_input.textChanged.connect(self.validate_input)
 
         self.submit_btn = QPushButton("Добавить")
         self.submit_btn.clicked.connect(self.handle_submit)
@@ -88,11 +92,15 @@ class UserPaymentsView(QWidget):
         table_layout.setContentsMargins(0, 0, 0, 0)
         table_layout.setSpacing(0)
 
-        search_layout = QHBoxLayout()
+        search_layout = QVBoxLayout()
         search_layout.setContentsMargins(8, 8, 8, 8)
 
+        search_input_layout = QHBoxLayout()
+        search_input_layout.setContentsMargins(0, 0, 0, 0)
+
         self.search_input = QLineEdit()
-        self.search_input.setPlaceholderText("Поиск по номеру карты")
+        self.search_input.setMaxLength(16)
+        self.search_input.textChanged.connect(self.validate_input)
 
         self.search_button = QPushButton("Найти")
         self.search_button.clicked.connect(self.handle_search)
@@ -102,9 +110,12 @@ class UserPaymentsView(QWidget):
 
         search_container.setLayout(search_layout)
 
-        search_layout.addWidget(self.search_input)
-        search_layout.addWidget(self.search_button)
-        search_layout.addWidget(self.load_button)
+        search_input_layout.addWidget(self.search_input)
+        search_input_layout.addWidget(self.search_button)
+        search_input_layout.addWidget(self.load_button)
+
+        search_layout.addWidget(QLabel("Поиск по номеру карты"))
+        search_layout.addLayout(search_input_layout)
 
         table_layout.addWidget(search_container)
 
@@ -131,12 +142,17 @@ class UserPaymentsView(QWidget):
         main_container.setLayout(table_layout)
         self.main_layout.addWidget(main_container)
 
+    def validate_input(self, text):
+        if text and not text.isdigit():
+            self.search_input.setText(text[:-1])
+            QMessageBox.warning(self, "Ошибка ввода", "Разрешены только цифры")
+
     def load_user_payments(self):
-        user_payments = self.user_payments_controller.get_user_payments()
+        self.user_payments = self.user_payments_controller.get_user_payments()
 
-        self.table.setRowCount(len(user_payments))
+        self.table.setRowCount(len(self.user_payments))
 
-        for row, user in enumerate(user_payments):
+        for row, user in enumerate(self.user_payments):
             self.table.setItem(row, 0, QTableWidgetItem(str(user[0])))
             self.table.setItem(row, 1, QTableWidgetItem(str(user[1])))
             self.table.setItem(row, 2, QTableWidgetItem(str(user[2])))
@@ -157,6 +173,11 @@ class UserPaymentsView(QWidget):
             QMessageBox.warning(self, "Ошибка", "Все поля обязательны для заполнения")
             return
 
+        for card in self.user_payments:
+            if card['card_number'] == card_number:
+                QMessageBox.warning(self, "Ошибка добавления", "Запись с такими данными уже существует")
+                return
+
         self.user_payments_controller.create_user_payment(user_id, payment_id, card_number, cvv)
         self.handle_clear()
         self.load_user_payments()
@@ -169,6 +190,10 @@ class UserPaymentsView(QWidget):
             return
 
         user_payments = self.user_payments_controller.get_user_payments_by_search(search)
+
+        if (len(user_payments) == 0):
+            QMessageBox.warning(self, "Записи не найдены", f"Номера карт, включающие в себя '{search}' не найдены")
+            return
 
         self.table.setRowCount(len(user_payments))
 
