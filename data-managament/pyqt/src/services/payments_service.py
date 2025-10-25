@@ -1,6 +1,6 @@
 from database.connection import db
 
-class PaymentsController:
+class PaymentsService:
     def __init__(self):
         self.db = db
 

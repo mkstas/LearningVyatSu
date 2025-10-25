@@ -1,6 +1,6 @@
 from database.connection import db
 
-class UserController:
+class UsersService:
     def __init__(self):
         self.db = db
 

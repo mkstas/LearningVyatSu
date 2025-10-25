@@ -14,7 +14,7 @@ class MainWindow(QMainWindow):
         main_layout.addSpacing(0)
         main_layout.addWidget(UserPaymentsView())
 
-        self.setWindowTitle("Dm PyQt")
+        self.setWindowTitle("User Payments")
         self.setFixedSize(1366, 768)
         self.setCentralWidget(central_widget)
 
