@@ -1,18 +1,16 @@
 import psycopg2
 import psycopg2.extras
 
-from database.config import config
-
 class Connection:
     connection = None
 
     def __init__(self):
-        self.connection = psycopg2.connect(config.dsn)
+        self.connection = psycopg2.connect("dbname=dm_db user=root password=root host=localhost port=5432")
 
     def get_cursor(self):
         return self.connection.cursor(cursor_factory=psycopg2.extras.DictCursor)
   
-    def execute_query(self, query, params = None):
+    def execute_query(self, query, params=None):
         cursor = self.get_cursor()
         try:
             cursor.execute(query, params)
@@ -27,7 +25,7 @@ class Connection:
         finally:
             cursor.close()
 
-    def fetch_all(self, query, params = None):
+    def fetch_all(self, query, params=None):
         cursor = self.get_cursor()
 
         try:
@@ -42,7 +40,7 @@ class Connection:
         finally:
             cursor.close()
 
-    def fetch_one(self, query, params = None):
+    def fetch_one(self, query, params=None):
         cursor = self.get_cursor()
 
         try:

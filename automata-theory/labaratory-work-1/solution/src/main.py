@@ -9,7 +9,7 @@ def main():
     main_window = MainWindow()
     main_window.show()
 
-    app.exec()
+    sys.exit(app.exec())
 
 if __name__ == '__main__':
-    main()
+    main();

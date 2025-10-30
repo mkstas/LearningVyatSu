@@ -1,0 +1,56 @@
+{
+    "speed": 70,
+    "alarm": 25,
+    "people": [
+        {
+            "id": 0,
+            "count": 0,
+            "color": "#ff0000"
+        },
+        {
+            "id": 1,
+            "count": 0,
+            "color": "#008080"
+        },
+        {
+            "id": 2,
+            "count": 0,
+            "color": "#808000"
+        },
+        {
+            "id": 3,
+            "count": 0,
+            "color": "#ff00ff"
+        },
+        {
+            "id": 4,
+            "count": 0,
+            "color": "#ffff00"
+        },
+        {
+            "id": 5,
+            "count": 0,
+            "color": "#800080"
+        },
+        {
+            "id": 6,
+            "count": 0,
+            "color": "#800000"
+        },
+        {
+            "id": 7,
+            "count": 0,
+            "color": "#008000"
+        },
+        {
+            "id": 8,
+            "count": 0,
+            "color": "#000080"
+        },
+        {
+            "id": 9,
+            "count": 0,
+            "color": "#808080"
+        }
+    ]
+}
