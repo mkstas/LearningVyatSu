@@ -238,7 +238,7 @@ class MainWindow(QMainWindow):
 
     def _set_count_label_style(self, label, color):
         label.setStyleSheet(f"""
-            font-size: 32px; 
+            font-size:48px; 
             font-weight: bold;
             padding: 5px;
             color: {color};
@@ -258,6 +258,7 @@ class MainWindow(QMainWindow):
         if text == "":
             setter_method(0)
             self._update_input_field(input_field, 0)
+            self._show_input_error("Ошибка ввода", "Поле не может быть пустым.")
             return False
 
         if not text.isdigit():
@@ -267,8 +268,11 @@ class MainWindow(QMainWindow):
 
         value = int(text)
 
-        if text.count('0') == len(text) and len(text) > 1:
+        if text.startswith('0') and len(text) > 1:
             self._update_input_field(input_field, current_value)
+            self._show_input_error("Недопустимое значение", "Число не должно начинаться с нуля.")
+            if value != 0:
+                self._update_input_field(input_field, value);
             return False
 
         if current_value == 0:
@@ -282,11 +286,6 @@ class MainWindow(QMainWindow):
                     self._update_input_field(input_field, current_value)
                     self._show_input_error("Недопустимое значение", f"{field_name} должна быть в диапазоне от 0 до 100.")
                     return False
-
-        if text.startswith('0') and len(text) > 1:
-            self._update_input_field(input_field, current_value)
-            self._show_input_error("Недопустимое значение", "Число не должно начинаться с нуля.")
-            return False
 
         if value > 100:
             self._update_input_field(input_field, current_value)
@@ -304,11 +303,9 @@ class MainWindow(QMainWindow):
         self.current_msg.setIcon(QMessageBox.Icon.Warning)
         self.current_msg.setWindowTitle(title)
         self.current_msg.setText(message)
-        # self.current_msg.setStandardButtons(QMessageBox.StandardButton.NoButton)
         self.current_msg.open()
 
-        QTimer.singleShot(1500, self.current_msg.close)
-        # QMessageBox.warning(self, title, message)
+        QTimer.singleShot(1000, self.current_msg.close)
 
     def _show_input_info(self, title, message):
         QMessageBox.information(self, title, message)
@@ -345,6 +342,7 @@ class MainWindow(QMainWindow):
     def _update_game_timer_interval(self):
         if self.is_running and not self.is_paused:
             interval = max(10, 1000 - self.speed * 7)
+
             self.game_timer.setInterval(interval)
 
     def update_controls(self):
@@ -357,7 +355,7 @@ class MainWindow(QMainWindow):
     def update_characters_display(self):
         if not hasattr(self, 'character_widgets') or not self.character_widgets:
             return
-            
+
         for i, character_data in enumerate(self.character_widgets):
             if i < len(self.people):
                 self._update_character_display(i, character_data)
@@ -497,6 +495,7 @@ class MainWindow(QMainWindow):
         self._set_menu_enabled(False)
 
         interval = max(10, 1000 - self.speed * 7)
+
         self.game_timer.setInterval(interval)
 
         self.update_characters_display()
@@ -515,9 +514,8 @@ class MainWindow(QMainWindow):
         self.game_timer.stop()
 
     def stop_game_with_message(self):
-        self.is_running = False
+        self.is_running = True
         self.is_paused = False
-        self.start_button.setText("Старт")
         self.pause_button.setText("Пауза")
 
         self.reset_game()

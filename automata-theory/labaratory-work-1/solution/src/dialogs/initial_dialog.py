@@ -1,14 +1,37 @@
 from PyQt6.QtWidgets import (
-    QDialog, QVBoxLayout, QHBoxLayout, QLabel, QSpinBox, QPushButton, QSpacerItem, QSizePolicy
+    QDialog, QVBoxLayout, QHBoxLayout, QLabel, QSpinBox, QPushButton,
+    QSpacerItem, QSizePolicy, QAbstractSpinBox
 )
 from PyQt6.QtGui import QIntValidator
 
-class InitialDialog(QDialog):
-    def __init__(self, parent=None, people=[]):
-        super().__init__(parent)
 
+class CyclicSpinBox(QSpinBox):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.setRange(0, 9)
+        self.setWrapping(True)
+
+    def stepBy(self, steps):
+        current = self.value()
+        new_value = current + steps
+        if new_value > 9:
+            self.setValue(0)
+        elif new_value < 0:
+            self.setValue(9)
+        else:
+            self.setValue(new_value)
+
+    def stepEnabled(self):
+        return (QAbstractSpinBox.StepEnabledFlag.StepUpEnabled |
+                QAbstractSpinBox.StepEnabledFlag.StepDownEnabled)
+
+class InitialDialog(QDialog):
+    def __init__(self, parent=None, people=None):
+        super().__init__(parent)
+        if people is None:
+            people = []
         self.people = [person.copy() for person in people]
-        self.original_people = people
+        self.original_people = [person.copy() for person in people]
         self.spinboxes = []
         self.person_id_to_index = {}
 
@@ -53,8 +76,7 @@ class InitialDialog(QDialog):
         return label
 
     def _create_spinbox(self, person):
-        spinbox = QSpinBox()
-        spinbox.setRange(0, 9)
+        spinbox = CyclicSpinBox()
         spinbox.setValue(person["count"])
         spinbox.person_id = person["id"]
 
@@ -71,6 +93,31 @@ class InitialDialog(QDialog):
         spinbox.editingFinished.connect(
             lambda sb=spinbox: self._final_validation(sb)
         )
+
+    def _prevent_leading_zeros(self, spinbox, text):
+        if text and len(text) > 1 and text.startswith('0'):
+            clean_text = text.lstrip('0') or '0'
+            spinbox.blockSignals(True)
+            spinbox.lineEdit().setText(clean_text)
+            spinbox.blockSignals(False)
+
+    def _final_validation(self, spinbox):
+        text = spinbox.lineEdit().text().strip()
+        if not text:
+            spinbox.setValue(0)
+            return
+
+        if text.startswith('0') and len(text) > 1:
+            clean_text = text.lstrip('0') or '0'
+        else:
+            clean_text = text
+
+        try:
+            value = int(clean_text)
+            value = max(0, min(9, value))
+            spinbox.setValue(value)
+        except ValueError:
+            spinbox.setValue(0)
 
     def _create_button_panel(self):
         h_layout = QHBoxLayout()
@@ -95,21 +142,6 @@ class InitialDialog(QDialog):
         button.clicked.connect(callback)
         return button
 
-    def _prevent_leading_zeros(self, spinbox, text):
-        if text and len(text) > 1 and text.startswith('0'):
-            clean_text = text.lstrip('0') or '0'
-            spinbox.lineEdit().setText(clean_text)
-
-    def _final_validation(self, spinbox):
-        text = spinbox.lineEdit().text()
-        if text and text.startswith('0') and len(text) > 1:
-            clean_text = text.lstrip('0') or '0'
-            try:
-                value = int(clean_text)
-                spinbox.setValue(min(max(value, spinbox.minimum()), spinbox.maximum()))
-            except ValueError:
-                spinbox.setValue(0)
-
     def _clear_all(self):
         for spinbox in self.spinboxes:
             spinbox.setValue(0)
@@ -126,16 +158,16 @@ class InitialDialog(QDialog):
         for spinbox in self.spinboxes:
             person_id = spinbox.person_id
             if person_id in self.person_id_to_index:
-                self.people[self.person_id_to_index[person_id]]["count"] = spinbox.value()
+                idx = self.person_id_to_index[person_id]
+                self.people[idx]["count"] = spinbox.value()
 
     def _restore_original_values(self):
         for spinbox in self.spinboxes:
             person_id = spinbox.person_id
-            for original_person in self.original_people:
-                if original_person["id"] == person_id:
-                    spinbox.setValue(original_person["count"])
+            for original in self.original_people:
+                if original["id"] == person_id:
+                    spinbox.setValue(original["count"])
                     break
-
         self.people = [person.copy() for person in self.original_people]
 
     def get_updated_people(self):
