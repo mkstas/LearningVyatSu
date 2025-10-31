@@ -61,7 +61,7 @@ class UserPaymentsView(QWidget):
         self.clear_btn.clicked.connect(self.handle_clear)
 
         form_layout = QVBoxLayout()
-        form_layout.setContentsMargins(0, 0, 0, 0)
+        form_layout.setContentsMargins(8, 8, 0, 0)
         form_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
 
         form_layout.addWidget(QLabel("Номер телефона"))
@@ -114,7 +114,7 @@ class UserPaymentsView(QWidget):
         self.table.setSelectionBehavior(QTableWidget.SelectionBehavior.SelectRows)
 
         search_layout = QVBoxLayout()
-        search_layout.setContentsMargins(8, 8, 8, 8)
+        search_layout.setContentsMargins(0, 8, 8, 8)
 
         search_input_layout = QHBoxLayout()
         search_input_layout.setContentsMargins(0, 0, 0, 0)

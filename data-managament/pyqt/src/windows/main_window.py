@@ -10,7 +10,7 @@ class MainWindow(QMainWindow):
         central_widget = QWidget()
 
         main_layout = QHBoxLayout(central_widget)
-        main_layout.setContentsMargins(8, 0, 0, 0)
+        main_layout.setContentsMargins(0, 0, 0, 0)
         main_layout.addSpacing(0)
         main_layout.addWidget(UserPaymentsView())
 
