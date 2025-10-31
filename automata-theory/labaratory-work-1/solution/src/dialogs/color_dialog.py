@@ -4,7 +4,7 @@ from PyQt6.QtWidgets import (
     QMessageBox, QPushButton, QSpacerItem, QSizePolicy
 )
 from PyQt6.QtGui import QColor, QIcon, QPixmap, QPainter
-from PyQt6.QtCore import Qt
+from PyQt6.QtCore import Qt, QTimer
 
 class ColorDialog(QDialog):
     __colors = [
@@ -34,6 +34,7 @@ class ColorDialog(QDialog):
         self.comboboxes = []
         self.current_colors = {}
         self.initial_colors = {}
+        self.current_msg = None
 
         self._setup_dialog_properties()
         self._initialize_color_data()
@@ -163,11 +164,17 @@ class ColorDialog(QDialog):
         combo.blockSignals(False)
 
     def _show_color_warning(self, color_hex):
-        QMessageBox.warning(
-            self,
-            "Цвет уже используется",
-            f"Цвет {self._get_color_name(color_hex)} уже занят."
-        )
+        if self.current_msg:
+            self.current_msg.close()
+
+        self.current_msg = QMessageBox(self)
+        self.current_msg.setIcon(QMessageBox.Icon.Warning)
+        self.current_msg.setWindowTitle("Предупреждение")
+        self.current_msg.setText(f"{self._get_color_name(color_hex)} цвет уже занят.")
+        # self.current_msg.setStandardButtons(QMessageBox.StandardButton.NoButton)
+        self.current_msg.open()
+
+        QTimer.singleShot(1500, self.current_msg.close)
 
     def _get_color_name(self, color_hex):
         for hex_val, name in self.__colors:

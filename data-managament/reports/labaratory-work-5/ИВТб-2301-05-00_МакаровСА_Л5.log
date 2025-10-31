@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.10.23)  31 OCT 2025 03:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.10.23)  31 OCT 2025 13:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/sempai/LearningVyatSu/data-managament/reports/labaratory-work-5/ИВТб-1301-05-00_МакаровСА_Л5.tex
-(/home/sempai/LearningVyatSu/data-managament/reports/labaratory-work-5/ИВТб-1301-05-00_МакаровСА_Л5.tex
+**/home/sempai/LearningVyatSu/data-managament/reports/labaratory-work-5/ИВТб-2301-05-00_МакаровСА_Л5.tex
+(/home/sempai/LearningVyatSu/data-managament/reports/labaratory-work-5/ИВТб-2301-05-00_МакаровСА_Л5.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
@@ -328,8 +328,8 @@ Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count278
 \l__pdf_internal_box=\box54
-) (./ИВТб-1301-05-00_МакаровСА_Л5.aux)
-\openout1 = `ИВТб-1301-05-00_МакаровСА_Л5.aux'.
+) (./ИВТб-2301-05-00_МакаровСА_Л5.aux)
+\openout1 = `ИВТб-2301-05-00_МакаровСА_Л5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
@@ -476,7 +476,7 @@ File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 
 [18]
 
-[19] (./ИВТб-1301-05-00_МакаровСА_Л5.aux)
+[19] (./ИВТб-2301-05-00_МакаровСА_Л5.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -491,7 +491,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  57i,7n,65p,522b,315s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on ИВТб-1301-05-00_МакаровСА_Л5.pdf (19 pages, 317022 bytes).
+Output written on ИВТб-2301-05-00_МакаровСА_Л5.pdf (19 pages, 317022 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream

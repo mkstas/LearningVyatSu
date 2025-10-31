@@ -15,7 +15,6 @@ from widgets.person import Person
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        # Начальные значения вместо загрузки из config.json
         self.speed = 30
         self.alarm = 15
         self.people = [
@@ -30,26 +29,27 @@ class MainWindow(QMainWindow):
             {"id": 8, "count": 4, "color": "#808080"},
             {"id": 9, "count": 2, "color": "#ff0000"}
         ]
-        
+
         self.game_timer = None
         self.is_running = False
         self.is_paused = False
         self.initial_people = []
         self.character_widgets = []
-        
+        self.current_msg = None
+
         self._setup_ui()
         self._initialize_game()
 
     def _setup_ui(self):
         self.setWindowTitle("Рыбаки")
         self.setFixedSize(1366, 768)
-        
+
         central_widget = QWidget()
         self.main_layout = QVBoxLayout(central_widget)
         self.main_layout.setContentsMargins(0, 0, 0, 0)
         self.main_layout.setSpacing(0)
         self.setCentralWidget(central_widget)
-        
+
         self._init_menu_bar()
         self._init_area()
         self._init_controls()
@@ -58,7 +58,7 @@ class MainWindow(QMainWindow):
         self._initialize_people_data()
         self.update_controls()
         self.update_characters_display()
-        
+
         self.game_timer = QTimer()
         self.game_timer.timeout.connect(self.game_tick)
 
@@ -151,7 +151,7 @@ class MainWindow(QMainWindow):
 
         self.speed_slider = QSlider(Qt.Orientation.Horizontal)
         self.speed_slider.setRange(0, 100)
-        
+
         self.speed_input = QLineEdit()
         self.speed_input.setFixedWidth(40)
 
@@ -168,7 +168,7 @@ class MainWindow(QMainWindow):
 
         self.alarm_slider = QSlider(Qt.Orientation.Horizontal)
         self.alarm_slider.setRange(0, 100)
-        
+
         self.alarm_input = QLineEdit()
         self.alarm_input.setFixedWidth(40)
 
@@ -189,7 +189,7 @@ class MainWindow(QMainWindow):
         self.area_container = QWidget()
         self.area_container.setStyleSheet("""
             QWidget {
-                background-color: #dbeafe;
+                background-color: #f1f5f9;
                 border-top: 1px solid #e2e8f0;
             }
         """)
@@ -212,7 +212,7 @@ class MainWindow(QMainWindow):
     def _create_character_widget(self):
         character_widget = QWidget()
         character_widget.setStyleSheet("border: none")
-        
+
         character_layout = QVBoxLayout()
         character_layout.setAlignment(Qt.AlignmentFlag.AlignCenter)
         character_layout.setSpacing(10)
@@ -280,7 +280,7 @@ class MainWindow(QMainWindow):
                     return True
                 else:
                     self._update_input_field(input_field, current_value)
-                    self._show_input_error("Недопустимое значение", f"{field_name} должно быть в диапазоне от 0 до 100.")
+                    self._show_input_error("Недопустимое значение", f"{field_name} должна быть в диапазоне от 0 до 100.")
                     return False
 
         if text.startswith('0') and len(text) > 1:
@@ -290,14 +290,25 @@ class MainWindow(QMainWindow):
 
         if value > 100:
             self._update_input_field(input_field, current_value)
-            self._show_input_error("Недопустимое значение", f"{field_name} должно быть в диапазоне от 0 до 100.")
+            self._show_input_error("Недопустимое значение", f"{field_name} должна быть в диапазоне от 0 до 100.")
             return False
 
         setter_method(value)
         return True
 
     def _show_input_error(self, title, message):
-        QMessageBox.warning(self, title, message)
+        if self.current_msg:
+            self.current_msg.close()
+
+        self.current_msg = QMessageBox(self)
+        self.current_msg.setIcon(QMessageBox.Icon.Warning)
+        self.current_msg.setWindowTitle(title)
+        self.current_msg.setText(message)
+        # self.current_msg.setStandardButtons(QMessageBox.StandardButton.NoButton)
+        self.current_msg.open()
+
+        QTimer.singleShot(1500, self.current_msg.close)
+        # QMessageBox.warning(self, title, message)
 
     def _show_input_info(self, title, message):
         QMessageBox.information(self, title, message)
@@ -357,7 +368,7 @@ class MainWindow(QMainWindow):
         person = self.people[index]
         character_data['Person_widget'].update_color(person['color'])
         character_data['count_label'].setText(str(person['count']))
-        
+
         color = "#16a34a" if person['count'] >= 10 else "black"
         self._set_count_label_style(character_data['count_label'], color)
 
@@ -389,14 +400,14 @@ class MainWindow(QMainWindow):
     def _animate_Person_movement(self, index):
         character_data = self.character_widgets[index]
         Person_widget = character_data['Person_widget']
-        
+
         animation = QPropertyAnimation(Person_widget, b"geometry")
         animation.setDuration(300)
         animation.setEasingCurve(QEasingCurve.Type.OutInQuad)
-        
+
         current_geometry = Person_widget.geometry()
         down_geometry = current_geometry.translated(0, 20)
-        
+
         animation.setKeyValueAt(0, current_geometry)
         animation.setKeyValueAt(0.5, down_geometry)
         animation.setKeyValueAt(1, current_geometry)
@@ -479,17 +490,17 @@ class MainWindow(QMainWindow):
 
     def start_game(self):
         self.is_running = True
-        
+
         self.start_button.setText("Стоп")
         self.pause_button.setText("Продолжить" if self.is_paused else "Пауза")
-        
+
         self._set_menu_enabled(False)
-        
+
         interval = max(10, 1000 - self.speed * 7)
         self.game_timer.setInterval(interval)
-        
+
         self.update_characters_display()
-        
+
         if not self.is_paused:
             self.game_timer.start()
 

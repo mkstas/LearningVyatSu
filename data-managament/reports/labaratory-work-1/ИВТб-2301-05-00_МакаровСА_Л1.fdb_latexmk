@@ -1,10 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1761870767.16669 "/home/sempai/LearningVyatSu/data-managament/reports/labaratory-work-4/ИВТб-1301-05-00_МакаровСА_Л4.tex" "ИВТб-1301-05-00_МакаровСА_Л4.pdf" "ИВТб-1301-05-00_МакаровСА_Л4" 1761870767.76911 0
+["pdflatex"] 1761905572.29983 "/home/sempai/LearningVyatSu/data-managament/reports/labaratory-work-1/ИВТб-2301-05-00_МакаровСА_Л1.tex" "ИВТб-2301-05-00_МакаровСА_Л1.pdf" "ИВТб-2301-05-00_МакаровСА_Л1" 1761905572.74609 0
   "/home/sempai/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/labx1440.tfm" 1761173267.77987 3304 6a543c07045572737981351171e0505e ""
   "/home/sempai/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/larm1200.tfm" 1761173269.60298 3240 c2435f2b5cd66d4930bc29b8df87967e ""
   "/home/sempai/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/larm1440.tfm" 1761173265.80648 3256 3daaa33cf35cf3f354983aa3214ecd7f ""
   "/home/sempai/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/latt1200.tfm" 1761173271.53499 1272 bf3bb5cc29880b269c8bcb412a1ac6e2 ""
-  "/home/sempai/LearningVyatSu/data-managament/reports/labaratory-work-4/ИВТб-1301-05-00_МакаровСА_Л4.tex" 1761870766.9809 28046 c3517214de57a4633c78340a086ec4bd ""
+  "/home/sempai/LearningVyatSu/data-managament/reports/labaratory-work-1/ИВТб-2301-05-00_МакаровСА_Л1.tex" 1761173669.69498 17225 e9d52d1564f6b91215f43dd41b1467e2 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc" 1755987285 3141 82d5616418ed8d5de703b3951bedecb4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1755987285 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm" 1755987285 3584 3169d30142b88a27d4ab0e3468e963a2 ""
@@ -50,15 +50,11 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1755987285 42087 b0f9697c952c8f5a8eede4134282cb0d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1761173241 5467117 e063ce8e53b0cc3d0312473583ebc51c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1761173208 3459351 359cc3e046aa1db0aec4dd388cc5c582 ""
-  "img/f-1.png" 1761869595.64699 47338 e87e347f6eaa6b377103057c2d189a9e ""
-  "img/f-2.png" 1761869595.6661 65599 725fa043cc3eaa0826051c9e1a4582d0 ""
-  "img/f-3.png" 1761869595.67436 64994 a9556eaa1bbada46b3a3b94146ce9608 ""
-  "img/f-4.png" 1761869595.68833 61774 ac72afc118aab5e102671d849424a616 ""
-  "img/uml-cpp.png" 1761868475.64999 78328 491f6e3088a1cb45ace94b30dd9c8e4e ""
-  "ИВТб-1301-05-00_МакаровСА_Л4.aux" 1761870767.72998 171 c5cccae3fa0eaa940aaaa75161ea2e48 "pdflatex"
-  "ИВТб-1301-05-00_МакаровСА_Л4.tex" 1761870766.9809 28046 c3517214de57a4633c78340a086ec4bd ""
+  "img/er.png" 1761169217.158 237068 a8e109a2844770a15d521cd364bc3241 ""
+  "ИВТб-2301-05-00_МакаровСА_Л1.aux" 1761905572.71298 170 6933e3f069d286f4ee9acaf39b0374a8 "pdflatex"
+  "ИВТб-2301-05-00_МакаровСА_Л1.tex" 1761173669.69498 17225 e9d52d1564f6b91215f43dd41b1467e2 ""
   (generated)
-  "ИВТб-1301-05-00_МакаровСА_Л4.aux"
-  "ИВТб-1301-05-00_МакаровСА_Л4.log"
-  "ИВТб-1301-05-00_МакаровСА_Л4.pdf"
+  "ИВТб-2301-05-00_МакаровСА_Л1.aux"
+  "ИВТб-2301-05-00_МакаровСА_Л1.log"
+  "ИВТб-2301-05-00_МакаровСА_Л1.pdf"
   (rewritten before read)

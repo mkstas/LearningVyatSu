@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.10.23)  23 OCT 2025 01:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.10.23)  31 OCT 2025 13:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/user/LearningVyatSu/data-managament/reports/labaratory-work-1/ИВТб-1301-05-00_МакаровСА_Л1.tex
-(/home/user/LearningVyatSu/data-managament/reports/labaratory-work-1/ИВТб-1301-05-00_МакаровСА_Л1.tex
+**/home/sempai/LearningVyatSu/data-managament/reports/labaratory-work-2.1/ИВТб-2301-05-00_МакаровСА_Л2.1.tex
+(/home/sempai/LearningVyatSu/data-managament/reports/labaratory-work-2.1/ИВТб-2301-05-00_МакаровСА_Л2.1.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
@@ -328,8 +328,8 @@ Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count278
 \l__pdf_internal_box=\box54
-) (./ИВТб-1301-05-00_МакаровСА_Л1.aux)
-\openout1 = `ИВТб-1301-05-00_МакаровСА_Л1.aux'.
+) (./ИВТб-2301-05-00_МакаровСА_Л2.1.aux)
+\openout1 = `ИВТб-2301-05-00_МакаровСА_Л2.1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
@@ -411,47 +411,59 @@ LaTeX Font Info:    External font `cmex7' loaded for size
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}]
 
 [2]
-
-[3]
-
-[4]
-<img/er.png, id=17, 1558.82375pt x 1144.275pt>
-File: img/er.png Graphic file (type png)
-<use img/er.png>
-Package pdftex.def Info: img/er.png  used on input line 113.
-(pdftex.def)             Requested size: 483.69687pt x 355.05333pt.
-LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 122.
+LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 69.
  (/usr/share/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
 
-[5 <./img/er.png>]
+[3]
+
+[4]
+
+[5]
 
 [6]
 
 [7]
+<img/view-1.png, id=28, 593.96906pt x 106.14656pt>
+File: img/view-1.png Graphic file (type png)
+<use img/view-1.png>
+Package pdftex.def Info: img/view-1.png  used on input line 276.
+(pdftex.def)             Requested size: 483.69687pt x 86.44308pt.
+<img/view-2.png, id=30, 911.65594pt x 142.28156pt>
+File: img/view-2.png Graphic file (type png)
+<use img/view-2.png>
+Package pdftex.def Info: img/view-2.png  used on input line 297.
+(pdftex.def)             Requested size: 483.69687pt x 75.49136pt.
 
-[8]
 
-[9] (./ИВТб-1301-05-00_МакаровСА_Л1.aux)
+[8 <./img/view-1.png> <./img/view-2.png>]
+<img/view-3.png, id=36, 365.11406pt x 85.06781pt>
+File: img/view-3.png Graphic file (type png)
+<use img/view-3.png>
+Package pdftex.def Info: img/view-3.png  used on input line 320.
+(pdftex.def)             Requested size: 362.77264pt x 84.5263pt.
+
+
+[9 <./img/view-3.png>] (./ИВТб-2301-05-00_МакаровСА_Л2.1.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4686 strings out of 473190
- 77859 string characters out of 5722592
- 481357 words of memory out of 5000000
- 27914 multiletter control sequences out of 15000+600000
+ 4706 strings out of 473190
+ 78317 string characters out of 5722592
+ 480361 words of memory out of 5000000
+ 27934 multiletter control sequences out of 15000+600000
  563705 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,964b,315s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,7n,65p,749b,317s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on ИВТб-1301-05-00_МакаровСА_Л1.pdf (9 pages, 226582 bytes).
+Output written on ИВТб-2301-05-00_МакаровСА_Л2.1.pdf (9 pages, 162068 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
+ 57 PDF objects out of 1000 (max. 8388607)
  33 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
