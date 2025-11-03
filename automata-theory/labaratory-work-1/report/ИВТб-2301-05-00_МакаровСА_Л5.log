@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.2)  2 NOV 2025 19:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.2)  2 NOV 2025 21:39
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -422,25 +422,58 @@ LaTeX Font Info:    External font `cmex7' loaded for size
 
 [2]
 
-[3] (./ИВТб-2301-05-00_МакаровСА_Л5.aux)
+[3]
+<img/f-1.png, id=14, 1029.09468pt x 598.48593pt>
+File: img/f-1.png Graphic file (type png)
+<use img/f-1.png>
+Package pdftex.def Info: img/f-1.png  used on input line 88.
+(pdftex.def)             Requested size: 459.51054pt x 267.23404pt.
+<img/f-2.png, id=16, 1027.58907pt x 599.23875pt>
+File: img/f-2.png Graphic file (type png)
+<use img/f-2.png>
+Package pdftex.def Info: img/f-2.png  used on input line 96.
+(pdftex.def)             Requested size: 459.51054pt x 267.96338pt.
+
+
+[4 <./img/f-1.png> <./img/f-2.png>]
+<img/f-3.png, id=22, 1029.8475pt x 595.47469pt>
+File: img/f-3.png Graphic file (type png)
+<use img/f-3.png>
+Package pdftex.def Info: img/f-3.png  used on input line 105.
+(pdftex.def)             Requested size: 459.51054pt x 265.68958pt.
+<img/f-4.png, id=23, 1028.34187pt x 598.48593pt>
+File: img/f-4.png Graphic file (type png)
+<use img/f-4.png>
+Package pdftex.def Info: img/f-4.png  used on input line 113.
+(pdftex.def)             Requested size: 459.51054pt x 267.43495pt.
+
+
+[5 <./img/f-3.png> <./img/f-4.png>]
+File: img/f-4.png Graphic file (type png)
+<use img/f-4.png>
+Package pdftex.def Info: img/f-4.png  used on input line 122.
+(pdftex.def)             Requested size: 459.51054pt x 267.43495pt.
+
+
+[6] (./ИВТб-2301-05-00_МакаровСА_Л5.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4661 strings out of 467800
- 78118 string characters out of 5429289
+ 4707 strings out of 467800
+ 78914 string characters out of 5429289
  491051 words of memory out of 5000000
- 33283 multiletter control sequences out of 15000+600000
+ 33329 multiletter control sequences out of 15000+600000
  630581 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,764b,204s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,7n,65p,764b,242s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/ProgramFiles/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/ProgramFiles/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb>
-Output written on ИВТб-2301-05-00_МакаровСА_Л5.pdf (3 pages, 37198 bytes).
+Output written on ИВТб-2301-05-00_МакаровСА_Л5.pdf (6 pages, 296593 bytes).
 PDF statistics:
- 25 PDF objects out of 1000 (max. 8388607)
- 15 compressed objects within 1 object stream
+ 43 PDF objects out of 1000 (max. 8388607)
+ 22 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
