@@ -1,8 +1,6 @@
 import express, { type Request, type Response } from 'express';
 import path from 'path';
-import { PrismaClient, type Payment } from './generated/prisma/index.js';
-
-type PaymentDTO = Omit<Payment, 'id'>;
+import { PrismaClient } from './generated/prisma/index.js';
 
 const prisma = new PrismaClient();
 const app = express();
@@ -14,11 +12,10 @@ app.get('/', (req: Request, res: Response) => {
   res.sendFile(path.resolve(process.cwd(), 'index.html'));
 });
 
-app.post('/api/v1/payments', async (req: Request, res: Response) => {
-  const body = req.body as PaymentDTO;
-  await prisma.payment.create({ data: body });
+app.get('/api/v1/products', async (req: Request, res: Response) => {
+  const products = await prisma.product.findMany();
 
-  res.send({ success: true }).status(201);
+  res.status(200).send(products);
 });
 
 app.listen(3000, () => {
