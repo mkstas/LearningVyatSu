@@ -13,6 +13,7 @@ qt_standard_project_setup()
 
 qt_add_executable(cppqt
     src/main.cpp
+    src/database/database.cpp
     src/windows/main_window.cpp
     src/modals/create_note_modal.cpp
 )
