@@ -16,7 +16,7 @@ INSERT INTO products (title, image_url, price) VALUES
     399),
 
 ('Круассан отпечённый с ветчиной и сыром',
-    'https://cheese-cake.ru/DesertThumb/kruassan-dlya-vypekaniya-s-abrikosovoj-nachinkoj-0-320x320.jpg',
+    'https://cheese-cake.ru/DesertThumb/kruassan-otpechennyj-s-vetchinoj-i-syrom-2-320x320.jpg',
     519),
 
 ('Багет с чесночной начинкой 10 шт',

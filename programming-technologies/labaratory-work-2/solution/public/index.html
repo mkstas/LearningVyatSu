@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Пирожочки</title>
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,21 +15,93 @@
   <body>
     <div class="app">
       <header class="header">
-        <div class="header-logo">
-          <h1 class="header-logo__caption">Пирожочки</h1>
+        <div class="header__logo">
+          <h1 class="header__logo-caption">Пирожочки</h1>
         </div>
-        <button class="header-cart _button">
-          <span>179 руб.</span>
+        <button class="header__cart-button button" type="button">
+          <span class="header__cart-sum">0 руб.</span>
           <img src="img/shopping-cart.svg" alt="Корзина" />
         </button>
       </header>
-      <section class="products">
-        <h2 class="products-title">Меню</h2>
-        <div class="products-container"></div>
-      </section>
+
+      <section class="products"></section>
     </div>
 
-    <div class="drawer"></div>
+    <aside class="drawer">
+      <div class="drawer__head">
+        <button class="drawer__back-button" type="button">
+          <img src="img/chevron-left.svg" alt="" />
+        </button>
+        <h2 class="drawer__title">Корзина</h2>
+      </div>
+
+      <div class="drawer__list"></div>
+
+      <div class="drawer__footer">
+        <div class="drawer__total">
+          <div class="drawer__total-label">Стоимость</div>
+          <div class="drawer__total-dash"></div>
+          <div class="drawer__total-value">0 руб.</div>
+        </div>
+        <button class="drawer__checkout-button button" type="button">Перейти к оформлению</button>
+      </div>
+    </aside>
+
+    <div class="payment">
+      <form class="payment__form" method="POST">
+        <button class="payment__close-button" type="button">
+          <img src="img/x-white.svg" alt="Закрыть" />
+        </button>
+
+        <div class="payment__row">
+          <div class="payment__field">
+            <label for="username">Имя</label>
+            <input
+              id="username"
+              placeholder="Аркадий"
+              name="username"
+              type="text"
+              class="payment__input"
+            />
+          </div>
+          <div class="payment__field">
+            <label for="phone_number">Номер телефона</label>
+            <input
+              id="phone_number"
+              placeholder="+7 (900) 000 00 00"
+              name="phone_number"
+              type="text"
+              class="payment__input"
+            />
+          </div>
+        </div>
+
+        <div class="payment__row">
+          <div class="payment__field">
+            <label for="card_number">Номер карты</label>
+            <input
+              id="card_number"
+              placeholder="0000 0000 0000 0000"
+              name="card_number"
+              type="text"
+              class="payment__input"
+            />
+          </div>
+          <div class="payment__field">
+            <label for="cvv_code">CVV код</label>
+            <input
+              id="cvv_code"
+              placeholder="000"
+              name="cvv_code"
+              type="text"
+              class="payment__input"
+            />
+          </div>
+        </div>
+
+        <button class="payment__submit-button button" type="submit">Оформить заказ</button>
+      </form>
+    </div>
 
     <script src="https://unpkg.com/imask"></script>
     <script src="./scripts/main.js"></script>
