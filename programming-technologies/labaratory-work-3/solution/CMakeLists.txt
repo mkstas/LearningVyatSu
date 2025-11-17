@@ -14,8 +14,10 @@ qt_standard_project_setup()
 qt_add_executable(cppqt
     src/main.cpp
     src/database/database.cpp
+    src/services/product_service.cpp
     src/windows/main_window.cpp
-    src/modals/create_note_modal.cpp
+    src/modals/create_product_modal.cpp
+    src/modals/update_product_modal.cpp
 )
 
 target_link_libraries(cppqt

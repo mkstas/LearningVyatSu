@@ -79,7 +79,11 @@
     "cinttypes": "cpp",
     "valarray": "cpp",
     "qhboxlayout": "cpp",
-    "qvboxlayout": "cpp"
+    "qvboxlayout": "cpp",
+    "qmainwindow": "cpp",
+    "qmenubar": "cpp",
+    "qheaderview": "cpp",
+    "qmessagebox": "cpp"
   },
   "cmake.ignoreCMakeListsMissing": true
 }
