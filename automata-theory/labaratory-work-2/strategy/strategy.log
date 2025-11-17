@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.2)  11 NOV 2025 01:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.2)  17 NOV 2025 18:45
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -353,15 +353,15 @@ LaTeX Font Info:    ... okay on input line 16.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(85.35826pt, 483.69687pt, 28.45274pt)
-* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* h-part:(L,W,R)=(28.45274pt, 540.60239pt, 28.45274pt)
+* v-part:(T,H,B)=(28.45274pt, 788.14136pt, 28.45274pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=483.69687pt
-* \textheight=731.23584pt
-* \oddsidemargin=13.08827pt
-* \evensidemargin=13.08827pt
-* \topmargin=-54.36449pt
+* \textwidth=540.60239pt
+* \textheight=788.14136pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=-82.81725pt
 * \headheight=14.0pt
 * \headsep=25.0pt
 * \topskip=14.0pt
@@ -399,11 +399,11 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-<img/schema.png, id=1, 1608.0075pt x 1889.0575pt>
+<img/schema.png, id=1, 1630.09pt x 1569.865pt>
 File: img/schema.png Graphic file (type png)
 <use img/schema.png>
 Package pdftex.def Info: img/schema.png  used on input line 22.
-(pdftex.def)             Requested size: 483.69687pt x 568.2205pt.
+(pdftex.def)             Requested size: 540.60239pt x 520.62016pt.
 
 
 [1
@@ -417,13 +417,13 @@ L3 programming layer <2025-08-13>
 Here is how much of TeX's memory you used:
  4224 strings out of 467800
  70489 string characters out of 5429289
- 477892 words of memory out of 5000000
+ 477900 words of memory out of 5000000
  32857 multiletter control sequences out of 15000+600000
  628697 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,6n,65p,341b,240s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on strategy.pdf (1 page, 184805 bytes).
+Output written on strategy.pdf (1 page, 146520 bytes).
 PDF statistics:
  11 PDF objects out of 1000 (max. 8388607)
  5 compressed objects within 1 object stream
