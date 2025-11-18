@@ -83,7 +83,8 @@
     "qmainwindow": "cpp",
     "qmenubar": "cpp",
     "qheaderview": "cpp",
-    "qmessagebox": "cpp"
+    "qmessagebox": "cpp",
+    "pqxx": "cpp"
   },
   "cmake.ignoreCMakeListsMissing": true
 }

@@ -148,7 +148,8 @@ app.listen(3000, () => {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,
+        wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -183,7 +184,9 @@ app.listen(3000, () => {
           <div class="drawer__total-dash"></div>
           <div class="drawer__total-value">0 руб.</div>
         </div>
-        <button class="drawer__checkout-button button" type="button">Перейти к оформлению</button>
+        <button class="drawer__checkout-button button" type="button">
+          Перейти к оформлению
+        </button>
       </div>
     </aside>
 
@@ -239,7 +242,9 @@ app.listen(3000, () => {
           </div>
         </div>
 
-        <button class="payment__submit-button button" type="submit">Оформить заказ</button>
+        <button class="payment__submit-button button" type="submit">
+          Оформить заказ
+        </button>
       </form>
     </div>
 
@@ -634,12 +639,16 @@ const productsElement = document.querySelector('.products');
 const drawerElement = document.querySelector('.drawer');
 const drawerBackButton = document.querySelector('.drawer__back-button');
 const drawerListElement = document.querySelector('.drawer__list');
-const drawerTotalValueElement = document.querySelector('.drawer__total-value');
-const drawerCheckoutButton = document.querySelector('.drawer__checkout-button');
-const headerCartButton = document.querySelector('.header__cart-button');
+const drawerTotalValueElement = 
+  document.querySelector('.drawer__total-value');
+const drawerCheckoutButton = 
+  document.querySelector('.drawer__checkout-button');
+const headerCartButton = 
+  document.querySelector('.header__cart-button');
 const paymentElement = document.querySelector('.payment');
 const paymentForm = document.querySelector('.payment__form');
-const closePaymentFormButton = document.querySelector('.payment__close-button');
+const closePaymentFormButton = 
+  document.querySelector('.payment__close-button');
 const phoneNumberInput = document.querySelector('#phone_number');
 const cardNumberInput = document.querySelector('#card_number');
 const cvvCodeInput = document.querySelector('#cvv_code');
@@ -648,8 +657,10 @@ IMask(phoneNumberInput, { mask: '+{7} (000) 000 00 00' });
 IMask(cardNumberInput, { mask: '0000 0000 0000 0000' });
 IMask(cvvCodeInput, { mask: '000' });
 
-headerCartButton.addEventListener('click', () => drawerElement.classList.toggle('drawer--active'));
-drawerBackButton.addEventListener('click', () => drawerElement.classList.remove('drawer--active'));
+headerCartButton.addEventListener('click', 
+  () => drawerElement.classList.toggle('drawer--active'));
+drawerBackButton.addEventListener('click', 
+  () => drawerElement.classList.remove('drawer--active'));
 
 drawerCheckoutButton.addEventListener('click', () => {
   paymentElement.classList.add('payment--active');
@@ -674,7 +685,8 @@ const getTotalCost = cart => {
 };
 
 const updateHeaderCartCost = () => {
-  headerCartButton.querySelector('span').innerText = getTotalCost(getCart()) + ' руб.';
+  headerCartButton.querySelector('span').innerText = 
+    getTotalCost(getCart()) + ' руб.';
 };
 
 const updateTotalDrawerCost = () => {
@@ -710,13 +722,17 @@ const updateCart = product => {
 
   if (isInCart) {
     setCart(cart.filter(item => item.id !== product.id));
-    setCardButtonToAdd(productsElement.querySelector(`[data-product-id="${product.id}"]`));
+    setCardButtonToAdd(productsElement.querySelector(
+      `[data-product-id="${product.id}"]`
+    ));
   }
 
   if (!isInCart) {
     cart.push(product);
     setCart(cart);
-    setCardButtonToDelete(productsElement.querySelector(`[data-product-id="${product.id}"]`));
+    setCardButtonToDelete(productsElement.querySelector(
+      `[data-product-id="${product.id}"]`
+    ));
   }
 
   updateHeaderCartCost();
@@ -738,7 +754,8 @@ const getProducts = async () => {
 const createCartProductElement = product => {
   return `
     <div class="drawer__item">
-      <img class="drawer__item-image" src="${product.imageUrl}" alt="${product.title}" />
+      <img class="drawer__item-image" 
+        src="${product.imageUrl}" alt="${product.title}" />
       <div class="drawer__item-info">
         <h3 class="drawer__item-title">${product.title}</h3>
         <p class="drawer__item-price">${product.price} руб.</p>
@@ -754,11 +771,13 @@ const createProductElement = (product, cart) => {
 
   return `
     <article class="card">
-      <img src="${product.imageUrl}" alt="${product.title}" class="card__image" />
+      <img src="${product.imageUrl}" alt="${product.title}" 
+        class="card__image" />
       <h3 class="card__title">${product.title}</h3>
       <div class="card__row">
         <span class="card__price">${product.price} руб.</span>
-        <button data-product-id=${product.id} class="button${isInCart ? ' button--outline' : ''}">
+        <button data-product-id=${product.id} 
+          class="button${isInCart ? ' button--outline' : ''}">
           ${isInCart ? 'Убрать' : 'В корзину'}
         </button>
       </div>
