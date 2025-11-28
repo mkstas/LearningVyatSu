@@ -1,11 +1,11 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.1.1">
   <diagram name="Страница-1" id="HU9Q8AC3zwcvyxUE_-G_">
-    <mxGraphModel dx="1501" dy="866" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1426" dy="857" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="1t35GeAZ90Uokap5AemT-1" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" value="Тип устройства" vertex="1">
-          <mxGeometry height="86" width="160" x="260" y="190" as="geometry" />
+          <mxGeometry height="86" width="160" x="260" y="220" as="geometry" />
         </mxCell>
         <mxCell id="1t35GeAZ90Uokap5AemT-2" parent="1t35GeAZ90Uokap5AemT-1" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="ID Типа устройства" vertex="1">
           <mxGeometry height="30" width="160" y="26" as="geometry" />
@@ -14,7 +14,7 @@
           <mxGeometry height="30" width="160" y="56" as="geometry" />
         </mxCell>
         <mxCell id="1t35GeAZ90Uokap5AemT-5" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" value="Устройство" vertex="1">
-          <mxGeometry height="116" width="160" x="260" y="40" as="geometry" />
+          <mxGeometry height="146" width="160" x="260" y="40" as="geometry" />
         </mxCell>
         <mxCell id="1t35GeAZ90Uokap5AemT-6" parent="1t35GeAZ90Uokap5AemT-5" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="ID Устройства" vertex="1">
           <mxGeometry height="30" width="160" y="26" as="geometry" />
@@ -25,14 +25,20 @@
         <mxCell id="1t35GeAZ90Uokap5AemT-8" parent="1t35GeAZ90Uokap5AemT-5" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="Название" vertex="1">
           <mxGeometry height="30" width="160" y="86" as="geometry" />
         </mxCell>
+        <mxCell id="2k1G3beZc9aSu6k-qa5I-1" parent="1t35GeAZ90Uokap5AemT-5" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="Цена" vertex="1">
+          <mxGeometry height="30" width="160" y="116" as="geometry" />
+        </mxCell>
         <mxCell id="1t35GeAZ90Uokap5AemT-12" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" value="Хаб" vertex="1">
-          <mxGeometry height="86" width="160" x="700" y="80" as="geometry" />
+          <mxGeometry height="116" width="160" x="700" y="30" as="geometry" />
         </mxCell>
         <mxCell id="1t35GeAZ90Uokap5AemT-13" parent="1t35GeAZ90Uokap5AemT-12" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="ID Хаба" vertex="1">
           <mxGeometry height="30" width="160" y="26" as="geometry" />
         </mxCell>
         <mxCell id="1t35GeAZ90Uokap5AemT-61" parent="1t35GeAZ90Uokap5AemT-12" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="Название" vertex="1">
           <mxGeometry height="30" width="160" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="2k1G3beZc9aSu6k-qa5I-2" parent="1t35GeAZ90Uokap5AemT-12" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="Цена" vertex="1">
+          <mxGeometry height="30" width="160" y="86" as="geometry" />
         </mxCell>
         <mxCell id="1t35GeAZ90Uokap5AemT-16" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" value="Устройство хаба" vertex="1">
           <mxGeometry height="146" width="160" x="480" y="10" as="geometry" />
@@ -49,14 +55,8 @@
         <mxCell id="1t35GeAZ90Uokap5AemT-19" parent="1t35GeAZ90Uokap5AemT-16" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="Серийный номер" vertex="1">
           <mxGeometry height="30" width="160" y="116" as="geometry" />
         </mxCell>
-        <mxCell id="1t35GeAZ90Uokap5AemT-20" edge="1" parent="1" source="1t35GeAZ90Uokap5AemT-18" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;" target="1t35GeAZ90Uokap5AemT-6" value="">
-          <mxGeometry height="100" relative="1" width="100" as="geometry">
-            <mxPoint x="430" y="250" as="sourcePoint" />
-            <mxPoint x="530" y="150" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="1t35GeAZ90Uokap5AemT-48" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" value="Пользователь" vertex="1">
-          <mxGeometry height="86" width="160" x="1140" y="200" as="geometry" />
+          <mxGeometry height="86" width="160" x="1140" y="180" as="geometry" />
         </mxCell>
         <mxCell id="1t35GeAZ90Uokap5AemT-49" parent="1t35GeAZ90Uokap5AemT-48" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="ID Пользователя" vertex="1">
           <mxGeometry height="30" width="160" y="26" as="geometry" />
@@ -65,7 +65,7 @@
           <mxGeometry height="30" width="160" y="56" as="geometry" />
         </mxCell>
         <mxCell id="1t35GeAZ90Uokap5AemT-52" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" value="Хаб пользователя" vertex="1">
-          <mxGeometry height="146" width="160" x="700" y="200" as="geometry" />
+          <mxGeometry height="146" width="160" x="700" y="180" as="geometry" />
         </mxCell>
         <mxCell id="1t35GeAZ90Uokap5AemT-53" parent="1t35GeAZ90Uokap5AemT-52" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="ID Хаба" vertex="1">
           <mxGeometry height="30" width="160" y="26" as="geometry" />
@@ -98,19 +98,19 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="1t35GeAZ90Uokap5AemT-66" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" value="Пользователи хаба" vertex="1">
-          <mxGeometry height="116" width="160" x="920" y="200" as="geometry" />
-        </mxCell>
-        <mxCell id="1t35GeAZ90Uokap5AemT-68" parent="1t35GeAZ90Uokap5AemT-66" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="ID Пользователя" vertex="1">
-          <mxGeometry height="30" width="160" y="26" as="geometry" />
-        </mxCell>
-        <mxCell id="1t35GeAZ90Uokap5AemT-67" parent="1t35GeAZ90Uokap5AemT-66" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="ID Хаба пользователя" vertex="1">
-          <mxGeometry height="30" width="160" y="56" as="geometry" />
+          <mxGeometry height="116" width="160" x="920" y="180" as="geometry" />
         </mxCell>
         <mxCell id="1t35GeAZ90Uokap5AemT-69" parent="1t35GeAZ90Uokap5AemT-66" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="ID Роли пол. хаба" vertex="1">
+          <mxGeometry height="30" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1t35GeAZ90Uokap5AemT-68" parent="1t35GeAZ90Uokap5AemT-66" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="ID Пользователя" vertex="1">
+          <mxGeometry height="30" width="160" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="1t35GeAZ90Uokap5AemT-67" parent="1t35GeAZ90Uokap5AemT-66" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="ID Хаба пользователя" vertex="1">
           <mxGeometry height="30" width="160" y="86" as="geometry" />
         </mxCell>
         <mxCell id="1t35GeAZ90Uokap5AemT-71" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" value="Роль пол. хаба" vertex="1">
-          <mxGeometry height="86" width="160" x="920" y="346" as="geometry" />
+          <mxGeometry height="86" width="160" x="920" y="60" as="geometry" />
         </mxCell>
         <mxCell id="1t35GeAZ90Uokap5AemT-72" parent="1t35GeAZ90Uokap5AemT-71" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="ID Роли хаба" vertex="1">
           <mxGeometry height="30" width="160" y="26" as="geometry" />
@@ -131,7 +131,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="1t35GeAZ90Uokap5AemT-79" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" value="Разрешение хаба" vertex="1">
-          <mxGeometry height="86" width="160" x="920" y="580" as="geometry" />
+          <mxGeometry height="86" width="160" x="1360" y="60" as="geometry" />
         </mxCell>
         <mxCell id="1t35GeAZ90Uokap5AemT-80" parent="1t35GeAZ90Uokap5AemT-79" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="ID Разрешения хаба" vertex="1">
           <mxGeometry height="30" width="160" y="26" as="geometry" />
@@ -140,7 +140,7 @@
           <mxGeometry height="30" width="160" y="56" as="geometry" />
         </mxCell>
         <mxCell id="1t35GeAZ90Uokap5AemT-83" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" value="Разрешения роли хаба" vertex="1">
-          <mxGeometry height="86" width="160" x="920" y="460" as="geometry" />
+          <mxGeometry height="86" width="160" x="1140" y="60" as="geometry" />
         </mxCell>
         <mxCell id="1t35GeAZ90Uokap5AemT-84" parent="1t35GeAZ90Uokap5AemT-83" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="ID Роли хаба" vertex="1">
           <mxGeometry height="30" width="160" y="26" as="geometry" />
@@ -160,14 +160,50 @@
             <mxPoint x="1070" y="550" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1t35GeAZ90Uokap5AemT-97" edge="1" parent="1" source="1t35GeAZ90Uokap5AemT-72" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endFill=0;startArrow=ERoneToMany;startFill=0;" target="1t35GeAZ90Uokap5AemT-69" value="">
+        <mxCell id="2k1G3beZc9aSu6k-qa5I-4" edge="1" parent="1" source="1t35GeAZ90Uokap5AemT-69" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=ERoneToMany;startFill=0;" target="1t35GeAZ90Uokap5AemT-72" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
-              <mxPoint x="890" y="387" />
-              <mxPoint x="890" y="301" />
+              <mxPoint x="900" y="221" />
+              <mxPoint x="900" y="101" />
             </Array>
-            <mxPoint x="960" y="360" as="sourcePoint" />
-            <mxPoint x="1010" y="310" as="targetPoint" />
+            <mxPoint x="900" y="280" as="sourcePoint" />
+            <mxPoint x="900" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2k1G3beZc9aSu6k-qa5I-5" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" value="Характеристика" vertex="1">
+          <mxGeometry height="86" width="160" x="260" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="2k1G3beZc9aSu6k-qa5I-6" parent="2k1G3beZc9aSu6k-qa5I-5" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="ID Характеристики" vertex="1">
+          <mxGeometry height="30" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="2k1G3beZc9aSu6k-qa5I-7" parent="2k1G3beZc9aSu6k-qa5I-5" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="Название" vertex="1">
+          <mxGeometry height="30" width="160" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="2k1G3beZc9aSu6k-qa5I-9" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" value="Характеристика устр." vertex="1">
+          <mxGeometry height="86" width="160" x="490" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="2k1G3beZc9aSu6k-qa5I-10" parent="2k1G3beZc9aSu6k-qa5I-9" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="ID Устройства" vertex="1">
+          <mxGeometry height="30" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="2k1G3beZc9aSu6k-qa5I-11" parent="2k1G3beZc9aSu6k-qa5I-9" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" value="ID Характеристики" vertex="1">
+          <mxGeometry height="30" width="160" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="2k1G3beZc9aSu6k-qa5I-14" edge="1" parent="1" source="1t35GeAZ90Uokap5AemT-6" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;" target="1t35GeAZ90Uokap5AemT-18" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="540" y="170" as="sourcePoint" />
+            <mxPoint x="640" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2k1G3beZc9aSu6k-qa5I-15" edge="1" parent="1" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="2k1G3beZc9aSu6k-qa5I-10" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="430" y="81" as="sourcePoint" />
+            <mxPoint x="490" y="381" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2k1G3beZc9aSu6k-qa5I-16" edge="1" parent="1" source="2k1G3beZc9aSu6k-qa5I-6" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;" target="2k1G3beZc9aSu6k-qa5I-11" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="450" y="430" as="sourcePoint" />
+            <mxPoint x="550" y="330" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
