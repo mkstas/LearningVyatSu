@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.2.1">
+  <diagram name="Страница-1" id="hUKyrcjhtbHBl17aR8U1">
+    <mxGraphModel dx="731" dy="422" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="STXbrqFnHHLR2eqBsMIC-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" value="Управление&lt;div&gt;устройством&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="130" x="350" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="STXbrqFnHHLR2eqBsMIC-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=10;" value="Данные&lt;div&gt;устройства&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="70" x="260" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="STXbrqFnHHLR2eqBsMIC-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=10;" value="Данные&lt;div&gt;пользователя&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="70" x="260" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="STXbrqFnHHLR2eqBsMIC-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=10;" value="&lt;div&gt;Мобильное&lt;/div&gt;&lt;div&gt;приложение&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="70" x="380" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="STXbrqFnHHLR2eqBsMIC-16" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="250" y="280" as="sourcePoint" />
+            <mxPoint x="350" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="STXbrqFnHHLR2eqBsMIC-17" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="250" y="320" as="sourcePoint" />
+            <mxPoint x="350" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="STXbrqFnHHLR2eqBsMIC-19" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="370" y="420" as="sourcePoint" />
+            <mxPoint x="370" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="STXbrqFnHHLR2eqBsMIC-20" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="460" y="420" as="sourcePoint" />
+            <mxPoint x="460" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="STXbrqFnHHLR2eqBsMIC-21" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="415" y="420" as="sourcePoint" />
+            <mxPoint x="415" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="STXbrqFnHHLR2eqBsMIC-22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=10;" value="&lt;div&gt;Пользователь&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="70" x="300" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="STXbrqFnHHLR2eqBsMIC-23" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=10;" value="&lt;div&gt;Устройство&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="70" x="460" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="STXbrqFnHHLR2eqBsMIC-25" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="370" y="180" as="sourcePoint" />
+            <mxPoint x="370" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="STXbrqFnHHLR2eqBsMIC-26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=10;" value="Пользовательское&lt;div&gt;соглашение&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="90" x="325" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="STXbrqFnHHLR2eqBsMIC-27" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="459" y="180" as="sourcePoint" />
+            <mxPoint x="459" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="STXbrqFnHHLR2eqBsMIC-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=10;" value="Руководство&lt;div&gt;пользования&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="70" x="424" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="STXbrqFnHHLR2eqBsMIC-29" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="480" y="299.92" as="sourcePoint" />
+            <mxPoint x="580" y="299.92" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="STXbrqFnHHLR2eqBsMIC-30" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=10;" value="А0" vertex="1">
+          <mxGeometry height="20" width="30" x="450" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="STXbrqFnHHLR2eqBsMIC-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Управляющее сообщение устройству" vertex="1">
+          <mxGeometry height="30" width="160" x="500" y="260" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
