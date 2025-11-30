@@ -19,7 +19,7 @@ def on_game_start() -> None:
     pass
 
 def beat(move: int) -> int:
-    """ Возвращает ход, который бьёт переданный """
+    """ Возвращает ход, который бьёт переданный. """
     return {ROCK: PAPER, PAPER: SCISSORS, SCISSORS: ROCK}[move]
 
 def choose(previous_opponent_choice: int) -> int:
