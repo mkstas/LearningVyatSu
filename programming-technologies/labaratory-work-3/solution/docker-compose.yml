@@ -13,7 +13,7 @@ services:
 
   pgadmin:
     container_name: pt_pgadmin
-    image: dpage/pgadmin4
+    image: dpage/pgadmin4:9.10
     environment:
       PGADMIN_DEFAULT_EMAIL: root@local.com
       PGADMIN_DEFAULT_PASSWORD: root

@@ -5,26 +5,27 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    backgroundColor: const Color(0xFF292c3c),
+    backgroundColor: Colors.black45,
     appBar: AppBar(
       title: const Text(
         'Макаров Станислав Алексеевич',
         style: TextStyle(
-          color: Color(0xFFc6d0f5),
+          color: Colors.white,
         ),
       ),
-      backgroundColor: const Color(0xFF232634),
+      backgroundColor: Colors.blueAccent,
     ),
     body: Padding(
       padding: const EdgeInsets.all(12.0),
       child: ListView(
         children: [
+          const SizedBox(height: 12),
           const Text(
             'Технологии программирования',
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.w500,
-              color: Color(0xFFc6d0f5),
+              color: Colors.white,
             ),
           ),
           const SizedBox(height: 24),

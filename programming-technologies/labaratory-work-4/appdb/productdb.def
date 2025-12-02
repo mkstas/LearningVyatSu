@@ -1,0 +1,11 @@
+LIBRARY productdb
+EXPORTS
+    create_product_repository
+    destroy_product_repository
+    product_repo_create
+    product_repo_get_all
+    product_repo_get_by_id
+    product_repo_update
+    product_repo_remove
+    product_repo_free_products
+    product_repo_free_product

@@ -1,19 +1,22 @@
 {
     "configurations": [
         {
-            "name": "Linux",
+            "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/include/qt6",
-                "/usr/include/qt6/QtWidgets",
-                "/usr/include/qt6/QtCore"
+                "C:/msys64/ucrt64/include/**",
+                "C:/msys64/ucrt64/include/Qt6/**",
+                "C:/msys64/ucrt64/include/pqxx/**"
             ],
-            "defines": [],
-            "compilerPath": "/usr/bin/gcc",
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:\\msys64\\ucrt64\\bin\\gcc.exe",
             "cStandard": "c23",
-            "cppStandard": "gnu++20",
-            "intelliSenseMode": "linux-gcc-x64",
-            "configurationProvider": "ms-vscode.cmake-tools"
+            "cppStandard": "c++23",
+            "intelliSenseMode": "windows-gcc-x64"
         }
     ],
     "version": 4

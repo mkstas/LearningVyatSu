@@ -26,12 +26,12 @@ private:
         try {
             conn = std::make_shared<pqxx::connection>(dsn);
             if (conn->is_open()) {
-                std::cout << "Connected to database: " << conn->dbname() << '\n';
+                std::cout << "Connected to database: " << conn->dbname() << std::endl;
                 return true;
             }
         }
         catch (const std::exception& e) {
-            std::cerr << "DB connection failed: " << e.what() << '\n';
+            std::cerr << "DB connection failed: " << e.what() << std::endl;
         }
         return false;
     }
@@ -54,15 +54,15 @@ public:
         return conn && conn->is_open();
     }
 
-    bool create(const ProductDto& dto)
+    bool create(const char* title, const char* image_url, int price)
     {
-        if (!dto.title || !dto.image_url) return false;
+        if (!title || !image_url) return false;
         try {
             exec(std::format(
                 "INSERT INTO products (title, image_url, price) VALUES ({}, {}, {})",
-                conn->quote(dto.title),
-                conn->quote(dto.image_url),
-                dto.price
+                conn->quote(title),
+                conn->quote(image_url),
+                price
             ));
             return true;
         }
@@ -80,7 +80,7 @@ public:
                 p.title     = cstr_dup(row["title"].as<std::string>());
                 p.image_url = cstr_dup(row["image_url"].as<std::string>());
                 p.price     = row["price"].as<int>();
-                result.push_back(p);
+                result.emplace_back(std::move(p));
             }
         }
         catch (...) {}
@@ -102,15 +102,15 @@ public:
         catch (...) { return false; }
     }
 
-    bool update(int id, const ProductDto& dto)
+    bool update(int id, const char* title, const char* image_url, int price)
     {
-        if (!dto.title || !dto.image_url) return false;
+        if (!title || !image_url) return false;
         try {
             exec(std::format(
                 "UPDATE products SET title = {}, image_url = {}, price = {} WHERE id = {}",
-                conn->quote(dto.title),
-                conn->quote(dto.image_url),
-                dto.price, id
+                conn->quote(title),
+                conn->quote(image_url),
+                price, id
             ));
             return true;
         }
@@ -129,7 +129,7 @@ public:
 
 extern "C" {
 
-void* create_product_repository(const char* dsn)
+__declspec(dllexport) void* create_product_repository(const char* dsn)
 {
     auto* repo = new ProductRepository(dsn);
     if (repo->is_connected())
@@ -138,17 +138,17 @@ void* create_product_repository(const char* dsn)
     return nullptr;
 }
 
-void destroy_product_repository(void* repo)
+__declspec(dllexport) void destroy_product_repository(void* repo)
 {
     delete static_cast<ProductRepository*>(repo);
 }
 
-bool product_repo_create(void* repo, const ProductDto* dto)
+__declspec(dllexport) bool product_repo_create(void* repo, const ProductDto* dto)
 {
-    return repo && dto && static_cast<ProductRepository*>(repo)->create(*dto);
+    return repo && dto && static_cast<ProductRepository*>(repo)->create(dto->title, dto->image_url, dto->price);
 }
 
-int product_repo_get_all(void* repo, Product** out_products, size_t* out_count)
+__declspec(dllexport) int product_repo_get_all(void* repo, Product** out_products, size_t* out_count)
 {
     if (!repo || !out_products || !out_count) return -1;
     auto vec = static_cast<ProductRepository*>(repo)->getAll();
@@ -164,22 +164,22 @@ int product_repo_get_all(void* repo, Product** out_products, size_t* out_count)
     return 0;
 }
 
-bool product_repo_get_by_id(void* repo, int id, Product* out)
+__declspec(dllexport) bool product_repo_get_by_id(void* repo, int id, Product* out)
 {
     return repo && out && static_cast<ProductRepository*>(repo)->getById(id, *out);
 }
 
-bool product_repo_update(void* repo, int id, const ProductDto* dto)
+__declspec(dllexport) bool product_repo_update(void* repo, int id, const ProductDto* dto)
 {
-    return repo && dto && static_cast<ProductRepository*>(repo)->update(id, *dto);
+    return repo && dto && static_cast<ProductRepository*>(repo)->update(id, dto->title, dto->image_url, dto->price);
 }
 
-bool product_repo_remove(void* repo, int id)
+__declspec(dllexport) bool product_repo_remove(void* repo, int id)
 {
     return repo && static_cast<ProductRepository*>(repo)->remove(id);
 }
 
-void product_repo_free_products(Product* products, size_t count)
+__declspec(dllexport) void product_repo_free_products(Product* products, size_t count)
 {
     if (!products) return;
     for (size_t i = 0; i < count; ++i) {
@@ -189,7 +189,7 @@ void product_repo_free_products(Product* products, size_t count)
     std::free(products);
 }
 
-void product_repo_free_product(Product* p)
+__declspec(dllexport) void product_repo_free_product(Product* p)
 {
     if (!p) return;
     std::free(p->title);
