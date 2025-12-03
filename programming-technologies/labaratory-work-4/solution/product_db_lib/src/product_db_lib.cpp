@@ -1,4 +1,4 @@
-#include "../include/appdb.h"
+#include "../include/product_db_lib.h"
 
 #include <pqxx/pqxx>
 #include <iostream>

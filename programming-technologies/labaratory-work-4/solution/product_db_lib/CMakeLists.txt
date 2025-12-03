@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(productdb 
+project(product_db_lib 
     VERSION 1.0.0 
     LANGUAGES CXX
     DESCRIPTION "Product Database C++/PostgreSQL library (explicit loading only)"
@@ -17,35 +17,35 @@ set(PQXX_LIBRARY "${MSYS2_PREFIX}/lib/libpqxx.dll.a")
 set(POSTGRESQL_INCLUDE_DIR "${MSYS2_PREFIX}/include")
 set(POSTGRESQL_LIBRARY "${MSYS2_PREFIX}/lib/libpq.dll.a")
 
-add_library(productdb SHARED
-    src/appdb.cpp
+add_library(product_db_lib SHARED
+    src/product_db_lib.cpp
 )
 
-target_include_directories(productdb PRIVATE
+target_include_directories(product_db_lib PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src
     ${PQXX_INCLUDE_DIR}
     ${POSTGRESQL_INCLUDE_DIR}
 )
 
-target_link_libraries(productdb PRIVATE
+target_link_libraries(product_db_lib PRIVATE
     ${PQXX_LIBRARY}
     ${POSTGRESQL_LIBRARY}
     ws2_32
     secur32
 )
 
-set_target_properties(productdb PROPERTIES
-    OUTPUT_NAME "productdb"
+set_target_properties(product_db_lib PROPERTIES
+    OUTPUT_NAME "product_db_lib"
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
     LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
 )
 
-add_custom_command(TARGET productdb POST_BUILD
+add_custom_command(TARGET product_db_lib POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
         "${MSYS2_PREFIX}/bin/libpqxx.dll"
-        $<TARGET_FILE_DIR:productdb>
+        $<TARGET_FILE_DIR:product_db_lib>
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
         "${MSYS2_PREFIX}/bin/libpq.dll"
-        $<TARGET_FILE_DIR:productdb>
+        $<TARGET_FILE_DIR:product_db_lib>
     COMMENT "Copying PostgreSQL DLL dependencies"
 )

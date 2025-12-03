@@ -1,65 +1,65 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.2)  17 NOV 2025 17:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.10.23)  17 NOV 2025 13:16
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/LearningVyatSU/programming-technologies/labaratory-work-4/report/ИВТб-2301-05-00_МакаровСА_Л4
-(d:/LearningVyatSU/programming-technologies/labaratory-work-4/report/ИВТб-2301-05-00_МакаровСА_Л4.tex
-LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-08-13>
-(d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/extsizes/extarticle.cls
+**/home/sempai/LearningVyatSu/programming-technologies/labaratory-work-3/report/ИВТб-2301-05-00_МакаровСА_Л3.tex
+(/home/sempai/LearningVyatSu/programming-technologies/labaratory-work-3/report/ИВТб-2301-05-00_МакаровСА_Л3.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(/usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
-(d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/extsizes/size14.clo
+(/usr/share/texmf-dist/tex/latex/extsizes/size14.clo
 File: size14.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
-) (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/base/exscale.sty
+) (/usr/share/texmf-dist/tex/latex/base/exscale.sty
 Package: exscale 2018/09/24 v2.1i Standard LaTeX package exscale
 LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
-\big@size=\dimen148
+\big@size=\dimen141
 )
-\c@part=\count275
-\c@section=\count276
-\c@subsection=\count277
-\c@subsubsection=\count278
-\c@paragraph=\count279
-\c@subparagraph=\count280
-\c@figure=\count281
-\c@table=\count282
+\c@part=\count196
+\c@section=\count197
+\c@subsection=\count198
+\c@subsubsection=\count199
+\c@paragraph=\count266
+\c@subparagraph=\count267
+\c@figure=\count268
+\c@table=\count269
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
-\bibindent=\dimen149
-) (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+\bibindent=\dimen142
+) (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+ (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
-) (d:/ProgramFiles/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
+) (/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- (d:/ProgramFiles/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
+ (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-\Gm@cnth=\count283
-\Gm@cntv=\count284
-\c@Gm@tempcnt=\count285
-\Gm@bindingoffset=\dimen150
-\Gm@wd@mp=\dimen151
-\Gm@odd@mp=\dimen152
-\Gm@even@mp=\dimen153
-\Gm@layoutwidth=\dimen154
-\Gm@layoutheight=\dimen155
-\Gm@layouthoffset=\dimen156
-\Gm@layoutvoffset=\dimen157
+\Gm@cnth=\count270
+\Gm@cntv=\count271
+\c@Gm@tempcnt=\count272
+\Gm@bindingoffset=\dimen143
+\Gm@wd@mp=\dimen144
+\Gm@odd@mp=\dimen145
+\Gm@even@mp=\dimen146
+\Gm@layoutwidth=\dimen147
+\Gm@layoutheight=\dimen148
+\Gm@layouthoffset=\dimen149
+\Gm@layoutvoffset=\dimen150
 \Gm@dimlist=\toks18
-) (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
- (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/cyrillic/t2aenc.def
+) (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+ (/usr/share/texmf-dist/tex/latex/cyrillic/t2aenc.def
 File: t2aenc.def 2023/11/07 v1.0k Cyrillic encoding definition file
 Now handling font encoding T2A ...
 ... processing UTF-8 mapping file for font encoding T2A
- (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/base/t2aenc.dfu
+ (/usr/share/texmf-dist/tex/latex/base/t2aenc.dfu
 File: t2aenc.dfu 2022/06/07 v1.3c UTF-8 support
    defining Unicode char U+00A4 (decimal 164)
    defining Unicode char U+00A7 (decimal 167)
@@ -261,85 +261,75 @@ File: t2aenc.dfu 2022/06/07 v1.3c UTF-8 support
    defining Unicode char U+FB06 (decimal 64262)
 ))
 LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 116.
- (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/cyrillic/t2acmr.fd
+ (/usr/share/texmf-dist/tex/latex/cyrillic/t2acmr.fd
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)) (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
+)) (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks19
 \inpenc@posthook=\toks20
-) (d:/ProgramFiles/texlive/2025/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2025/08/03 v25.12 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
-\babel@savecnt=\count286
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2045.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2047.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2049.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2050.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2051.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2053.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2078.
-\U@D=\dimen158
+) (/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2025/02/14 v25.4 The multilingual framework for pdfLaTeX, LuaLaTeX and XeLaTeX
+\babel@savecnt=\count273
+\U@D=\dimen151
 \l@unhyphenated=\language90
- (d:/ProgramFiles/texlive/2025/texmf-dist/tex/generic/babel/txtbabel.def)
+ (/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count287
- (d:/ProgramFiles/texlive/2025/texmf-dist/tex/generic/babel-russian/russianb.ldf
+\bbl@dirlevel=\count274
+ (/usr/share/texmf-dist/tex/generic/babel-russian/russianb.ldf
 File: russianb.ldf 2021/01/10 1.3m Russian support for the Babel system
 Language: russian 2020/09/09 1.3k Russian support for the Babel system
- (d:/ProgramFiles/texlive/2025/texmf-dist/tex/generic/babel/locale/ru/babel-russian.tex
-Package babel Info: Importing font and identification data for russian
-(babel)             from babel-ru.ini. Reported on input line 12.
-)
 Package babel Info: Making " an active character on input line 124.
 Package babel Info: Default for \cyrdash is provided on input line 163.
-)) (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/tools/indentfirst.sty
+)) (/usr/share/texmf-dist/tex/generic/babel/locale/ru/babel-russian.tex
+Package babel Info: Importing font and identification data for russian
+(babel)             from babel-ru.ini. Reported on input line 11.
+) (/usr/share/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
-) (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/titlesec/titlesec.sty
+) (/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
-\ttl@box=\box53
+\ttl@box=\box52
 \beforetitleunit=\skip51
 \aftertitleunit=\skip52
-\ttl@plus=\dimen159
-\ttl@minus=\dimen160
+\ttl@plus=\dimen152
+\ttl@minus=\dimen153
 \ttl@toksa=\toks21
-\titlewidth=\dimen161
-\titlewidthlast=\dimen162
-\titlewidthfirst=\dimen163
-) (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
- (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+\titlewidth=\dimen154
+\titlewidthlast=\dimen155
+\titlewidthfirst=\dimen156
+) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
+ (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
- (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
+ (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen164
-\Gin@req@width=\dimen165
-) (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/tools/verbatim.sty
+\Gin@req@height=\dimen157
+\Gin@req@width=\dimen158
+) (/usr/share/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks22
 \verbatim@line=\toks23
 \verbatim@in@stream=\read3
-) (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-Package: fancyvrb 2025/07/28 4.6 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count288
+) (/usr/share/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
+\FV@CodeLineNo=\count275
 \FV@InFile=\read4
-\FV@TabBox=\box54
-\c@FancyVerbLine=\count289
-\FV@StepNumber=\count290
+\FV@TabBox=\box53
+\c@FancyVerbLine=\count276
+\FV@StepNumber=\count277
 \FV@OutFile=\write3
-) (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count291
-) (./ИВТб-2301-05-00_МакаровСА_Л4.aux
-Package babel Info: 'russian' activates 'russian' shorthands.
-(babel)             Reported on input line 5.
-)
-\openout1 = `ИВТб-2301-05-00_МакаровСА_Л4.aux'.
+) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count278
+\l__pdf_internal_box=\box54
+) (./ИВТб-2301-05-00_МакаровСА_Л3.aux)
+\openout1 = `ИВТб-2301-05-00_МакаровСА_Л3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
@@ -393,23 +383,23 @@ LaTeX Font Info:    ... okay on input line 18.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Info: Redefining \th on input line 18.
-(d:/ProgramFiles/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count292
-\scratchdimen=\dimen166
+\scratchcounter=\count279
+\scratchdimen=\dimen159
 \scratchbox=\box55
-\nofMPsegments=\count293
-\nofMParguments=\count294
+\nofMPsegments=\count280
+\nofMParguments=\count281
 \everyMPshowfont=\toks24
-\MPscratchCnt=\count295
-\MPscratchDim=\dimen167
-\MPnumerator=\count296
-\makeMPintoPDFobject=\count297
+\MPscratchCnt=\count282
+\MPscratchDim=\dimen160
+\MPnumerator=\count283
+\makeMPintoPDFobject=\count284
 \everyMPtoPDFconversion=\toks25
-) (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (d:/ProgramFiles/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+ (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 LaTeX Font Info:    External font `cmex7' loaded for size
@@ -418,27 +408,90 @@ LaTeX Font Info:    External font `cmex7' loaded for size
 
 [1
 
-{d:/ProgramFiles/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{d:/ProgramFiles/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}]
+<img/1.png, id=7, 578.16pt x 381.67593pt>
+File: img/1.png Graphic file (type png)
+<use img/1.png>
+Package pdftex.def Info: img/1.png  used on input line 64.
+(pdftex.def)             Requested size: 435.32422pt x 287.38026pt.
 
-[2] (./ИВТб-2301-05-00_МакаровСА_Л4.aux)
+
+[2 <./img/1.png>]
+<img/2.png, id=14, 577.40718pt x 383.18156pt>
+File: img/2.png Graphic file (type png)
+<use img/2.png>
+Package pdftex.def Info: img/2.png  used on input line 73.
+(pdftex.def)             Requested size: 406.30359pt x 269.64604pt.
+<img/3.png, id=15, 578.91281pt x 381.67593pt>
+File: img/3.png Graphic file (type png)
+<use img/3.png>
+Package pdftex.def Info: img/3.png  used on input line 81.
+(pdftex.def)             Requested size: 406.30359pt x 267.87602pt.
+
+
+[3 <./img/2.png> <./img/3.png>]
+LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 91.
+ (/usr/share/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
+File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)
+
+[4]
+
+[5]
+
+[6]
+
+[7]
+
+[8]
+
+[9]
+
+[10]
+
+[11]
+
+[12]
+
+[13]
+
+[14]
+
+[15]
+
+[16]
+
+[17]
+
+[18]
+
+[19]
+
+[20]
+
+[21]
+
+[22]
+
+[23] (./ИВТб-2301-05-00_МакаровСА_Л3.aux)
  ***********
-LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-08-13>
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4659 strings out of 467800
- 78087 string characters out of 5429289
- 488053 words of memory out of 5000000
- 33281 multiletter control sequences out of 15000+600000
- 630581 words of font info for 48 fonts, out of 8000000 for 9000
+ 4692 strings out of 473190
+ 77928 string characters out of 5722592
+ 481359 words of memory out of 5000000
+ 27920 multiletter control sequences out of 15000+600000
+ 563705 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,558b,204s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<d:/ProgramFiles/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/ProgramFiles/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb>
-Output written on ИВТб-2301-05-00_МакаровСА_Л4.pdf (2 pages, 36671 bytes).
+ 57i,7n,65p,574b,315s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on ИВТб-2301-05-00_МакаровСА_Л3.pdf (23 pages, 232996 bytes).
 PDF statistics:
- 22 PDF objects out of 1000 (max. 8388607)
- 13 compressed objects within 1 object stream
+ 101 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
