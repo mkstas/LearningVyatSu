@@ -2,15 +2,16 @@
 #define UPDATE_PRODUCT_MODAL_H
 
 #ifdef PRODUCT_QT_LIB_EXPORTS
-    #define PRODUCT_QT_LIB_API __declspec(dllexport)
+#define PRODUCT_QT_LIB_API __declspec(dllexport)
 #else
-    #define PRODUCT_QT_LIB_API __declspec(dllimport)
+#define PRODUCT_QT_LIB_API __declspec(dllimport)
 #endif
 
 #include "../product_repository_wrapper.h"
 #include "../include/product_qt_lib.h"
 
 #include <vector>
+#include <windows.h>
 
 #include <QDialog>
 #include <QVBoxLayout>
@@ -25,7 +26,7 @@ class PRODUCT_QT_LIB_API UpdateProductModal : public QDialog
     Q_OBJECT
 
 private:
-    ProductRepositoryWrapper* product_repo;
+    ProductRepositoryWrapper *product_repo;
     std::vector<InternalProduct> products;
 
     QVBoxLayout *main_layout;
@@ -40,6 +41,9 @@ private:
 
     int product_id;
 
+    HMODULE hValidateLib = nullptr;
+    bool (*validateIntInputAsm)(const char *) = nullptr;
+
     void setupForm();
     void setupButtons();
     void handleSubmit();
@@ -50,7 +54,8 @@ private slots:
     void onCancelClick();
 
 public:
-    explicit UpdateProductModal(ProductRepositoryWrapper* repo, int product_id, QWidget *parent = nullptr);
+    explicit UpdateProductModal(ProductRepositoryWrapper *repo, int product_id, QWidget *parent = nullptr);
+    ~UpdateProductModal();
 };
 
 #endif
