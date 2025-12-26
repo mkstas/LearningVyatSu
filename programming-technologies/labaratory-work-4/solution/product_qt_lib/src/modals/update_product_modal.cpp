@@ -1,23 +1,37 @@
 #include "update_product_modal.h"
 
-UpdateProductModal::UpdateProductModal(ProductRepositoryWrapper* repo, int product_id, QWidget *parent)
-    : QDialog(parent)
-    , product_repo(repo)
-    , product_id(product_id)
+UpdateProductModal::UpdateProductModal(ProductRepositoryWrapper *repo, int product_id, QWidget *parent)
+    : QDialog(parent), product_repo(repo), product_id(product_id)
 {
-    main_layout = new QVBoxLayout();
+    // Загружаем ассемблерную библиотеку
+    hValidateLib = LoadLibraryA("validate_int_lib.dll");
+    if (hValidateLib)
+    {
+        validateIntInputAsm = reinterpret_cast<bool (*)(const char *)>(
+            GetProcAddress(hValidateLib, "validateIntInputAsm"));
+    }
 
+    main_layout = new QVBoxLayout();
     setWindowTitle("Обновление продукта");
     setFixedSize(480, 300);
     setLayout(main_layout);
 
-    if (product_repo && product_repo->isConnected()) {
+    if (product_repo && product_repo->isConnected())
+    {
         products = product_repo->getAll();
     }
 
     setupForm();
     setupButtons();
     loadProductData();
+}
+
+UpdateProductModal::~UpdateProductModal()
+{
+    if (hValidateLib)
+    {
+        FreeLibrary(hValidateLib);
+    }
 }
 
 void UpdateProductModal::setupForm()
@@ -55,18 +69,22 @@ void UpdateProductModal::setupButtons()
 
 void UpdateProductModal::loadProductData()
 {
-    if (!product_repo || !product_repo->isConnected()) {
+    if (!product_repo || !product_repo->isConnected())
+    {
         QMessageBox::warning(this, "Ошибка", "Нет подключения к базе данных");
         reject();
         return;
     }
 
     auto product = product_repo->getById(product_id);
-    if (product.id != -1) {
+    if (product.id != -1)
+    {
         title_input->setText(QString::fromStdString(product.title));
         image_url_input->setText(QString::fromStdString(product.image_url));
         price_input->setText(QString::number(product.price));
-    } else {
+    }
+    else
+    {
         QMessageBox::warning(this, "Ошибка", "Продукт не найден.");
         reject();
     }
@@ -74,7 +92,8 @@ void UpdateProductModal::loadProductData()
 
 void UpdateProductModal::handleSubmit()
 {
-    if (!product_repo || !product_repo->isConnected()) {
+    if (!product_repo || !product_repo->isConnected())
+    {
         QMessageBox::warning(this, "Ошибка", "Нет подключения к базе данных");
         return;
     }
@@ -83,13 +102,16 @@ void UpdateProductModal::handleSubmit()
     QString image_url = image_url_input->text().trimmed();
     QString price = price_input->text().trimmed();
 
-    if (title.isEmpty() || image_url.isEmpty() || price.isEmpty()) {
+    if (title.isEmpty() || image_url.isEmpty() || price.isEmpty())
+    {
         QMessageBox::warning(this, "Ошибка обновления", "Все поля обязательны для заполнения.");
         return;
     }
 
-    for (const auto& product : products) {
-        if (product.title == title.toStdString() && product.id != product_id) {
+    for (const auto &product : products)
+    {
+        if (product.title == title.toStdString() && product.id != product_id)
+        {
             QMessageBox::warning(this, "Ошибка обновления", "Продукт с таким названием уже существует.");
             return;
         }
@@ -102,26 +124,26 @@ void UpdateProductModal::handleSubmit()
 
     bool success = product_repo->update(product_id, dto);
 
-    if (success) {
+    if (success)
+    {
         accept();
-    } else {
+    }
+    else
+    {
         QMessageBox::warning(this, "Ошибка обновления", "Не удалось обновить продукт.");
     }
 }
 
 void UpdateProductModal::validateIntInput(const QString &text)
 {
-    if (!text.isEmpty()) {
-        for (const QChar &ch : text) {
-            if (!ch.isDigit()) {
-                QLineEdit *sender = qobject_cast<QLineEdit*>(this->sender());
-                if (sender) {
-                    QString currentText = sender->text();
-                    sender->setText(currentText.left(currentText.length() - 1));
-                    QMessageBox::warning(this, "Ошибка ввода", "Разрешены только цифры");
-                }
-                break;
-            }
+    std::string stdStr = text.toStdString();
+    if (!validateIntInputAsm(stdStr.c_str()))
+    {
+        QLineEdit *sender = qobject_cast<QLineEdit *>(this->sender());
+        if (sender && !text.isEmpty())
+        {
+            sender->setText(text.left(text.length() - 1));
+            QMessageBox::warning(this, "Ошибка ввода", "Разрешены только цифры");
         }
     }
 }

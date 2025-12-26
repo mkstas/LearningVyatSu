@@ -1,21 +1,35 @@
 #include "create_product_modal.h"
 
-CreateProductModal::CreateProductModal(ProductRepositoryWrapper* repo, QWidget *parent)
-    : QDialog(parent)
-    , product_repo(repo)
+CreateProductModal::CreateProductModal(ProductRepositoryWrapper *repo, QWidget *parent)
+    : QDialog(parent), product_repo(repo)
 {
-    main_layout = new QVBoxLayout();
+    hValidateLib = LoadLibraryA("validate_int_lib.dll");
+    if (hValidateLib)
+    {
+        validateIntInputAsm = reinterpret_cast<bool (*)(const char *)>(
+            GetProcAddress(hValidateLib, "validateIntInputAsm"));
+    }
 
+    main_layout = new QVBoxLayout();
     setWindowTitle("Добавление продукта");
     setFixedSize(480, 300);
     setLayout(main_layout);
 
-    if (product_repo && product_repo->isConnected()) {
+    if (product_repo && product_repo->isConnected())
+    {
         products = product_repo->getAll();
     }
 
     setupForm();
     setupButtons();
+}
+
+CreateProductModal::~CreateProductModal()
+{
+    if (hValidateLib)
+    {
+        FreeLibrary(hValidateLib);
+    }
 }
 
 void CreateProductModal::setupForm()
@@ -53,7 +67,8 @@ void CreateProductModal::setupButtons()
 
 void CreateProductModal::handleSubmit()
 {
-    if (!product_repo || !product_repo->isConnected()) {
+    if (!product_repo || !product_repo->isConnected())
+    {
         QMessageBox::warning(this, "Ошибка", "Нет подключения к базе данных");
         return;
     }
@@ -62,13 +77,16 @@ void CreateProductModal::handleSubmit()
     QString image_url = image_url_input->text().trimmed();
     QString price = price_input->text().trimmed();
 
-    if (title.isEmpty() || image_url.isEmpty() || price.isEmpty()) {
+    if (title.isEmpty() || image_url.isEmpty() || price.isEmpty())
+    {
         QMessageBox::warning(this, "Ошибка добавления", "Все поля обязательны для заполнения.");
         return;
     }
 
-    for (const auto& product : products) {
-        if (product.title == title.toStdString()) {
+    for (const auto &product : products)
+    {
+        if (product.title == title.toStdString())
+        {
             QMessageBox::warning(this, "Ошибка добавления", "Продукт с таким названием уже существует.");
             return;
         }
@@ -79,26 +97,26 @@ void CreateProductModal::handleSubmit()
     dto.image_url = image_url.toStdString();
     dto.price = price.toInt();
 
-    if (product_repo->create(dto)) {
+    if (product_repo->create(dto))
+    {
         accept();
-    } else {
+    }
+    else
+    {
         QMessageBox::warning(this, "Ошибка добавления", "Не удалось добавить продукт");
     }
 }
 
 void CreateProductModal::validateIntInput(const QString &text)
 {
-    if (!text.isEmpty()) {
-        for (const QChar &ch : text) {
-            if (!ch.isDigit()) {
-                QLineEdit *sender = qobject_cast<QLineEdit*>(this->sender());
-                if (sender) {
-                    QString currentText = sender->text();
-                    sender->setText(currentText.left(currentText.length() - 1));
-                    QMessageBox::warning(this, "Ошибка ввода", "Разрешены только цифры");
-                }
-                break;
-            }
+    std::string stdStr = text.toStdString();
+    if (!validateIntInputAsm(stdStr.c_str()))
+    {
+        QLineEdit *sender = qobject_cast<QLineEdit *>(this->sender());
+        if (sender && !text.isEmpty())
+        {
+            sender->setText(text.left(text.length() - 1));
+            QMessageBox::warning(this, "Ошибка ввода", "Разрешены только цифры");
         }
     }
 }

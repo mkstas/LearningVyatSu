@@ -5,6 +5,8 @@ project(product_qt_lib
     DESCRIPTION "Qt Product Management Library"
 )
 
+enable_language(ASM_NASM)
+
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
@@ -17,6 +19,20 @@ find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
 qt_standard_project_setup()
 
 add_definitions(-DPRODUCT_QT_LIB_EXPORTS)
+
+set(VALIDATE_ASM_SRC src/asm/validate_int_input.asm)
+
+file(WRITE ${CMAKE_BINARY_DIR}/validate_int_lib.def "EXPORTS\nvalidateIntInputAsm\n")
+
+add_library(validate_int_lib SHARED ${VALIDATE_ASM_SRC} ${CMAKE_BINARY_DIR}/validate_int_lib.def)
+set_source_files_properties(${VALIDATE_ASM_SRC} PROPERTIES LANGUAGE ASM_NASM)
+
+set_target_properties(validate_int_lib PROPERTIES
+    PREFIX ""
+    OUTPUT_NAME "validate_int_lib"
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+)
 
 set(SOURCES
     src/main.cpp
@@ -79,7 +95,10 @@ if(WIN32)
         COMMAND ${CMAKE_COMMAND} -E copy_if_different
             "${CMAKE_SOURCE_DIR}/../product_db_lib/build/bin/libproduct_db_lib.dll"
             $<TARGET_FILE_DIR:product_qt_lib>
-        COMMENT "Copying required DLLs"
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            "$<TARGET_FILE_DIR:validate_int_lib>"
+            $<TARGET_FILE_DIR:product_qt_lib>
+        COMMENT "Copying required DLLs including validate_int_lib.dll"
     )
 endif()
 
@@ -92,7 +111,3 @@ install(TARGETS product_qt_lib
 install(FILES include/product_qt_lib.h
     DESTINATION include
 )
-
-if(WIN32 AND MINGW)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wl,--export-all-symbols")
-endif()

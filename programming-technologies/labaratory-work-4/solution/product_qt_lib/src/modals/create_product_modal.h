@@ -2,15 +2,16 @@
 #define CREATE_PRODUCT_MODAL_H
 
 #ifdef PRODUCT_QT_LIB_EXPORTS
-    #define PRODUCT_QT_LIB_API __declspec(dllexport)
+#define PRODUCT_QT_LIB_API __declspec(dllexport)
 #else
-    #define PRODUCT_QT_LIB_API __declspec(dllimport)
+#define PRODUCT_QT_LIB_API __declspec(dllimport)
 #endif
 
 #include "../product_repository_wrapper.h"
 #include "../include/product_qt_lib.h"
 
 #include <vector>
+#include <windows.h>
 
 #include <QDialog>
 #include <QVBoxLayout>
@@ -25,8 +26,7 @@ class PRODUCT_QT_LIB_API CreateProductModal : public QDialog
     Q_OBJECT
 
 private:
-    ProductRepositoryWrapper* product_repo;
-
+    ProductRepositoryWrapper *product_repo;
     std::vector<InternalProduct> products;
 
     QVBoxLayout *main_layout;
@@ -39,6 +39,9 @@ private:
     QPushButton *submit_button;
     QPushButton *cancel_button;
 
+    HMODULE hValidateLib = nullptr;
+    bool (*validateIntInputAsm)(const char *) = nullptr;
+
     void setupForm();
     void setupButtons();
     void handleSubmit();
@@ -48,7 +51,8 @@ private slots:
     void onCancelClick();
 
 public:
-    explicit CreateProductModal(ProductRepositoryWrapper* repo, QWidget *parent = nullptr);
+    explicit CreateProductModal(ProductRepositoryWrapper *repo, QWidget *parent = nullptr);
+    ~CreateProductModal();
 };
 
 #endif

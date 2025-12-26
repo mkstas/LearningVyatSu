@@ -6,7 +6,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOMOC ON)
 
 set(MSYS2_PREFIX "C:/msys64/ucrt64")
-
 set(CMAKE_PREFIX_PATH "${MSYS2_PREFIX};${CMAKE_PREFIX_PATH}")
 
 find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
@@ -30,6 +29,9 @@ if(WIN32)
             "${CMAKE_SOURCE_DIR}/../product_qt_lib/build/bin/libproduct_qt_lib.dll"
             $<TARGET_FILE_DIR:product_app>
         COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            "${CMAKE_SOURCE_DIR}/../product_qt_lib/build/bin/validate_int_lib.dll"
+            $<TARGET_FILE_DIR:product_app>
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
             "${CMAKE_SOURCE_DIR}/../product_db_lib/build/bin/libproduct_db_lib.dll"
             $<TARGET_FILE_DIR:product_app>
         COMMAND ${CMAKE_COMMAND} -E copy_if_different
@@ -38,5 +40,6 @@ if(WIN32)
         COMMAND ${CMAKE_COMMAND} -E copy_if_different
             "${MSYS2_PREFIX}/bin/libpq.dll"
             $<TARGET_FILE_DIR:product_app>
+        COMMENT "Copying runtime DLLs for product_app"
     )
 endif()
