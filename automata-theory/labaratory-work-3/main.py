@@ -174,18 +174,14 @@ def _generate_fixed_map() -> None:
     global _my_map
     _my_map = [[0 for _ in range(10)] for _ in range(10)]
 
-    _my_map[6][1] = 1
-    _my_map[7][1] = 1
-    _my_map[8][1] = 1
-    _my_map[9][1] = 1
+    for i in range(6, 10):
+        _my_map[i][1] = 1
 
-    _my_map[1][7] = 1
-    _my_map[1][8] = 1
-    _my_map[1][9] = 1
+    for j in range(7, 10):
+        _my_map[1][j] = 1
 
-    _my_map[3][4] = 1
-    _my_map[4][4] = 1
-    _my_map[5][4] = 1
+    for i in range(3, 6):
+        _my_map[i][4] = 1
 
     _my_map[0][2] = 1
     _my_map[1][2] = 1
@@ -197,9 +193,9 @@ def _generate_fixed_map() -> None:
     _my_map[9][7] = 1
 
     _my_map[0][5] = 1
-    _my_map[2][8] = 1
-    _my_map[5][7] = 1
-    _my_map[7][9] = 1
+    _my_map[5][9] = 1
+    _my_map[7][5] = 1
+    _my_map[4][7] = 1
 
 
 def _update_strategy(result_code: int) -> None:
