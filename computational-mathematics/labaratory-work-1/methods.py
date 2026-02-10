@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def f(x: float, a: float = 1) -> float:
     """Calculate f(x) = ln(x) - cos(x)"""
     return np.log(x) - a * np.cos(x)

@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 
 from methods import f, df
 
+
 def draw_graph() -> None:
     """Draw a graph for function"""
     x_vals = np.linspace(0.8, 1.7)
@@ -17,6 +18,7 @@ def draw_graph() -> None:
     plt.legend()
     plt.grid(True, linestyle='--', alpha=0.2)
     plt.show()
+
 
 def draw_graph_comb(history):
     """Draw a graph for combine method"""
@@ -40,7 +42,7 @@ def draw_graph_comb(history):
         x1, y1 = step['a'], f(step['a'])
         x2, y2 = step['b_p'], f(step['b_p'])
 
-        if abs(x2 - x1) > 1e-12:
+        if abs(x2 - x1) > 1e-5:
             m = (y2 - y1) / (x2 - x1)
             x_chord = np.linspace(max(0.5, min(x1, x2) - 0.3), min(2.0, max(x1, x2) + 0.3), 50)
             y_chord = y1 + m * (x_chord - x1)
