@@ -1,35 +1,39 @@
 #pragma once
 
 #include <string>
+#include <iomanip>
+#include <iostream>
 
 class Dish
 {
 public:
-	Dish(std::string name, int weight, float price)
-		: _name(name), _weight(weight), _price(price)
+	Dish(std::string name, int weight, double price)
+		: _name(std::move(name))
+		, _weight(weight)
+		, _price(price)
+	{}
+
+	virtual ~Dish() = default;
+
+	std::string GetName()	const { return _name; }
+	int			GetWeight() const { return _weight; }
+	double		GetPrice()	const { return _price; }
+
+	virtual std::string GetInfo() const
 	{
+		std::cout << "Dish: " << _name << ", "
+			<< _weight << "g, $"
+			<< std::fixed << std::setprecision(2) << _price
+			<< std::endl;
 	}
 
-	std::string GetName() const
+	virtual double GetFullPrice() const
 	{
-		return _name;
+		return _price * 1.2;
 	}
-
-	int GetWeight() const
-	{
-		return _weight;
-	}
-
-	float GetPrice() const
-	{
-		return _price;
-	}
-
-	virtual std::string GetInfo() const = 0;
-	virtual float GetFullPrice() const = 0;
 
 private:
 	std::string _name;
-	int _weight;
-	float _price;
+	int			_weight;
+	double		_price;
 };

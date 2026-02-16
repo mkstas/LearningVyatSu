@@ -12,24 +12,13 @@ enum Dressing
 class Salad : public Dish
 {
 public:
-	Salad(std::string name, int weight, float price)
+	Salad(std::string name, int weight, double price)
 		: Dish(name, weight, price)
-	{
-	}
+	{}
 
 	std::string GetDressing() const
 	{
 		return _dressing == Dressing::OliveOil ? "olive oil" : "mayonnaise";
-	}
-
-	std::string GetInfo() const override
-	{
-		return "Pizza: " + GetName() + ", " + GetDressing() + " dough, " + std::to_string(GetWeight()) + "g, $" + std::to_string(GetFullPrice());
-	}
-
-	float GetFullPrice() const override
-	{
-		return _dressing == OliveOil ? GetPrice() * 1.1f : GetPrice() * 1.3f;
 	}
 
 	void ChangeDressing()
@@ -42,7 +31,20 @@ public:
 		std::cout << "Tossing the salad with " << GetDressing() << "..." << std::endl;
 	}
 
+	std::string GetInfo() const override
+	{
+		std::cout << "Salad: " << GetName() << ", "
+			<< GetDressing() << " dressing, "
+			<< std::to_string(GetWeight()) << "g, $"
+			<< std::fixed << std::setprecision(2) << std::to_string(GetFullPrice())
+			<< std::endl;
+	}
+
+	double GetFullPrice() const override
+	{
+		return _dressing == OliveOil ? GetPrice() * 1.4 : GetPrice() * 1.3;
+	}
+
 private:
 	Dressing _dressing = Dressing::OliveOil;
 };
-#pragma once

@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClInclude Include="dish.h" />
     <ClInclude Include="pizza.h" />
+    <ClInclude Include="salad.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

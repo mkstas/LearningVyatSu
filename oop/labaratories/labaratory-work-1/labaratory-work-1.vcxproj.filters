@@ -26,5 +26,8 @@
     <ClInclude Include="pizza.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="salad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
