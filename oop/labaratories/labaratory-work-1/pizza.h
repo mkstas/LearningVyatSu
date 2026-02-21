@@ -31,12 +31,12 @@ public:
 		std::cout << "Cutting the pizza into slices..." << std::endl;
 	}
 
-	std::string GetInfo() const override
+	void DisplayInfo() const override
 	{
 		std::cout << "Pizza: " << GetName() << ", "
 			<< GetDough() << " dough, "
 			<< GetWeight() << "g, $"
-			<< std::fixed << std::setprecision(2) << std::to_string(GetFullPrice())
+			<< std::fixed << std::setprecision(2) << GetFullPrice()
 			<< std::endl;
 	}
 

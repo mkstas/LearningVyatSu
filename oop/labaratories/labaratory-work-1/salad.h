@@ -31,12 +31,12 @@ public:
 		std::cout << "Tossing the salad with " << GetDressing() << "..." << std::endl;
 	}
 
-	std::string GetInfo() const override
+	void DisplayInfo() const override
 	{
 		std::cout << "Salad: " << GetName() << ", "
 			<< GetDressing() << " dressing, "
 			<< std::to_string(GetWeight()) << "g, $"
-			<< std::fixed << std::setprecision(2) << std::to_string(GetFullPrice())
+			<< std::fixed << std::setprecision(2) << GetFullPrice()
 			<< std::endl;
 	}
 

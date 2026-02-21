@@ -19,11 +19,11 @@ public:
 	int			GetWeight() const { return _weight; }
 	double		GetPrice()	const { return _price; }
 
-	virtual std::string GetInfo() const
+	virtual void DisplayInfo() const
 	{
 		std::cout << "Dish: " << _name << ", "
 			<< _weight << "g, $"
-			<< std::fixed << std::setprecision(2) << _price
+			<< std::fixed << std::setprecision(2) << GetFullPrice()
 			<< std::endl;
 	}
 
