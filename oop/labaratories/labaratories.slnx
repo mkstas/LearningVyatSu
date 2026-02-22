@@ -1,7 +1,9 @@
 <Solution>
   <Configurations>
+    <Platform Name="Any CPU" />
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
   <Project Path="labaratory-work-1/labaratory-work-1.vcxproj" Id="2d130786-a151-4662-bbc1-1c32ba0cafa0" />
+  <Project Path="labaratory-work-2/labaratory-work-2.csproj" Id="b1eaad8a-ac0d-4741-9985-d62642d1e139" />
 </Solution>
