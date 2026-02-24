@@ -23,7 +23,7 @@
 
         public override void DisplayInfo()
         {
-            Console.WriteLine($"Salad: {Name}, {Dressing} dressing, {Weight}g, ${Price:F2}, ");
+            Console.WriteLine($"Salad: {Name}, {Dressing} dressing, {Weight}g, ${GetFullPrice():F2}, ");
         }
 
         public override double GetFullPrice()

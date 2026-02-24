@@ -12,9 +12,18 @@ enum Dressing
 class Salad : public Dish
 {
 public:
+	Salad() : Dish()
+	{
+	}
+
+	Salad(std::string name) : Dish(name)
+	{
+	}
+
 	Salad(std::string name, int weight, double price)
 		: Dish(name, weight, price)
-	{}
+	{
+	}
 
 	std::string GetDressing() const
 	{
@@ -31,7 +40,7 @@ public:
 		std::cout << "Tossing the salad with " << GetDressing() << "..." << std::endl;
 	}
 
-	void DisplayInfo() const override
+	void DisplayInfo() override
 	{
 		std::cout << "Salad: " << GetName() << ", "
 			<< GetDressing() << " dressing, "
@@ -40,7 +49,7 @@ public:
 			<< std::endl;
 	}
 
-	double GetFullPrice() const override
+	double GetFullPrice() override
 	{
 		return _dressing == OliveOil ? GetPrice() * 1.4 : GetPrice() * 1.3;
 	}

@@ -12,9 +12,18 @@ enum Dough
 class Pizza : public Dish
 {
 public:
+	Pizza() : Dish()
+	{
+	}
+
+	Pizza(std::string name) : Dish(name)
+	{
+	}
+
 	Pizza(std::string name, int weight, double price)
 		: Dish(name, weight, price)
-	{}
+	{
+	}
 	
 	std::string GetDough() const
 	{
@@ -31,7 +40,7 @@ public:
 		std::cout << "Cutting the pizza into slices..." << std::endl;
 	}
 
-	void DisplayInfo() const override
+	void DisplayInfo() override
 	{
 		std::cout << "Pizza: " << GetName() << ", "
 			<< GetDough() << " dough, "
@@ -40,7 +49,7 @@ public:
 			<< std::endl;
 	}
 
-	double GetFullPrice() const override
+	double GetFullPrice() override
 	{
 		return _dough == Dough::Thin ? GetPrice() * 1.3 : GetPrice() * 1.5;
 	}

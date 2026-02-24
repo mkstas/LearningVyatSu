@@ -7,30 +7,33 @@
 class Dish
 {
 public:
-	Dish(std::string name, int weight, double price)
+	Dish()
+		: _name("Dish")
+		, _weight(100)
+		, _price(10.0)
+	{
+	}
+
+	Dish(std::string name)
+		: _name(std::move(name))
+		, _weight(200)
+		, _price(20.0)
+	{
+	}
+
+	Dish(std::string name, int weight, double price = 15.0)
 		: _name(std::move(name))
 		, _weight(weight)
 		, _price(price)
-	{}
-
-	virtual ~Dish() = default;
+	{
+	}
 
 	std::string GetName()	const { return _name; }
 	int			GetWeight() const { return _weight; }
 	double		GetPrice()	const { return _price; }
 
-	virtual void DisplayInfo() const
-	{
-		std::cout << "Dish: " << _name << ", "
-			<< _weight << "g, $"
-			<< std::fixed << std::setprecision(2) << GetFullPrice()
-			<< std::endl;
-	}
-
-	virtual double GetFullPrice() const
-	{
-		return _price * 1.2;
-	}
+	virtual void DisplayInfo() = 0 {}
+	virtual double GetFullPrice() = 0 {}
 
 private:
 	std::string _name;

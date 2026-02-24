@@ -9,6 +9,7 @@
 \usepackage{graphicx}
 \usepackage{verbatim}
 \usepackage{fancyvrb}
+\usepackage{hyperref}
 
 \renewcommand{\baselinestretch}{1.3}
 
@@ -79,233 +80,42 @@
 \begin{itemize}
   \item[--] Класс Dish:
         \begin{itemize}
-          \item[--] Dish(string name, int weight, double price) -- конструктор, инициализирует название блюда, вес в граммах и базовую цену;
+          \item[--] Dish() -- конструктор, инициализирует название блюда, вес в граммах и базовую цену;
+          \item[--] Dish(string name) -- конструктор, инициализирует название блюда, вес в граммах и базовую цену;
+          \item[--] Dish(string name, int weight, double price = 15.0) -- конструктор, инициализирует название блюда, вес в граммах и базовую цену;
           \item[--] string GetName() const -- возвращает название блюда;
           \item[--] int GetWeight() const -- возвращает вес блюда в граммах;
           \item[--] double GetPrice() const -- возвращает базовую цену блюда;
-          \item[--] virtual void DisplayInfo() const -- выводит основную информацию о блюде: название, вес, итоговую цену;
-          \item[] virtual double GetFullPrice() const -- возвращает цену, которую платит клиент (с наценкой);
+          \item[--] virtual void DisplayInfo() = 0 -- виртуальный метод отображения информации;
+          \item[] virtual double GetFullPrice() = 0 -- виртуальный метод, возвращающий полную цену;
         \end{itemize}
   \item[--] Класс Pizza наследуется от Dish:
         \begin{itemize}
+          \item[--] Pizza() -- конструктор, передаёт параметры в базовый класс Dish, тип теста по умолчанию — Thick;
+          \item[--] Pizza(string name) -- конструктор, передаёт параметры в базовый класс Dish, тип теста по умолчанию — Thick;
           \item[--] Pizza(string name, int weight, double price) -- конструктор, передаёт параметры в базовый класс Dish, тип теста по умолчанию — Thick;
           \item[--] string GetDough() const -- возвращает текстовое описание текущего типа теста;
           \item[--] void ChangeDough() -- переключает тип теста между Thin и Thick;
           \item[--] void CutInSlices() -- имитирует действие «нарезать пиццу на куски», выводит соответствующее сообщение;
-          \item[--] void DisplayInfo() const override -- переопределённый метод, выводит информацию о пицце: название, тип теста, вес, итоговая цена;
-          \item[--] double GetFullPrice() const override -- возвращает итоговую цену с учётом типа теста;
+          \item[--] void DisplayInfo() override -- переопределённый метод, выводит информацию о пицце: название, тип теста, вес, итоговая цена;
+          \item[--] double GetFullPrice() override -- возвращает итоговую цену с учётом типа теста;
         \end{itemize}
   \item[--] Класс Salad наследуется от Dish:
         \begin{itemize}
+          \item[--] Salad() -- конструктор, передаёт параметры в базовый класс Dish, заправка по умолчанию — OliveOil;
+          \item[--] Salad(string name) -- конструктор, передаёт параметры в базовый класс Dish, заправка по умолчанию — OliveOil;
           \item[--] Salad(string name, int weight, double price) -- конструктор, передаёт параметры в базовый класс Dish, заправка по умолчанию — OliveOil;
           \item[--] string GetDressing() const -- возвращает текстовое описание текущей заправки;
           \item[--] void ChangeDressing() -- переключает вид заправки между OliveOil и Mayonnaise;
           \item[--] void TossWithDressing() const -- bмитирует действие «перемешать салат с заправкой», выводит соответствующее сообщение;
-          \item[--] void DisplayInfo() const override -- gереопределённый метод, выводит информацию о салате: название, вид заправки, вес, цена;
-          \item[--] double GetFullPrice() const override -- возвращает итоговую цену с учётом заправки.
+          \item[--] void DisplayInfo() override -- gереопределённый метод, выводит информацию о салате: название, вид заправки, вес, цена;
+          \item[--] double GetFullPrice() override -- возвращает итоговую цену с учётом заправки.
         \end{itemize}
 \end{itemize}
 
-Исходный код класса Dish представлен ниже:
+Исходный код программы находится в репозитории GitHub:
 
-\noindent
-\begin{Verbatim}[tabsize=4,fontsize=\small]
-  #pragma once
-
-  #include <string>
-  #include <iomanip>
-  #include <iostream>
-
-  class Dish
-    {
-      public:
-      Dish(std::string name, int weight, double price)
-      : _name(std::move(name))
-      , _weight(weight)
-      , _price(price)
-      {}
-
-      virtual ~Dish() = default;
-
-      std::string GetName()	const { return _name; }
-      int			GetWeight() const { return _weight; }
-      double		GetPrice()	const { return _price; }
-
-      virtual void DisplayInfo() const
-        {
-          std::cout << "Dish: " << _name << ", "
-          << _weight << "g, $"
-          << std::fixed << std::setprecision(2) << GetFullPrice()
-          << std::endl;
-        }
-
-      virtual double GetFullPrice() const
-        {
-          return _price * 1.2;
-        }
-
-      private:
-      std::string _name;
-      int			_weight;
-      double		_price;
-    };
-\end{Verbatim}
-
-Исходный код класса Pizza представлен ниже:
-
-\noindent
-\begin{Verbatim}[tabsize=4,fontsize=\small]
-  #pragma once
-
-  #include <iostream>
-  #include "dish.h"
-
-  enum Dough
-    {
-      Thin,
-      Thick
-    };
-
-  class Pizza : public Dish
-    {
-      public:
-      Pizza(std::string name, int weight, double price)
-      : Dish(name, weight, price)
-      {}
-
-      std::string GetDough() const
-        {
-          return _dough == Dough::Thin ? "thin" : "thick";
-        }
-
-      void ChangeDough()
-      {
-          _dough = _dough == Dough::Thin ? Dough::Thick : Dough::Thin;
-        }
-
-      void CutInSlices()
-      {
-          std::cout << "Cutting the pizza into slices..." << std::endl;
-        }
-
-      void DisplayInfo() const override
-        {
-          std::cout << "Pizza: " << GetName() << ", "
-          << GetDough() << " dough, "
-          << GetWeight() << "g, $"
-          << std::fixed << std::setprecision(2) << GetFullPrice()
-          << std::endl;
-        }
-
-      double GetFullPrice() const override
-        {
-          return _dough == Dough::Thin ? GetPrice() * 1.3 : GetPrice() * 1.5;
-        }
-
-      private:
-      Dough _dough = Dough::Thick;
-    };
-\end{Verbatim}
-
-Исходный код класса Salad представлен ниже:
-
-\noindent
-\begin{Verbatim}[tabsize=4,fontsize=\small]
-  #pragma once
-
-  #include <iostream>
-  #include "dish.h"
-
-  enum Dressing
-    {
-      OliveOil,
-      Mayonnaise
-    };
-
-  class Salad : public Dish
-    {
-      public:
-      Salad(std::string name, int weight, double price)
-      : Dish(name, weight, price)
-      {}
-
-      std::string GetDressing() const
-        {
-          return _dressing == Dressing::OliveOil ? "olive oil" : "mayonnaise";
-        }
-
-      void ChangeDressing()
-      {
-          _dressing = _dressing == Dressing::OliveOil
-          ? Dressing::Mayonnaise
-          : Dressing::OliveOil;
-        }
-
-      void TossWithDressing() const
-        {
-          std::cout << "Tossing the salad with "
-          << GetDressing() << "..." << std::endl;
-        }
-
-      void DisplayInfo() const override
-        {
-          std::cout << "Salad: " << GetName() << ", "
-          << GetDressing() << " dressing, "
-          << std::to_string(GetWeight()) << "g, $"
-          << std::fixed << std::setprecision(2) << GetFullPrice()
-          << std::endl;
-        }
-
-      double GetFullPrice() const override
-        {
-          return _dressing == OliveOil ? GetPrice() * 1.4 : GetPrice() * 1.3;
-        }
-
-      private:
-      Dressing _dressing = Dressing::OliveOil;
-    };
-\end{Verbatim}
-
-Исходный код программы, демонстрирующее использование классов:
-
-\noindent
-\begin{Verbatim}[tabsize=4,fontsize=\small]
-  #include <iostream>
-  #include "dish.h"
-  #include "pizza.h"
-  #include "salad.h"
-
-  int main()
-  {
-      Dish sushi("Philadelphia", 320, 15);
-      Pizza pizza("Margarita", 450, 12);
-      Salad salad("Caesar", 250, 9);
-
-      std::cout << "--------------------------------" << std::endl;
-
-      sushi.DisplayInfo();
-      std::cout << "Full price: $" << sushi.GetFullPrice() << std::endl;
-
-        std::cout << "--------------------------------" << std::endl;
-
-        pizza.DisplayInfo();
-        std::cout << "Full price: $" << pizza.GetFullPrice() << std::endl;
-      pizza.ChangeDough();
-      std::cout << "Full price: $" << pizza.GetFullPrice() << std::endl;
-        pizza.CutInSlices();
-
-        std::cout << "--------------------------------" << std::endl;
-
-        salad.DisplayInfo();
-        std::cout << "Full price: $" << salad.GetFullPrice() << std::endl;
-      salad.TossWithDressing();
-      salad.ChangeDressing();
-      std::cout << "Full price: $" << salad.GetFullPrice() << std::endl;
-      salad.TossWithDressing();
-
-      std::cout << "--------------------------------" << std::endl;
-    }
-\end{Verbatim}
+\url{https://github.com/mkstas/VyatSu/tree/master/oop/labaratories/labaratory-work-1}
 
 \section*{\hspace{12.5mm}Вывод}
 В ходе выполнения лабораторной работы была разработана и реализована иерархия классов, моделирующая управление ассортиментом блюд в заведении общественного питания. Изучены основные принципы объектно-ориентированного программированя: инкапсуляция, наследование, полиморфизм. Разработано приложение, демонстрирующее применение данных принципов.

@@ -6,14 +6,7 @@
         public int Weight { get; } = weight;
         public double Price { get; } = price;
 
-        public virtual void DisplayInfo()
-        {
-            Console.WriteLine($"Dish: {Name}, {Weight}g, ${Price:F2}");
-        }
-
-        public virtual double GetFullPrice()
-        {
-            return Price * 1.2;
-        }
+        public virtual void DisplayInfo() {}
+        public virtual double GetFullPrice() { }
     }
 }
